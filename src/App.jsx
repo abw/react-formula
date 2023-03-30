@@ -85,14 +85,16 @@ const App = () => {
         >
           <Field name="foo"/>
           <Field name="bar" label="The bar field in the second form"/>
-          <Field name="blurb" label="Some Blurb" input="textarea"/>
+          <Field name="blurb" label="Some Blurb" type="textarea"/>
           <Field name="badger" label="Are you a badger?" type="checkbox" text="Yes I am"/>
           <Field
             name="wiz"
             render={
               field => <div className="field">
                 <label>{field.label || field.name}</label>
-                <input type="text" value={field.value} onChange={e => field.set(e.target.value)}/>
+                <div className="inputs">
+                  <input type="text" value={field.value} onChange={e => field.set(e.target.value)}/>
+                </div>
               </div>
             }
           />

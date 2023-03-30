@@ -1,23 +1,29 @@
 import React from 'react'
 
 export const TextAreaInput = ({field}) => {
-  const { className='input', rows=5 } = field
+  const {
+    className='input',
+    inputsClass='inputs',
+    rows=5
+  } = field
   return (
-    <textarea
-      className={className}
-      id={field.id}
-      name={field.name}
-      value={field.value}
-      disabled={field.disabled}
-      aria-disabled={field.disabled}
-      tabIndex={field.disabled ? -1 : field.tabIndex}
-      placeholder={field.placeholder}
-      autoComplete={field.autocomplete}
-      onChange={e => field.set(e.target.value)}
-      onFocus={field.onFocus}
-      onBlur={field.onBlur}
-      rows={rows}
-    />
+    <div className={inputsClass}>
+      <textarea
+        className={className}
+        id={field.id}
+        name={field.name}
+        value={field.value}
+        disabled={field.disabled}
+        aria-disabled={field.disabled}
+        tabIndex={field.disabled ? -1 : field.tabIndex}
+        placeholder={field.placeholder}
+        autoComplete={field.autocomplete}
+        onChange={e => field.set(e.target.value)}
+        onFocus={field.onFocus}
+        onBlur={field.onBlur}
+        rows={rows}
+      />
+    </div>
   )
 }
 

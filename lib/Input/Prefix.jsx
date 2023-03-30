@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FieldPrefix = ({field}) => {
+export const InputPrefix = ({field}) => {
   const {prefix, prefixClass='prefix'} = field
   return prefix &&
     <div className={prefixClass}>
@@ -8,4 +8,4 @@ export const FieldPrefix = ({field}) => {
     </div>
 }
 
-export default FieldPrefix
+export default InputPrefix

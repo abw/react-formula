@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FieldSuffix = ({field}) => {
+export const InputSuffix = ({field}) => {
   const {suffix, suffixClass='suffix'} = field
   return suffix &&
     <div className={suffixClass}>
@@ -8,4 +8,4 @@ export const FieldSuffix = ({field}) => {
     </div>
 }
 
-export default FieldSuffix
+export default InputSuffix

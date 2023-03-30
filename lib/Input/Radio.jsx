@@ -1,5 +1,6 @@
 import React from 'react'
-import DefaultInput from './Input.jsx'
+import Handlers from './Handlers.js'
+import { inputAttrs } from '../Utils.js'
 
 // options can be defined as an array of simple booleans, strings, or numbers,
 // e.g. options = [ true, 'yes', 23 ], otherwise they must be objects
@@ -13,11 +14,14 @@ const valueTypes = {
 export const RadioInputs = ({field}) => {
   const {
     options=[],
+    type='radio',
+    className='input',
     inputsClass='radio inputs',
     controlsClass='controls',
     optionClass='option',
-    Input=DefaultInput,
+    handler=Handlers[type]||Handlers.default
   } = field
+  const attrs = inputAttrs(field)
 
   return (
     <div className={inputsClass}>
@@ -31,7 +35,17 @@ export const RadioInputs = ({field}) => {
           return (
             <div key={option.value} className={controlsClass}>
               <label htmlFor={id} className={optionClass}>
-                <Input field={{ ...field, id, checked, value: option.value }}/>
+                <input
+                  className={className}
+                  type={type}
+                  aria-disabled={field.disabled}
+                  tabIndex={field.disabled ? -1 : field.tabIndex}
+                  onChange={handler(field)}
+                  {...attrs}
+                  id={id}
+                  checked={checked}
+                  value={option.value}
+                />
                 <span className="label">{option.text}</span>
               </label>
             </div>

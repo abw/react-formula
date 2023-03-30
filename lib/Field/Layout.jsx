@@ -1,13 +1,6 @@
 import React from 'react'
 import DefaultLabel from './Label.jsx'
-import DefaultInputs from './Inputs.jsx'
-import CheckboxInputs from './Checkbox.jsx'
-import RadioInputs from './Radio.jsx'
-
-export const InputsTypes  = {
-  checkbox: CheckboxInputs,
-  radio:    RadioInputs
-}
+import InputTypes from '../Input/index.js'
 
 export const FieldLayout = ({field}) => {
   const {
@@ -16,13 +9,13 @@ export const FieldLayout = ({field}) => {
     className='field',
     focusClass='focus',
     Label=DefaultLabel,
-    Inputs=InputsTypes[type]||DefaultInputs
+    Input=InputTypes[type]||InputTypes.default
   } = field
 
   return (
     <div className={`${className} ${focus ? focusClass : ''}`}>
       <Label field={field}/>
-      <Inputs field={field}/>
+      <Input field={field}/>
     </div>
   )
 }
