@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: false,
+    minify: true,
     sourcemap: false,
     lib: {
       entry: 'lib/index.js',
@@ -12,11 +12,16 @@ export default defineConfig({
       fileName: 'react-formula',
     },
     rollupOptions: {
-      external: ['react', 'reactDOM'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime'
+      ],
       output: {
         globals: {
-          react: 'React',
-          'react-dom/client': 'ReactDOM',
+          'react': 'react',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'react/jsx-runtime',
         },
       },
     },
