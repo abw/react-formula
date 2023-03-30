@@ -10,13 +10,11 @@ div.formula-debug {
   padding: 1rem;
   margin-top: 1rem;
 }
-
 div.formula-debug h4 {
   margin: 0 0 0.5rem 0;
   font-size: 0.8rem;
   line-height: 1;
 }
-
 div.formula-debug pre {
   border: 1px solid #c0c0c8;
   background-color: #f0f0f8;
@@ -24,13 +22,11 @@ div.formula-debug pre {
   margin: 0;
   padding: 0.5rem;
 }
-
 section {
   border: 1px solid #ddd;
   padding: 1rem;
   margin: 0 0 1rem 0;
 }
-
 section h1 {
   font-size: 1.5rem;
   margin-top: 0;
@@ -39,14 +35,20 @@ section h1 {
 div.field {
   margin-bottom: 0.5rem;
   width: auto;
+  width: 100%;
   /* display: inline-block; */
 }
-
-label {
+label:not(.option) {
   display: block;
   font-size: 0.8em;
 }
-
+label.option {
+  margin-right: 0.5em;
+}
+label.option .label {
+  padding-left: 0.25em;
+  padding-right: 0.5em;
+}
 label .required {
   float: right;
   color: red;
@@ -54,15 +56,26 @@ label .required {
 
 .field .inputs {
   display: flex;
+  /* border: 1px solid red; */
+  /* width: 100%; */
 }
-.field .inputs input {
+.field .inputs input,
+.field .inputs textarea {
+  /* width: 100%; */
   font-size: 1em;
-  line-height: 1;
-  padding: 0.25em 0.5em;
   border-radius: 4px;
   border: 1px solid #888;
   outline: none !important;
 }
+.field .inputs input {
+  line-height: 1;
+  padding: 0.25em 0.5em;
+}
+.field .inputs textarea {
+  font-size: 1em;
+  line-height: 1.25;
+}
+
 .field .inputs.prefixed input {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -91,9 +104,13 @@ label .required {
   border-bottom-left-radius: 0;
 }
 .field .inputs .control {
-  flex-basis: 100%;
+  /* flex-grow: 1; */
+  /* flex-basis: 100%; */
   /* avoid overflow: https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container */
   min-width: 0;
+}
+.field .radio.inputs.block {
+  display: block;
 }
 
 .field.focus .inputs input {
@@ -104,4 +121,8 @@ label .required {
 .field.focus .inputs .suffix {
   border-color: #66A;
   background-color: #AAE;
+}
+input[type=checkbox] {
+  font-size: 1.5rem;
+  accent-color: maroon;
 }

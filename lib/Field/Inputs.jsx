@@ -6,7 +6,7 @@ import DefaultSuffix from './Suffix.jsx'
 export const FieldInputs = ({field}) => {
   const {
     inputsClass='inputs',
-    controlsClass='controls',
+    controlClass='control',
     prefixedClass='prefixed',
     suffixedClass='suffixed',
     Prefix=DefaultPrefix,
@@ -22,7 +22,7 @@ export const FieldInputs = ({field}) => {
   return (
     <div className={classes}>
       <Prefix field={field}/>
-      <div className={controlsClass}>
+      <div className={controlClass}>
         <Input field={field}/>
       </div>
       <Suffix field={field}/>

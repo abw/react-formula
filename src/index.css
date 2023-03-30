@@ -52,6 +52,9 @@ button:focus-visible {
 input + button {
   margin-left: 0.5rem;
 }
+textarea {
+  font-family: inherit;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
