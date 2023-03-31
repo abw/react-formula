@@ -3,35 +3,32 @@
 /* Base Hues */
 // A hue for your brand used to style various components, including
 // checkboxes, radio buttons, etc.
-$brand-hue:                 260 !default;
+$brand-hue:                 230 !default;
 // Hue for default state inputs, typically the `$brand-hue` but almost
 // totally de-saturated.
 $input-hue:                 $brand-hue !default;
 // Hue for focussed inputs, defaulting to a sky blue.
-$focus-hue:                 200 !default;
+$focus-hue:                 210 !default;
 // Hue for invalid inputs, usually a red hue.
 $invalid-hue:               0   !default;
 // Hue for validated inputs, usually a green hue.
 $valid-hue:                 90  !default;
 // Hue for the "required" label that can appear in the label when the
 // `showRequired` option is set
-$required-hue:              0   !default;
+$required-hue:              30  !default;
 // Hue for the "optional" tag that can appear in the label when the
 // `showOptional` option is set
 $optional-hue:              210 !default;
 // Hue for debugging panel, not usually seen by customers.
 $debug-hue:                 230 !default;
 
-/* Other Defaults */
+/* Labels, Including Required and Optional Tags */
 // Default saturation for labels
 $label-saturation:          40% !default;
-// Accent color for checkboxes, radio buttons, range sliders, etc., based on
-// the brand hue.
-$accent-color:              hsl($brand-hue, 60%, 50%) !default;
+// De-saturated saturation for labels
+$label-desaturation:        10% !default;
 // Color for field labels in the default state.
-$label-color:               hsl($brand-hue, math.div($label-saturation, 4), 50%) !default;
-
-/* Required and Optional Labels */
+$label-color:               hsl($brand-hue, $label-desaturation, 50%) !default;
 // Color for the "required" tag that can appear in the label when the
 // `showRequired` option is set
 $required-label-color:      hsl($required-hue, 90%, 30%) !default;
@@ -53,7 +50,7 @@ $input-back-color:          hsl($input-hue, 10%, 98%) !default;
 // Border color for inputs in the default state.
 $input-border-color:        hsl($input-hue, 40%, 80%) !default;
 // Text color for inputs in the default state.
-$input-text-color:          hsl($input-hue, 30%, 40%) !default;
+$input-text-color:          hsl($input-hue, 20%, 40%) !default;
 // Background color for input prefix/suffix elements in the default state.
 $input-prefix-back-color:   hsl($input-hue, 20%, 90%) !default;
 // Text color for input prefix/suffix elements in the default state.
@@ -69,7 +66,7 @@ $focus-back-color:          hsl($focus-hue, 60%, 95%) !default;
 // Border color for inputs in focussed fields.
 $focus-border-color:        hsl($focus-hue, 60%, 70%) !default;
 // Text color for inputs in focussed fields.
-$focus-text-color:          hsl($focus-hue, 50%, 30%) !default;
+$focus-text-color:          hsl($focus-hue, 60%, 20%) !default;
 // Background color for prefix/suffix elements in focussed fields.
 $focus-prefix-back-color:   hsl($focus-hue, 30%, 85%) !default;
 // Text color for prefix/suffix elements in focussed fields.
@@ -108,3 +105,9 @@ $invalid-prefix-back-color: hsl($invalid-hue, 30%, 85%) !default;
 $invalid-prefix-text-color: hsl($invalid-hue, 70%, 20%) !default;
 // Color for input placeholder text in invalid fields.
 $invalid-placeholder-color: hsl($invalid-hue, 50%, 70%) !default;
+
+/* Other Colors */
+// Accent color for checkboxes, radio buttons, range sliders, etc., based on
+// the brand hue.
+$accent-color:              hsl($brand-hue, 60%, 50%) !default;
+

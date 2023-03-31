@@ -9,17 +9,15 @@ export const Example = ({Element, code, children='', className=''}) => {
 
   return <div className={`example ${className}`}>
     {children}
-    <div className="row stack-desktop">
-      <div className="split-2 gut-r">
-        <CodeBlock>{core}</CodeBlock>
-      </div>
-      { Element
-        ? <div className="split-2 gut-l output">
-            <Element/>
-          </div>
-        : null
-      }
+    <div className="mar-t-4">
+      <CodeBlock>{core}</CodeBlock>
     </div>
+    { Element
+      ? <div className="mar-t-4">
+          <Element/>
+        </div>
+      : null
+    }
   </div>
 }
 

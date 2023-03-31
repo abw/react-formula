@@ -16,6 +16,10 @@ import RequiredOptional from '../pages/RequiredOptional.jsx'
 import Styling from '../pages/Styling.jsx'
 import SASSVariables from '../pages/SASSVariables.jsx'
 import FormStyles from '../pages/FormStyles.jsx'
+import GettingStarted from '../pages/GettingStarted.jsx'
+import Submit from '../pages/Submit.jsx'
+import Reset from '../pages/Reset.jsx'
+import CustomComponents from '../pages/CustomComponents.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -23,9 +27,12 @@ const Router = createBrowserRouter([
     element:  <Layout/>,
     children: [
       { path: '/',                  element: <Home/> },
+      { path: 'getting-started',    element: <GettingStarted/> },
       { path: 'simple',             element: <Simple/> },
       { path: 'schema',             element: <Schema/> },
       { path: 'fields',             element: <Fields/> },
+      { path: 'submit',             element: <Submit/> },
+      { path: 'reset',              element: <Reset/> },
       { path: 'text',               element: <Text/> },
       { path: 'textarea',           element: <TextArea/> },
       { path: 'number',             element: <Number/> },
@@ -34,6 +41,7 @@ const Router = createBrowserRouter([
       { path: 'select',             element: <Select/> },
       { path: 'required-optional',  element: <RequiredOptional/> },
       { path: 'prefix-suffix',      element: <PrefixSuffix/> },
+      { path: 'custom-components',  element: <CustomComponents/> },
       { path: 'styling',            element: <Styling/> },
       { path: 'form-styles',        element: <FormStyles/> },
       { path: 'sass-variables',     element: <SASSVariables/> },

@@ -1,6 +1,10 @@
-@import "config/fonts.scss";
+@import 'config/formula.scss';
+@import 'config/fonts.scss';
+@import 'utils/spacing.scss';
 
-$dev-hue: 220;
+// $dev-hue: 220;
+$dev-hue: 30;
+$note-hue: 210;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -42,6 +46,24 @@ h3 {
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
+.home {
+  // padding: 2rem;
+}
+p.intro {
+  font-size: 1.25em;
+}
+p.subintro {
+  font-size: 1.25em;
+}
+.pic-side {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  img {
+    margin-top: 1rem;
+  }
+}
+
 #layout {
   min-width: 320px;
   max-width: 1280px;
@@ -86,7 +108,7 @@ h3 {
   main {
     flex-basis: 0;
     flex-grow: 999;
-    padding: 1rem;
+    padding: 2rem;
     background-color: rgba(#fff, 0.7);
     h1:first-child {
       line-height: 1;
@@ -102,6 +124,10 @@ a {
   &:hover {
     color: hsl($dev-hue, 90%, 30%);
   }
+}
+
+li {
+  margin-bottom: 1rem;
 }
 
 code.code {
@@ -148,6 +174,14 @@ table.sass-vars {
 .bold {
   font-weight: bold;
 }
+.note {
+  background-color: hsl($note-hue, 80%, 90%);
+  border: 3px solid hsl($note-hue, 90%, 45%);
+  border-radius: 12px;
+  color: hsl($note-hue, 80%, 20%);
+  padding: 1em;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+}
 
 button {
   border-radius: 4px;
@@ -159,9 +193,6 @@ button {
   background-color: #ccc;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  // border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
@@ -177,7 +208,5 @@ textarea {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
   }
 }

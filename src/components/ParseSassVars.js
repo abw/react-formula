@@ -11,7 +11,6 @@ export function parseSassVars(text) {
     }
     if ((match = line.match(/^\/\*\s*(.*?)\s*\*\/$/))) {
       // reset on a section
-      console.log('section: ', match[1])
       comment = [ ]
       defs.push({ section: match[1] })
       continue
@@ -31,8 +30,6 @@ export function parseSassVars(text) {
       comment = [ ]
     }
   }
-  console.log('defs:', defs)
-
   return defs
 }
 /*

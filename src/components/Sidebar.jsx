@@ -6,9 +6,16 @@ const Sidebar = () =>
     <h4>Overview</h4>
     <ul className="menu">
       <li><Link to="/" end text="Home"/></li>
+      <li><Link to="getting-started" text="Getting Started"/></li>
+    </ul>
+
+    <h4>Examples</h4>
+    <ul className="menu">
       <li><Link to="simple" text="Simple Example"/></li>
       <li><Link to="schema" text="Separate Schema"/></li>
-      <li><Link to="fields" text="Multiple Fields"/></li>
+      <li><Link to="fields" text="Adding Multiple Fields"/></li>
+      <li><Link to="submit" text="Submitting the Form *"/></li>
+      <li><Link to="reset"  text="Resetting the Form *"/></li>
     </ul>
 
     <h4>Input Types</h4>
@@ -23,8 +30,13 @@ const Sidebar = () =>
 
     <h4>Bling</h4>
     <ul className="menu">
-      <li><Link to="required-optional" text="Required and Optional"/></li>
+      <li><Link to="required-optional" text="Required and Optional Tags"/></li>
       <li><Link to="prefix-suffix" text="Prefix and Suffix"/></li>
+    </ul>
+
+    <h4>Customising</h4>
+    <ul className="menu">
+      <li><Link to="custom-components" text="Using Custom Components *"/></li>
     </ul>
 
     <h4>Styling</h4>

@@ -18,31 +18,37 @@ const Styling = () =>
       SCSS) and you can import the styles into your own SASS stylesheet like so:
     </p>
     <CodeBlock language="scss">
-      {`@import "@abw/react-formula/scss/formula.scss";`}
+      {`@import '@abw/react-formula/scss/formula.scss';`}
     </CodeBlock>
     <p>
-      The goodest news it that it&apos;s built from numerous configuration
-      variables which you can tweak to change the styling.
+      The goodest news it that it&apos;s built from numerous {' '}
+      <a href="sass-variables">configuration variables</a> which you can tweak
+      to change the styling.  They&apos;re all defined using the{' '}
+      <code className="code">!default</code> directive which means you can
+      provide your own values before importing the main SCSS file and it&apos;ll
+      use your values instead of the defaults.
     </p>
     <CodeBlock language="scss">
       {`$brand-hue:     123;
 $valid-hue:     40;
 $invalid-hue:   12;
-@import "@abw/react-formula/scss/formula.scss";`}
+@import '@abw/react-formula/scss/formula.scss';`}
     </CodeBlock>
     <p>
       Or you can rewrite large chunks of the styling if you prefer. Every
       element has its own CSS class and they&apos;re all scoped inside{' '}
-      <code className="code">form.formula</code>.
+      <code className="code">form.formula</code>.  For example, you can import
+      the main stylesheet and then selectively override the things you want
+      to change.
     </p>
     <CodeBlock language="scss">
-      {`@import "@abw/react-formula/scss/formula.scss";
+      {`@import '@abw/react-formula/scss/formula.scss';
 
 form.formula {
   .field {
     .inputs {
       select {
-        // custom styling overrides
+        // your custom styling overrides
       }
     }
   }
