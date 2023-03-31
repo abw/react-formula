@@ -34,7 +34,8 @@
       "warn",
       "single",
       {
-        "avoidEscape": true
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
       }
     ],
     "react/prop-types": 0,

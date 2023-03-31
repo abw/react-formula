@@ -4,8 +4,8 @@ import Required from './Required.jsx'
 
 export const Label = ({field}) => {
   const { labelClass='', label, id, required, form } = field
-  const showRequired = form.showRequired && required
-  const showOptional = form.showOptional && ! required
+  const showRequired = (field.showRequired || form.showRequired) && required
+  const showOptional = (field.showOptional || form.showOptional) && ! required
   const hasLabel     = label || showRequired || showOptional
 
   return hasLabel &&

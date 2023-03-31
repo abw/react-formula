@@ -13,6 +13,9 @@ import Fields from '../pages/Fields.jsx'
 import Select from '../pages/Select.jsx'
 import PrefixSuffix from '../pages/PrefixSuffix.jsx'
 import RequiredOptional from '../pages/RequiredOptional.jsx'
+import Styling from '../pages/Styling.jsx'
+import SASSVariables from '../pages/SASSVariables.jsx'
+import FormStyles from '../pages/FormStyles.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -31,6 +34,9 @@ const Router = createBrowserRouter([
       { path: 'select',             element: <Select/> },
       { path: 'required-optional',  element: <RequiredOptional/> },
       { path: 'prefix-suffix',      element: <PrefixSuffix/> },
+      { path: 'styling',            element: <Styling/> },
+      { path: 'form-styles',        element: <FormStyles/> },
+      { path: 'sass-variables',     element: <SASSVariables/> },
     ]
   },
 ])

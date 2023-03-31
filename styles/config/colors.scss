@@ -1,11 +1,110 @@
-$brand-hue:                 150 !default;
-$input-hue:                 240 !default;
-$required-hue:              0   !default;
-$optional-hue:              120 !default;
+@use "sass:math";
+
+/* Base Hues */
+// A hue for your brand used to style various components, including
+// checkboxes, radio buttons, etc.
+$brand-hue:                 260 !default;
+// Hue for default state inputs, typically the `$brand-hue` but almost
+// totally de-saturated.
+$input-hue:                 $brand-hue !default;
+// Hue for focussed inputs, defaulting to a sky blue.
+$focus-hue:                 200 !default;
+// Hue for invalid inputs, usually a red hue.
 $invalid-hue:               0   !default;
-$valid-hue:                 30  !default;
+// Hue for validated inputs, usually a green hue.
+$valid-hue:                 90  !default;
+// Hue for the "required" label that can appear in the label when the
+// `showRequired` option is set
+$required-hue:              0   !default;
+// Hue for the "optional" tag that can appear in the label when the
+// `showOptional` option is set
+$optional-hue:              210 !default;
+// Hue for debugging panel, not usually seen by customers.
 $debug-hue:                 230 !default;
 
-$required-label-color:      hsl(0, 90%, 30%) !default;
-$optional-label-color:      hsl(120, 10%, 30%) !default;
-$invalid-border-color:      hsl($invalid-hue 90% 40%) !default;
+/* Other Defaults */
+// Default saturation for labels
+$label-saturation:          40% !default;
+// Accent color for checkboxes, radio buttons, range sliders, etc., based on
+// the brand hue.
+$accent-color:              hsl($brand-hue, 60%, 50%) !default;
+// Color for field labels in the default state.
+$label-color:               hsl($brand-hue, math.div($label-saturation, 4), 50%) !default;
+
+/* Required and Optional Labels */
+// Color for the "required" tag that can appear in the label when the
+// `showRequired` option is set
+$required-label-color:      hsl($required-hue, 90%, 30%) !default;
+// Background color for the "required" tag.
+$required-back-color:       hsl($required-hue, 50%, 90%) !default;
+// Border color for the "required" tag.
+$required-border-color:     hsl($required-hue, 70%, 80%) !default;
+// Color for the "optional" tag that can appear in the label when the
+// `showOptional` option is set
+$optional-label-color:      hsl($optional-hue, 10%, 30%) !default;
+// Background color for the "optional" tag.
+$optional-back-color:       hsl($optional-hue, 50%, 90%) !default;
+// Border color for the "optional" tag.
+$optional-border-color:     hsl($optional-hue, 70%, 80%) !default;
+
+/* Default Input State */
+// Background color for inputs in the default state.
+$input-back-color:          hsl($input-hue, 10%, 98%) !default;
+// Border color for inputs in the default state.
+$input-border-color:        hsl($input-hue, 40%, 80%) !default;
+// Text color for inputs in the default state.
+$input-text-color:          hsl($input-hue, 30%, 40%) !default;
+// Background color for input prefix/suffix elements in the default state.
+$input-prefix-back-color:   hsl($input-hue, 20%, 90%) !default;
+// Text color for input prefix/suffix elements in the default state.
+$input-prefix-text-color:   hsl($input-hue, 70%, 20%) !default;
+// Color for input placeholder text in the default state.
+$input-placeholder-color:   hsl($input-hue, 20%, 75%) !default;
+
+/* Focussed Input State */
+// Color for labels in focussed fields.
+$focus-label-color:         hsl($focus-hue, $label-saturation, 30%) !default;
+// Background color for inputs in focussed fields.
+$focus-back-color:          hsl($focus-hue, 60%, 95%) !default;
+// Border color for inputs in focussed fields.
+$focus-border-color:        hsl($focus-hue, 60%, 70%) !default;
+// Text color for inputs in focussed fields.
+$focus-text-color:          hsl($focus-hue, 50%, 30%) !default;
+// Background color for prefix/suffix elements in focussed fields.
+$focus-prefix-back-color:   hsl($focus-hue, 30%, 85%) !default;
+// Text color for prefix/suffix elements in focussed fields.
+$focus-prefix-text-color:   hsl($focus-hue, 70%, 20%) !default;
+// Color for input placeholder text in focussed fields.
+$focus-placeholder-color:   hsl($focus-hue, 50%, 70%) !default;
+
+/* Valid Field State */
+// Color for labels in valid fields.
+$valid-label-color:         hsl($valid-hue, $label-saturation, 30%) !default;
+// Background color for inputs in valid fields.
+$valid-back-color:          hsl($valid-hue, 30%, 95%) !default;
+// Border color for inputs in valid fields.
+$valid-border-color:        hsl($valid-hue, 40%, 50%) !default;
+// Text color for inputs in valid fields.
+$valid-text-color:          hsl($valid-hue, 50%, 30%) !default;
+// Background color for prefix/suffix elements in valid fields.
+$valid-prefix-back-color:   hsl($valid-hue, 30%, 85%) !default;
+// Text color for prefix/suffix elements in valid fields.
+$valid-prefix-text-color:   hsl($valid-hue, 70%, 20%) !default;
+// Color for input placeholder text in valid fields.
+$valid-placeholder-color:   hsl($valid-hue, 50%, 70%) !default;
+
+/* Invalid Field State */
+// Color for labels in invalid fields.
+$invalid-label-color:       hsl($invalid-hue, $label-saturation, 30%) !default;
+// Background color for inputs in invalid fields.
+$invalid-back-color:        hsl($invalid-hue, 60%, 95%) !default;
+// Border color for inputs in invalid fields.
+$invalid-border-color:      hsl($invalid-hue, 60%, 70%) !default;
+// Text color for inputs in invalid fields.
+$invalid-text-color:        hsl($invalid-hue, 50%, 30%) !default;
+// Background color for prefix/suffix elements in invalid fields.
+$invalid-prefix-back-color: hsl($invalid-hue, 30%, 85%) !default;
+// Text color for prefix/suffix elements in invalid fields.
+$invalid-prefix-text-color: hsl($invalid-hue, 70%, 20%) !default;
+// Color for input placeholder text in invalid fields.
+$invalid-placeholder-color: hsl($invalid-hue, 50%, 70%) !default;

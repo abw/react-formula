@@ -26,6 +26,13 @@ const Sidebar = () =>
       <li><Link to="required-optional" text="Required and Optional"/></li>
       <li><Link to="prefix-suffix" text="Prefix and Suffix"/></li>
     </ul>
+
+    <h4>Styling</h4>
+    <ul className="menu">
+      <li><Link to="styling" text="Styling"/></li>
+      <li><Link to="form-styles" text="Form Styles"/></li>
+      <li><Link to="sass-variables" text="SASS Variables"/></li>
+    </ul>
   </>
 
 

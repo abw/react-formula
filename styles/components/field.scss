@@ -10,6 +10,7 @@ form.formula {
         font-size: 0.8em;
         margin-right: 0.5em;
         white-space: nowrap;
+        color: $label-color;
       }
       &.option {
         white-space: nowrap;
@@ -18,13 +19,24 @@ form.formula {
           padding-right: 0.5em;
         }
       }
-      .required {
-        float: right;
-        color: $required-label-color;
-      }
+      .required,
       .optional {
         float: right;
+        font-size: 0.8em;
+        line-height: 1.2;
+        padding: 0 0.5em;
+        margin-right: -0.5em;
+        border-radius: 0.25em;
+      }
+      .required {
+        color: $required-label-color;
+        background-color: $required-back-color;
+        border: 1px solid $required-border-color;
+      }
+      .optional {
         color: $optional-label-color;
+        background-color: $optional-back-color;
+        border: 1px solid $optional-border-color;
       }
     }
     .inputs {
@@ -46,11 +58,17 @@ form.formula {
         line-height: 1;
         padding: 0.25em 0.5em;
         border-radius: 4px;
-        border: 1px solid #888;
         outline: none !important;
         flex-basis: 100%;
         /* avoid overflow: https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container */
         min-width: 0;
+        color: $input-text-color;
+        border: 1px solid $input-border-color;
+        background-color: $input-back-color;
+        &::placeholder {
+          color: $input-placeholder-color;
+          font-weight: 300;
+        }
       }
       input,
       select {
@@ -83,8 +101,9 @@ form.formula {
         line-height: 1;
         padding: 0.25em 0.5em;
         border-radius: 4px;
-        border: 1px solid #888;
-        background-color: #eee
+        border: 1px solid $input-border-color;
+        background-color: $input-prefix-back-color;
+        color: $input-prefix-text-color;
       }
       .prefix {
         border-right: 0;
@@ -101,13 +120,14 @@ form.formula {
         line-height: 1;
         padding: 0.25em;
         border-radius: 4px;
-        border: 1px solid #888;
-        /* margin-bottom: 0.5rem; */
+        color: $input-text-color;
+        border: 1px solid $input-border-color;
+        background-color: $input-back-color;
         cursor: pointer;
         &:hover {
-          background-color: #EEF;
-          border-color: #66A;
-          color: #224;
+          background-color: $focus-back-color;
+          border-color: $focus-border-color;
+          color: $focus-text-color;
         }
       }
       &.radio {
@@ -126,19 +146,79 @@ form.formula {
       input[type=checkbox],
       input[type=radio],
       input[type=range] {
-        // font-size: 1.5rem;
-        accent-color: #44a;
+        accent-color: $accent-color;
       }
     }
-    &.focus .inputs {
-      input {
-        background-color: #EEF;
-        border-color: #66A;
+    &.valid {
+      label:not(.option) {
+        color: $valid-label-color;
       }
-      .prefix,
-      .suffix {
-        border-color: #66A;
-        background-color: #AAE;
+      .inputs {
+        input,
+        textarea,
+        select {
+          background-color: $valid-back-color;
+          border-color: $valid-border-color;
+          color: $valid-text-color;
+          &::placeholder {
+            color: $valid-placeholder-color;
+            font-weight: 300;
+          }
+        }
+        .prefix,
+        .suffix {
+          border-color: $valid-border-color;
+          background-color: $valid-prefix-back-color;
+          color: $valid-prefix-text-color;
+        }
+      }
+    }
+    &.invalid {
+      label:not(.option) {
+        color: $invalid-label-color;
+      }
+      .inputs {
+        input,
+        textarea,
+        select {
+          background-color: $invalid-back-color;
+          border-color: $invalid-border-color;
+          color: $invalid-text-color;
+          &::placeholder {
+            color: $invalid-placeholder-color;
+            font-weight: 300;
+          }
+        }
+        .prefix,
+        .suffix {
+          border-color: $invalid-border-color;
+          background-color: $invalid-prefix-back-color;
+          color: $invalid-prefix-text-color;
+        }
+      }
+    }
+    &.focus {
+      label:not(.option) {
+        color: $focus-label-color;
+      }
+      .inputs {
+        input,
+        textarea,
+        select {
+          background-color: $focus-back-color;
+          border-color: $focus-border-color;
+          color: $focus-text-color;
+          &::placeholder {
+            color: $focus-placeholder-color;
+            font-weight: 300;
+          }
+        }
+        .prefix,
+        .suffix {
+          border-color: $focus-border-color;
+          background-color: $focus-prefix-back-color;
+          color: $focus-prefix-text-color;
+        }
       }
     }
   }

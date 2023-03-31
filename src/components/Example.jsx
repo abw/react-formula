@@ -1,9 +1,5 @@
 import React from 'react'
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
-import { xonokai } from 'react-syntax-highlighter/dist/esm/styles/prism'
-
-SyntaxHighlighter.registerLanguage('jsx', jsx)
+import CodeBlock from './CodeBlock.jsx'
 
 export const Example = ({Element, code, children='', className=''}) => {
   const core = code
@@ -26,11 +22,5 @@ export const Example = ({Element, code, children='', className=''}) => {
     </div>
   </div>
 }
-
-export const CodeBlock = ({children}) => <div className="codeblock">
-  <SyntaxHighlighter language="jsx" style={xonokai} showLineNumbers={true}>
-    {children}
-  </SyntaxHighlighter>
-</div>
 
 export default Example
