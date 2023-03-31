@@ -5,7 +5,7 @@ export const Debug = () => {
   const form   = useForm()
   const values = form.values
   return (
-    <div className="formula-debug">
+    <div className="debug">
       <h4>Debug Values</h4>
       <pre>
         {JSON.stringify(values, null, 2)}

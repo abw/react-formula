@@ -19,15 +19,23 @@
   "rules": {
     "indent": [
       "error",
-      2
+      2,
+      {
+        "offsetTernaryExpressions": true,
+        "SwitchCase": 1
+      }
+
     ],
     "linebreak-style": [
       "error",
       "unix"
     ],
     "quotes": [
-      "error",
-      "single"
+      "warn",
+      "single",
+      {
+        "avoidEscape": true
+      }
     ],
     "react/prop-types": 0,
     "semi": [

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const FieldRequired = () =>
+export const FieldRequired = ({field}) =>
   <span className="required">
-    required
+    {field.requiredText || field.form.requiredText || 'required'}
   </span>
 
 export default FieldRequired

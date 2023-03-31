@@ -1,0 +1,28 @@
+// le fancy new grid
+[class*="grid-"] {
+  display: grid;
+}
+
+@for $n from 2 through 16 {
+  .grid-#{$n} {
+    grid-template-columns: repeat($n, 1fr);
+  }
+}
+
+@for $n from 0 through 16 {
+  .gap-#{$n} {
+    gap: $n * $unit-margin;
+  }
+  .gap-h-#{$n} {
+    column-gap: $n * $unit-margin;
+  }
+  .gap-v-#{$n} {
+    row-gap: $n * $unit-margin;
+  }
+}
+
+@for $n from 0 through 16 {
+  .gap-#{$n} {
+    gap: $n * $unit-margin;
+  }
+}

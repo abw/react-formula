@@ -9,7 +9,6 @@ export const CheckboxInput = ({field}) => {
     type='checkbox',
     className='input',
     inputsClass='checkbox inputs',
-    controlsClass='controls',
     optionClass='option',
     handler=Handlers[type]||Handlers.default
   } = field
@@ -20,20 +19,18 @@ export const CheckboxInput = ({field}) => {
 
   return (
     <div className={classes}>
-      <div className={controlsClass}>
-        <label htmlFor={id} className={optionClass}>
-          <input
-            className={className}
-            type={type}
-            aria-disabled={field.disabled}
-            tabIndex={field.disabled ? -1 : field.tabIndex}
-            onChange={handler(field)}
-            {...attrs}
-            checked={field.value}
-          />
-          <span className="label">{text}</span>
-        </label>
-      </div>
+      <label htmlFor={id} className={optionClass}>
+        <input
+          className={className}
+          type={type}
+          aria-disabled={field.disabled}
+          tabIndex={field.disabled ? -1 : field.tabIndex}
+          onChange={handler(field)}
+          {...attrs}
+          checked={field.value}
+        />
+        <span className="label">{text}</span>
+      </label>
     </div>
   )
 }

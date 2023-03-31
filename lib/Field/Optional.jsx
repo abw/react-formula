@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const FieldOptional = () =>
+export const FieldOptional = ({field}) =>
   <span className="optional">
-    optional
+    {field.optionalText || field.form.optionalText || 'optional'}
   </span>
 
 export default FieldOptional
