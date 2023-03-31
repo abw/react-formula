@@ -6,7 +6,8 @@ import { propClasses } from '../Utils.js'
 export const FieldLayout = ({field}) => {
   const {
     type,
-    className='field',
+    className='',
+    fieldClass='field',
     validClass='valid',
     invalidClass='invalid',
     focusClass='focus',
@@ -16,7 +17,7 @@ export const FieldLayout = ({field}) => {
   let classes = propClasses(
     field,
     { valid: validClass, invalid: invalidClass, focus: focusClass },
-    className
+    fieldClass, className
   )
 
   return (

@@ -210,3 +210,55 @@ textarea {
     background-color: #ffffff;
   }
 }
+
+form.formula div.field label.option {
+  &.red {
+    background-color: red;
+    color: white;
+  }
+  &.red input[type=radio] {
+    accent-color: red;
+  }
+  &.orange {
+    background-color: orange;
+    color: black;
+  }
+  &.orange input[type=radio] {
+    accent-color: orange;
+  }
+  &.yellow {
+    background-color: gold;
+    color: black;
+  }
+  &.yellow input[type=radio] {
+    accent-color: gold;
+  }
+  &.green {
+    background-color: green;
+    color: white;
+  }
+  &.green input[type=radio] {
+    accent-color: green;
+  }
+  &.blue {
+    background-color: blue;
+    color: white;
+  }
+  &.blue input[type=radio] {
+    accent-color: blue;
+  }
+  &.indigo {
+    background-color: indigo;
+    color: white;
+  }
+  &.indigo input[type=radio] {
+    accent-color: indigo;
+  }
+  &.violet {
+    background-color: violet;
+    color: white;
+  }
+  &.violet input[type=radio] {
+    accent-color: violet;
+  }
+}

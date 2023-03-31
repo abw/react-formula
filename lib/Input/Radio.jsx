@@ -6,7 +6,7 @@ export const RadioInput = ({field}) => {
   const {
     options=[],
     type='radio',
-    className='input',
+    inputClass='input',
     inputsClass='radio inputs',
     optionClass='option',
     handler=Handlers[type]||Handlers.default
@@ -23,7 +23,7 @@ export const RadioInput = ({field}) => {
           return (
             <label key={option.value} htmlFor={id} className={`${optionClass} ${option.className||''}`}>
               <input
-                className={className}
+                className={inputClass}
                 type={type}
                 aria-disabled={field.disabled}
                 tabIndex={field.disabled ? -1 : field.tabIndex}

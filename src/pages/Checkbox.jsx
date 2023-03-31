@@ -16,6 +16,17 @@ const Checkbox = () =>
         so depending on what your checkbox text says, you might want to
         leave it out.
       </p>
+      <p>
+        The default behaviour is for a checkbox to only take up as much room
+        as is required for the text.  Add the <code className="code">wide</code>{' '}
+        CSS class using the <code className="code">className</code> property
+        to make it extend across the full width of the container.
+      </p>
+      <p>
+        If boxes around checkboxes aren&apos;t your thing then the{' '}
+        <code className="code">bare</code> class will strip them naked.
+      </p>
+
     </Example>
   </div>
 

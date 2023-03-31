@@ -16,6 +16,7 @@ const Sidebar = () =>
       <li><Link to="fields" text="Adding Multiple Fields"/></li>
       <li><Link to="submit" text="Submitting the Form *"/></li>
       <li><Link to="reset"  text="Resetting the Form *"/></li>
+      <li><Link to="complete" text="Complete Example"/></li>
     </ul>
 
     <h4>Input Types</h4>

@@ -7,21 +7,18 @@ export const CheckboxInput = ({field}) => {
     id,
     text,
     type='checkbox',
-    className='input',
+    inputClass='input',
     inputsClass='checkbox inputs',
     optionClass='option',
     handler=Handlers[type]||Handlers.default
   } = field
-  let classes = [
-    inputsClass,
-  ].filter(i => i).join(' ')
   const attrs = inputAttrs(field)
 
   return (
-    <div className={classes}>
+    <div className={inputsClass}>
       <label htmlFor={id} className={optionClass}>
         <input
-          className={className}
+          className={inputClass}
           type={type}
           aria-disabled={field.disabled}
           tabIndex={field.disabled ? -1 : field.tabIndex}

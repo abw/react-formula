@@ -25,6 +25,18 @@ const Radio = () =>
         <a href="schema">separate scheme</a> or you can &quot;inline&quot;
         them as shown here.  Whatever floats your boat.
       </p>
+      <p>
+        The default behaviour is for radio button options to only take up as
+        much room as is required for the text.  Add the{' '}
+        <code className="code">wide</code> CSS class using the{' '}
+        <code className="code">className</code> property
+        to make them extend across the full width of the container.
+      </p>
+      <p>
+        If you don&apos;t like the &quot;boxy&quot; look then add the{' '}
+        <code className="code">bare</code> class to remove the border and
+        background.
+      </p>
     </Example>
 
   </div>

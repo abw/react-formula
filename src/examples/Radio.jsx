@@ -17,6 +17,12 @@ const RadioExample = () =>
         { value: 11, text: 'Eleven (one louder)', className: 'bold' },
         { value: 42, text: <>Forty-Two (the meaning of <i>life</i>)</> },
       ]}
+      className="wide"
+    />
+    <Field
+      name="cheese" label="What is your favourite cheese?" type="radio"
+      options={[ 'Cheddar', 'Brie', 'Emmental' ]}
+      className="bare"
     />
     <Debug/>
   </Form>

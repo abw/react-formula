@@ -20,6 +20,7 @@ import GettingStarted from '../pages/GettingStarted.jsx'
 import Submit from '../pages/Submit.jsx'
 import Reset from '../pages/Reset.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
+import Complete from '../pages/Complete.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const Router = createBrowserRouter([
       { path: '/',                  element: <Home/> },
       { path: 'getting-started',    element: <GettingStarted/> },
       { path: 'simple',             element: <Simple/> },
+      { path: 'complete',           element: <Complete/> },
       { path: 'schema',             element: <Schema/> },
       { path: 'fields',             element: <Fields/> },
       { path: 'submit',             element: <Submit/> },
