@@ -1,5 +1,16 @@
-export const DEFAULT     = 'default'
 export const BLANK       = ''
+export const BLUR        = 'blur'
+export const DEFAULT     = 'default'
+export const FOCUS       = 'focus'
+export const FORMULA     = 'formula'
+export const INVALID     = 'invalid'
+export const RESET       = 'reset'
+export const SAVING      = 'saving'
+export const SET         = 'set'
+export const USE_FIELD   = 'use_field'
+export const VALID       = 'valid'
+export const VALIDATING  = 'validating'
+export const VALIDATED   = 'validated'
 
 export const INPUT_ATTRS = [
   'id', 'name', 'value', 'checked', 'disabled', 'placeholder',
