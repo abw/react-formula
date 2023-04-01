@@ -1,6 +1,6 @@
 import React from 'react'
-// import { USE_FIELD, SET, VALIDATED, VALIDATING } from '../Constants.jsx'
-import { VALIDATED, VALIDATING } from '../Constants.jsx'
+import { DEFAULT, VALIDATED, VALIDATING } from '../Constants.jsx'
+import prepareField from '../Field/Prepare.jsx'
 import { sleep } from '../Utils.js'
 
 export const formProvider = ({ Context, state, dispatch }) => {
@@ -12,27 +12,25 @@ export const formProvider = ({ Context, state, dispatch }) => {
         () => dispatch({ type: VALIDATED })
       )
     }
+    const useField = ({name=DEFAULT, ...spec}) => {
+      const defaults = state.initialFields[name] || { }
+      const field = prepareField({ name,...defaults, ...spec })
+      return field
+    }
+
+    // focus field, blur field, validating_field, valid_field, invalid_field,
+    // etc
 
     /*
     const set = (values) => {
       dispatch({ type: SET, values })
     }
 
-    const useField = (name, field) => {
-      if (state.activeFields[name]) {
-        console.log(`${name} field is already active in form`)
-        return state.activeFields[name]
-      }
-      console.log('calling USE_FIELD for', name)
-      dispatch({ type: USE_FIELD, name, field })
-      console.log('called USE_FIELD for', name)
-      console.log('field is', state.activeFields[name])
-    }
     */
     const value = {
       ...state,
       validate,
-      // useField,
+      useField,
       // set,
     }
 

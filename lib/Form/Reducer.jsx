@@ -1,5 +1,5 @@
 import {
-  VALID, INVALID, VALIDATING, VALIDATED, SET, RESET, USE_FIELD
+  VALID, INVALID, VALIDATING, VALIDATED, SET, RESET, USE_FIELD, SET_FIELD
 } from '../Constants.jsx'
 
 export function formReducer(state, action) {
@@ -13,12 +13,22 @@ export function formReducer(state, action) {
     case VALIDATED:
       return { ...state, validating: false }
     case USE_FIELD:
-      console.log('running USE_FIELD action')
       return {
         ...state,
         fields: {
           ...state.fields,
           [action.name] : action.field
+        }
+      }
+    case SET_FIELD:
+      return {
+        ...state,
+        fields: {
+          ...state.fields,
+          [action.name]: {
+            ...(state.fields[action.name] || { }),
+            ...action.state
+          }
         }
       }
     case SET:
