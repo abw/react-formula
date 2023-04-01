@@ -7,7 +7,7 @@ export const formProvider = ({ Context, state, dispatch }) => {
   const Provider = ({children}) => {
     const validate = () => {
       dispatch({ type: VALIDATING })
-      // do stuff
+      // do stuff - this is just for testing
       sleep(2000).then(
         () => dispatch({ type: VALIDATED })
       )

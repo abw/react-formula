@@ -16,8 +16,8 @@ export function formReducer(state, action) {
       console.log('running USE_FIELD action')
       return {
         ...state,
-        activeFields: {
-          ...(state.activeFields || { }),
+        fields: {
+          ...state.fields,
           [action.name] : action.field
         }
       }
@@ -26,14 +26,13 @@ export function formReducer(state, action) {
       console.log('running SET action')
       return {
         ...state,
-        activeValue: {
-          ...(state.activeValue || { }),
+        values: {
+          ...state.values,
           ...action.values
         }
       }
     case RESET:
-      // TODO
-      return state
+      return { ...state, fields: { }, values: { ...state.initialValues } }
     default:
       throw Error(`Invalid form reducer action: ${action.type}`)
   }
