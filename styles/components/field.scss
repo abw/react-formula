@@ -98,6 +98,7 @@ form.formula {
         border: 1px solid $input-border-color;
         background-color: $input-prefix-back-color;
         color: $input-prefix-text-color;
+        user-select: none;
       }
       .prefix {
         border-right: 0;
@@ -271,6 +272,36 @@ form.formula {
           border-color: $focus-border-color;
           background-color: $focus-prefix-back-color;
           color: $focus-prefix-text-color;
+        }
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      label:not(.option) {
+        color: $disabled-label-color;
+      }
+      .inputs {
+        input,
+        textarea,
+        select {
+          background-color: $disabled-back-color;
+          border-color: $disabled-border-color;
+          color: $disabled-text-color;
+          &::placeholder {
+            color: $disabled-placeholder-color;
+          }
+        }
+        .prefix,
+        .suffix {
+          border-color: $disabled-border-color;
+          background-color: $disabled-prefix-back-color;
+          color: $disabled-prefix-text-color;
+        }
+      }
+      .help {
+        color: $disabled-message-color;
+        &::before {
+          content: '✘ ';
         }
       }
     }

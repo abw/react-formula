@@ -10,6 +10,11 @@ const Checkbox = () =>
       name="one" label="A checkbox example"
       type="checkbox" text="I like badgers!"
     />
+    <Field
+      name="two" label="A checkbox example"
+      type="checkbox" text="I like badgers!"
+      prefix="!"
+    />
   </Form>
 
 export default Checkbox

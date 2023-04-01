@@ -11,6 +11,7 @@ export const FieldLayout = ({field}) => {
     fieldClass='field',
     validClass='valid',
     invalidClass='invalid',
+    disabledClass='disabled',
     focusClass='focus',
     Label=DefaultLabel,
     Message=DefaultMessage,
@@ -18,7 +19,7 @@ export const FieldLayout = ({field}) => {
   } = field
   let classes = propClasses(
     field,
-    { valid: validClass, invalid: invalidClass, focus: focusClass },
+    { valid: validClass, invalid: invalidClass, disabled: disabledClass, focus: focusClass },
     fieldClass, className
   )
 

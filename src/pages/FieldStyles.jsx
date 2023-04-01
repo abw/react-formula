@@ -61,6 +61,10 @@ const FieldStyles = () =>
       <h3>Field With Invalid Message</h3>
       <FieldLayout field={{...mockField, message: 'Something went wrong!', invalid: true }}/>
 
+      <h3>Disabled Field</h3>
+      <FieldLayout field={{...mockField, disabled: true, prefix: '£', message: 'Denied!' }}/>
+
+
     </form>
   </div>
 
