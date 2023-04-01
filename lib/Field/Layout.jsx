@@ -1,5 +1,6 @@
 import React from 'react'
 import DefaultLabel from './Label.jsx'
+import DefaultMessage from './Message.jsx'
 import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
 
@@ -12,6 +13,7 @@ export const FieldLayout = ({field}) => {
     invalidClass='invalid',
     focusClass='focus',
     Label=DefaultLabel,
+    Message=DefaultMessage,
     Input=InputTypes[type]||InputTypes.default
   } = field
   let classes = propClasses(
@@ -24,6 +26,7 @@ export const FieldLayout = ({field}) => {
     <div className={classes}>
       <Label field={field}/>
       <Input field={field}/>
+      <Message field={field}/>
     </div>
   )
 }

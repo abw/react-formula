@@ -44,6 +44,7 @@ const Sidebar = () =>
     <ul className="menu">
       <li><Link to="styling" text="Styling"/></li>
       <li><Link to="form-styles" text="Form Styles"/></li>
+      <li><Link to="field-styles" text="Field Styles"/></li>
       <li><Link to="sass-variables" text="SASS Variables"/></li>
     </ul>
   </>

@@ -86,7 +86,9 @@ $valid-prefix-back-color:   hsl($valid-hue, 30%, 85%) !default;
 // Text color for prefix/suffix elements in valid fields.
 $valid-prefix-text-color:   hsl($valid-hue, 70%, 20%) !default;
 // Color for input placeholder text in valid fields.
-$valid-placeholder-color:   hsl($valid-hue, 50%, 70%) !default;
+$valid-placeholder-color:   hsl($valid-hue, 40%, 60%) !default;
+// Successful validation message displayed under field input
+$valid-message-color:       hsl($valid-hue, 60%, 40%) !default;
 
 /* Invalid Field State */
 // Color for labels in invalid fields.
@@ -103,9 +105,10 @@ $invalid-prefix-back-color: hsl($invalid-hue, 30%, 85%) !default;
 $invalid-prefix-text-color: hsl($invalid-hue, 70%, 20%) !default;
 // Color for input placeholder text in invalid fields.
 $invalid-placeholder-color: hsl($invalid-hue, 50%, 70%) !default;
+// Error message displayed under field input
+$invalid-message-color:     hsl($invalid-hue, 70%, 50%) !default;
 
 /* Other Colors */
 // Accent color for checkboxes, radio buttons, range sliders, etc., based on
 // the brand hue.
 $accent-color:              hsl($brand-hue, 60%, 50%) !default;
-

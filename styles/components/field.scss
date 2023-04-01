@@ -45,7 +45,6 @@ form.formula {
     }
     .inputs {
       display: flex;
-      /* width: 100%; */
       &.radio {
         flex-wrap: wrap;
       }
@@ -53,7 +52,6 @@ form.formula {
       textarea,
       select {
         transition: 0.3s all;
-        /* width: 100%; */
         font-size: 1em;
         font-weight: normal;
         font-style: normal;
@@ -62,7 +60,6 @@ form.formula {
         border-radius: 4px;
         outline: none !important;
         flex-basis: 100%;
-        /* avoid overflow: https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container */
         min-width: 0;
         color: $input-text-color;
         border: 1px solid $input-border-color;
@@ -71,11 +68,6 @@ form.formula {
           color: $input-placeholder-color;
           font-weight: 300;
         }
-      }
-      input,
-      select {
-        line-height: 1;
-        padding: 0.25em 0.5em;
       }
       textarea {
         /* font-size: 1em; */
@@ -149,8 +141,39 @@ form.formula {
       input[type=range] {
         accent-color: $accent-color;
       }
+      input[type=color] {
+        padding: 0;
+      }
+    }
+    .help {
+      transition: 0.3s all;
+      display: block;
+      font-size: 0.8em;
+      margin-right: 0.5em;
+      white-space: nowrap;
+      color: $label-color;
+    }
+    &.thin {
+      .inputs {
+        input,
+        textarea,
+        select {
+          flex-basis: auto;
+        }
+      }
+      .radio label.option,
+      .checkbox label.option {
+        width: 100%;
+      }
     }
     &.wide {
+      .inputs {
+        input,
+        textarea,
+        select {
+          flex-basis: 100%;
+        }
+      }
       .radio label.option,
       .checkbox label.option {
         width: 100%;
@@ -160,6 +183,7 @@ form.formula {
       .inputs .option {
         border: none;
         background-color: transparent;
+        padding-left: 0;
         &:hover {
           background-color: transparent;
           color: $focus-text-color;
@@ -189,6 +213,12 @@ form.formula {
           color: $valid-prefix-text-color;
         }
       }
+      .help {
+        color: $valid-message-color;
+        &::before {
+          content: '✔︎ ';
+        }
+      }
     }
     &.invalid {
       label:not(.option) {
@@ -211,6 +241,12 @@ form.formula {
           border-color: $invalid-border-color;
           background-color: $invalid-prefix-back-color;
           color: $invalid-prefix-text-color;
+        }
+      }
+      .help {
+        color: $invalid-message-color;
+        &::before {
+          content: '✘ ';
         }
       }
     }

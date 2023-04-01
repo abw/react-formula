@@ -4,12 +4,13 @@ import { Form, Field } from '../../lib/index.js'
 {/* START */}
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const Radio = () =>
+const CheckboxBare = () =>
   <Form>
     <Field
-      name="animal" label="What is your favourite animal?" type="radio"
-      options={[ 'Badger', 'Ferret', 'Stoat' ]}
+      name="badger" label="A bare checkbox"
+      type="checkbox" text="I really, really like badgers!"
+      className="bare"
     />
   </Form>
 
-export default Radio
+export default CheckboxBare

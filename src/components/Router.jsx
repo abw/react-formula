@@ -21,6 +21,7 @@ import Submit from '../pages/Submit.jsx'
 import Reset from '../pages/Reset.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
 import Complete from '../pages/Complete.jsx'
+import FieldStyles from '../pages/FieldStyles.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ const Router = createBrowserRouter([
       { path: 'custom-components',  element: <CustomComponents/> },
       { path: 'styling',            element: <Styling/> },
       { path: 'form-styles',        element: <FormStyles/> },
+      { path: 'field-styles',       element: <FieldStyles/> },
       { path: 'sass-variables',     element: <SASSVariables/> },
     ]
   },

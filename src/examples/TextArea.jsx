@@ -16,7 +16,9 @@ const TextAreaExample = () =>
     />
     <Field
       type="textarea" name="three"
-      label="Text area with placeholder" placeholder="Type here"
+      label="Thin text area with placeholder"
+      placeholder="Type here"
+      className="thin"
     />
     <Debug/>
   </Form>
