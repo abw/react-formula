@@ -16,6 +16,7 @@ const Sidebar = () =>
       <li><Link to="fields" text="Adding Multiple Fields"/></li>
       <li><Link to="submit" text="Submitting the Form *"/></li>
       <li><Link to="reset"  text="Resetting the Form *"/></li>
+      <li><Link to="debug"  text="Debugging"/></li>
       <li><Link to="complete" text="Complete Example"/></li>
     </ul>
 
@@ -33,6 +34,12 @@ const Sidebar = () =>
     <ul className="menu">
       <li><Link to="required-optional" text="Required and Optional Tags"/></li>
       <li><Link to="prefix-suffix" text="Prefix and Suffix"/></li>
+    </ul>
+
+    <h4>Preparation and Validation</h4>
+    <ul className="menu">
+      <li><Link to="prepare-value" text="Preparing Values"/></li>
+      <li><Link to="validate-field" text="Validating Fields"/></li>
     </ul>
 
     <h4>Customising</h4>

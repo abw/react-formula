@@ -22,6 +22,9 @@ import Reset from '../pages/Reset.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
 import Complete from '../pages/Complete.jsx'
 import FieldStyles from '../pages/FieldStyles.jsx'
+import PrepareValue from '../pages/PrepareValue.jsx'
+import Debug from '../pages/Debug.jsx'
+import ValidateField from '../pages/ValidateField.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -31,11 +34,12 @@ const Router = createBrowserRouter([
       { path: '/',                  element: <Home/> },
       { path: 'getting-started',    element: <GettingStarted/> },
       { path: 'simple',             element: <Simple/> },
-      { path: 'complete',           element: <Complete/> },
       { path: 'schema',             element: <Schema/> },
       { path: 'fields',             element: <Fields/> },
       { path: 'submit',             element: <Submit/> },
       { path: 'reset',              element: <Reset/> },
+      { path: 'debug',              element: <Debug/> },
+      { path: 'complete',           element: <Complete/> },
       { path: 'text',               element: <Text/> },
       { path: 'textarea',           element: <TextArea/> },
       { path: 'number',             element: <Number/> },
@@ -44,6 +48,8 @@ const Router = createBrowserRouter([
       { path: 'select',             element: <Select/> },
       { path: 'required-optional',  element: <RequiredOptional/> },
       { path: 'prefix-suffix',      element: <PrefixSuffix/> },
+      { path: 'prepare-value',      element: <PrepareValue/> },
+      { path: 'validate-field',     element: <ValidateField/> },
       { path: 'custom-components',  element: <CustomComponents/> },
       { path: 'styling',            element: <Styling/> },
       { path: 'form-styles',        element: <FormStyles/> },
