@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { INVALID, VALID, VALIDATED, VALIDATING } from '../../lib/Constants.jsx'
+import { INVALID, RESET, SET_FIELD, VALID, VALIDATED, VALIDATING } from '../../lib/Constants.jsx'
 import { formReducer } from '../../lib/Form/Reducer.jsx'
 
 describe(
@@ -28,6 +28,42 @@ describe(
       () => expect(
         formReducer({ }, { type: VALIDATED })
       ).toStrictEqual({ validating: false })
+    )
+    it(
+      'set_field',
+      () => expect(
+        formReducer(
+          {
+            values: { x: 20 },
+            fields: { x: { value: 'blah' }, y: { value: 10 } },
+          },
+          { type: SET_FIELD, name: 'x', state: { focus: true } })
+      ).toStrictEqual(
+        {
+          values: { x: 20 },
+          fields: { x: { value: 'blah', focus: true }, y: { value: 10 } },
+        }
+      )
+    ),
+    it(
+      'reset',
+      () => expect(
+        formReducer(
+          {
+            values: { x: 20 },
+            fields: { x: 'blah' },
+            initialValues: { x: 10 },
+            initialFields: { x: 'foo', y: 'bar', z: 'baz' }
+          },
+          { type: RESET })
+      ).toStrictEqual(
+        {
+          values: { x: 10 },
+          fields: { },
+          initialValues: { x: 10 },
+          initialFields: { x: 'foo', y: 'bar', z: 'baz' }
+        }
+      )
     )
     // TODO: SET, RESET, USE_FIELD
   }
