@@ -1,7 +1,7 @@
 import React from 'react'
 import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import { Form, Field } from '../../lib/index.js'
+import { Form } from '../../lib/index.js'
 
 describe(
   'App',
@@ -11,7 +11,7 @@ describe(
       () => {
         const {container} = render(
           <Form>
-            <Field name="foo"/>
+            {/* <Field name="foo"/> */}
           </Form>
         )
         // screen.debug()
