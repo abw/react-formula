@@ -3,6 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './test/setup.js',
+    include: ['test/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    exclude: ['test/setup.js']
+  },
   build: {
     minify: true,
     sourcemap: false,
