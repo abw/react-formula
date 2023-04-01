@@ -1,3 +1,5 @@
+import { useId } from 'react'
+
 export const prepareForm = form => {
   // The form can be passed a large set of fields, not all of which may be
   // used in the form.  We store them in initialFields and migrate them into
@@ -6,9 +8,10 @@ export const prepareForm = form => {
   // relate to fields that are used in the form (e.g. a record id that must
   // be sent with the submission request).  We store the initial values in
   // initialValues in case we need to reset the form and restore them.
-  const { fields={}, values={} } = form
+  const { id, fields={}, values={} } = form
   return {
     ...form,
+    id: id || useId(),
     fields: { },
     values: { ...values },
     initialFields: fields,

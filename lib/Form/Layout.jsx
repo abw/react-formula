@@ -1,9 +1,10 @@
 import React from 'react'
 import { FORMULA, INVALID, SAVING, VALID, VALIDATING } from '../Constants.jsx'
 import { formAttrs, propClasses } from '../Utils.js'
+import useForm from './useForm.jsx'
 
-export const Layout = ({form, children}) => {
-  // const form = useForm()     // Hmm... why doesn't this work?
+export const Layout = ({children}) => {
+  const form = useForm()
   const {
     className       = FORMULA,
     validClass      = VALID,

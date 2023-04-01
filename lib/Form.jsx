@@ -1,8 +1,6 @@
 import React from 'react'
-import Context from './Context.jsx'
-import State from './State.jsx'
+import formContext from './Form/Context.jsx'
 import DefaultLayout from './Form/Layout.jsx'
-import { useId } from 'react'
 
 export const Form = ({
   render,
@@ -10,15 +8,16 @@ export const Form = ({
   Layout=DefaultLayout,
   ...props
 }) => {
-  props.id ||= useId()
-  const form = State(props)
+  const { Provider, state } = formContext(props)
   return (
-    <Context.Provider value={form}>
+    <Provider>
       { render
-        ? render(form)
-        : <Layout form={form}>{children}</Layout>
+        ? render(state)
+        : <Layout>
+            {children}
+          </Layout>
       }
-    </Context.Provider>
+    </Provider>
   )
 }
 
