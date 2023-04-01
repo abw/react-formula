@@ -7,6 +7,7 @@ const Sidebar = () =>
     <ul className="menu">
       <li><Link to="/" end text="Home"/></li>
       <li><Link to="getting-started" text="Getting Started"/></li>
+      <li><Link to="why" text="Why Does This Exist?"/></li>
     </ul>
 
     <h4>Examples</h4>

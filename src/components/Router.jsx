@@ -25,6 +25,8 @@ import FieldStyles from '../pages/FieldStyles.jsx'
 import PrepareValue from '../pages/PrepareValue.jsx'
 import Debug from '../pages/Debug.jsx'
 import ValidateField from '../pages/ValidateField.jsx'
+import TestForm from '../test/Form.jsx'
+import Why from '../pages/Why.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -33,6 +35,7 @@ const Router = createBrowserRouter([
     children: [
       { path: '/',                  element: <Home/> },
       { path: 'getting-started',    element: <GettingStarted/> },
+      { path: 'why',                element: <Why/> },
       { path: 'simple',             element: <Simple/> },
       { path: 'schema',             element: <Schema/> },
       { path: 'fields',             element: <Fields/> },
@@ -55,6 +58,7 @@ const Router = createBrowserRouter([
       { path: 'form-styles',        element: <FormStyles/> },
       { path: 'field-styles',       element: <FieldStyles/> },
       { path: 'sass-variables',     element: <SASSVariables/> },
+      { path: 'test-form',          element: <TestForm/> },
     ]
   },
 ])

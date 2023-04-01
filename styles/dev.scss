@@ -47,9 +47,6 @@ h3 {
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
-.home {
-  // padding: 2rem;
-}
 p.intro {
   font-size: 1.25em;
 }
@@ -62,6 +59,23 @@ p.subintro {
   gap: 2rem;
   img {
     margin-top: 1rem;
+  }
+  & > div.blurb {
+    padding-right: 2rem;
+  }
+}
+.badger {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  img {
+    width: 100px;
+  }
+  .caption {
+    padding: 0.5rem 0;
   }
 }
 
@@ -107,9 +121,11 @@ p.subintro {
     }
   }
   main {
+    position: relative;
     flex-basis: 0;
     flex-grow: 999;
     padding: 2rem;
+    padding-bottom: 200px;
     background-color: rgba(#fff, 0.7);
     h1:first-child {
       line-height: 1;
@@ -125,6 +141,10 @@ a {
   &:hover {
     color: hsl($dev-hue, 90%, 30%);
   }
+}
+
+ul.menu.large {
+  font-size: 1.25rem;
 }
 
 li {
@@ -182,6 +202,11 @@ table.sass-vars {
   color: hsl($note-hue, 80%, 20%);
   padding: 1em;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+}
+.caption {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 button {
@@ -262,4 +287,18 @@ form.formula div.field label.option {
   &.violet input[type=radio] {
     accent-color: violet;
   }
+}
+
+form.debug {
+  border: 1px solid grey;
+  padding: 1rem;
+}
+form.debug.validating {
+  border: 1px solid blue;
+}
+form.debug.valid {
+  border: 1px solid green;
+}
+form.debug.invalid {
+  border: 1px solid red;
 }
