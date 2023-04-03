@@ -1,3 +1,4 @@
+// DEPRECATED (or will be soon)
 import { useId } from 'react'
 import { useState } from 'react'
 import { DEFAULT } from './Constants.jsx'

@@ -19,3 +19,5 @@
 ## Styling
 
 * thin/wide fields - be consistent and let it be set on form
+
+* prefix/suffix for checkboxes

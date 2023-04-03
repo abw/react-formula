@@ -2,6 +2,9 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from '../pages/Home.jsx'
+import GettingStarted from '../pages/GettingStarted.jsx'
+import Why from '../pages/Why.jsx'
+/*
 import Simple from '../pages/Simple.jsx'
 import Text from '../pages/Text.jsx'
 import TextArea from '../pages/TextArea.jsx'
@@ -16,7 +19,6 @@ import RequiredOptional from '../pages/RequiredOptional.jsx'
 import Styling from '../pages/Styling.jsx'
 import SASSVariables from '../pages/SASSVariables.jsx'
 import FormStyles from '../pages/FormStyles.jsx'
-import GettingStarted from '../pages/GettingStarted.jsx'
 import Submit from '../pages/Submit.jsx'
 import Reset from '../pages/Reset.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
@@ -25,8 +27,8 @@ import FieldStyles from '../pages/FieldStyles.jsx'
 import PrepareValue from '../pages/PrepareValue.jsx'
 import Debug from '../pages/Debug.jsx'
 import ValidateField from '../pages/ValidateField.jsx'
+*/
 import TestForm from '../test/Form.jsx'
-import Why from '../pages/Why.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -36,6 +38,7 @@ const Router = createBrowserRouter([
       { path: '/',                  element: <Home/> },
       { path: 'getting-started',    element: <GettingStarted/> },
       { path: 'why',                element: <Why/> },
+/*
       { path: 'simple',             element: <Simple/> },
       { path: 'schema',             element: <Schema/> },
       { path: 'fields',             element: <Fields/> },
@@ -58,6 +61,7 @@ const Router = createBrowserRouter([
       { path: 'form-styles',        element: <FormStyles/> },
       { path: 'field-styles',       element: <FieldStyles/> },
       { path: 'sass-variables',     element: <SASSVariables/> },
+*/
       { path: 'test-form',          element: <TestForm/> },
     ]
   },

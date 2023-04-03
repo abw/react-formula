@@ -1,4 +1,5 @@
-import useForm from './useForm.jsx'
+// DEPRECATED (or will be soon)
+import useForm from './Form/useForm.jsx'
 import { useState } from 'react'
 import { BLANK } from './Constants.jsx'
 import { passValue } from './Utils.js'
