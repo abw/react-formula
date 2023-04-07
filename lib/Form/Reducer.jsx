@@ -1,5 +1,5 @@
 import {
-  VALID, INVALID, VALIDATING, VALIDATED, SET, RESET, USE_FIELD, SET_FIELD
+  VALID, INVALID, VALIDATING, VALIDATED, RESET, USE_FIELD, SET_FIELD, SET_VALUES
 } from '../Constants.jsx'
 
 export function formReducer(state, action) {
@@ -12,6 +12,23 @@ export function formReducer(state, action) {
       return { ...state, valid: null, invalid: null, validating: true }
     case VALIDATED:
       return { ...state, validating: false }
+    case SET_VALUES:
+      return {
+        ...state,
+        changed: true,
+        values: {
+          ...state.values,
+          ...action.values
+        }
+      }
+    case RESET:
+      return {
+        ...state,
+        changed: false,
+        fields: { },
+        values: { ...state.initialValues }
+      }
+
     case USE_FIELD:
       return {
         ...state,
@@ -31,18 +48,7 @@ export function formReducer(state, action) {
           }
         }
       }
-    case SET:
-      // TODO
-      console.log('running SET action')
-      return {
-        ...state,
-        values: {
-          ...state.values,
-          ...action.values
-        }
-      }
-    case RESET:
-      return { ...state, fields: { }, values: { ...state.initialValues } }
+
     default:
       throw Error(`Invalid form reducer action: ${action.type}`)
   }

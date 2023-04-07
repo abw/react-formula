@@ -6,7 +6,7 @@ import Validate from '../../lib/Test/Validate.jsx'
 // import Field from '../../lib/Test/Field.jsx'
 import ValidateField from '../../lib/Test/ValidateField.jsx'
 import DebugField from '../../lib/Test/DebugField.jsx'
-//import SetField from '../../lib/Test/SetField.jsx'
+import SetField from '../../lib/Test/SetField.jsx'
 
 const fields = {
   foo: {
@@ -24,6 +24,8 @@ const TestForm = () =>
     <Form fields={fields} values={values} className="formula debug">
       <Validate/>
       <Field name="foo" help="This is some help">
+        <SetField/>
+        <SetField n={20}/>
         <ValidateField/>
         <DebugField/>
       </Field>

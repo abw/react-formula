@@ -17,10 +17,21 @@ export function fieldReducer(state, action) {
     case VALIDATED:
       return { ...state, validating: false }
     case SET:
-      console.log('fieldReducer SET:', action)
-      return { ...state, value: action.value }
+      return {
+        ...state,
+        value: action.value,
+        changed: true,
+        valid:   null,
+        invalid: null
+      }
     case RESET:
-      return { ...state, value: state.initialValue }
+      return {
+        ...state,
+        value: state.initialValue,
+        changed: false,
+        valid:   null,
+        invalid: null
+      }
     default:
       throw Error(`Invalid field reducer action: ${action.type}`)
   }

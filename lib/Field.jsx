@@ -11,7 +11,8 @@ export const Field = ({
   ...props
 }) => {
   const form  = useForm()
-  const field = form.useField(name, props)
+  const field = form.fieldSpec(name, props)
+  console.log(`field spec for ${name}:`, field)
   const { Provider, state } = fieldContext(field)
 
   /*
@@ -23,7 +24,6 @@ export const Field = ({
     [name, state]
     // [field.id]
   )
-  */
   useEffect(
     () => {
       form.registerField(name, state)
@@ -31,6 +31,7 @@ export const Field = ({
     [name]
     // [field.id]
   )
+  */
 
   return (
     <Provider>
@@ -46,25 +47,6 @@ export const Field = ({
       */}
     </Provider>
   )
-
-  //return <>FIELD: #{field.id}: {field.name}</>
-  /*
-  const { Provider, state } = form.useField(
-    name, props,
-    field => fieldContext(field)
-  )
-  console.log('got field state:', state);
-
-  if (! state) {
-    return null
-  }
-  // const field = form.useField(name, props)
-  const field = form.fieldSpec(name, props)
-  console.log('got field spec:', field);
-  // console.log('got Field: ', field)
-  const { Provider, state } = fieldContext(field)
-  console.log('got Field context state: ', state)
-  */
 
   /*
   useEffect(
