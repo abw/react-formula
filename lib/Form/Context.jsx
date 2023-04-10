@@ -6,7 +6,7 @@ import formHandlers from './Handlers.jsx'
 
 export const Context = createContext()
 
-export const formContext = form => {
+export function formContext(form) {
   console.log('%c running formContext', 'color:blue')
 
   const [state, dispatch] = useReducer(

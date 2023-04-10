@@ -11,16 +11,16 @@ import { addLazyFieldMetaState } from "./getters";
 import useConstantCallback from "./useConstantCallback";
 
 const all = fieldSubscriptionItems.reduce((result, key) => {
-  result[key] = true;
-  return result;
-}, {});
+  result[key] = true
+  return result
+}, {})
 
-const defaultFormat = (value, name) =>
-  value === undefined ? "" : value;
-const defaultParse = (value, name) =>
-  value === "" ? undefined : value;
+const defaultFormat = (value) =>
+  value === undefined ? '' : value
+const defaultParse = (value) =>
+  value === '' ? undefined : value
 
-const defaultIsEqual = (a, b) => a === b;
+const defaultIsEqual = (a, b) => a === b
 
 function useField( name, config ) {
   const {
@@ -31,8 +31,8 @@ function useField( name, config ) {
     subscription = all,
     type, validateFields, value: _value,
   } = config;
-  const form = useForm("useField");
-  const configRef = useLatest(config);
+  const form = useForm('useField')
+  const configRef = useLatest(config)
 
   // avoid using `state` const in any closures created inside `register`
   // because they would refer `state` from current execution context

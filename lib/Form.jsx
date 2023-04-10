@@ -8,11 +8,12 @@ export const Form = ({
   Layout=DefaultLayout,
   ...props
 }) => {
-  const { Provider, state } = formContext(props)
+  const { Provider, state, handlers } = formContext(props)
+
   return (
     <Provider>
       { render
-        ? render(state)
+        ? render({ state, handlers })
         : <Layout>
             {children}
           </Layout>

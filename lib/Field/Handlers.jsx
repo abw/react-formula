@@ -2,9 +2,10 @@ import { RESET, SET, VALIDATED, VALIDATING } from '../Constants.jsx'
 import { sleep } from '../Utils.js'
 
 // export const fieldHandlers = ({ dispatch, form }) => {
-export const fieldHandlers = ({ dispatch }) => {
+export const fieldHandlers = ({ state, dispatch, form }) => {
   const set = (value) => {
     // TODO: set form value
+    form.setValue(state.name, value)
     dispatch({ type: SET, value })
   }
   const reset = () => {

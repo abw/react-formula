@@ -9,6 +9,7 @@ export const prepareForm = form => {
   // be sent with the submission request).  We store the initial values in
   // initialValues in case we need to reset the form and restore them.
   const { id, fields={}, values={} } = form
+  console.log('%c running prepareForm()', 'color:rebeccapurple')
   return {
     ...form,
     id: id || useId(),

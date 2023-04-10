@@ -1,50 +1,42 @@
 // import React from 'react'
 import { useState } from 'react'
-import { BLANK, RESET, SET_VALUES, VALIDATED, VALIDATING } from '../Constants.jsx'
-import prepareField from '../Field/Prepare.jsx'
+import { ATTACH_FIELD, BLANK, DETACH_FIELD, RESET, SET_VALUES, VALIDATED, VALIDATING } from '../Constants.jsx'
+// import prepareField from '../Field/Prepare.jsx'
 import { sleep } from '../Utils.js'
+import { useId } from 'react'
+import prepareField from '../Field/Prepare.jsx'
 
-export const formHandlers = ({ state, dispatch }) => {
-  const [fields, setFields] = useState({ })
-
+export function formHandlers({ state, dispatch }) {
   console.log('%c ** regenerating formHandlers', 'color:red')
+  // const [fields, setFields] = useState({ })
+  let fields = { }
 
-  const attachField = (name, field) => {
-    console.log(`attachField(${name})`)
-    setFields({ ...fields, [name]: field })
-  }
+  // const activeFields = () => fields
 
-  const detachField = name => {
-    console.log(`detachField(${name})`)
-    setFields(
-      Object.entries(fields).reduce(
-        (newFields, [key, value]) => {
-          if (key !== name) {
-            newFields[key] = value
-          }
-          return newFields
-        },
-        [ ]
-      )
-    )
-  }
-
-  const fieldSpec = (name, spec={}) => {
-    //if (fields[name]) {
-    //  console.log('returning cached field:', fields[name])
-    //  return fields[name];
+  function fieldSpec(name, spec={}) {
+    //if (state.fields[name]) {
+    //  console.log(`returning cached field for ${name}:`, state.fields[name])
+    //  return state.fields[name]
     //}
     const { showRequired, showOptional } = state
-    const defaults = state.initialFields[name] || { }
-    const value    = state.initialValues[name] || { }
-    return {
+    // const defaults = state.fields[name] ?? state.initialFields[name] ?? { }
+    const defaults = state.fields[name] ?? state.initialFields[name] ?? { }
+    const value    = state.values[name] ?? state.initialValues[name]
+    const id       = defaults.id || useId()
+    const field    = prepareField({
+      id,
       name,
       value,
       showRequired,
       showOptional,
       ...defaults,
       ...spec
-    }
+    })
+    console.log(`fieldSpec(${name}):`, field)
+    //sleep(500).then(
+    //  () => dispatch({ type: ATTACH_FIELD, name, field })
+    //)
+    return field
     /*
     const field    = prepareField({
       name,
@@ -55,13 +47,82 @@ export const formHandlers = ({ state, dispatch }) => {
       ...spec
     })
     */
-    console.log(`fieldSpec(${name}): `, field)
-
+    // console.log(`fieldSpec(${name}): `, field)
     // setFields({ ...fields, [name]: field })
-    fields[name] = field
-    return field
   }
 
+  function attachField(name, field) {
+    console.log(`attachField(${name})`)
+    // DEBUGGING
+    sleep(500).then(
+      // () => dispatch({ type: ATTACH_FIELD, name, field })
+      // () => setFields({ ...fields, [name]: field })
+      () => fields = { ...fields, [name]: field }
+    )
+  }
+
+  function detachField(name) {
+    console.log(`detachField(${name})`)
+    const { [name]: _, ...newFields } = fields
+    // DEBUGGING
+    sleep(500).then(
+      // () => dispatch({ type: DETACH_FIELD, name })
+      // () => setFields(newFields)
+      () => fields = newFields
+      /*
+      () => setFields(
+        Object.entries(fields).reduce(
+          (newFields, [key, value]) => {
+            if (key !== name) {
+              newFields[key] = value
+            }
+            return newFields
+          },
+          [ ]
+        )
+      )
+      */
+    )
+  }
+
+  function setValues(values={}) {
+    console.log('setValues')
+    sleep(500).then(
+      () => dispatch({ type: SET_VALUES, values })
+    )
+  }
+
+  function setValue(name, value) {
+    setValues({ [name]: value })
+  }
+
+  function reset() {
+    dispatch({ type: RESET })
+  }
+
+  function validate() {
+    console.log('validate()')
+    // do stuff - this is just for testing
+    dispatch({ type: VALIDATING })
+    sleep(2000).then(
+      () => dispatch({ type: VALIDATED })
+    )
+  }
+
+
+  return {
+    // activeFields,
+    fieldSpec,
+    attachField,
+    detachField,
+    setValues,
+    setValue,
+    validate,
+    reset
+  }
+
+
+  /*
   const setValues = (values={}) => {
     dispatch({ type: SET_VALUES, values })
   }
@@ -70,18 +131,7 @@ export const formHandlers = ({ state, dispatch }) => {
     setValues({ [name]: value })
   }
 
-  const reset = () => {
-    dispatch({ type: RESET })
-  }
 
-
-  const validate = () => {
-    // do stuff - this is just for testing
-    dispatch({ type: VALIDATING })
-    sleep(2000).then(
-      () => dispatch({ type: VALIDATED })
-    )
-  }
 
   return {
     fieldSpec,
@@ -90,6 +140,7 @@ export const formHandlers = ({ state, dispatch }) => {
     reset,
     validate,
   }
+  */
 }
 
 export default formHandlers

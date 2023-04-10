@@ -1,5 +1,5 @@
 import {
-  VALID, INVALID, VALIDATING, VALIDATED, RESET, USE_FIELD, SET_FIELD, SET_VALUES
+  VALID, INVALID, VALIDATING, VALIDATED, RESET, ATTACH_FIELD, DETACH_FIELD, SET_FIELD, SET_VALUES
 } from '../Constants.jsx'
 
 export function formReducer(state, action) {
@@ -29,14 +29,23 @@ export function formReducer(state, action) {
         values: { ...state.initialValues }
       }
 
-    case USE_FIELD:
+    case ATTACH_FIELD:
       return {
         ...state,
         fields: {
           ...state.fields,
-          [action.name] : action.field
+          [action.name]: action.field
         }
       }
+
+    case DETACH_FIELD:
+      // eslint-disable-next-line no-case-declarations, no-unused-vars
+      const { [action.name]: _, ...fields } = state.fields
+      return {
+        ...state,
+        fields
+      }
+
     case SET_FIELD:
       return {
         ...state,

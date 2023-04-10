@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const formProvider = ({ Context, state, handlers }) => {
-  const FormProvider = ({children}) => {
+export function formProvider({ Context, state, handlers }) {
+  function FormProvider({children}) {
     const value = {
       ...state,
       ...handlers,

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import fieldContext from './Field/Context.jsx'
 import DefaultLayout from './Field/Layout.jsx'
 import useForm from './Form/useForm.jsx'
+import prepareField from './Field/Prepare.jsx'
 
 export const Field = ({
   name,
@@ -12,30 +13,15 @@ export const Field = ({
 }) => {
   const form  = useForm()
   const field = form.fieldSpec(name, props)
+  // const noob  = React.useRef(true)
   console.log(`field spec for ${name}:`, field)
-  const { Provider, state } = fieldContext(field)
-
-  /*
-  useEffect(
-    () => {
-      // form.attachField(name, state)
-      return () => form.detachField(name)
-    },
-    [name, state]
-    // [field.id]
-  )
-  useEffect(
-    () => {
-      form.registerField(name, state)
-    },
-    [name]
-    // [field.id]
-  )
-  */
+  const { Provider, state } = fieldContext(field, form)
 
   return (
     <Provider>
-      FIELD: #{field.id}: {field.name}
+      <div>
+        FIELD: #{field.id}: {field.name} is {field.value}
+      </div>
       {children}
       {/*
       { render

@@ -7,6 +7,8 @@ import Validate from '../../lib/Test/Validate.jsx'
 import ValidateField from '../../lib/Test/ValidateField.jsx'
 import DebugField from '../../lib/Test/DebugField.jsx'
 import SetField from '../../lib/Test/SetField.jsx'
+import Reset from '../../lib/Test/Reset.jsx'
+import SetValues from '../../lib/Test/SetValues.jsx'
 
 const fields = {
   foo: {
@@ -23,6 +25,8 @@ const TestForm = () =>
     <h1>Test Form</h1>
     <Form fields={fields} values={values} className="formula debug">
       <Validate/>
+      <SetValues/>
+      <Reset/>
       <Field name="foo" help="This is some help">
         <SetField/>
         <SetField n={20}/>

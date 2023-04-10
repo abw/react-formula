@@ -5,6 +5,8 @@ import useForm from './useForm.jsx'
 
 export const Layout = ({children}) => {
   const form = useForm()
+  console.log('form layout useForm: ', form)
+
   const {
     className       = FORMULA,
     validClass      = VALID,

@@ -9,7 +9,8 @@ export const Context = createContext()
 export const fieldContext = (field, form) => {
   const [state, dispatch] = useReducer(
     fieldReducer,
-    prepareField(field)
+    field
+    // prepareField(field)
   )
   const handlers = fieldHandlers({
     state,
