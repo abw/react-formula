@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@abw/react-context': ^2.0.1
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
   '@types/react': ^18.0.28
@@ -19,6 +20,7 @@ specifiers:
   yup: ^1.0.2
 
 dependencies:
+  '@abw/react-context': 2.0.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -39,6 +41,13 @@ devDependencies:
   yup: 1.0.2
 
 packages:
+
+  /@abw/react-context/2.0.1:
+    resolution: {integrity: sha512-TZW4lW7OMTECwozGUSK+OsQQysqwxGX/mX0wtfhtdUpagw0k9dZ9DFT4Sta9BSmMTUTJ92i5LS3rl3Rb4IhNRw==}
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /@adobe/css-tools/4.2.0:
     resolution: {integrity: sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==}

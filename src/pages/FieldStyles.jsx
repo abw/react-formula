@@ -1,5 +1,5 @@
 import React from 'react'
-import { FieldLayout } from '../../lib/index.js'
+import FieldLayout from '../../lib/Field/Layout.jsx'
 
 const mockField = {
   label: 'Example Label',

@@ -1,6 +1,6 @@
 import React from 'react'
 import Field from './Field.jsx'
-import { splitList } from '../Utils.js'
+import { splitList } from './Utils.js'
 
 export const Fields = ({ names, ...props }) =>
   <div>

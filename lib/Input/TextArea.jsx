@@ -1,6 +1,8 @@
 import React from 'react'
+import { useField } from '../Field/Context.js'
 
-export const TextAreaInput = ({field}) => {
+export const TextAreaInput = () => {
+  const field = useField()
   const {
     className='input',
     inputsClass='inputs',

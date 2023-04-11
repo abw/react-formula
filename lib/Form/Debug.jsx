@@ -1,5 +1,5 @@
 import React from 'react'
-import useForm from './useForm.jsx'
+import { useForm } from './Context.js'
 
 export const Debug = ({showValues=true, showForm=false }) => {
   const form   = useForm()

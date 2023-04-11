@@ -1,12 +1,11 @@
 import React from 'react'
 import { FORMULA, INVALID, SAVING, VALID, VALIDATING } from '../Constants.jsx'
 import { formAttrs, propClasses } from '../Utils.js'
-import useForm from './useForm.jsx'
+import { useForm } from './Context.js'
 
 export const Layout = ({children}) => {
   const form = useForm()
-  console.log('form layout useForm: ', form)
-
+  // console.log('form layout useForm: ', form)
   const {
     className       = FORMULA,
     validClass      = VALID,

@@ -3,8 +3,10 @@ import Handlers from './Handlers.js'
 import DefaultPrefix from '../Input/Prefix.jsx'
 import DefaultSuffix from '../Input/Suffix.jsx'
 import { inputAttrs, propClasses } from '../Utils.js'
+import { useField } from '../Field/Context.js'
 
-export const TextInput = ({field}) => {
+export const TextInput = () => {
+  const field = useField()
   const {
     type='text',
     inputClass='input',
@@ -35,6 +37,8 @@ export const TextInput = ({field}) => {
         type={type}
         aria-disabled={field.disabled}
         tabIndex={field.disabled ? -1 : field.tabIndex}
+        onFocus={field.onFocus}
+        onBlur={field.onBlur}
         onChange={handler(field)}
         {...attrs}
       />

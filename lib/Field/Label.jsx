@@ -1,11 +1,13 @@
 import React from 'react'
 import Optional from './Optional.jsx'
 import Required from './Required.jsx'
+import { useField } from './Context.js'
 
-export const Label = ({field}) => {
-  const { labelClass='', label, id, required, form } = field
-  const showRequired = (field.showRequired || form.showRequired) && required
-  const showOptional = (field.showOptional || form.showOptional) && ! required
+export const Label = () => {
+  const field = useField()
+  const { labelClass = '', label, id, required } = field
+  const showRequired = field.showRequired  && required
+  const showOptional = field.showOptional  && ! required
   const hasLabel     = label || showRequired || showOptional
 
   return hasLabel &&

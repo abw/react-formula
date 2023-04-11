@@ -3,8 +3,10 @@ import DefaultLabel from './Label.jsx'
 import DefaultMessage from './Message.jsx'
 import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
+import { useField } from './Context.js'
 
-export const FieldLayout = ({field}) => {
+export const FieldLayout = () => {
+  const field = useField()
   const {
     type,
     className='',
