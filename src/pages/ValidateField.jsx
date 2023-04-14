@@ -1,5 +1,5 @@
 import React from 'react'
-import Example from '../components/Example.jsx'
+import Example from '../site/Example.jsx'
 import Source from '../examples/ValidateField.jsx?raw'
 import Element from '../examples/ValidateField.jsx'
 

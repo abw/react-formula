@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Router from './components/Router.jsx'
+import Router from './site/Router.jsx'
 import { RouterProvider, } from 'react-router-dom'
 import '../styles/formula.scss'
 import '../styles/dev.scss'

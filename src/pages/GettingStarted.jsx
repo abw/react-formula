@@ -1,5 +1,5 @@
 import React from 'react'
-import CodeBlock from '../components/CodeBlock.jsx'
+import CodeBlock from '../site/CodeBlock.jsx'
 
 const GettingStarted = () =>
   <div>

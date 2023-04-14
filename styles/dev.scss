@@ -93,6 +93,8 @@ p.subintro {
     margin-right: 1rem;
     padding: 1rem;
     background-color: rgba(#fff, 0.4);
+    max-height: calc(100vh - 2rem);
+    overflow-y: scroll;
     h4 {
 
       margin-top: 0;
@@ -127,6 +129,8 @@ p.subintro {
     padding: 2rem;
     padding-bottom: 200px;
     background-color: rgba(#fff, 0.7);
+    max-height: calc(100vh - 2rem);
+    overflow-y: scroll;
     h1:first-child {
       line-height: 1;
       margin: 0 0 0.5em 0;
