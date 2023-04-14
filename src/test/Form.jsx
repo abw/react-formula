@@ -8,6 +8,11 @@ import Field from '../../lib/Field.jsx'
 // import ValidateField from '../../lib/Test/ValidateField.jsx'
 // import DebugField from '../../lib/Test/DebugField.jsx'
 import SetField from '../../lib/Test/SetField.jsx'
+import SetValid from '../../lib/Test/SetValid.jsx'
+import SetInvalid from '../../lib/Test/SetInvalid.jsx'
+import SetChanged from '../../lib/Test/SetChanged.jsx'
+import Changed from '../../lib/Form/Changed.jsx'
+import Reset from '../../lib/Control/Reset.jsx'
 // import Reset from '../../lib/Test/Reset.jsx'
 // import SetValues from '../../lib/Test/SetValues.jsx'
 
@@ -30,7 +35,13 @@ const TestForm = () =>
     <h1>Test Form</h1>
     <Form fields={fields} values={values} className="formula debug" debug={true}>
       FORM BODY
-      <Validate/>
+      <div>
+        <Validate/>
+        <SetValid/>
+        <SetInvalid/>
+        <SetChanged/>
+        <Reset/>
+      </div>
       {/*
       <Field name="foo" help="This is some help">
         <DebugField/>
@@ -43,6 +54,9 @@ const TestForm = () =>
         <SetField/>
         <SetField n={20}/>
       </Field>
+      <Changed>
+        Form has unsaved changes
+      </Changed>
       {/*
       <SetValues/>
       <Reset/>

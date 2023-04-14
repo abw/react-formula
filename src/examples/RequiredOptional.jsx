@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Fields } from '../../lib/index.js'
+import { Form, Fields, Field } from '../../lib/index.js'
 
 {/* START */}
 // PRETEND: import { Form, Field, Fields, Debug } from '@abw/react-formula'
@@ -20,7 +20,7 @@ const RequiredOptionalExample = () =>
     <Form fields={fields} showRequired={true}>
       <Fields names="field1 field2"/>
     </Form>
-
+  {/*
     <h3>showOptional</h3>
     <Form fields={fields} showOptional={true}>
       <Fields names="field1 field2"/>
@@ -39,6 +39,7 @@ const RequiredOptionalExample = () =>
     >
       <Fields names="field1 field2"/>
     </Form>
+  */}
   </>
 
 export default RequiredOptionalExample

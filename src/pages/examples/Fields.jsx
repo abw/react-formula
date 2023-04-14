@@ -1,6 +1,6 @@
 import React from 'react'
 import Example from '../../site/Example.jsx'
-import Source from '../examples/Fields.jsx?raw'
+import Source from '../../examples/Fields.jsx?raw'
 import Element from '../../examples/Fields.jsx'
 
 const Fields = () =>

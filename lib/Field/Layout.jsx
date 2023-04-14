@@ -5,8 +5,7 @@ import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
 import { useField } from './Context.js'
 
-export const FieldLayout = () => {
-  const field = useField()
+export const FieldLayout = ({ field=useField() }) => {
   const {
     type,
     className='',

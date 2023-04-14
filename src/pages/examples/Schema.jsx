@@ -1,6 +1,6 @@
 import React from 'react'
 import Example from '../../site/Example.jsx'
-import Source from '../examples/Schema.jsx?raw'
+import Source from '../../examples/Schema.jsx?raw'
 import Element from '../../examples/Schema.jsx'
 
 const Schema = () =>

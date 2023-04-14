@@ -41,6 +41,7 @@
     "yup": "^1.0.2"
   },
   "dependencies": {
-    "@abw/react-context": "^2.0.1"
+    "@abw/react-context": "^2.0.1",
+    "@abw/react-one-louder": "^0.0.5"
   }
 }

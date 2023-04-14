@@ -11,8 +11,9 @@ SyntaxHighlighter.registerLanguage('css', css)
 SyntaxHighlighter.registerLanguage('scss', scss)
 SyntaxHighlighter.registerLanguage('bash', bash)
 
-export const CodeBlock = ({children, language='jsx'}) =>
+export const CodeBlock = ({children, language='jsx', caption}) =>
   <div className="codeblock">
+    {Boolean(caption) && <h4 className="caption">{caption}</h4>}
     <SyntaxHighlighter language={language} style={darcula} showLineNumbers={true}>
       {children}
     </SyntaxHighlighter>

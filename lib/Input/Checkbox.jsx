@@ -3,8 +3,7 @@ import Handlers from './Handlers.js'
 import { inputAttrs } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
-export const CheckboxInput = () => {
-  const field = useField()
+export const CheckboxInput = ({ field=useField() }) => {
   const {
     id,
     text,

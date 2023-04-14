@@ -1,8 +1,6 @@
-import useForm from './useForm.jsx'
+import { Consumer } from './Context.js'
 
-export const Changed = ({ children }) => {
-  const form = useForm()
-  return form.changed && children
-}
+export const Changed = ({status, children}) =>
+  status.changed && children
 
-export default Changed
+export default Consumer(Changed)

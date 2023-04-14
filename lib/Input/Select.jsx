@@ -3,8 +3,7 @@ import Handlers from './Handlers.js'
 import { inputAttrs, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
-export const SelectInput = () => {
-  const field = useField()
+export const SelectInput = ({ field=useField() }) => {
   const {
     options=[],
     type='select',

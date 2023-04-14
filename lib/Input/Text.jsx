@@ -5,8 +5,7 @@ import DefaultSuffix from '../Input/Suffix.jsx'
 import { inputAttrs, propClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
-export const TextInput = () => {
-  const field = useField()
+export const TextInput = ({ field=useField() }) => {
   const {
     type='text',
     inputClass='input',

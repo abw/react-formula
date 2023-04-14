@@ -6,8 +6,7 @@ import GettingStarted from '../pages/GettingStarted.jsx'
 import Why from '../pages/Why.jsx'
 import Examples from '../pages/examples/index.jsx'
 import Inputs from '../pages/inputs/index.jsx'
-import PrefixSuffix from '../pages/PrefixSuffix.jsx'
-import RequiredOptional from '../pages/RequiredOptional.jsx'
+import Options from '../pages/options/index.jsx'
 import Styling from '../pages/styling/index.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
 import PrepareValue from '../pages/PrepareValue.jsx'
@@ -26,8 +25,7 @@ const Router = createBrowserRouter([
       { path: 'why',                element: <Why/> },
       { path: 'examples/*',         element: <Examples/> },
       { path: 'inputs/*',           element: <Inputs/> },
-      { path: 'required-optional',  element: <RequiredOptional/> },
-      { path: 'prefix-suffix',      element: <PrefixSuffix/> },
+      { path: 'options/*',          element: <Options/> },
       { path: 'prepare-value',      element: <PrepareValue/> },
       { path: 'validate-field',     element: <ValidateField/> },
       { path: 'custom-components',  element: <CustomComponents/> },

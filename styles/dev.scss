@@ -155,7 +155,7 @@ li {
   margin-bottom: 1rem;
 }
 
-code.code {
+p code, code.code {
   background-color: hsl($dev-hue, 30%, 95%);
   border: 1px solid hsl($dev-hue, 40%, 90%);
   color: hsl($dev-hue, 90%, 30%);
@@ -233,6 +233,23 @@ input + button {
 }
 textarea {
   font-family: inherit;
+}
+div.codeblock {
+  position: relative;
+  padding: 0;
+  pre {
+    margin: 0 !important;
+  }
+  h4.caption {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    color: white;
+  }
+
 }
 @media (prefers-color-scheme: light) {
   :root {

@@ -3,6 +3,11 @@ import Link from './Link.jsx'
 
 const Sidebar = () =>
   <>
+    <h4>Testing</h4>
+    <ul className="menu">
+      <li><Link to="/test-form" text="Test Form"/></li>
+    </ul>
+
     <h4>Overview</h4>
     <ul className="menu">
       <li><Link to="/" end text="Home"/></li>
@@ -31,10 +36,10 @@ const Sidebar = () =>
       <li><Link to="/inputs/select" text="Select Input"/></li>
     </ul>
 
-    <h4>Bling</h4>
+    <h4>Options</h4>
     <ul className="menu">
-      <li><Link to="required-optional" text="Required and Optional Tags"/></li>
-      <li><Link to="prefix-suffix" text="Prefix and Suffix"/></li>
+      <li><Link to="/options/required-optional" text="Required and Optional"/></li>
+      <li><Link to="/options/prefix-suffix" text="Prefix and Suffix"/></li>
     </ul>
 
     <h4>Preparation and Validation</h4>

@@ -1,7 +1,9 @@
 import React from 'react'
 import CodeBlock from './CodeBlock.jsx'
 
-export const Example = ({Element, code, children='', className=''}) => {
+export const Example = ({
+  Element, code, children='', className='', caption
+}) => {
   const core = code
     .replace(/^[^]*?{?\/\*\s*START\s*\*\/}?\n/, '')  // remove everything up to {/* START */}
     .replace(/[\n\s]*{?\/\*\s*END\s*\*\/}?[^]*/, '') // and everything from {/* END */} onwards
@@ -10,7 +12,7 @@ export const Example = ({Element, code, children='', className=''}) => {
   return <div className={`example ${className}`}>
     {children}
     <div className="mar-t-4">
-      <CodeBlock>{core}</CodeBlock>
+      <CodeBlock caption={caption}>{core}</CodeBlock>
     </div>
     { Element
       ? <div className="mar-t-4">

@@ -100,8 +100,8 @@ const CompleteExample = () =>
     <Field name="four"  type="color"    label="A color field"/>
     <Changed>
       <Reset text="Reset Form"/>
-      <Debug/>
     </Changed>
+    <Debug showForm={true}/>
   </Form>
 
 export default CompleteExample

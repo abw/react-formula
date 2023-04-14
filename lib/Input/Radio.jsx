@@ -3,8 +3,7 @@ import Handlers from './Handlers.js'
 import { inputAttrs, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
-export const RadioInput = () => {
-  const field = useField()
+export const RadioInput = ({ field=useField() }) => {
   const {
     options=[],
     type='radio',
