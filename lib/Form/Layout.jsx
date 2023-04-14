@@ -1,6 +1,7 @@
 import React from 'react'
 import { formAttrs, propClasses } from '../Utils.js'
 import { useForm } from './Context.js'
+import { INVALID, SUBMITTING, VALID, VALIDATING } from '../Constants.jsx'
 
 export const Layout = ({children}) => {
   const form = useForm()
@@ -11,15 +12,15 @@ export const Layout = ({children}) => {
     invalidClass,
     validatingClass,
     submittingClass,
-  } = form.options
+  } = form.config
 
   const classes = propClasses(
     form.status,
     {
-      valid:      validClass,
-      invalid:    invalidClass,
-      validating: validatingClass,
-      submitting: submittingClass
+      [VALID]:      validClass,
+      [INVALID]:    invalidClass,
+      [VALIDATING]: validatingClass,
+      [SUBMITTING]: submittingClass
     },
     className
   )

@@ -4,23 +4,32 @@ import DefaultMessage from './Message.jsx'
 import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
 import { useField } from './Context.js'
+import { DISABLED, FOCUS, INVALID, VALID } from '../Constants.jsx'
 
 export const FieldLayout = ({ field=useField() }) => {
   const {
-    type,
-    className='',
-    fieldClass='field',
-    validClass='valid',
-    invalidClass='invalid',
+    className,
+    fieldClass,
+    validClass,
+    invalidClass,
     disabledClass='disabled',
     focusClass='focus',
+  } = field.config
+  const {
+    type,
     Label=DefaultLabel,
     Message=DefaultMessage,
     Input=InputTypes[type]||InputTypes.default
   } = field
-  let classes = propClasses(
-    field,
-    { valid: validClass, invalid: invalidClass, disabled: disabledClass, focus: focusClass },
+
+  const classes = propClasses(
+    field.status,
+    {
+      [VALID]:    validClass,
+      [INVALID]:  invalidClass,
+      [DISABLED]: disabledClass,
+      [FOCUS]:    focusClass,
+    },
     fieldClass, className
   )
 

@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import { BLANK } from '../Constants.jsx'
 
 export const prepareField = field => {
   // The form can be passed a large set of fields, not all of which may be
@@ -12,7 +13,7 @@ export const prepareField = field => {
   return {
     ...field,
     id: id || useId(),
-    value: value ?? field.default,
+    value: value ?? field.default ?? BLANK,
   }
 }
 

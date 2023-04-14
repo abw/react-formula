@@ -11,7 +11,7 @@ export const Example = ({
 
   return <div className={`example ${className}`}>
     {children}
-    <div className="mar-t-4">
+    <div className="mar-t-2">
       <CodeBlock caption={caption}>{core}</CodeBlock>
     </div>
     { Element
