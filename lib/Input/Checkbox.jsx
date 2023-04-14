@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs } from '../Utils.js'
+import { inputAttrs, propClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
 export const CheckboxInput = ({ field=useField() }) => {
@@ -11,13 +11,20 @@ export const CheckboxInput = ({ field=useField() }) => {
     inputClass='input',
     inputsClass='checkbox inputs',
     optionClass='option',
+    checkedClass='checked',
     handler=Handlers[type]||Handlers.default
   } = field
-  const attrs = inputAttrs(field)
+  const attrs   = inputAttrs(field)
+  const checked = field.value
+  const classes = propClasses(
+    { checked },
+    { checked: checkedClass },
+    optionClass
+  )
 
   return (
     <div className={inputsClass}>
-      <label htmlFor={id} className={optionClass}>
+      <label htmlFor={id} className={classes}>
         <input
           className={inputClass}
           type={type}

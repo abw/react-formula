@@ -65,6 +65,10 @@ $focus-label-color:         hsl($focus-hue, $label-saturation, 30%) !default;
 $focus-back-color:          hsl($focus-hue, 60%, 98%) !default;
 // Border color for inputs in focussed fields.
 $focus-border-color:        hsl($focus-hue, 60%, 70%) !default;
+// Border color for inputs in focussed fields.
+$focus-ring-color:          hsl($focus-hue, 70%, 85%) !default;
+// Color of gap between border and ring.
+$focus-gap-color:           hsl($focus-hue, 10%, 95%) !default;
 // Text color for inputs in focussed fields.
 $focus-text-color:          hsl($focus-hue, 60%, 20%) !default;
 // Background color for prefix/suffix elements in focussed fields.

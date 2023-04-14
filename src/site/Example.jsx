@@ -15,7 +15,7 @@ export const Example = ({
       <CodeBlock caption={caption}>{core}</CodeBlock>
     </div>
     { Element
-      ? <div className="mar-t-4">
+      ? <div className="mar-t-2">
           <Element/>
         </div>
       : null

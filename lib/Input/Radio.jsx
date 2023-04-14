@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs, valueOption } from '../Utils.js'
+import { inputAttrs, propClasses, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 
 export const RadioInput = ({ field=useField() }) => {
@@ -10,6 +10,7 @@ export const RadioInput = ({ field=useField() }) => {
     inputClass='input',
     inputsClass='radio inputs',
     optionClass='option',
+    checkedClass='checked',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
@@ -21,8 +22,13 @@ export const RadioInput = ({ field=useField() }) => {
           option = valueOption(option)
           const id = `${field.id}-${option.value}`
           const checked = field.value == option.value
+          const classes = propClasses(
+            { checked },
+            { checked: checkedClass },
+            optionClass, option.className
+          )
           return (
-            <label key={option.value} htmlFor={id} className={`${optionClass} ${option.className||''}`}>
+            <label key={option.value} htmlFor={id} className={classes}>
               <input
                 className={inputClass}
                 type={type}

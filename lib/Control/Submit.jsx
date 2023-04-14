@@ -13,7 +13,7 @@ const Submit = ({
   return (
     <Button
       type={type}
-      onClick={() => submit}
+      onClick={submit}
       text={text}
       {...props}
     />

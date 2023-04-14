@@ -26,6 +26,11 @@ const Sidebar = () =>
       <li><Link to="/examples/complete" text="Complete Example"/></li>
     </ul>
 
+    <h4>Field</h4>
+    <ul className="menu">
+      <li><Link to="/field/focus-blur" text="Focus and Blur"/></li>
+    </ul>
+
     <h4>Input Types</h4>
     <ul className="menu">
       <li><Link to="/inputs/text" text="Text"/></li>

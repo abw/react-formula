@@ -57,7 +57,7 @@ form.formula {
         font-style: normal;
         line-height: 1;
         padding: 0.25em 0.5em;
-        border-radius: 4px;
+        border-radius: $field-border-radius;
         outline: none !important;
         flex-basis: 100%;
         min-width: 0;
@@ -91,14 +91,16 @@ form.formula {
       }
       .prefix,
       .suffix {
+        transition: 0.3s all;
         font-size: 1em;
         line-height: 1;
         padding: 0.25em 0.5em;
-        border-radius: 4px;
+        border-radius: $field-border-radius;
         border: 1px solid $input-border-color;
         background-color: $input-prefix-back-color;
         color: $input-prefix-text-color;
         user-select: none;
+        z-index: 99;
       }
       .prefix {
         border-right: 0;
@@ -114,7 +116,7 @@ form.formula {
         font-size: 1em;
         line-height: 1;
         padding: 0.25em;
-        border-radius: 4px;
+        border-radius: $field-border-radius;
         color: $input-text-color;
         border: 1px solid $input-border-color;
         background-color: $input-back-color;
@@ -256,6 +258,23 @@ form.formula {
         color: $focus-label-color;
       }
       .inputs {
+        &:not(.prefixed):not(.suffixed) {
+          input:not([type=checkbox]):not([type=radio]),
+          textarea,
+          select,
+          &.radio label.checked,
+          &.checkbox label {
+            box-shadow:
+              0 0 0 $field-ring-gap $focus-gap-color,
+              0 0 0 $field-ring-width $focus-ring-color;
+          }
+        }
+        &.prefixed, &.suffixed {
+          border-radius: $field-border-radius;
+          box-shadow:
+            0 0 0 $field-ring-gap $focus-gap-color,
+            0 0 0 $field-ring-width $focus-ring-color;
+        }
         input,
         textarea,
         select {
