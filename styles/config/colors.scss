@@ -85,6 +85,10 @@ $valid-label-color:         hsl($valid-hue, $label-saturation, 30%) !default;
 $valid-back-color:          hsl($valid-hue, 30%, 97%) !default;
 // Border color for inputs in valid fields.
 $valid-border-color:        hsl($valid-hue, 40%, 50%) !default;
+// Border color for valid inputs in focussed fields.
+$valid-ring-color:          hsl($valid-hue, 60%, 75%) !default;
+// Color of gap between border and ring.
+$valid-gap-color:           hsl($valid-hue, 10%, 95%) !default;
 // Text color for inputs in valid fields.
 $valid-text-color:          hsl($valid-hue, 50%, 30%) !default;
 // Background color for prefix/suffix elements in valid fields.
@@ -103,6 +107,11 @@ $invalid-label-color:       hsl($invalid-hue, $label-saturation, 30%) !default;
 $invalid-back-color:        hsl($invalid-hue, 60%, 96%) !default;
 // Border color for inputs in invalid fields.
 $invalid-border-color:      hsl($invalid-hue, 60%, 70%) !default;
+// Border color for invalid inputs in focussed fields.
+$invalid-ring-color:        hsl($invalid-hue, 70%, 85%) !default;
+// Color of gap between border and ring.
+$invalid-gap-color:         hsl($invalid-hue, 10%, 95%) !default;
+// Text color for inputs in valid fields.
 // Text color for inputs in invalid fields.
 $invalid-text-color:        hsl($invalid-hue, 50%, 30%) !default;
 // Background color for prefix/suffix elements in invalid fields.

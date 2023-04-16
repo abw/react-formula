@@ -12,6 +12,7 @@ form.formula {
         display: block;
         font-size: 0.8em;
         margin-right: 0.5em;
+        margin-bottom: $label-margin;
         // margin-right: $option-margin;
         white-space: nowrap;
         color: $label-color;
@@ -153,6 +154,7 @@ form.formula {
       display: block;
       font-size: 0.8em;
       margin-right: 0.5em;
+      margin-top: $message-margin;
       white-space: nowrap;
       color: $label-color;
     }
@@ -255,45 +257,87 @@ form.formula {
       }
     }
     &.focus {
-      label:not(.option) {
-        color: $focus-label-color;
-      }
-      .inputs {
-        &:not(.prefixed):not(.suffixed) {
-          input:not([type=checkbox]):not([type=radio]),
-          textarea,
-          select,
-          &.radio label.checked,
-          &.checkbox label {
+      &:not(.invalid):not(.valid) {
+        label:not(.option) {
+          color: $focus-label-color;
+        }
+        .inputs {
+          &:not(.prefixed):not(.suffixed) {
+            input:not([type=checkbox]):not([type=radio]),
+            textarea,
+            select,
+            &.radio label.checked,
+            &.checkbox label {
+              box-shadow:
+                0 0 0 $input-ring-gap $focus-gap-color,
+                0 0 0 $input-ring-width $focus-ring-color;
+            }
+          }
+          &.prefixed, &.suffixed {
+            border-radius: $input-border-radius;
             box-shadow:
               0 0 0 $input-ring-gap $focus-gap-color,
               0 0 0 $input-ring-width $focus-ring-color;
           }
-        }
-        &.prefixed, &.suffixed {
-          border-radius: $input-border-radius;
-          box-shadow:
-            0 0 0 $input-ring-gap $focus-gap-color,
-            0 0 0 $input-ring-width $focus-ring-color;
-        }
-        input,
-        textarea,
-        select,
-        &.radio label.checked,
-        &.checkbox label {
-          background-color: $focus-back-color;
-          border-color: $focus-border-color;
-          color: $focus-text-color;
-          &::placeholder {
-            color: $focus-placeholder-color;
-            font-weight: 300;
+          input,
+          textarea,
+          select,
+          &.radio label.checked,
+          &.checkbox label {
+            background-color: $focus-back-color;
+            border-color: $focus-border-color;
+            color: $focus-text-color;
+            &::placeholder {
+              color: $focus-placeholder-color;
+              font-weight: 300;
+            }
+          }
+          .prefix,
+          .suffix {
+            border-color: $focus-border-color;
+            background-color: $focus-prefix-back-color;
+            color: $focus-prefix-text-color;
           }
         }
-        .prefix,
-        .suffix {
-          border-color: $focus-border-color;
-          background-color: $focus-prefix-back-color;
-          color: $focus-prefix-text-color;
+      }
+      &.invalid {
+        .inputs {
+          &:not(.prefixed):not(.suffixed) {
+            input:not([type=checkbox]):not([type=radio]),
+            textarea,
+            select,
+            &.radio label.checked,
+            &.checkbox label {
+              box-shadow:
+                0 0 0 $input-ring-gap $invalid-gap-color,
+                0 0 0 $input-ring-width $invalid-ring-color;
+            }
+          }
+          &.prefixed, &.suffixed {
+            box-shadow:
+              0 0 0 $input-ring-gap $invalid-gap-color,
+              0 0 0 $input-ring-width $invalid-ring-color;
+          }
+        }
+      }
+      &.valid {
+        .inputs {
+          &:not(.prefixed):not(.suffixed) {
+            input:not([type=checkbox]):not([type=radio]),
+            textarea,
+            select,
+            &.radio label.checked,
+            &.checkbox label {
+              box-shadow:
+                0 0 0 $input-ring-gap $valid-gap-color,
+                0 0 0 $input-ring-width $valid-ring-color;
+            }
+          }
+          &.prefixed, &.suffixed {
+            box-shadow:
+              0 0 0 $input-ring-gap $valid-gap-color,
+              0 0 0 $input-ring-width $valid-ring-color;
+          }
         }
       }
     }

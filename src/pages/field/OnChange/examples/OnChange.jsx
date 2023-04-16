@@ -11,6 +11,8 @@ const OnChangeExample = () => {
       <Field
         name="blur-field" label="Field with onChange"
         onChange={field => setValue(field.value)}
+        validateOnChange={true}
+        minValidateLength={3}
       />
       Current value: {value}
     </Form>
