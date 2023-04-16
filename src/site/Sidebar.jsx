@@ -28,6 +28,8 @@ const Sidebar = () =>
 
     <h4>Field</h4>
     <ul className="menu">
+      <li><Link to="/field/required-optional" text="Required and Optional"/></li>
+      <li><Link to="/field/prefix-suffix" text="Prefix and Suffix"/></li>
       <li><Link to="/field/focus-blur" text="Focus and Blur"/></li>
     </ul>
 
@@ -41,11 +43,11 @@ const Sidebar = () =>
       <li><Link to="/inputs/select" text="Select Input"/></li>
     </ul>
 
+    {/*
     <h4>Options</h4>
     <ul className="menu">
-      <li><Link to="/options/required-optional" text="Required and Optional"/></li>
-      <li><Link to="/options/prefix-suffix" text="Prefix and Suffix"/></li>
     </ul>
+    */}
 
     <h4>Preparation and Validation</h4>
     <ul className="menu">
