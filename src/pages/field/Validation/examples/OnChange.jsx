@@ -11,13 +11,13 @@ const fields = {
     help:  'Enter between 3 and 5 vowels',
     validateOnChange: true,
     minValidateLength: 3,
-    // required: true,
     validate: value => yup
       .string()
       .trim()
+      .matches(/^[^y]*$/i, 'Sorry, but y is not allowed')
       .matches(/^[aeiou]*$/i, 'You should only type vowels')
       .min(3, 'You must enter at least three vowels')
-      .max(5, 'You should not enter more than 5')
+      .max(5, 'You should not enter more than 5 vowels')
       .validate(value)
   }
 }

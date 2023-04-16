@@ -82,6 +82,9 @@ form.formula {
         vertical-align: middle;
         /* height: calc(1.5em + 2px); */
       }
+      &.prefixed, &.suffixed {
+        border-radius: $input-border-radius;
+      }
       &.prefixed input {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -274,7 +277,7 @@ form.formula {
             }
           }
           &.prefixed, &.suffixed {
-            border-radius: $input-border-radius;
+            // border-radius: $input-border-radius;
             box-shadow:
               0 0 0 $input-ring-gap $focus-gap-color,
               0 0 0 $input-ring-width $focus-ring-color;
@@ -314,6 +317,7 @@ form.formula {
             }
           }
           &.prefixed, &.suffixed {
+            // border-radius: $input-border-radius;
             box-shadow:
               0 0 0 $input-ring-gap $invalid-gap-color,
               0 0 0 $input-ring-width $invalid-ring-color;
