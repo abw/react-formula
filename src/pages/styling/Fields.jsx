@@ -1,11 +1,14 @@
 import React from 'react'
 import FieldLayout from '../../../lib/Field/Layout.jsx'
+import { defaultConfig } from '../../../lib/Field/Config.js'
 
 const mockField = {
+  ...defaultConfig,
   label: 'Example Label',
   type: 'text',
   placeholder: 'Placeholder text',
-  form: { }
+  form: { },
+  status: { }
 }
 
 const Fields = () =>
@@ -38,34 +41,92 @@ const Fields = () =>
       <FieldLayout field={{...mockField, focus: true }}/>
 
       <h3>Focussed Field With Value</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', focus: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World',
+          status: { focus: true }
+        }}
+      />
 
       <h3>Focussed Field With Help</h3>
-      <FieldLayout field={{...mockField, help: 'Your password must be between 11 and 42 characters', focus: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          help: 'Your password must be between 11 and 42 characters',
+          status: { focus: true }
+        }}
+      />
 
       <h3>Focussed Field With Prefix and Suffix</h3>
-      <FieldLayout field={{...mockField, prefix: '$', suffix: '.00', focus: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField, prefix: '$', suffix: '.00',
+          status: { focus: true }
+        }}
+      />
 
       <h3>Valid Field</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', valid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World',
+          status: { valid: true }
+        }}
+      />
 
       <h3>Valid Field With Message</h3>
-      <FieldLayout field={{...mockField, message: 'That username is available!', valid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          message: 'That username is available!',
+          status: { valid: true }
+        }}
+      />
 
       <h3>Valid Field With Prefix and Suffix</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', prefix: '$', suffix: '.00', valid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World', prefix: '$', suffix: '.00',
+          status: { valid: true }
+        }}
+      />
 
       <h3>Invalid Field</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', invalid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World',
+          status: { invalid: true }
+        }}
+      />
 
       <h3>Invalid Field With Message</h3>
-      <FieldLayout field={{...mockField, message: 'Something went wrong!', invalid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          message: 'Something went wrong!',
+          status: { invalid: true }
+        }}
+      />
 
       <h3>Invalid Field With Prefix and Suffix</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', prefix: '$', suffix: '.00', invalid: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World', prefix: '$', suffix: '.00',
+          status: { invalid: true }
+        }}
+      />
 
       <h3>Disabled Field</h3>
-      <FieldLayout field={{...mockField, disabled: true, prefix: '£', message: 'Denied!' }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          disabled: true, prefix: '£', message: 'Denied!'
+        }}
+      />
 
 
     </form>

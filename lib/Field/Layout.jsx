@@ -14,7 +14,7 @@ export const FieldLayout = ({ field=useField() }) => {
     invalidClass,
     disabledClass='disabled',
     focusClass='focus',
-  } = field.config
+  } = field
   const {
     type,
     Label=DefaultLabel,
