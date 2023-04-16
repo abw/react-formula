@@ -1,13 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar.jsx'
+import ScrollToTop from './ScrollToTop.jsx'
 
 const Layout = () =>
   <div id="layout">
-    <aside>
+    <ScrollToTop/>
+    <aside id="sidebar">
       <Sidebar/>
     </aside>
-    <main>
+    <main id="content">
       <Outlet/>
     </main>
   </div>

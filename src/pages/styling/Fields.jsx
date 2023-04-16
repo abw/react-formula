@@ -124,7 +124,8 @@ const Fields = () =>
       <FieldLayout
         field={{
           ...mockField,
-          disabled: true, prefix: '£', message: 'Denied!'
+          prefix: '£', message: 'Denied!',
+          status: { disabled: true }
         }}
       />
 

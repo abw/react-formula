@@ -31,6 +31,7 @@ const Sidebar = () =>
       <li><Link to="/field/required-optional" text="Required and Optional"/></li>
       <li><Link to="/field/prefix-suffix" text="Prefix and Suffix"/></li>
       <li><Link to="/field/focus-blur" text="Focus and Blur"/></li>
+      <li><Link to="/field/onchange" text="onChange"/></li>
     </ul>
 
     <h4>Input Types</h4>
