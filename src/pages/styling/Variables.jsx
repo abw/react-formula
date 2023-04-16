@@ -1,12 +1,15 @@
 import React from 'react'
 import colors from '../../../styles/config/colors.scss?raw'
+import input  from '../../../styles/config/input.scss?raw'
 import { parseSassVars } from '../../site/ParseSassVars.js'
 
 const colorVars = parseSassVars(colors)
+const inputVars = parseSassVars(input)
 
 const Variables = () =>
   <div>
     <h1>SASS Variables</h1>
+    <Table title="Input" vars={inputVars}/>
     <Table title="Colors" vars={colorVars}/>
   </div>
 

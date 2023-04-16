@@ -57,12 +57,12 @@ form.formula {
         font-style: normal;
         line-height: 1;
         padding: 0.25em 0.5em;
-        border-radius: $field-border-radius;
+        border-radius: $input-border-radius;
         outline: none !important;
         flex-basis: 100%;
         min-width: 0;
         color: $input-text-color;
-        border: 1px solid $input-border-color;
+        border: $input-border-width solid $input-border-color;
         background-color: $input-back-color;
         &::placeholder {
           color: $input-placeholder-color;
@@ -95,8 +95,8 @@ form.formula {
         font-size: 1em;
         line-height: 1;
         padding: 0.25em 0.5em;
-        border-radius: $field-border-radius;
-        border: 1px solid $input-border-color;
+        border-radius: $input-border-radius;
+        border: $input-border-width solid $input-border-color;
         background-color: $input-prefix-back-color;
         color: $input-prefix-text-color;
         user-select: none;
@@ -116,7 +116,7 @@ form.formula {
         font-size: 1em;
         line-height: 1;
         padding: 0.25em;
-        border-radius: $field-border-radius;
+        border-radius: $input-border-radius;
         color: $input-text-color;
         border: 1px solid $input-border-color;
         background-color: $input-back-color;
@@ -158,6 +158,7 @@ form.formula {
     }
     &.thin {
       .inputs {
+        display: inline-flex;
         input,
         textarea,
         select {
@@ -265,15 +266,15 @@ form.formula {
           &.radio label.checked,
           &.checkbox label {
             box-shadow:
-              0 0 0 $field-ring-gap $focus-gap-color,
-              0 0 0 $field-ring-width $focus-ring-color;
+              0 0 0 $input-ring-gap $focus-gap-color,
+              0 0 0 $input-ring-width $focus-ring-color;
           }
         }
         &.prefixed, &.suffixed {
-          border-radius: $field-border-radius;
+          border-radius: $input-border-radius;
           box-shadow:
-            0 0 0 $field-ring-gap $focus-gap-color,
-            0 0 0 $field-ring-width $focus-ring-color;
+            0 0 0 $input-ring-gap $focus-gap-color,
+            0 0 0 $input-ring-width $focus-ring-color;
         }
         input,
         textarea,
