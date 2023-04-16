@@ -336,3 +336,16 @@ form.debug.invalid {
       0 0 0 4px #4a4;
   }
 }
+.btn-blue {
+  background-color: #46c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  &:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px #cdc,
+      0 0 0 4px #46c;
+  }
+}

@@ -10,8 +10,9 @@ export const TextAreaInput = ({ field=useField() }) => {
   return (
     <div className={inputsClass}>
       <textarea
-        className={className}
         id={field.id}
+        ref={field.inputRef}
+        className={className}
         name={field.name}
         value={field.value}
         disabled={field.disabled}

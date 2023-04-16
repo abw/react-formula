@@ -32,8 +32,9 @@ export const TextInput = ({ field=useField() }) => {
     <div className={classes}>
       <Prefix field={field}/>
       <input
-        className={inputClass}
         type={type}
+        className={inputClass}
+        ref={field.inputRef}
         aria-disabled={field.disabled}
         tabIndex={field.disabled ? -1 : field.tabIndex}
         onFocus={field.onFocus}
