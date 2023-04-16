@@ -14,23 +14,28 @@ import CustomComponents from '../pages/CustomComponents.jsx'
 */
 import TestForm from '../test/Form.jsx'
 
-const Router = createBrowserRouter([
+const Router = createBrowserRouter(
+  [
+    {
+      path:     '/',
+      element:  <Layout/>,
+      children: [
+        { path: '/',                  element: <Home/> },
+        { path: 'getting-started',    element: <GettingStarted/> },
+        { path: 'why',                element: <Why/> },
+        { path: 'examples/*',         element: <Examples/> },
+        { path: 'field/*',            element: <Field/> },
+        { path: 'inputs/*',           element: <Inputs/> },
+        // { path: 'options/*',          element: <Options/> },
+        { path: 'custom-components',  element: <CustomComponents/> },
+        { path: 'styling/*',          element: <Styling/> },
+        { path: 'test-form',          element: <TestForm/> },
+      ]
+    },
+  ],
   {
-    path:     '/',
-    element:  <Layout/>,
-    children: [
-      { path: '/',                  element: <Home/> },
-      { path: 'getting-started',    element: <GettingStarted/> },
-      { path: 'why',                element: <Why/> },
-      { path: 'examples/*',         element: <Examples/> },
-      { path: 'field/*',            element: <Field/> },
-      { path: 'inputs/*',           element: <Inputs/> },
-      // { path: 'options/*',          element: <Options/> },
-      { path: 'custom-components',  element: <CustomComponents/> },
-      { path: 'styling/*',          element: <Styling/> },
-      { path: 'test-form',          element: <TestForm/> },
-    ]
-  },
-])
+    basename: import.meta.env.BASE_URL
+  }
+)
 
 export default Router

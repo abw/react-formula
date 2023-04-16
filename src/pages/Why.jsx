@@ -1,11 +1,12 @@
 import React from 'react'
+import { imgUrl } from '../site/Utils.js'
 
 const Why = () =>
   <div className="home">
     <h1>Why Does This Exist?</h1>
     <div className="pic-side">
       <div>
-        <img src="/fruit-loop.svg"/>
+        <img src={imgUrl('fruit-loop.svg')}/>
         <div className="caption">
           Fruit by Artem Yurov from{' '}
           <a href="https://thenounproject.com/browse/icons/term/fruit/" target="_blank" rel="noreferrer" title="Fruit Icons">Noun Project</a>.

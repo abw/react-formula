@@ -1,10 +1,11 @@
 import React from 'react'
+import { imgUrl } from '../site/Utils.js'
 
 const Home = () =>
   <div className="home">
     <h1>@abw/react-formula</h1>
     <div className="pic-side">
-      <img src="/react-formula.svg"/>
+      <img src={imgUrl('react-formula.svg')}/>
       <div className="blurb">
         <p className="intro">
           <code className="code">react-formula</code> is yet another React
