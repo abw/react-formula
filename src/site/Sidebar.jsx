@@ -32,6 +32,7 @@ const Sidebar = () =>
       <li><Link to="/field/prefix-suffix" text="Prefix and Suffix"/></li>
       <li><Link to="/field/focus-blur" text="Focus and Blur"/></li>
       <li><Link to="/field/onchange" text="onChange"/></li>
+      <li><Link to="/field/prepare-value" text="prepareValue"/></li>
       <li><Link to="/field/validation" text="Validation"/></li>
     </ul>
 
@@ -50,12 +51,6 @@ const Sidebar = () =>
     <ul className="menu">
     </ul>
     */}
-
-    <h4>Preparation and Validation</h4>
-    <ul className="menu">
-      <li><Link to="prepare-value" text="Preparing Values"/></li>
-      <li><Link to="validate-field" text="Validating Fields"/></li>
-    </ul>
 
     <h4>Customising</h4>
     <ul className="menu">

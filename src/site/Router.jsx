@@ -10,8 +10,6 @@ import Inputs from '../pages/inputs/index.jsx'
 // import Options from '../pages/options/index.jsx'
 import Styling from '../pages/styling/index.jsx'
 import CustomComponents from '../pages/CustomComponents.jsx'
-import PrepareValue from '../pages/PrepareValue.jsx'
-import ValidateField from '../pages/ValidateField.jsx'
 /*
 */
 import TestForm from '../test/Form.jsx'
@@ -28,8 +26,6 @@ const Router = createBrowserRouter([
       { path: 'field/*',            element: <Field/> },
       { path: 'inputs/*',           element: <Inputs/> },
       // { path: 'options/*',          element: <Options/> },
-      { path: 'prepare-value',      element: <PrepareValue/> },
-      { path: 'validate-field',     element: <ValidateField/> },
       { path: 'custom-components',  element: <CustomComponents/> },
       { path: 'styling/*',          element: <Styling/> },
       { path: 'test-form',          element: <TestForm/> },
