@@ -3,11 +3,6 @@ import Link from './Link.jsx'
 
 const Sidebar = () =>
   <>
-    <h4>Testing</h4>
-    <ul className="menu">
-      <li><Link to="/test-form" text="Test Form"/></li>
-    </ul>
-
     <h4>Overview</h4>
     <ul className="menu">
       <li><Link to="/" end text="Home"/></li>
@@ -63,6 +58,11 @@ const Sidebar = () =>
       <li><Link to="/styling/forms"     text="Form Styles"/></li>
       <li><Link to="/styling/fields"    text="Field Styles"/></li>
       <li><Link to="/styling/variables" text="SASS Variables"/></li>
+    </ul>
+
+    <h4>Tests</h4>
+    <ul className="menu">
+      <li><Link to="/test-form" text="Test Form"/></li>
     </ul>
   </>
 
