@@ -28,6 +28,7 @@ export const CheckboxInput = ({ field=useField() }) => {
         <input
           className={inputClass}
           type={type}
+          ref={field.inputRef}
           aria-disabled={field.disabled}
           tabIndex={field.disabled ? -1 : field.tabIndex}
           onChange={handler(field)}

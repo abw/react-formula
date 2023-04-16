@@ -118,7 +118,7 @@ form.formula {
         padding: 0.25em;
         border-radius: $input-border-radius;
         color: $input-text-color;
-        border: 1px solid $input-border-color;
+        border: $input-border-width solid $input-border-color;
         background-color: $input-back-color;
         cursor: pointer;
         &:hover {
@@ -278,7 +278,9 @@ form.formula {
         }
         input,
         textarea,
-        select {
+        select,
+        &.radio label.checked,
+        &.checkbox label {
           background-color: $focus-back-color;
           border-color: $focus-border-color;
           color: $focus-text-color;

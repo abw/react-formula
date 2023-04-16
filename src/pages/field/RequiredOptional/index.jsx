@@ -13,6 +13,7 @@ const RequiredOptional = () =>
   <div>
     <h1>Required and Optional Fields</h1>
 
+    <h2>showRequired</h2>
     <Example
       Element={ShowRequiredExample} code={ShowRequiredSource}
       caption="showRequired"
@@ -27,6 +28,7 @@ const RequiredOptional = () =>
       </p>
     </Example>
 
+    <h2>requiredText</h2>
     <Example
       Element={RequiredTextExample} code={RequiredTextSource}
       caption="requiredText"
@@ -38,6 +40,7 @@ const RequiredOptional = () =>
       </p>
     </Example>
 
+    <h2>showOptional</h2>
     <Example
       Element={ShowOptionalExample} code={ShowOptionalSource}
       caption="showOptional"
@@ -49,6 +52,7 @@ const RequiredOptional = () =>
       </p>
     </Example>
 
+    <h2>optionalText</h2>
     <Example
       Element={OptionalTextExample} code={OptionalTextSource}
       caption="optionalText"

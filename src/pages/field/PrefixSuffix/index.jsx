@@ -10,6 +10,8 @@ import PrefixSuffixExample from './examples/PrefixSuffix.jsx'
 const PrefixSuffix = () =>
   <div>
     <h1>Prefix and Suffix</h1>
+
+    <h2>prefix</h2>
     <Example
       Element={PrefixExample} code={PrefixSource}
       caption="prefix"
@@ -21,6 +23,7 @@ const PrefixSuffix = () =>
       </p>
     </Example>
 
+    <h2>suffix</h2>
     <Example
       Element={SuffixExample} code={SuffixSource}
       caption="suffix"
@@ -30,6 +33,7 @@ const PrefixSuffix = () =>
       </p>
     </Example>
 
+    <h2>prefix and suffix</h2>
     <Example
       Element={PrefixSuffixExample} code={PrefixSuffixSource}
       caption="prefix and suffix"

@@ -18,6 +18,7 @@ export const SelectInput = ({ field=useField() }) => {
     <div className={inputsClass}>
       <select
         className={className}
+        ref={field.inputRef}
         aria-disabled={field.disabled}
         tabIndex={field.disabled ? -1 : field.tabIndex}
         onChange={handler(field)}
