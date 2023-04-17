@@ -65,6 +65,10 @@ form.formula {
         color: $input-text-color;
         border: $input-border-width solid $input-border-color;
         background-color: $input-back-color;
+        &:hover {
+          border-color: $focus-border-color;
+          color: $focus-text-color;
+        }
         &::placeholder {
           color: $input-placeholder-color;
           font-weight: 300;
@@ -126,7 +130,6 @@ form.formula {
         background-color: $input-back-color;
         cursor: pointer;
         &:hover {
-          background-color: $focus-back-color;
           border-color: $focus-border-color;
           color: $focus-text-color;
         }

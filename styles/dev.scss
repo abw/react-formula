@@ -3,7 +3,7 @@
 @import 'utils/spacing.scss';
 
 // $dev-hue: 220;
-$dev-hue: 30;
+$dev-hue: 193;
 $note-hue: 210;
 
 :root {
@@ -32,9 +32,15 @@ body {
   padding: 0;
   background-color: hsl($dev-hue, 30%, 90%);
 }
+h1, h2, h3 {
+  color: hsl($dev-hue, 80%, 20%);
+}
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
+  &:first-child {
+    margin-top: -0.5rem !important;
+  }
 }
 h2 {
   font-size: 2rem;
@@ -164,10 +170,14 @@ p.subintro {
 
 a {
   font-weight: 500;
-  color: hsl($dev-hue, 70%, 40%);
+  color: hsl($dev-hue, 60%, 30%);
   text-decoration: inherit;
+  transition: 250ms all;
   &:hover {
-    color: hsl($dev-hue, 90%, 30%);
+    color: hsl($dev-hue, 90%, 15%);
+  }
+  &.active {
+    color: hsl($dev-hue, 90%, 10%);
   }
 }
 
@@ -182,7 +192,7 @@ li {
 p code, code.code {
   background-color: hsl($dev-hue, 30%, 95%);
   border: 1px solid hsl($dev-hue, 40%, 90%);
-  color: hsl($dev-hue, 90%, 30%);
+  color: hsl($dev-hue, 90%, 25%);
   padding: 0 3px;
   border-radius: 2px;
 }
