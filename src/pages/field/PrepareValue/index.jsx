@@ -7,13 +7,17 @@ const PrepareValueExamples = () =>
   <div>
     <h1>onChange</h1>
 
+    <p>
+      You can add a <code className="code">prepareValue</code> function to
+      a field to prepare the value before it&apos;s set.
+    </p>
     <Example
       Element={PrepareValue} code={PrepareValueSource}
       caption="onChange"
     >
       <p>
-        You can add a <code className="code">prepareValue</code> function to
-        a field to prepare the value before it&apos;s set.
+        Try entering some letters in the field below.  You should see that
+        they get converted to upper case.
       </p>
     </Example>
 

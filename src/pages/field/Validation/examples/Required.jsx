@@ -17,8 +17,8 @@ const fields = {
 }
 
 const ValidateExample = () =>
-  <Form fields={fields}>
-    <Fields names="username password"/>
+  <Form fields={fields} validateOnBlur debug>
+    <Fields names="username password" debug/>
   </Form>
 
 export default ValidateExample

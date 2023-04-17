@@ -5,10 +5,10 @@ export const Example = ({
   Element, code, children='', className='', caption
 }) => {
   return <div className={`example ${className}`}>
-    {children}
     <div className="mar-t-2">
       <CodeBlock caption={caption}>{prepareCode(code)}</CodeBlock>
     </div>
+    {children}
     { Element
       ? <div className="mar-t-2">
           <Element/>

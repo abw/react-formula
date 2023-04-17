@@ -1,8 +1,8 @@
-import React from 'react'
-import { Form, Field, Debug } from '../../../../../lib/index.js'
+import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
-// PRETEND: import { Form, Field, Debug } from '@abw/react-formula'
+import React from 'react'
+// PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const TextAreaExample = () =>
   <Form>
@@ -20,7 +20,6 @@ const TextAreaExample = () =>
       placeholder="Type here"
       className="thin"
     />
-    <Debug/>
   </Form>
 
 export default TextAreaExample

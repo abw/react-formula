@@ -1,8 +1,8 @@
-import React from 'react'
-import { Form, Field, Debug } from '../../../../../lib/index.js'
+import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
-// PRETEND: import { Form, Field, Debug } from '@abw/react-formula'
+import React from 'react'
+// PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const SelectExample = () =>
   <Form>
@@ -18,7 +18,6 @@ const SelectExample = () =>
         { value: 42, text: <>Forty-Two (the meaning of <i>life</i>)</> },
       ]}
     />
-    <Debug/>
   </Form>
 
 export default SelectExample

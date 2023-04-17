@@ -12,36 +12,33 @@ const PrefixSuffix = () =>
     <h1>Prefix and Suffix</h1>
 
     <h2>prefix</h2>
+    <p>
+      You can add a <code>prefix</code> to a <code>text</code> field or any
+      of the other types using the basic text input, e.g.{' '}
+      <code>money</code>, <code>date</code>, etc.
+    </p>
     <Example
       Element={PrefixExample} code={PrefixSource}
       caption="prefix"
-    >
-      <p>
-        You can add a <code>prefix</code> to a <code>text</code> field or any
-        of the other types using the basic text input, e.g.{' '}
-        <code>money</code>, <code>date</code>, etc.
-      </p>
-    </Example>
+    />
 
     <h2>suffix</h2>
+    <p>
+      You can add also add a <code>suffix</code>.
+    </p>
     <Example
       Element={SuffixExample} code={SuffixSource}
       caption="suffix"
-    >
-      <p>
-        You can add also add a <code>suffix</code>.
-      </p>
-    </Example>
+    />
 
     <h2>prefix and suffix</h2>
+    <p>
+      Or you can add both.
+    </p>
     <Example
       Element={PrefixSuffixExample} code={PrefixSuffixSource}
       caption="prefix and suffix"
-    >
-      <p>
-        Or you can add both.
-      </p>
-    </Example>
+    />
   </div>
 
 

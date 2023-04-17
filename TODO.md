@@ -1,5 +1,10 @@
 # TODO
 
+## Config
+
+Form should accept all config options that field
+supports.
+
 ## State
 
 * form must track registered fields

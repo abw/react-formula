@@ -1,7 +1,7 @@
-import React from 'react'
 import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
+import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const Checkbox = () =>
@@ -9,11 +9,6 @@ const Checkbox = () =>
     <Field
       name="one" label="A checkbox example"
       type="checkbox" text="I like badgers!"
-    />
-    <Field
-      name="two" label="A checkbox example"
-      type="checkbox" text="I like badgers!"
-      prefix="!"
     />
   </Form>
 

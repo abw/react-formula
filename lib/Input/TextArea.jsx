@@ -20,7 +20,7 @@ export const TextAreaInput = ({ field=useField() }) => {
         tabIndex={field.disabled ? -1 : field.tabIndex}
         placeholder={field.placeholder}
         autoComplete={field.autocomplete}
-        onChange={e => field.set(e.target.value)}
+        onChange={e => field.onChange(e.target.value)}
         onFocus={field.onFocus}
         onBlur={field.onBlur}
         rows={rows}
