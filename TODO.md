@@ -2,8 +2,11 @@
 
 ## Config
 
-Form should accept all config options that field
-supports.
+Form should accept all config options that field supports.
+
+## Form
+
+* submit, including validation
 
 ## State
 

@@ -38,7 +38,12 @@ const Fields = () =>
       <FieldLayout field={{...mockField, prefix: '$', suffix: '.00'}}/>
 
       <h3>Focussed Field With Placeholder Text</h3>
-      <FieldLayout field={{...mockField, focus: true }}/>
+      <FieldLayout
+        field={{
+          ...mockField,
+          status: { focus: true }
+        }}
+      />
 
       <h3>Focussed Field With Value</h3>
       <FieldLayout
@@ -93,6 +98,15 @@ const Fields = () =>
         }}
       />
 
+      <h3>Focussed Valid Field With Prefix and Suffix</h3>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World', prefix: '$', suffix: '.00',
+          status: { valid: true, focus: true }
+        }}
+      />
+
       <h3>Invalid Field</h3>
       <FieldLayout
         field={{
@@ -117,6 +131,15 @@ const Fields = () =>
           ...mockField,
           value: 'Hello World', prefix: '$', suffix: '.00',
           status: { invalid: true }
+        }}
+      />
+
+      <h3>Focussed Invalid Field With Prefix and Suffix</h3>
+      <FieldLayout
+        field={{
+          ...mockField,
+          value: 'Hello World', prefix: '$', suffix: '.00',
+          status: { invalid: true, focus: true }
         }}
       />
 

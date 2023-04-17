@@ -21,6 +21,13 @@ const Sidebar = () =>
       <li><Link to="/examples/complete" text="Complete Example"/></li>
     </ul>
 
+    <h4>Form</h4>
+    <ul className="menu">
+      <li><Link to="/form/properties" text="Properties"/></li>
+      <li><Link to="/form/reset"      text="Reset"/></li>
+      <li><Link to="/form/submit"     text="Submit"/></li>
+    </ul>
+
     <h4>Field</h4>
     <ul className="menu">
       <li><Link to="/field/required-optional" text="Required and Optional"/></li>

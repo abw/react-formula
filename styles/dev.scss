@@ -210,21 +210,6 @@ table.sass-vars {
   text-align: center;
 }
 
-button {
-  border-radius: 4px;
-  border: 1px solid #888;
-  padding: 0.25em 0.5em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #ccc;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 input + button {
   margin-left: 0.5rem;
 }
@@ -347,5 +332,18 @@ form.debug.invalid {
     box-shadow:
       0 0 0 2px #cdc,
       0 0 0 4px #46c;
+  }
+}
+.btn-brown {
+  background-color: #860;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  &:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px #dca,
+      0 0 0 4px #860;
   }
 }

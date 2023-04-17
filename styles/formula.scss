@@ -2,8 +2,6 @@
 @import 'utils/all';
 @import 'components/all';
 
-
-
 .flex {
   display: flex;
 }
@@ -20,6 +18,25 @@
   margin-right: 0.5rem;
 }
 
+button {
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ccd;
+  transition: border-color 0.25s;
+  cursor: pointer;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 button + button {
   margin-left: 0.5rem;
+}
+button[type=submit] {
+
 }
