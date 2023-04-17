@@ -1,70 +1,81 @@
 import React from 'react'
 import Link from './Link.jsx'
+import { useResolvedPath } from 'react-router-dom'
+import Icon from '../../lib/ui/Icon/index.jsx'
 
 const Sidebar = () =>
   <>
     <h4>Overview</h4>
-    <ul className="menu">
+    <ul className="menu mar-b-2">
       <li><Link to="/" end text="Home"/></li>
       <li><Link to="/getting-started" text="Getting Started"/></li>
       <li><Link to="/why" text="Why Does This Exist?"/></li>
     </ul>
 
-    <h4>Examples</h4>
-    <ul className="menu">
-      <li><Link to="/examples/simple" text="Simple Example"/></li>
-      <li><Link to="/examples/schema" text="Separate Schema"/></li>
-      <li><Link to="/examples/fields" text="Adding Multiple Fields"/></li>
-      <li><Link to="/examples/submit" text="Submitting the Form *"/></li>
-      <li><Link to="/examples/reset"  text="Resetting the Form *"/></li>
-      <li><Link to="/examples/debug"  text="Debugging"/></li>
-      <li><Link to="/examples/complete" text="Complete Example"/></li>
-    </ul>
+    <Menu
+      title="Examples"
+      url="/examples"
+      items={[
+        ['simple',    'Simple Example'],
+        ['schema',    'Separate Schema'],
+        ['fields',    'Adding Multiple Fields'],
+        ['submit',    'Submitting the Form *'],
+        ['reset',     'Resetting the Form *'],
+        ['debug',     'Debugging'],
+        ['complete',  'Complete Example'],
+      ]}
+    />
 
-    <h4>Form</h4>
-    <ul className="menu">
-      <li><Link to="/form/properties" text="Properties"/></li>
-      <li><Link to="/form/reset"      text="Reset"/></li>
-      <li><Link to="/form/submit"     text="Submit"/></li>
-    </ul>
+    <Menu
+      title="Form"
+      url="/form"
+      items={[
+        ['properties', 'Properties'],
+        ['reset',      'Reset'],
+        ['submit',     'Submit'],
+      ]}
+    />
 
-    <h4>Field</h4>
-    <ul className="menu">
-      <li><Link to="/field/required-optional" text="Required and Optional"/></li>
-      <li><Link to="/field/prefix-suffix" text="Prefix and Suffix"/></li>
-      <li><Link to="/field/focus-blur" text="Focus and Blur"/></li>
-      <li><Link to="/field/onchange" text="onChange"/></li>
-      <li><Link to="/field/prepare-value" text="prepareValue"/></li>
-      <li><Link to="/field/validation" text="Validation"/></li>
-    </ul>
+    <Menu
+      title="Field"
+      url="/field"
+      items={[
+        ['required-optional', 'Required and Optional'],
+        ['prefix-suffix',     'Prefix and Suffix'],
+        ['focus-blur',        'Focus and Blur'],
+        ['onchange"',         'onChange'],
+        ['prepare-value',     'prepareValue'],
+        ['validation"',       'Validation'],
+      ]}
+    />
 
-    <h4>Input Types</h4>
-    <ul className="menu">
-      <li><Link to="/inputs/text" text="Text"/></li>
-      <li><Link to="/inputs/textarea" text="Text Area"/></li>
-      <li><Link to="/inputs/number" text="Number, Date, etc"/></li>
-      <li><Link to="/inputs/checkbox" text="Checkbox"/></li>
-      <li><Link to="/inputs/radio" text="Radio Buttons"/></li>
-      <li><Link to="/inputs/select" text="Select Input"/></li>
-    </ul>
+    <Menu
+      title="Inputs"
+      url="/inputs"
+      items={[
+        ['text', 'Text'],
+        ['textarea', 'Text Area'],
+        ['number', 'Number, Date, etc'],
+        ['checkbox', 'Checkbox'],
+        ['radio', 'Radio Buttons'],
+        ['select', 'Select Input'],
+      ]}
+    />
 
-    {/*
-    <h4>Options</h4>
-    <ul className="menu">
-    </ul>
-    */}
+    <Menu
+      title="Styling"
+      url="/styling"
+      items={[
+        ['forms',     'Form Styles'],
+        ['fields',    'Field Styles'],
+        ['variables', 'SASS Variables'],
+      ]}
+    />
+
 
     <h4>Customising</h4>
     <ul className="menu">
       <li><Link to="custom-components" text="Using Custom Components *"/></li>
-    </ul>
-
-    <h4>Styling</h4>
-    <ul className="menu">
-      <li><Link to="/styling" end       text="Styling"/></li>
-      <li><Link to="/styling/forms"     text="Form Styles"/></li>
-      <li><Link to="/styling/fields"    text="Field Styles"/></li>
-      <li><Link to="/styling/variables" text="SASS Variables"/></li>
     </ul>
 
     <h4>Tests</h4>
@@ -73,5 +84,28 @@ const Sidebar = () =>
     </ul>
   </>
 
+const Menu = ({ title, url, items=[] }) => {
+  const resolved = useResolvedPath()
+  const match = resolved.pathname.slice(0, url.length) === url
+  const open = match
+  return (
+    <div className="menu">
+      <div className={`flex space menu-head ${open ? 'open' : 'closed'}`}>
+        <Link to={url} className="flex center">
+          <Icon name={ open ? 'angle-down' : 'angle-right'}/>
+          <h4>{title}</h4>
+        </Link>
+      </div>
+      { open &&
+        <ul className="menu">
+          { items.map(
+            ([path, text]) =>
+              <li key={path}><Link to={`${url}/${path}`} text={text}/></li>
+          )}
+        </ul>
+      }
+    </div>
+  )
+}
 
 export default Sidebar
