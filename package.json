@@ -42,6 +42,7 @@
     "yup": "^1.0.2"
   },
   "dependencies": {
+    "@abw/badger-utils": "^1.0.19",
     "@abw/react-context": "^2.0.1",
     "@abw/react-one-louder": "^0.0.5"
   }
