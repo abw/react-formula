@@ -1,9 +1,11 @@
-import React       from 'react'
-import Example     from '../../../site/Example.jsx'
-import ResetSource from './examples/Reset.jsx?raw'
-import Reset       from './examples/Reset.jsx'
-import ResetProps       from './examples/ResetProperties.jsx'
-import ResetPropsSource from './examples/ResetProperties.jsx?raw'
+import React         from 'react'
+import Example       from '../../../site/Example.jsx'
+import ResetSrc      from './examples/Reset.jsx?raw'
+import Reset         from './examples/Reset.jsx'
+import Properties    from './examples/Properties.jsx'
+import PropertiesSrc from './examples/Properties.jsx?raw'
+import OnResetSrc    from './examples/OnReset.jsx?raw'
+import OnReset       from './examples/OnReset.jsx'
 
 const ResetExamples = () =>
   <div>
@@ -16,7 +18,7 @@ const ResetExamples = () =>
       value.
     </p>
     <Example
-      Element={Reset} code={ResetSource}
+      Element={Reset} code={ResetSrc}
       caption="Reset"
     >
       <p>
@@ -31,8 +33,18 @@ const ResetExamples = () =>
       displayed on the button and add a custom CSS class using <code>className</code>.
     </p>
     <Example
-      Element={ResetProps} code={ResetPropsSource}
+      Element={Properties} code={PropertiesSrc}
       caption="Properties"
+    />
+
+    <h2>onReset</h2>
+    <p>
+      You can use the <code>onReset</code> property to register a function
+      that should be called when the form is reset.
+    </p>
+    <Example
+      Element={OnReset} code={OnResetSrc}
+      caption="onReset"
     />
 
   </div>

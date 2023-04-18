@@ -19,7 +19,6 @@ const Sidebar = () =>
         ['simple',    'Simple Example'],
         ['schema',    'Separate Schema'],
         ['fields',    'Adding Multiple Fields'],
-        ['submit',    'Submitting the Form *'],
         ['reset',     'Resetting the Form *'],
         ['debug',     'Debugging'],
         ['complete',  'Complete Example'],
@@ -63,6 +62,14 @@ const Sidebar = () =>
     />
 
     <Menu
+      title="Customising"
+      url="/customising"
+      items={[
+        ['components', 'Custom Components'],
+      ]}
+    />
+
+    <Menu
       title="Styling"
       url="/styling"
       items={[
@@ -71,12 +78,6 @@ const Sidebar = () =>
         ['variables', 'SASS Variables'],
       ]}
     />
-
-
-    <h4>Customising</h4>
-    <ul className="menu">
-      <li><Link to="custom-components" text="Using Custom Components *"/></li>
-    </ul>
 
     <h4>Tests</h4>
     <ul className="menu">

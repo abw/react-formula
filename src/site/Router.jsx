@@ -8,11 +8,8 @@ import Examples from '../pages/examples/index.jsx'
 import Field from '../pages/field/index.jsx'
 import Form from '../pages/form/index.jsx'
 import Inputs from '../pages/inputs/index.jsx'
-// import Options from '../pages/options/index.jsx'
+import Customising from '../pages/customising/index.jsx'
 import Styling from '../pages/styling/index.jsx'
-import CustomComponents from '../pages/CustomComponents.jsx'
-/*
-*/
 import TestForm from '../test/Form.jsx'
 
 const Router = createBrowserRouter(
@@ -28,8 +25,7 @@ const Router = createBrowserRouter(
         { path: 'form/*',             element: <Form/> },
         { path: 'field/*',            element: <Field/> },
         { path: 'inputs/*',           element: <Inputs/> },
-        // { path: 'options/*',          element: <Options/> },
-        { path: 'custom-components',  element: <CustomComponents/> },
+        { path: 'customising/*',      element: <Customising/> },
         { path: 'styling/*',          element: <Styling/> },
         { path: 'test-form',          element: <TestForm/> },
       ]

@@ -4,6 +4,8 @@ import Submit         from './examples/Submit.jsx'
 import SubmitSrc      from './examples/Submit.jsx?raw'
 import SubmitProps    from './examples/SubmitProperties.jsx'
 import SubmitPropsSrc from './examples/SubmitProperties.jsx?raw'
+import OnSubmitSrc    from './examples/OnSubmit.jsx?raw'
+import OnSubmit       from './examples/OnSubmit.jsx'
 
 const SubmitExamples = () =>
   <div>
@@ -30,6 +32,16 @@ const SubmitExamples = () =>
     <Example
       Element={SubmitProps} code={SubmitPropsSrc}
       caption="Properties"
+    />
+
+    <h2>onSubmit</h2>
+    <p>
+      You can use the <code>onSubmit</code> form property to handle the
+      submission.
+    </p>
+    <Example
+      Element={OnSubmit} code={OnSubmitSrc}
+      caption="onSubmit"
     />
   </div>
 
