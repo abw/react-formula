@@ -19,8 +19,6 @@ const Sidebar = () =>
         ['simple',    'Simple Example'],
         ['schema',    'Separate Schema'],
         ['fields',    'Adding Multiple Fields'],
-        ['reset',     'Resetting the Form *'],
-        ['debug',     'Debugging'],
         ['complete',  'Complete Example'],
       ]}
     />
@@ -32,6 +30,7 @@ const Sidebar = () =>
         ['properties', 'Properties'],
         ['reset',      'Reset'],
         ['submit',     'Submit'],
+        ['debug',      'Debug'],
       ]}
     />
 
@@ -39,6 +38,7 @@ const Sidebar = () =>
       title="Field"
       url="/field"
       items={[
+        ['properties',        'Properties'],
         ['required-optional', 'Required and Optional'],
         ['prefix-suffix',     'Prefix and Suffix'],
         ['focus-blur',        'Focus and Blur'],
