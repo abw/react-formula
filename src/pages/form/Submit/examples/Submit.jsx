@@ -5,8 +5,8 @@ import React from 'react'
 // PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
 
 const SubmitExample = () =>
-  <Form onSubmit={ submit => console.log('Form submitted: ', submit) }>
-    <Field name="one" label="Field one"/>
+  <Form showRequired onSubmit={ submit => console.log('Form submitted: ', submit) }>
+    <Field name="one" label="Field one" required/>
     <Field name="two" label="Field two"/>
     <Submit/>
   </Form>

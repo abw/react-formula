@@ -1,0 +1,38 @@
+/* Button Variables */
+// Vertical padding
+$button-padding-vertical:       $unit-padding-vertical !default;
+// Horizontal padding
+$button-padding-horizontal:     $unit-padding-horizontal !default;
+// Width of button border
+$button-border-width:           $border-width !default;
+// Width of focus ring
+$button-ring-width:             $ring-width !default;
+// Gap between border and focus ring
+$button-ring-gap:               $ring-gap !default;
+// Default button background color
+$button-back-color:             hsl($brand-hue, 60%, 50%) !default;
+// Default button text color
+$button-text-color:             hsl($brand-hue, 10%, 95%) !default;
+// Default button border color
+$button-border-color:           hsl($brand-hue, 65%, 45%);
+// Border color for focussed button.
+$button-ring-color:             hsl($brand-hue, 70%, 75%) !default;
+// Color of gap between border and ring.
+$button-gap-color:              hsl($brand-hue, 20%, 95%) !default;
+// Submit button background color
+$submit-back-color:             $button-back-color !default;
+// Submit button text color
+$submit-text-color:             $button-text-color !default;
+// Submit button border color
+$submit-border-color:           $button-border-color !default;
+// Reset button background color
+$reset-back-color:              hsl($brand-hue, 5%, 90%) !default;
+// Reset button text color
+$reset-text-color:              hsl($brand-hue, 60%, 10%) !default;
+// Reset button border color
+$reset-border-color:            hsl($brand-hue, 10%, 80%) !default;
+// Border color for focussed reset button.
+$reset-ring-color:              hsl($brand-hue, 15%, 85%) !default;
+// Color of gap between border and ring.
+$reset-gap-color:               hsl($brand-hue, 10%, 95%) !default;
+// Submit button background color

@@ -1,9 +1,15 @@
 /* Input Variables */
 // Width of border
-$input-border-width:           2px !default;
+$input-border-width:           $border-width !default;
 // Border radius of field
-$input-border-radius:          4px !default;
+$input-border-radius:          $border-radius !default;
 // Width of focus ring
-$input-ring-width:             3px !default;
+$input-ring-width:             $ring-width !default;
 // Gap between border and focus ring
-$input-ring-gap:               1px !default;
+$input-ring-gap:               $ring-gap !default;
+// Vertical padding
+$input-padding-vertical:       $unit-padding-vertical !default;
+// Horizontal padding
+$input-padding-horizontal:     $unit-padding-horizontal !default;
+// Tweak select to make same size
+$select-padding-tweak:         1.25px !default;

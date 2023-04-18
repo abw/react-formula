@@ -6,6 +6,7 @@ import { Themed } from '../Theme.jsx'
 const Reset = ({
   type='reset',
   text='Reset',
+  className='reset',
   Button=DefaultButton,
   ...props
 }) => {
@@ -13,8 +14,9 @@ const Reset = ({
   return (
     <Button
       type={type}
-      onClick={() => reset()}
       text={text}
+      className={className}
+      onClick={() => reset()}
       {...props}
     />
   )

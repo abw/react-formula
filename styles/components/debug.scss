@@ -1,25 +1,23 @@
-form.formula {
-  div.debug {
-    border: 1px solid hsl($debug-hue, 30%, 60%);
-    background-color: hsl($debug-hue, 10%, 85%);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-top: 2rem;
-    h4 {
-      color: hsl($debug-hue, 80%, 20%);
-      margin: 0.5rem 0;
-      font-size: 0.8rem;
-      line-height: 1;
-      &:first-child {
-        margin-top: -0.5rem;
-      }
+div.debug {
+  border: 1px solid hsl($debug-hue, 30%, 60%);
+  background-color: hsl($debug-hue, 10%, 85%);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 2rem;
+  h4 {
+    color: hsl($debug-hue, 80%, 20%);
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    line-height: 1;
+    &:first-child {
+      margin-top: -0.5rem;
     }
-    pre {
-      border: 1px solid hsl($debug-hue, 30%, 70%);
-      background-color: hsl($debug-hue, 10%, 95%);
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-      margin: 0;
-      padding: 0.5rem;
-    }
+  }
+  pre {
+    border: 1px solid hsl($debug-hue, 30%, 70%);
+    background-color: hsl($debug-hue, 10%, 95%);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 0.5rem;
   }
 }

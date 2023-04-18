@@ -1,381 +1,382 @@
-form.formula {
-  div.field {
-    position: relative;
-    margin-bottom: $field-margin;
-    width: auto;
-    width: 100%;
-    transition: 0.3s all;
+div.field {
+  position: relative;
+  margin-bottom: $field-margin;
+  width: auto;
+  width: 100%;
+  transition: 0.3s all;
 
-    label {
-      transition: 0.3s all;
-      &:not(.option) {
-        display: block;
-        font-size: 0.8em;
-        margin-right: 0.5em;
-        margin-bottom: $label-margin;
-        // margin-right: $option-margin;
-        white-space: nowrap;
-        color: $label-color;
-      }
-      &.option {
-        white-space: nowrap;
-        .label {
-          padding-left: 0.25em;
-          padding-right: 0.5em;
-        }
-      }
-      .required,
-      .optional {
-        float: right;
-        font-size: 0.8em;
-        line-height: 1.2;
-        padding: 0 0.5em;
-        margin-right: -0.5em;
-        border-radius: 0.25em;
-      }
-      .required {
-        color: $required-label-color;
-        background-color: $required-back-color;
-        border: 1px solid $required-border-color;
-      }
-      .optional {
-        color: $optional-label-color;
-        background-color: $optional-back-color;
-        border: 1px solid $optional-border-color;
-      }
-    }
-    .inputs {
-      display: flex;
-      &.radio {
-        flex-wrap: wrap;
-      }
-      input,
-      textarea,
-      select {
-        transition: 0.3s all;
-        font-size: 1em;
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1;
-        padding: 0.25em 0.5em;
-        border-radius: $input-border-radius;
-        outline: none !important;
-        flex-basis: 100%;
-        min-width: 0;
-        color: $input-text-color;
-        border: $input-border-width solid $input-border-color;
-        background-color: $input-back-color;
-        &:hover {
-          border-color: $focus-border-color;
-          color: $focus-text-color;
-        }
-        &::placeholder {
-          color: $input-placeholder-color;
-          font-weight: 300;
-        }
-      }
-      textarea {
-        /* font-size: 1em; */
-        line-height: 1.25;
-      }
-      select {
-        font-size: 1em;
-        line-height: 1;
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-        /* height: calc(1.5em + 2px); */
-      }
-      &.prefixed, &.suffixed {
-        border-radius: $input-border-radius;
-      }
-      &.prefixed input {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      &.suffixed input {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      .prefix,
-      .suffix {
-        transition: 0.3s all;
-        font-size: 1em;
-        line-height: 1;
-        padding: 0.25em 0.5em;
-        border-radius: $input-border-radius;
-        border: $input-border-width solid $input-border-color;
-        background-color: $input-prefix-back-color;
-        color: $input-prefix-text-color;
-        user-select: none;
-        z-index: 99;
-      }
-      .prefix {
-        border-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      .suffix {
-        border-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-      .option {
-        font-size: 1em;
-        line-height: 1;
-        padding: 0.25em;
-        border-radius: $input-border-radius;
-        color: $input-text-color;
-        border: $input-border-width solid $input-border-color;
-        background-color: $input-back-color;
-        cursor: pointer;
-        &:hover {
-          border-color: $focus-border-color;
-          color: $focus-text-color;
-        }
-      }
-      &.radio {
-        display: flex;
-        gap: $option-margin;
-        &.block {
-          display: block;
-          gap: 0.5rem;
-          label {
-            display: block;
-            margin-bottom: $option-margin;
-          }
-        }
-      }
-      input[type=checkbox],
-      input[type=radio],
-      input[type=range] {
-        accent-color: $accent-color;
-      }
-      input[type=color] {
-        padding: 0;
-      }
-    }
-    .help {
-      transition: 0.3s all;
+  label {
+    transition: 0.3s all;
+    &:not(.option) {
       display: block;
       font-size: 0.8em;
       margin-right: 0.5em;
-      margin-top: $message-margin;
+      margin-bottom: $label-margin;
+      // margin-right: $option-margin;
       white-space: nowrap;
       color: $label-color;
     }
-    &.thin {
-      .inputs {
-        display: inline-flex;
-        input,
-        textarea,
-        select {
-          flex-basis: auto;
-        }
-      }
-      .radio label.option,
-      .checkbox label.option {
-        width: 100%;
+    &.option {
+      white-space: nowrap;
+      .label {
+        padding-left: 0.25em;
+        padding-right: 0.5em;
       }
     }
-    &.wide {
-      .inputs {
-        input,
-        textarea,
-        select {
-          flex-basis: 100%;
-        }
+    .required,
+    .optional {
+      float: right;
+      font-size: 0.8em;
+      line-height: 1.2;
+      padding: 0 0.5em;
+      margin-right: -0.5em;
+      border-radius: 0.25em;
+    }
+    .required {
+      color: $required-label-color;
+      background-color: $required-back-color;
+      border: 1px solid $required-border-color;
+    }
+    .optional {
+      color: $optional-label-color;
+      background-color: $optional-back-color;
+      border: 1px solid $optional-border-color;
+    }
+  }
+  .inputs {
+    display: flex;
+    &.radio {
+      flex-wrap: wrap;
+    }
+    input,
+    textarea,
+    select {
+      transition: 0.3s all;
+      font-size: 1em;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      padding: $input-padding-vertical $input-padding-horizontal;
+      border-radius: $input-border-radius;
+      outline: none !important;
+      flex-basis: 100%;
+      min-width: 0;
+      color: $input-text-color;
+      border: $input-border-width solid $input-border-color;
+      background-color: $input-back-color;
+      &:hover {
+        border-color: $focus-border-color;
+        color: $focus-text-color;
       }
-      .radio label.option,
-      .checkbox label.option {
-        width: 100%;
+      &::placeholder {
+        color: $input-placeholder-color;
+        font-weight: 300;
       }
     }
-    &.bare {
-      .inputs .option {
-        border: none;
+    textarea {
+      /* font-size: 1em; */
+      line-height: 1.25;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance : none;
+      font-size: 1em;
+      // line-height: 1.16;
+      padding: calc($input-padding-vertical + $select-padding-tweak) $input-padding-horizontal;
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+      /* height: calc(1.5em + 2px); */
+    }
+    &.prefixed, &.suffixed {
+      border-radius: $input-border-radius;
+    }
+    &.prefixed input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &.suffixed input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .prefix,
+    .suffix {
+      transition: 0.3s all;
+      font-size: 1em;
+      line-height: 1;
+      padding: $input-padding-vertical $input-padding-horizontal;
+      border-radius: $input-border-radius;
+      border: $input-border-width solid $input-border-color;
+      background-color: $input-prefix-back-color;
+      color: $input-prefix-text-color;
+      user-select: none;
+      z-index: 99;
+    }
+    .prefix {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .suffix {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .option {
+      font-size: 1em;
+      line-height: 1;
+      padding: $input-padding-vertical $input-padding-horizontal;
+      border-radius: $input-border-radius;
+      color: $input-text-color;
+      border: $input-border-width solid $input-border-color;
+      background-color: $input-back-color;
+      cursor: pointer;
+      &:hover {
+        border-color: $focus-border-color;
+        color: $focus-text-color;
+      }
+    }
+    &.radio {
+      display: flex;
+      gap: $option-margin;
+      &.block {
+        display: block;
+        gap: 0.5rem;
+        label {
+          display: block;
+          margin-bottom: $option-margin;
+        }
+      }
+    }
+    input[type=checkbox],
+    input[type=radio],
+    input[type=range] {
+      accent-color: $accent-color;
+    }
+    input[type=color] {
+      padding: 0;
+    }
+  }
+  .help {
+    transition: 0.3s all;
+    display: block;
+    font-size: 0.8em;
+    margin-right: 0.5em;
+    margin-top: $message-margin;
+    white-space: nowrap;
+    color: $label-color;
+  }
+  &.thin {
+    .inputs {
+      display: inline-flex;
+      input,
+      textarea,
+      select {
+        flex-basis: auto;
+      }
+    }
+    .radio label.option,
+    .checkbox label.option {
+      width: 100%;
+    }
+  }
+  &.wide {
+    .inputs {
+      input,
+      textarea,
+      select {
+        flex-basis: 100%;
+      }
+    }
+    .radio label.option,
+    .checkbox label.option {
+      width: 100%;
+    }
+  }
+  &.bare {
+    .inputs .option {
+      border: none;
+      background-color: transparent;
+      padding-left: 0;
+      &:hover {
         background-color: transparent;
-        padding-left: 0;
-        &:hover {
-          background-color: transparent;
-          color: $focus-text-color;
-        }
+        color: $focus-text-color;
       }
     }
-    &.valid {
+  }
+  &.valid {
+    label:not(.option) {
+      color: $valid-label-color;
+    }
+    .inputs {
+      input,
+      textarea,
+      select {
+        background-color: $valid-back-color;
+        border-color: $valid-border-color;
+        color: $valid-text-color;
+        &::placeholder {
+          color: $valid-placeholder-color;
+          font-weight: 300;
+        }
+      }
+      .prefix,
+      .suffix {
+        border-color: $valid-border-color;
+        background-color: $valid-prefix-back-color;
+        color: $valid-prefix-text-color;
+      }
+    }
+    .help {
+      color: $valid-message-color;
+      &::before {
+        content: '✔︎ ';
+      }
+    }
+  }
+  &.invalid {
+    label:not(.option) {
+      color: $invalid-label-color;
+    }
+    .inputs {
+      input,
+      textarea,
+      select {
+        background-color: $invalid-back-color;
+        border-color: $invalid-border-color;
+        color: $invalid-text-color;
+        &::placeholder {
+          color: $invalid-placeholder-color;
+          font-weight: 300;
+        }
+      }
+      .prefix,
+      .suffix {
+        border-color: $invalid-border-color;
+        background-color: $invalid-prefix-back-color;
+        color: $invalid-prefix-text-color;
+      }
+    }
+    .help {
+      color: $invalid-message-color;
+      &::before {
+        content: '✘ ';
+      }
+    }
+  }
+  &.focus {
+    &:not(.invalid):not(.valid) {
       label:not(.option) {
-        color: $valid-label-color;
+        color: $focus-label-color;
       }
       .inputs {
-        input,
-        textarea,
-        select {
-          background-color: $valid-back-color;
-          border-color: $valid-border-color;
-          color: $valid-text-color;
-          &::placeholder {
-            color: $valid-placeholder-color;
-            font-weight: 300;
-          }
-        }
-        .prefix,
-        .suffix {
-          border-color: $valid-border-color;
-          background-color: $valid-prefix-back-color;
-          color: $valid-prefix-text-color;
-        }
-      }
-      .help {
-        color: $valid-message-color;
-        &::before {
-          content: '✔︎ ';
-        }
-      }
-    }
-    &.invalid {
-      label:not(.option) {
-        color: $invalid-label-color;
-      }
-      .inputs {
-        input,
-        textarea,
-        select {
-          background-color: $invalid-back-color;
-          border-color: $invalid-border-color;
-          color: $invalid-text-color;
-          &::placeholder {
-            color: $invalid-placeholder-color;
-            font-weight: 300;
-          }
-        }
-        .prefix,
-        .suffix {
-          border-color: $invalid-border-color;
-          background-color: $invalid-prefix-back-color;
-          color: $invalid-prefix-text-color;
-        }
-      }
-      .help {
-        color: $invalid-message-color;
-        &::before {
-          content: '✘ ';
-        }
-      }
-    }
-    &.focus {
-      &:not(.invalid):not(.valid) {
-        label:not(.option) {
-          color: $focus-label-color;
-        }
-        .inputs {
-          &:not(.prefixed):not(.suffixed) {
-            input:not([type=checkbox]):not([type=radio]),
-            textarea,
-            select,
-            &.radio label.checked,
-            &.checkbox label {
-              box-shadow:
-                0 0 0 $input-ring-gap $focus-gap-color,
-                0 0 0 $input-ring-width $focus-ring-color;
-            }
-          }
-          &.prefixed, &.suffixed {
-            // border-radius: $input-border-radius;
-            box-shadow:
-              0 0 0 $input-ring-gap $focus-gap-color,
-              0 0 0 $input-ring-width $focus-ring-color;
-          }
-          input,
+        &:not(.prefixed):not(.suffixed) {
+          input:not([type=checkbox]):not([type=radio]),
           textarea,
           select,
           &.radio label.checked,
           &.checkbox label {
-            background-color: $focus-back-color;
-            border-color: $focus-border-color;
-            color: $focus-text-color;
-            &::placeholder {
-              color: $focus-placeholder-color;
-              font-weight: 300;
-            }
-          }
-          .prefix,
-          .suffix {
-            border-color: $focus-border-color;
-            background-color: $focus-prefix-back-color;
-            color: $focus-prefix-text-color;
+            box-shadow:
+              0 0 0 $input-ring-gap $focus-gap-color,
+              0 0 0 $input-ring-width $focus-ring-color;
           }
         }
-      }
-      &.invalid {
-        .inputs {
-          &:not(.prefixed):not(.suffixed) {
-            input:not([type=checkbox]):not([type=radio]),
-            textarea,
-            select,
-            &.radio label.checked,
-            &.checkbox label {
-              box-shadow:
-                0 0 0 $input-ring-gap $invalid-gap-color,
-                0 0 0 $input-ring-width $invalid-ring-color;
-            }
+        &.prefixed, &.suffixed {
+          // border-radius: $input-border-radius;
+          box-shadow:
+            0 0 0 $input-ring-gap $focus-gap-color,
+            0 0 0 $input-ring-width $focus-ring-color;
+        }
+        input,
+        textarea,
+        select,
+        &.radio label.checked,
+        &.checkbox label {
+          background-color: $focus-back-color;
+          border-color: $focus-border-color;
+          color: $focus-text-color;
+          &::placeholder {
+            color: $focus-placeholder-color;
+            font-weight: 300;
           }
-          &.prefixed, &.suffixed {
-            // border-radius: $input-border-radius;
+        }
+        .prefix,
+        .suffix {
+          border-color: $focus-border-color;
+          background-color: $focus-prefix-back-color;
+          color: $focus-prefix-text-color;
+        }
+      }
+    }
+    &.invalid {
+      .inputs {
+        &:not(.prefixed):not(.suffixed) {
+          input:not([type=checkbox]):not([type=radio]),
+          textarea,
+          select,
+          &.radio label.checked,
+          &.checkbox label {
             box-shadow:
               0 0 0 $input-ring-gap $invalid-gap-color,
               0 0 0 $input-ring-width $invalid-ring-color;
           }
         }
+        &.prefixed, &.suffixed {
+          // border-radius: $input-border-radius;
+          box-shadow:
+            0 0 0 $input-ring-gap $invalid-gap-color,
+            0 0 0 $input-ring-width $invalid-ring-color;
+        }
       }
-      &.valid {
-        .inputs {
-          &:not(.prefixed):not(.suffixed) {
-            input:not([type=checkbox]):not([type=radio]),
-            textarea,
-            select,
-            &.radio label.checked,
-            &.checkbox label {
-              box-shadow:
-                0 0 0 $input-ring-gap $valid-gap-color,
-                0 0 0 $input-ring-width $valid-ring-color;
-            }
-          }
-          &.prefixed, &.suffixed {
+    }
+    &.valid {
+      .inputs {
+        &:not(.prefixed):not(.suffixed) {
+          input:not([type=checkbox]):not([type=radio]),
+          textarea,
+          select,
+          &.radio label.checked,
+          &.checkbox label {
             box-shadow:
               0 0 0 $input-ring-gap $valid-gap-color,
               0 0 0 $input-ring-width $valid-ring-color;
           }
         }
+        &.prefixed, &.suffixed {
+          box-shadow:
+            0 0 0 $input-ring-gap $valid-gap-color,
+            0 0 0 $input-ring-width $valid-ring-color;
+        }
       }
     }
-    &.disabled {
-      cursor: not-allowed;
-      label:not(.option) {
-        color: $disabled-label-color;
-      }
-      .inputs {
-        input,
-        textarea,
-        select {
-          background-color: $disabled-back-color;
-          border-color: $disabled-border-color;
-          color: $disabled-text-color;
-          &::placeholder {
-            color: $disabled-placeholder-color;
-          }
-        }
-        .prefix,
-        .suffix {
-          border-color: $disabled-border-color;
-          background-color: $disabled-prefix-back-color;
-          color: $disabled-prefix-text-color;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    label:not(.option) {
+      color: $disabled-label-color;
+    }
+    .inputs {
+      input,
+      textarea,
+      select {
+        background-color: $disabled-back-color;
+        border-color: $disabled-border-color;
+        color: $disabled-text-color;
+        &::placeholder {
+          color: $disabled-placeholder-color;
         }
       }
-      .help {
-        color: $disabled-message-color;
-        &::before {
-          content: '✘ ';
-        }
+      .prefix,
+      .suffix {
+        border-color: $disabled-border-color;
+        background-color: $disabled-prefix-back-color;
+        color: $disabled-prefix-text-color;
+      }
+    }
+    .help {
+      color: $disabled-message-color;
+      &::before {
+        content: '✘ ';
       }
     }
   }

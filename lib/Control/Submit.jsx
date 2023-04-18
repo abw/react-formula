@@ -6,6 +6,7 @@ import { Themed } from '../Theme.jsx'
 const Submit = ({
   type='submit',
   text='Submit',
+  className='submit',
   Button=DefaultButton,
   ...props
 }) => {
@@ -13,8 +14,9 @@ const Submit = ({
   return (
     <Button
       type={type}
-      onClick={submit}
       text={text}
+      className={className}
+      onClick={submit}
       {...props}
     />
   )

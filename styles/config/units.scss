@@ -1,2 +1,8 @@
-$unit-margin:   0.5rem !default;
-$unit-padding:  0.5rem !default;
+$unit-margin:             0.5rem !default;
+$unit-padding:            0.5rem !default;
+$unit-padding-vertical:   $unit-padding !default;
+$unit-padding-horizontal: $unit-padding * 2 !default;
+$border-width:            2px !default;
+$border-radius:           2px !default;
+$ring-width:              4px !default;
+$ring-gap:                2px !default;

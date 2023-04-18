@@ -30,6 +30,7 @@ const Sidebar = () =>
         ['properties', 'Properties'],
         ['reset',      'Reset'],
         ['submit',     'Submit'],
+        ['controls',   'Controls'],
         ['debug',      'Debug'],
       ]}
     />

@@ -5,7 +5,7 @@ import { Form, Field, Submit } from '../../../../../lib/index.js'
 // PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
 
 const OnSubmit = () =>
-  <Form onSubmit={() => alert('submitted')}>
+  <Form onSubmit={() => alert('You submitted the form')}>
     <Field name="field1" label="Field One"/>
     <Submit/>
   </Form>

@@ -345,42 +345,54 @@ form.debug.valid {
 form.debug.invalid {
   border: 1px solid red;
 }
-.btn-green {
-  background-color: #4a4;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  &:focus {
-    outline: none;
-    box-shadow:
-      0 0 0 2px #cdc,
-      0 0 0 4px #4a4;
+$green-hue: 120;
+$blue-hue: 210;
+$brown-hue: 30;
+$lilac-hue: 240;
+
+form.formula {
+  button.btn-green {
+    background-color: hsl($green-hue, 50%, 40%);
+    border-color: hsl($green-hue, 55%, 35%);
+    color: #fff;
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 $button-ring-gap hsl($green-hue, 20%, 90%),
+        0 0 0 $button-ring-width hsl($green-hue, 50%, 70%);
+    }
   }
-}
-.btn-blue {
-  background-color: #46c;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  &:focus {
-    outline: none;
-    box-shadow:
-      0 0 0 2px #cdc,
-      0 0 0 4px #46c;
+  button.btn-blue {
+    background-color: hsl($blue-hue, 60%, 50%);
+    border-color: hsl($blue-hue, 65%, 45%);
+    color: #fff;
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 $button-ring-gap hsl($blue-hue, 20%, 90%),
+        0 0 0 $button-ring-width hsl($blue-hue, 50%, 70%);
+    }
   }
-}
-.btn-brown {
-  background-color: hsl(30, 60%, 30%);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  &:focus {
-    outline: none;
-    box-shadow:
-      0 0 0 2px hsl(30, 20%, 90%),
-      0 0 0 4px hsl(20, 50%, 70%);
+  button.btn-brown {
+    background-color: hsl($brown-hue, 60%, 30%);
+    border-color: hsl($brown-hue, 65%, 25%);
+    color: #fff;
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 $button-ring-gap hsl($brown-hue, 20%, 90%),
+        0 0 0 $button-ring-width hsl($brown-hue, 50%, 70%);
+    }
+  }
+  button.btn-lilac {
+    background-color: hsl($lilac-hue, 60%, 80%);
+    border-color: hsl($lilac-hue, 65%, 75%);
+    color: hsl($lilac-hue, 50%, 50%);
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 $button-ring-gap hsl($lilac-hue, 10%, 90%),
+        0 0 0 $button-ring-width hsl($lilac-hue, 20%, 80%);
+    }
   }
 }
