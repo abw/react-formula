@@ -1,5 +1,5 @@
 import React from 'react'
-import { isString } from '../../Utils.js'
+import { isString } from '@abw/badger-utils'
 
 export function Transform({icon, transform, children}) {
   const { width, height } = icon

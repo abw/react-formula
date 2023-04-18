@@ -1,6 +1,6 @@
 import React from 'react'
 import Field from './Field.jsx'
-import { splitList } from './Utils.js'
+import { splitList } from '@abw/badger-utils'
 
 export const Fields = ({ names, ...props }) =>
   <div>

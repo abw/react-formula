@@ -1,7 +1,6 @@
 import React from 'react'
-import { isString } from '../../Utils.js'
 import { Transform } from './Transform.jsx'
-import { fail } from '../../Utils.js'
+import { fail, isString } from '@abw/badger-utils'
 import { pathStyles } from './styles.js'
 
 const defaultStyle = pathStyles.default
