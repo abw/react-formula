@@ -372,7 +372,7 @@ form.debug.invalid {
   }
 }
 .btn-brown {
-  background-color: hsl(30, 60, 30);
+  background-color: hsl(30, 60%, 30%);
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -380,7 +380,7 @@ form.debug.invalid {
   &:focus {
     outline: none;
     box-shadow:
-      0 0 0 2px hsl(30, 20, 90),
-      0 0 0 4px hsl(20, 50, 70);
+      0 0 0 2px hsl(30, 20%, 90%),
+      0 0 0 4px hsl(20, 50%, 70%);
   }
 }

@@ -4,7 +4,7 @@ import { Form, Field, Debug } from '../../../../../lib/index.js'
 {/* START */}
 // PRETEND: import { Form, Field, Debug } from '@abw/react-formula'
 
-const DebugForm = () =>
+const Show = () =>
   <Form>
     <Field
       name="message" label="Message"
@@ -17,7 +17,7 @@ const DebugForm = () =>
       name="terms" label="Terms and Conditions" type="checkbox"
       text="I agree to the Terms and Conditions"
     />
-    <Debug/>
+    <Debug show={{ values: true, status: true, config: true }}/>
   </Form>
 
-export default DebugForm
+export default Show
