@@ -32,6 +32,7 @@ const Sidebar = () =>
         ['submit',     'Submit'],
         ['controls',   'Controls'],
         ['debug',      'Debug'],
+        ['set',        'Setting Values'],
       ]}
     />
 
