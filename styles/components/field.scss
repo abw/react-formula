@@ -18,6 +18,7 @@ div.field {
     }
     &.option {
       white-space: nowrap;
+      display: inline-flex;
       .label {
         padding-left: 0.25em;
         padding-right: 0.5em;
@@ -82,11 +83,17 @@ div.field {
       -moz-appearance : none;
       font-size: 1em;
       // line-height: 1.16;
-      padding: calc($input-padding-vertical + $select-padding-tweak) $input-padding-horizontal;
+      //padding: calc($input-padding-vertical + $select-padding-tweak) $input-padding-horizontal;
       display: inline-block;
       width: auto;
       vertical-align: middle;
       /* height: calc(1.5em + 2px); */
+    }
+    input,
+    select,
+    .option {
+      align-items: center;
+      max-height: calc(1em + ($input-padding-vertical * 2) + ($input-border-width * 2));
     }
     &.prefixed, &.suffixed {
       border-radius: $input-border-radius;
@@ -152,9 +159,22 @@ div.field {
     input[type=radio],
     input[type=range] {
       accent-color: $accent-color;
+      margin-left: 0;
     }
     input[type=color] {
       padding: 0;
+      height: calc(1em + $input-padding-vertical * 2);
+      &::-webkit-color-swatch,
+      &::-moz-color-swatch {
+        //height: 1em;
+        //height: 32px !important;
+        //appearance: none;
+        //line-height: 1;
+      }
+      // padding: 0;
+    }
+    input[type=date] {
+      max-height: calc(1em + ($input-padding-vertical * 2) + ($input-border-width * 2));
     }
   }
   .help {

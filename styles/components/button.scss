@@ -3,12 +3,15 @@ button {
   border-radius: 4px;
   padding: $button-padding-vertical $button-padding-horizontal;
   font-size: 1em;
+  line-height: 1;
   font-weight: 500;
   font-family: inherit;
   color: $button-text-color;
   background-color: $button-back-color;
   border: $button-border-width solid $button-border-color;
   transition: border-color 0.25s;
+  margin-bottom: $field-margin;
+  // max-height: calc(1em + ($button-padding-vertical * 2) + ($button-border-width * 2));
   cursor: pointer;
   &:focus,
   &:focus-visible {

@@ -2,17 +2,14 @@
 @import 'utils/all';
 @import 'components/all';
 
-.flex {
-  display: flex;
+.formula {
+  * {
+    box-sizing: border-box;
+  }
 }
+
 .wide {
   width: 100%;
-}
-.flex.space {
-  justify-content: space-between;
-}
-.flex.evenly {
-  justify-content: space-evenly;
 }
 .mar-r {
   margin-right: 0.5rem;

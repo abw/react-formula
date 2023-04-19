@@ -10,11 +10,11 @@ $button-ring-width:             $ring-width !default;
 // Gap between border and focus ring
 $button-ring-gap:               $ring-gap !default;
 // Default button background color
-$button-back-color:             hsl($brand-hue, 60%, 50%) !default;
+$button-back-color:             hsl($brand-hue, 60%, 45%) !default;
 // Default button text color
 $button-text-color:             hsl($brand-hue, 10%, 95%) !default;
 // Default button border color
-$button-border-color:           hsl($brand-hue, 65%, 45%);
+$button-border-color:           hsl($brand-hue, 65%, 40%);
 // Border color for focussed button.
 $button-ring-color:             hsl($brand-hue, 70%, 75%) !default;
 // Color of gap between border and ring.

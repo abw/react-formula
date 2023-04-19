@@ -1,6 +1,9 @@
 // le fancy new grid
 [class*="grid-"] {
   display: grid;
+  &.end {
+    align-items: end;
+  }
 }
 
 @for $n from 2 through 16 {

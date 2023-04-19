@@ -25,16 +25,18 @@ export const CheckboxInput = ({ field=useField() }) => {
   return (
     <div className={inputsClass}>
       <label htmlFor={id} className={classes}>
-        <input
-          className={inputClass}
-          type={type}
-          ref={field.inputRef}
-          aria-disabled={field.disabled}
-          tabIndex={field.disabled ? -1 : field.tabIndex}
-          onChange={handler(field)}
-          {...attrs}
-          checked={field.value}
-        />
+        <span className="checkbox">
+          <input
+            className={inputClass}
+            type={type}
+            ref={field.inputRef}
+            aria-disabled={field.disabled}
+            tabIndex={field.disabled ? -1 : field.tabIndex}
+            onChange={handler(field)}
+            {...attrs}
+            checked={field.value}
+          />
+        </span>
         <span className="label">{text}</span>
       </label>
     </div>

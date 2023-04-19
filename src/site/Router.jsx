@@ -11,6 +11,7 @@ import Inputs from '../pages/inputs/index.jsx'
 import Customising from '../pages/customising/index.jsx'
 import Styling from '../pages/styling/index.jsx'
 import TestForm from '../test/Form.jsx'
+import LayoutTest from '../test/Layout.jsx'
 
 const Router = createBrowserRouter(
   [
@@ -28,6 +29,7 @@ const Router = createBrowserRouter(
         { path: 'customising/*',      element: <Customising/> },
         { path: 'styling/*',          element: <Styling/> },
         { path: 'test-form',          element: <TestForm/> },
+        { path: 'test-layout',        element: <LayoutTest/> },
       ]
     },
   ],
