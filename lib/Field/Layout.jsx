@@ -6,7 +6,7 @@ import { propClasses } from '../Utils.js'
 import { useField } from './Context.js'
 import { DISABLED, FOCUS, INVALID, VALID } from '../Constants.jsx'
 
-export const FieldLayout = ({ field=useField() }) => {
+export const FieldLayout = ({ field=useField(), children }) => {
   const {
     type,
     className,
@@ -36,6 +36,7 @@ export const FieldLayout = ({ field=useField() }) => {
       <Label field={field}/>
       <Input field={field}/>
       <Message field={field}/>
+      {children}
     </div>
   )
 }
