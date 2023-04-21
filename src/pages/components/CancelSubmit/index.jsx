@@ -11,8 +11,7 @@ const CancelSubmitExamples = () =>
     <h1>CancelSubmit</h1>
     <p>
       The <code>CancelSubmit</code> component can be used to add both{' '}
-      <CancelLink/> and <SubmitLink/> controls in one fell
-      swoop.
+      <CancelLink/> and <SubmitLink/> controls.
     </p>
     <Example
       Element={CancelSubmit} code={CancelSubmitSrc}

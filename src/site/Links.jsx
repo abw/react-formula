@@ -13,6 +13,9 @@ export const FormLink = () =>
 export const FieldLink = () =>
   <Link to="/components/field"><code>Field</code></Link>
 
+export const FieldsLink = () =>
+  <Link to="/components/fields"><code>Fields</code></Link>
+
 export const ResetLink = () =>
   <Link to="/components/reset"><code>Reset</code></Link>
 

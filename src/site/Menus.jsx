@@ -26,16 +26,18 @@ export const ComponentsMenu = {
   title: 'Components',
   url:   '/components',
   items: [
-    ['form',          'Form', FormMenu],
-    ['field',         'Field', FieldMenu],
-    ['fields',        'Fields'],
-    ['submit',        'Submit'],
-    ['reset',         'Reset'],
-    ['cancel',        'Cancel'],
-    ['cancel-submit', 'CancelSubmit'],
-    ['reset-submit',  'ResetSubmit'],
-    ['errors',        'Errors'],
-    ['debug',         'Debug'],
+    ['form',                'Form', FormMenu],
+    ['field',               'Field', FieldMenu],
+    ['fields',              'Fields'],
+    ['fieldset',            'Fieldset'],
+    ['submit',              'Submit'],
+    ['reset',               'Reset'],
+    ['cancel',              'Cancel'],
+    ['reset-submit',        'ResetSubmit'],
+    ['cancel-submit',       'CancelSubmit'],
+    ['cancel-reset-submit', 'CancelResetSubmit'],
+    ['errors',              'Errors'],
+    ['debug',               'Debug'],
 
   ]
 }

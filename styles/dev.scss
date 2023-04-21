@@ -6,6 +6,7 @@
 $dev-hue: 193;
 $hover-hue: 30;
 $note-hue: 210;
+$codeblock-radius: 5px;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -120,6 +121,7 @@ a {
     }
     div.menu {
       margin: 0 -1rem 0.25rem;
+      font-size: 0.9rem;
     }
     .menu-head {
       background-color: rgba(#fff, 0.8);
@@ -127,7 +129,7 @@ a {
         background-color: #fff;
       }
       margin: 0 0 0.25rem 0;
-      padding: 0.25rem 0.5rem;
+      padding: 0.25em 0.5em;
       a {
         flex-basis: 100%;
         h4 {
@@ -135,7 +137,7 @@ a {
           margin: 0;
         }
         svg.icon {
-          margin: 0 0.25rem 0 -0.25rem;
+          margin: 0 0.25em 0 -0.25em;
         }
         &.active {
           color: hsl($dev-hue, 100%, 20%);
@@ -157,8 +159,8 @@ a {
         a {
           display: block;
           background-color: rgba(#fff, 0.3);
-          padding: 0.25rem 0.5rem;
-          margin-bottom: 0.25rem;
+          padding: 0.25em 0.5em;
+          margin-bottom: 0.25em;
           &:hover {
             background-color: rgba(#fff, 0.6);
           }
@@ -284,9 +286,11 @@ div.example {
   margin-bottom: 2rem;
 }
 div.codeblock {
+  font-size: 0.9rem;
   position: relative;
   padding: 0;
   pre {
+    border-radius: $codeblock-radius;
     margin: 0 !important;
   }
   h4.caption {
@@ -297,6 +301,29 @@ div.codeblock {
     padding: 0;
     text-align: right;
     color: white;
+  }
+  .clipboard {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    min-width: 8ch;
+    text-align: center;
+    color: white;
+    background-color: hsl($dev-hue, 90%, 30%);
+    border-radius: $codeblock-radius 0 $codeblock-radius 0;
+    font-size: 0.8rem;
+    transition: all 1s;
+    &:hover {
+      transition: all 0.2s;
+      background-color: hsl($hover-hue, 90%, 40%);
+      cursor: pointer;
+    }
+    &.copied {
+      background-color: hsl(120, 70%, 30%);
+      cursor: pointer;
+    }
   }
 }
 @media (prefers-color-scheme: light) {

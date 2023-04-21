@@ -1,0 +1,17 @@
+/* Fieldset variables */
+// Width of fieldset border
+$fieldset-border-width:     $input-border-width !default;
+// Corner radius for fieldset border
+$fieldset-border-radius:    $input-border-radius * 2 !default;
+// Padding for fieldset
+$fieldset-padding:          1rem 2rem 2rem 2rem !default;
+// Padding for fieldset
+$fieldset-shadow:           2px 2px 4px rgba(0, 0, 0, 0.05);
+// Padding for legend
+$legend-padding:            0.25em 0.5em !default;
+// Font size for legend
+$legend-font-size:          0.8rem !default;
+// Border width for legend
+$legend-border-width:       $input-border-width !default;
+// Corner radius for legend
+$legend-border-radius:      0.25rem !default;

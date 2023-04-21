@@ -1,0 +1,22 @@
+fieldset {
+  border: $fieldset-border-width solid $fieldset-border-color;
+  border-radius: $fieldset-border-radius;
+  background-color: $fieldset-back-color;
+  padding: $fieldset-padding;
+  box-shadow: $fieldset-shadow;
+  legend {
+    font-size: $legend-font-size;
+    line-height: 1;
+    padding: $legend-padding;
+    color: $legend-text-color;
+    background-color: $legend-back-color;
+    border: $legend-border-width solid $legend-border-color;
+    border-radius: $legend-border-radius;
+  }
+  .field:first-child {
+    margin-top: 0;
+  }
+  .field:last-child {
+    margin-bottom: 0;
+  }
+}

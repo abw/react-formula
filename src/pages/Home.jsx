@@ -40,7 +40,7 @@ const Home = () =>
       </ul>
     </div>
     <div className="badger">
-      <img src="/badger3-bw.svg" alt="badger"/>
+      <img src={imgUrl('badger.svg')} alt="badger"/>
       <div className="caption">
         Built by Badgers
       </div>

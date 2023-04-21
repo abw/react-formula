@@ -10,7 +10,14 @@ It then became part of [badger-ui](https://github.com/abw/badger-ui) where
 it has lived happily for several years, foraging in the forest for nuts and
 berries.
 
-Now I'm looking to extract it out into a separate library.
+Now I'm extracting it out into a separate library.
 
-Watch this space.
+It's still a work in progress so don't go building any web sites with it
+just yet.
+
+## Documentation
+
+There's a [documentation web site](https://abw.github.io/react-formula/)
+which is also a work in progress.
+
 

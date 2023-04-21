@@ -152,7 +152,18 @@ $error-text-color:           hsl($error-hue, 50%, 50%) !default;
 // Text color for error border
 $error-border-color:         hsl($error-hue, 50%, 60%) !default;
 // Text color for errors
-$error-title-color:          hsl($error-hue, 60%, 30%) !default;
+$error-title-color:          hsl($error-hue, 60%, 40%) !default;
+
+// Background color for fieldset
+$fieldset-back-color:       rgba(255, 255, 255, 0.5) !default;
+// Color of fieldset border
+$fieldset-border-color:      $input-border-color !default;
+// Text color for fieldset legend
+$legend-text-color:          hsl($brand-hue, $label-desaturation, 30%) !default;
+// Background color for fieldset legend
+$legend-back-color:          hsl($brand-hue, 5%, 95%) !default;
+// Background color for fieldset legend
+$legend-border-color:        $input-border-color !default;
 
 /* Other Colors */
 // Accent color for checkboxes, radio buttons, range sliders, etc., based on

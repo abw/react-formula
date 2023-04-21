@@ -6,7 +6,7 @@ export const Example = ({
 }) => {
   return <div className={`example ${className}`}>
     <div className="mar-t-2">
-      <CodeBlock caption={caption}>{prepareCode(code)}</CodeBlock>
+      <CodeBlock caption={caption} code={prepareCode(code)}/>
     </div>
     {children}
     { Element

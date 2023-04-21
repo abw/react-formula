@@ -6,11 +6,13 @@ import { ComponentsMenu } from './Menus.jsx'
 const Sidebar = () =>
   <>
     <h4>Overview</h4>
-    <ul className="menu mar-b-2">
-      <li><Link to="/" end text="Home"/></li>
-      <li><Link to="/getting-started" text="Getting Started"/></li>
-      <li><Link to="/why" text="Why Does This Exist?"/></li>
-    </ul>
+    <div className="menu">
+      <ul className="menu mar-b-2">
+        <li><Link to="/" end text="Home"/></li>
+        <li><Link to="/getting-started" text="Getting Started"/></li>
+        <li><Link to="/why" text="Why Does This Exist?"/></li>
+      </ul>
+    </div>
 
     <Menu
       title="Examples"
@@ -26,7 +28,7 @@ const Sidebar = () =>
     <Menu {...ComponentsMenu}/>
 
     <Menu
-      title="Inputs"
+      title="Input Types"
       url="/inputs"
       items={[
         ['text', 'Text'],
