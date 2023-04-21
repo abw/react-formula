@@ -4,6 +4,7 @@
 
 // $dev-hue: 220;
 $dev-hue: 193;
+$hover-hue: 30;
 $note-hue: 210;
 
 :root {
@@ -59,6 +60,21 @@ p.intro {
 p.subintro {
   font-size: 1.25em;
 }
+a {
+  font-weight: 500;
+  color: hsl($dev-hue, 60%, 30%);
+  text-decoration: inherit;
+  transition: 250ms all;
+  &:hover {
+    color: hsl($hover-hue, 90%, 15%);
+  }
+  &.active {
+    color: hsl($dev-hue, 90%, 10%);
+  }
+}
+
+
+
 .pic-side {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -103,14 +119,14 @@ p.subintro {
       margin-bottom: 0.5rem;
     }
     div.menu {
-      margin-bottom: 0.25rem;
+      margin: 0 -1rem 0.25rem;
     }
     .menu-head {
       background-color: rgba(#fff, 0.8);
       &:hover {
         background-color: #fff;
       }
-      margin: 0 -1rem 0.25rem -1rem;
+      margin: 0 0 0.25rem 0;
       padding: 0.25rem 0.5rem;
       a {
         flex-basis: 100%;
@@ -132,10 +148,11 @@ p.subintro {
     }
     ul.menu {
       padding: 0;
-      margin: 0 0 0 0;
+      margin: 0 0 0 1rem;
       list-style: none;
       li {
-        margin: 0 -0.5rem 0 -0.5rem;
+        margin: 0;
+        // margin: 0 -0.5rem 0 -0.5rem;
         padding: 0;
         a {
           display: block;
@@ -168,17 +185,8 @@ p.subintro {
   }
 }
 
-a {
-  font-weight: 500;
-  color: hsl($dev-hue, 60%, 30%);
-  text-decoration: inherit;
-  transition: 250ms all;
-  &:hover {
-    color: hsl($dev-hue, 90%, 15%);
-  }
-  &.active {
-    color: hsl($dev-hue, 90%, 10%);
-  }
+ul.menu ul.menu {
+  font-size: 0.9em;
 }
 
 ul.menu.large {
@@ -189,12 +197,24 @@ li {
   margin-bottom: 1rem;
 }
 
-p code, code.code {
+code:not(.codeblock code) {
   background-color: hsl($dev-hue, 30%, 95%);
   border: 1px solid hsl($dev-hue, 40%, 90%);
   color: hsl($dev-hue, 90%, 25%);
   padding: 0 3px;
   border-radius: 2px;
+}
+a code:not(.codeblock code) {
+  background-color: hsl($dev-hue, 40%, 90%);
+  border: 1px solid hsl($dev-hue, 50%, 80%);
+  border-bottom-color: hsl($dev-hue, 80%, 50%);
+  color: hsl($dev-hue, 90%, 15%);
+}
+a:hover code:not(.codeblock code) {
+  background-color: hsl($hover-hue, 40%, 90%);
+  border: 1px solid hsl($hover-hue, 50%, 80%);
+  border-bottom-color: hsl($hover-hue, 80%, 50%);
+  color: hsl($hover-hue, 90%, 15%);
 }
 
 table.sass-vars {
@@ -271,7 +291,6 @@ div.codeblock {
     text-align: right;
     color: white;
   }
-
 }
 @media (prefers-color-scheme: light) {
   :root {

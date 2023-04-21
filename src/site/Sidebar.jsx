@@ -2,6 +2,8 @@ import React from 'react'
 import Link from './Link.jsx'
 import { useResolvedPath } from 'react-router-dom'
 import Icon from '../../lib/ui/Icon/index.jsx'
+import { ComponentsMenu } from './Menus.jsx'
+import Menu from './Menu.jsx'
 
 const Sidebar = () =>
   <>
@@ -23,34 +25,8 @@ const Sidebar = () =>
       ]}
     />
 
-    <Menu
-      title="Form"
-      url="/form"
-      items={[
-        ['properties', 'Properties'],
-        ['reset',      'Reset'],
-        ['submit',     'Submit'],
-        ['controls',   'Controls'],
-        ['validation', 'Validation'],
-        ['errors',     'Errors'],
-        ['debug',      'Debug'],
-        ['set',        'Setting Values'],
-      ]}
-    />
+    <Menu {...ComponentsMenu}/>
 
-    <Menu
-      title="Field"
-      url="/field"
-      items={[
-        ['properties',        'Properties'],
-        ['required-optional', 'Required and Optional'],
-        ['prefix-suffix',     'Prefix and Suffix'],
-        ['focus-blur',        'Focus and Blur'],
-        ['onchange',          'onChange'],
-        ['prepare-value',     'prepareValue'],
-        ['validation',        'Validation'],
-      ]}
-    />
 
     <Menu
       title="Inputs"
@@ -90,28 +66,35 @@ const Sidebar = () =>
     </ul>
   </>
 
-const Menu = ({ title, url, items=[] }) => {
-  const resolved = useResolvedPath()
-  const match = resolved.pathname.slice(0, url.length) === url
-  const open = match
-  return (
-    <div className="menu">
-      <div className={`flex space menu-head ${open ? 'open' : 'closed'}`}>
-        <Link to={url} className="flex center">
-          <Icon name={ open ? 'angle-down' : 'angle-right'}/>
-          <h4>{title}</h4>
-        </Link>
-      </div>
-      { open &&
-        <ul className="menu">
-          { items.map(
-            ([path, text]) =>
-              <li key={path}><Link to={`${url}/${path}`} text={text}/></li>
-          )}
-        </ul>
-      }
-    </div>
-  )
-}
+/*
+    <Menu
+      title="Form"
+      url="/form"
+      items={[
+        ['properties', 'Properties'],
+        ['reset',      'Reset'],
+        ['submit',     'Submit'],
+        ['controls',   'Controls'],
+        ['validation', 'Validation'],
+        ['errors',     'Errors'],
+        ['debug',      'Debug'],
+        ['set',        'Setting Values'],
+      ]}
+    />
+
+    <Menu
+      title="Field"
+      url="/field"
+      items={[
+        ['properties',        'Properties'],
+        ['required-optional', 'Required and Optional'],
+        ['prefix-suffix',     'Prefix and Suffix'],
+        ['focus-blur',        'Focus and Blur'],
+        ['onchange',          'onChange'],
+        ['prepare-value',     'prepareValue'],
+        ['validation',        'Validation'],
+      ]}
+    />
+*/
 
 export default Sidebar
