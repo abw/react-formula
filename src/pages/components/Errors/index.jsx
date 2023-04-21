@@ -94,6 +94,13 @@ const ErrorsExamples = () =>
       You can use the <code>useForm</code> function to get access to the form
       context which contains the <code>error</code> and/or <code>errors</code>.
     </p>
+    <p>
+      See the implementations of the{' '}
+      <a href="https://github.com/abw/react-formula/blob/master/lib/Form/Errors.jsx">Errors</a>{' '}
+      and{' '}
+      <a href="https://github.com/abw/react-formula/blob/master/lib/Form/Error.jsx">Error</a>{' '}
+      modules for a starting point.
+    </p>
 
   </div>
 
