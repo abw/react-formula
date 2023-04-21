@@ -184,6 +184,13 @@ a {
     }
   }
 }
+a.github {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
 
 ul.menu ul.menu {
   font-size: 0.9em;
