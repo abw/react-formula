@@ -1,0 +1,11 @@
+/* Error Variables */
+// Width of border
+$error-border-width:           $border-width * 2 !default;
+// Border radius of error panels
+$error-border-radius:          $border-radius * 2 !default;
+// Error box padding
+$error-padding:                1em 1.5em !default;
+// Error box margin
+$error-margin:                 1em 0 !default;
+// Box shadow
+$error-box-shadow:             3px 3px 6px hsla($error-hue, 90%, 20%, 0.1);

@@ -23,8 +23,8 @@ const fields = {
 }
 
 const OnChangeExample = () =>
-  <Form fields={fields} debug={true}>
-    <Field name="vowels" debug={true}/>
+  <Form fields={fields}>
+    <Field name="vowels"/>
   </Form>
 
 export default OnChangeExample

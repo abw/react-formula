@@ -4,11 +4,12 @@ import { Form, Field, Submit } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
 
-const SubmitExample = () =>
+const RequiredExample = () =>
   <Form showRequired>
-    <Field name="one"   label="Field one"/>
-    <Field name="two"   label="Field two"/>
+    <Field name="one"   label="Field one" required/>
+    <Field name="two"   label="Field two" required/>
+    <Field name="three" label="Field three"/>
     <Submit/>
   </Form>
 
-export default SubmitExample
+export default RequiredExample

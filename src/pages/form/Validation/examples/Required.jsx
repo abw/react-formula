@@ -6,8 +6,9 @@ import React from 'react'
 
 const SubmitExample = () =>
   <Form showRequired>
-    <Field name="one"   label="Field one"/>
-    <Field name="two"   label="Field two"/>
+    <Field name="one"   label="Field one" required/>
+    <Field name="two"   label="Field two" required/>
+    <Field name="three" label="Field three"/>
     <Submit/>
   </Form>
 

@@ -19,6 +19,8 @@ $required-hue:              30  !default;
 // Hue for the "optional" tag that can appear in the label when the
 // `showOptional` option is set
 $optional-hue:              210 !default;
+// Hue for errors.
+$error-hue:                 $invalid-hue !default;
 // Hue for debugging panel, not usually seen by customers.
 $debug-hue:                 230 !default;
 
@@ -142,6 +144,15 @@ $disabled-prefix-text-color: hsl($disabled-hue, $disabled-saturation, 55%) !defa
 $disabled-placeholder-color: hsl($disabled-hue, $disabled-saturation, 65%) !default;
 // Error message displayed under field input
 $disabled-message-color:     hsl($disabled-hue, $disabled-saturation, 70%) !default;
+
+// Background color for errors.
+$error-back-color:           hsl($error-hue, 50%, 95%) !default;
+// Text color for errors
+$error-text-color:           hsl($error-hue, 50%, 50%) !default;
+// Text color for error border
+$error-border-color:         hsl($error-hue, 50%, 60%) !default;
+// Text color for errors
+$error-title-color:          hsl($error-hue, 60%, 30%) !default;
 
 /* Other Colors */
 // Accent color for checkboxes, radio buttons, range sliders, etc., based on

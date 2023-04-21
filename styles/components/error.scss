@@ -1,0 +1,26 @@
+.formula .errors {
+  color: $error-text-color;
+  background-color: $error-back-color;
+  border: 1px solid $error-border-color;
+  border-width: $error-border-width;
+  border-radius: $error-border-radius;
+  padding: $error-padding;
+  margin: $error-margin;
+  box-shadow: $error-box-shadow;
+  h3 {
+    color: $error-title-color;
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 0.5em;
+      b {
+        color: $error-title-color;
+      }
+    }
+  }
+}

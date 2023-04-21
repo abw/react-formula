@@ -31,6 +31,8 @@ const Sidebar = () =>
         ['reset',      'Reset'],
         ['submit',     'Submit'],
         ['controls',   'Controls'],
+        ['validation', 'Validation'],
+        ['errors',     'Errors'],
         ['debug',      'Debug'],
         ['set',        'Setting Values'],
       ]}

@@ -14,15 +14,17 @@ Form should accept all config options that field supports.
 
 ## Validation
 
-* field validation
-
-* validation on change/blur
-
 * form validation
+
+* focus/scroll to first invalid field
 
 ## Misc
 
 * placeholder for select as initial unselected/unselectable option
+
+## Docs
+
+* API / component reference
 
 ## Styling
 

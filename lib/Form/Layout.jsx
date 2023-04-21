@@ -1,18 +1,23 @@
 import React from 'react'
-import { formAttrs, propClasses } from '../Utils.js'
 import { useForm } from './Context.js'
+import { formAttrs, propClasses } from '../Utils.js'
 import { INVALID, SUBMITTING, VALID, VALIDATING } from '../Constants.jsx'
+import DefaultHeader from './Header.jsx'
+import DefaultFooter from './Footer.jsx'
 
 export const Layout = ({children}) => {
   const form = useForm()
   // console.log('form layout useForm: ', form)
   const {
     className,
+    bodyClass,
     validClass,
     invalidClass,
     validatingClass,
     submittingClass,
-  } = form.config
+    Header=DefaultHeader,
+    Footer=DefaultFooter,
+  } = form
 
   const classes = propClasses(
     form.status,
@@ -29,7 +34,11 @@ export const Layout = ({children}) => {
 
   return (
     <form className={classes} {...attrs}>
-      {children}
+      <Header/>
+      <div className={bodyClass}>
+        {children}
+      </div>
+      <Footer/>
     </form>
   )
 }

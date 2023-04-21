@@ -8,15 +8,13 @@ import { DISABLED, FOCUS, INVALID, VALID } from '../Constants.jsx'
 
 export const FieldLayout = ({ field=useField() }) => {
   const {
+    type,
     className,
     fieldClass,
     validClass,
     invalidClass,
     disabledClass='disabled',
     focusClass='focus',
-  } = field
-  const {
-    type,
     Label=DefaultLabel,
     Message=DefaultMessage,
     Input=InputTypes[type]||InputTypes.default
