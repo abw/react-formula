@@ -4,8 +4,8 @@ import { useResolvedPath } from 'react-router-dom'
 
 export const MenuItems = ({ url, items=[] }) => {
   const resolved = useResolvedPath()
-  const prefix   = resolved.pathname.slice(0, url.length)
-  const open     = prefix === url
+  const prefix   = resolved.pathname.slice(0, url.length + 1)
+  const open     = prefix === url + '/' || prefix === url  // better way?
   // console.log(`prefix:${prefix} url:${url} open:${open}`)
 
   return open &&

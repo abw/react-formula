@@ -8,6 +8,7 @@ import ShowOptionalSource  from './examples/ShowOptional.jsx?raw'
 import ShowOptionalExample from './examples/ShowOptional.jsx'
 import OptionalTextSource  from './examples/OptionalText.jsx?raw'
 import OptionalTextExample from './examples/OptionalText.jsx'
+import { FieldLink, FormLink } from '../../../../site/Links.jsx'
 
 const RequiredOptional = () =>
   <div>
@@ -19,8 +20,8 @@ const RequiredOptional = () =>
       as being required.  This automatically adds a validator to the field
       to ensure that a value is provided when the form is submitted.  If
       you set the {' '} <code>showRequired</code> property on either the{' '}
-      <code>Form</code> or <code>Field</code> then it will mark the required
-      fields as shown in the examples below.
+      <FormLink/> or <FieldLink/> then it will mark the required fields as
+      shown in the examples below.
     </p>
     <Example
       Element={ShowRequiredExample} code={ShowRequiredSource}
@@ -31,7 +32,7 @@ const RequiredOptional = () =>
     <p>
       You can change the text that&apos;s display for required fields by
       setting <code className="code">requiredText</code> property on the{' '}
-      <code>Form</code> or on individual <code>Field</code> components.
+      <FormLink/> or on individual <FieldLink/> components.
     </p>
     <Example
       Element={RequiredTextExample} code={RequiredTextSource}
@@ -41,7 +42,7 @@ const RequiredOptional = () =>
     <h2>showOptional</h2>
     <p>
       If you set the <code>showOptional</code> property on either the{' '}
-      <code>Form</code> or <code>Field</code> then it will mark the optional
+      <FormLink/> or <FieldLink/> then it will mark the optional
       fields as shown in the examples below.
     </p>
     <Example

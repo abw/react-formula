@@ -6,6 +6,7 @@ import Properties    from './examples/Properties.jsx'
 import PropertiesSrc from './examples/Properties.jsx?raw'
 import OnResetSrc    from './examples/OnReset.jsx?raw'
 import OnReset       from './examples/OnReset.jsx'
+import { FormLink } from '../../../site/Links.jsx'
 
 const ResetExamples = () =>
   <div>
@@ -13,7 +14,7 @@ const ResetExamples = () =>
     <p>
       The <code>Reset</code> component can be used to add a reset button
       which will reset the form to its initial state.  Any{' '}
-      <code>values</code> defined on the <code>Form</code> will be restored.
+      <code>values</code> defined on the <FormLink/> will be restored.
       Any fields that have a <code>default</code> value will be reset to that
       value.
     </p>

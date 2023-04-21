@@ -4,9 +4,17 @@ import { isString } from '@abw/badger-utils'
 export const Error = ({error}) =>
   isString(error)
     ? error
-    : <>
-        <b>{error.label||error.name}:</b> {error.message}
-      </>
+    : <ErrorObject error={error}/>
+
+export const ErrorObject = ({error}) => {
+  const label = error.label || error.name
+  return (
+    <>
+      { Boolean(label) && <b>{label}: </b> }
+      { error.message }
+    </>
+  )
+}
 
 export default Error
 

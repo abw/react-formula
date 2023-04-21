@@ -7,6 +7,7 @@ import SubmitPropsSrc from './examples/SubmitProperties.jsx?raw'
 import OnSubmitSrc    from './examples/OnSubmit.jsx?raw'
 import OnSubmit       from './examples/OnSubmit.jsx'
 import Link from '../../../site/Link.jsx'
+import { ErrorsLink } from '../../../site/Links.jsx'
 
 const SubmitExamples = () =>
   <div>
@@ -14,10 +15,10 @@ const SubmitExamples = () =>
     <p>
       The <code>Submit</code> component can be used to add a button
       which will submit the form.  See the{' '}
-      <Link to="/form/validation" text="validation page"/> for information
+      <Link to="/components/form/validation" text="validation page"/> for information
       on how the form data is validated and the{' '}
-      <Link to="/form/errors" text="errors page"/> for how validation errors
-      are displayed.
+      <ErrorsLink/> component for details on how validation errors are
+      displayed and can be customised.
     </p>
     <Example
       Element={Submit} code={SubmitSrc}

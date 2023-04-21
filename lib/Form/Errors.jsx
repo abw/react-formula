@@ -9,25 +9,23 @@ export const Errors = () => {
     errors,
     errorsClass,
     errorsTitle,
-    errorPrompt,
     errorsPrompt,
     Error=DefaultError
   } = form
+  const hasError = Boolean(error)
+  const n = errors.length + (hasError ? 1 : 0)
 
-  if (! error && errors.length === 0 ) {
+  if (n === 0 ) {
     return null
   }
 
-  const prompt = errors.length === 1
-    ? errorPrompt
-    : errorsPrompt(errors.length)
-
   return (
     <div className={errorsClass}>
-      { Boolean(errorsTitle) && <h3>{errorsTitle(errors.length||1)}</h3> }
+      { Boolean(errorsTitle) && <h3>{errorsTitle(n)}</h3> }
+      { hasError && <Error error={error}/> }
       { errors.length !== 0 &&
         <>
-          { Boolean(prompt) && <p>{prompt}</p>}
+          { Boolean(errorsPrompt) && <p>{errorsPrompt(errors.length)}</p>}
           <ul>
             { errors.map(
               (error, n) =>

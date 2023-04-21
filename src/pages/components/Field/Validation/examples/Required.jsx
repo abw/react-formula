@@ -1,8 +1,8 @@
-import { Form, Fields } from '../../../../../../lib/index.js'
+import { Form, Fields, Submit } from '../../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Fields } from '@abw/react-formula'
+// PRETEND: import { Form, Fields, Submit } from '@abw/react-formula'
 
 const fields = {
   username: {
@@ -19,6 +19,7 @@ const fields = {
 const ValidateExample = () =>
   <Form fields={fields} validateOnBlur>
     <Fields names="username password"/>
+    <Submit/>
   </Form>
 
 export default ValidateExample

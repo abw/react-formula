@@ -1,7 +1,7 @@
-import React from 'react'
 import { Form, Field, Reset } from '../../../../../lib/index.js'
 
 {/* START */}
+import React from 'react'
 // PRETEND: import { Form, Field, Reset } from '@abw/react-formula'
 
 const OnReset = () =>

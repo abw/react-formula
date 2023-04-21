@@ -2,6 +2,7 @@ import React             from 'react'
 import Home              from './Home.jsx'
 import Form              from './Form/index.jsx'
 import Field             from './Field/index.jsx'
+import Fields            from './Fields/index.jsx'
 import Submit            from './Submit/index.jsx'
 import Reset             from './Reset/index.jsx'
 import Cancel            from './Cancel/index.jsx'
@@ -16,6 +17,7 @@ const Components = () =>
     <Route path="" end            element={<Home/>}/>
     <Route path="form/*"          element={<Form/>}/>
     <Route path="field/*"         element={<Field/>}/>
+    <Route path="fields/*"        element={<Fields/>}/>
     <Route path="submit/*"        element={<Submit/>}/>
     <Route path="reset/*"         element={<Reset/>}/>
     <Route path="cancel/*"        element={<Cancel/>}/>

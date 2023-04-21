@@ -39,7 +39,7 @@ const DebugExamples = () =>
 
     <h2>showAll</h2>
     <p>
-      The <code>showAll</code> option is a short-cut to showing all form
+      The <code>showAll</code> option is a shortcut to showing all form
       data.
     </p>
 

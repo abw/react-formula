@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from './Link.jsx'
-import { useResolvedPath } from 'react-router-dom'
-import Icon from '../../lib/ui/Icon/index.jsx'
-import { ComponentsMenu } from './Menus.jsx'
 import Menu from './Menu.jsx'
+import { ComponentsMenu } from './Menus.jsx'
 
 const Sidebar = () =>
   <>
@@ -26,7 +24,6 @@ const Sidebar = () =>
     />
 
     <Menu {...ComponentsMenu}/>
-
 
     <Menu
       title="Inputs"

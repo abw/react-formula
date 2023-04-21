@@ -12,6 +12,7 @@ import FormFocusElement         from './examples/FormFocus.jsx'
 import UseFormFocusSource       from './examples/UseFormFocus.jsx?raw'
 import UseFormFocusElement      from './examples/UseFormFocus.jsx'
 import FocusButtonSource        from './examples/FocusButton.jsx?raw'
+import { FieldLink, FormLink } from '../../../../site/Links.jsx'
 
 const FocusBlur = () =>
   <div>
@@ -19,7 +20,7 @@ const FocusBlur = () =>
 
     <h2>onFocus</h2>
     <p>
-      You can add an <code>onFocus</code> handler to a <code>Field</code>{' '}
+      You can add an <code>onFocus</code> handler to a <FieldLink/>{' '}
       which will be called when the field is focussed.  The field context
       will be passed as an argument.
     </p>
@@ -64,8 +65,8 @@ const FocusBlur = () =>
     <h2>Focus a Form Field</h2>
     <p>
       The other way to programmatically set the focus on a field is to
-      call the <code>form.setFocus()</code> method, passing the name of the
-      field that you want to focus as an argument.
+      call the <code>setFocus()</code> method on a <FormLink/>, passing the
+      name of the field that you want to focus as an argument.
     </p>
     <p>
       In this case you&apos;ll need to capture a reference to the form using
@@ -82,7 +83,7 @@ const FocusBlur = () =>
 
     <p>
       If the buttons (or other controls) that you want to use to focus
-      the fields are contained within the <code>Form</code> then you can
+      the fields are contained within the <FormLink/> then you can
       call the <code>useForm()</code> function to gain access to the form.
     </p>
     <Example

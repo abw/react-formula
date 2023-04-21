@@ -28,6 +28,7 @@ export const ComponentsMenu = {
   items: [
     ['form',          'Form', FormMenu],
     ['field',         'Field', FieldMenu],
+    ['fields',        'Fields'],
     ['submit',        'Submit'],
     ['reset',         'Reset'],
     ['cancel',        'Cancel'],

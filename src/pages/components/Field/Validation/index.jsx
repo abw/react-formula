@@ -1,15 +1,23 @@
 import React          from 'react'
 import Example        from '../../../../site/Example.jsx'
-import RequiredSource from './examples/Required.jsx?raw'
 import Required       from './examples/Required.jsx'
-import ValidateSource from './examples/Validate.jsx?raw'
+import RequiredSrc    from './examples/Required.jsx?raw'
 import Validate       from './examples/Validate.jsx'
-import OnChangeSource from './examples/OnChange.jsx?raw'
+import ValidateSrc    from './examples/Validate.jsx?raw'
+import Validator      from './examples/Validator.jsx'
+import ValidatorSrc   from './examples/Validator.jsx?raw'
+import OnChangeSrc    from './examples/OnChange.jsx?raw'
 import OnChange       from './examples/OnChange.jsx'
 
 const ValidationExamples = () =>
   <div>
     <h1>Validation</h1>
+    <p>
+      There are a number of different ways to validate field input.
+      For simple cases where a value must be provided you can use the{' '}
+      <code>required</code> property.  If you need to perform additional
+      validation then you can do that using a <code>validate</code> function.
+    </p>
 
     <h2>required</h2>
     <p>
@@ -22,30 +30,55 @@ const ValidationExamples = () =>
       default for all fields.
     </p>
     <Example
-      Element={Required} code={RequiredSource}
+      Element={Required} code={RequiredSrc}
       caption="required"
     >
       <p>
-        Try focussing on one of the fields and then click outside the field
-        without entering anything.
+        Try submitting the form without entering anything.  The{' '}
+        <code>validateOnBlur</code> option is set so you can also focus on
+        a field and then click outside the field to trigger the validation.
       </p>
     </Example>
 
     <h2>validate</h2>
     <p>
-      You can set the <code>validate</code> option to define a validation
+      You can set the <code>validate</code> option to define an{' '}
+      <code>async</code> validation
       function.  In this example we&apos;re using{' '}
       <a href="https://www.npmjs.com/package/yup">Yup</a> but you can
       use anything you like.  It should return the validated value on
       success or throw an error if the valid is invalid.
     </p>
     <Example
-      Element={Validate} code={ValidateSource}
+      Element={Validate} code={ValidateSrc}
       caption="validate"
     >
       <p>
         Try switching focus from one field to another without entering
         anything.  You can see the custom validation errors.
+      </p>
+    </Example>
+    <p>
+      The <code>validate</code> function is passed four arguments.  The first
+      is the field value for common cases where that&apos;s all you need to
+      determine if the field is valid.  The second argument is the field
+      context containing everything you need to know about the field state
+      and callable actions to change it.  The third and fourth arguments are{' '}
+      <code>resolve</code> and <code>reject</code> functions which can be
+      called to validate or invalidate the field, respectively.  The{' '}
+      <code>resolve</code> function should be passed an object containing
+      the <code>value</code>, which may be modified by your function.
+      The <code>reject</code> function should be passed an object containing
+      an error <code>message</code>, and optionally a new <code>value</code>{' '}
+      for the field.
+    </p>
+    <Example
+      Element={Validator} code={ValidatorSrc}
+      caption="validate"
+    >
+      <p>
+        In this somewhat contrived example we require the user to enter a
+        username containing the word &quot;badger&quot;.
       </p>
     </Example>
 
@@ -57,7 +90,7 @@ const ValidationExamples = () =>
       threshold.
     </p>
     <Example
-      Element={OnChange} code={OnChangeSource}
+      Element={OnChange} code={OnChangeSrc}
       caption="onChange"
     >
       <p>
