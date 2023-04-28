@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
-import { ComponentsMenu } from './Menus.jsx'
-import { TutorialMenu } from './Tutorial.jsx'
+import { ComponentsMenu, InputsMenu, TutorialMenu } from './Menus.jsx'
 
 const Sidebar = () =>
   <>
@@ -15,26 +14,9 @@ const Sidebar = () =>
       </ul>
     </div>
 
-    <Menu
-      title="Tutorial"
-      url="/tutorial"
-      items={TutorialMenu}
-    />
-
+    <Menu {...TutorialMenu}/>
     <Menu {...ComponentsMenu}/>
-
-    <Menu
-      title="Input Types"
-      url="/inputs"
-      items={[
-        ['text', 'Text'],
-        ['textarea', 'Text Area'],
-        ['number', 'Number, Date, etc'],
-        ['checkbox', 'Checkbox'],
-        ['radio', 'Radio Buttons'],
-        ['select', 'Select Input'],
-      ]}
-    />
+    <Menu {...InputsMenu}/>
 
     <Menu
       title="Customising"

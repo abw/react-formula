@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Home = () =>
-  <h1>Customising</h1>
+  <div>
+    <h1>Customising</h1>
+    <h2>TODO</h2>
+  </div>
 
 export default Home
