@@ -5,7 +5,7 @@ import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
 import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
 import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { sleep } from '@abw/badger-utils'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
@@ -29,7 +29,7 @@ export const CodeBlock = ({code, children, language='jsx', caption}) => {
       >
         { copied ? 'Copied' : 'Copy' }
       </div>
-      <SyntaxHighlighter language={language} style={darcula} showLineNumbers={true}>
+      <SyntaxHighlighter language={language} style={a11yDark} showLineNumbers={true}>
         {code||children}
       </SyntaxHighlighter>
     </div>

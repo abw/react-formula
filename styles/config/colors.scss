@@ -149,10 +149,12 @@ $disabled-message-color:     hsl($disabled-hue, $disabled-saturation, 70%) !defa
 $error-back-color:           hsl($error-hue, 50%, 95%) !default;
 // Text color for errors
 $error-text-color:           hsl($error-hue, 50%, 50%) !default;
-// Text color for error border
-$error-border-color:         hsl($error-hue, 50%, 60%) !default;
-// Text color for errors
-$error-title-color:          hsl($error-hue, 60%, 40%) !default;
+// Color for errors border
+$error-border-color:         hsl($error-hue, 80%, 40%) !default;
+// Color for errors title
+$error-title-color:          hsl($error-hue, 20%, 90%) !default;
+// Color for labels in errors
+$error-label-color:          hsl($error-hue, 60%, 40%) !default;
 
 // Background color for fieldset
 $fieldset-back-color:       rgba(255, 255, 255, 0.5) !default;

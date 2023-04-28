@@ -10,6 +10,10 @@
 
 * submit, including validation
 
+* internal values shouldn't default to all values, but should cherry pick
+  as fields are registered (and also go through the field prepareValue()
+  and/or validation
+
 ## State
 
 ## Validation

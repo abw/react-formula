@@ -15,6 +15,19 @@ const Sidebar = () =>
     </div>
 
     <Menu
+      title="Tutorial"
+      url="/tutorial"
+      items={[
+        ['simple-form',         'Defining a Form'],
+        ['field-validation',    'Field Validation'],
+        ['form-validation',     'Form Validation'],
+        ['form-submission',     'Form Submission'],
+        ['submission-response', 'Submission Response'],
+        ['submission-errors',   'Submission Errors'],
+      ]}
+    />
+
+    <Menu
       title="Examples"
       url="/examples"
       items={[

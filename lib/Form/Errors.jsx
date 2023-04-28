@@ -22,7 +22,7 @@ export const Errors = () => {
   return (
     <div className={errorsClass}>
       { Boolean(errorsTitle) && <h3>{errorsTitle(n)}</h3> }
-      { hasError && <Error error={error}/> }
+      { hasError && <h4><Error error={error}/></h4> }
       { errors.length !== 0 &&
         <>
           { Boolean(errorsPrompt) && <p>{errorsPrompt(errors.length)}</p>}

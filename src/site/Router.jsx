@@ -4,6 +4,7 @@ import Layout from './Layout.jsx'
 import Home from '../pages/Home.jsx'
 import GettingStarted from '../pages/GettingStarted.jsx'
 import Why from '../pages/Why.jsx'
+import Tutorial from '../pages/tutorial/index.jsx'
 import Examples from '../pages/examples/index.jsx'
 // import Field from '../pages/field/index.jsx'
 import Components from '../pages/components/index.jsx'
@@ -23,6 +24,7 @@ const Router = createBrowserRouter(
         { path: '/',                  element: <Home/> },
         { path: 'getting-started',    element: <GettingStarted/> },
         { path: 'why',                element: <Why/> },
+        { path: 'tutorial/*',         element: <Tutorial/> },
         { path: 'examples/*',         element: <Examples/> },
         { path: 'components/*',       element: <Components/> },
         // { path: 'form/*',             element: <Form/> },
