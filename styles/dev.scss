@@ -65,9 +65,10 @@ a {
   font-weight: 500;
   color: hsl($dev-hue, 60%, 30%);
   text-decoration: inherit;
-  transition: 250ms all;
+  transition: 500ms all;
   &:hover {
-    color: hsl($hover-hue, 90%, 15%);
+    transition: 200ms all;
+    color: hsl($hover-hue, 40%, 55%);
   }
   &.active {
     color: hsl($dev-hue, 90%, 10%);
@@ -116,6 +117,8 @@ a {
     background-color: rgba(#fff, 0.4);
     max-height: calc(100vh - 2rem);
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
     h4 {
       margin-top: 0;
       margin-bottom: 0.5rem;
@@ -173,6 +176,23 @@ a {
             color: hsl($dev-hue, 90%, 10%);
           }
         }
+      }
+    }
+    footer {
+      margin-top: auto;
+      a {
+        font-size: 0;
+        width: 6rem;
+      }
+      img {
+        height: 2rem;
+      }
+      .notes {
+        font-size: 0.8rem;
+        color: hsl($dev-hue, 40%, 40%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
       }
     }
   }

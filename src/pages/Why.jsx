@@ -138,12 +138,11 @@ const Why = () =>
       </li>
     </ul>
     <div className="badger">
-      <img src="/badger3-bw.svg" alt="badger"/>
+      <img src={imgUrl('badger.svg')} alt="badger"/>
       <div className="caption">
         Why am I here?
       </div>
     </div>
-
   </div>
 
 export default Why

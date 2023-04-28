@@ -2,6 +2,8 @@ import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
 import { ComponentsMenu, InputsMenu, TutorialMenu } from './Menus.jsx'
+import { date, version } from './Utils.js'
+import { ReactComponent as Abw } from '../svg/abw.svg'
 
 const Sidebar = () =>
   <>
@@ -41,6 +43,20 @@ const Sidebar = () =>
       <li><Link to="/test-form" text="Test Form"/></li>
       <li><Link to="/test-layout" text="Layout Test"/></li>
     </ul>
+    <footer>
+      <div className="notes">
+        <div>
+          Version {version}
+        </div>
+        <a href="https://github.com/abw">
+          <Abw/>
+        </a>
+        <div>
+          {date}
+        </div>
+      </div>
+    </footer>
+
   </>
 
 /*

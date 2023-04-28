@@ -1,14 +1,12 @@
 import React from 'react'
 import { imgUrl } from '../site/Utils.js'
+import { ReactComponent as Github } from '../svg/github.svg'
 
 const Home = () =>
   <div className="home">
     <h1>@abw/react-formula</h1>
     <a href="https://github.com/abw/react-formula" className="github">
-      <img
-        src="https://github.githubassets.com/favicons/favicon.svg"
-        alt="Github repository"
-      />
+      <Github/>
     </a>
     <div className="pic-side">
       <img src={imgUrl('react-formula.svg')}/>
