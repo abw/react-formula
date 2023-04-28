@@ -454,6 +454,7 @@ form.formula {
   min-width: 20ch;
   background-color: hsl($dev-hue, 40%, 95%);
   border: 1px solid hsl($dev-hue, 50%, 80%);
+  margin-top: 1rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
@@ -485,5 +486,18 @@ form.formula {
   }
   &.ch48 {
     width: 48ch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-grid-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .lg-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }

@@ -5,18 +5,25 @@ import React, { useState } from 'react'
 // PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
 
 const SubmitResponse = () => {
-  const [values, setValues] = useState()
+  const [response, setResponse] = useState()
 
   // dummy submission in the style of fetch or axios
-  const onSubmit = submit => {
+  const onSubmit = values => {
     return Promise.resolve({
       status: 200,
-      data:   submit.values
+      data:   {
+        message: 'Welcome back!  You are now logged in.',
+        user:    {
+          id:    12345,
+          email: values.email,
+          name:  'Bobby Badger',
+        },
+      }
     })
   }
 
   // handle successful response
-  const onSuccess = response => setValues(response.data)
+  const onSuccess = response => setResponse(response.data)
 
   return (
     <>
@@ -25,10 +32,10 @@ const SubmitResponse = () => {
         <Field name="password" type="password" label="Password" required/>
         <Submit text="Login"/>
       </Form>
-      { values
+      { response
         ? <div className="debug">
-            <h4>Submitted Values</h4>
-            <pre>{JSON.stringify(values, null, 2)}</pre>
+            <h4>Emulated Response</h4>
+            <pre>{JSON.stringify(response, null, 2)}</pre>
           </div>
         : null
       }

@@ -3,7 +3,7 @@ import BasicLoginForm    from './examples/BasicLoginForm.jsx'
 import BasicLoginFormSrc from './examples/BasicLoginForm.jsx?raw'
 import Example from '../../site/Example.jsx'
 import { FieldLink, FormLink, SubmitLink } from '../../site/Links.jsx'
-import PrevNext from '../../site/PrevNext.jsx'
+import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const SimpleForm = () =>
   <div>
@@ -48,7 +48,7 @@ const SimpleForm = () =>
       at some point you&apos;ll want to add more thorough validation for
       fields.  Let&apos;s look at that next.
     </p>
-    <PrevNext nextLink="/tutorial/field-validation" nextText="Field Validation"/>
+    <TutorialPager uri="simple-form"/>
   </div>
 
 export default SimpleForm

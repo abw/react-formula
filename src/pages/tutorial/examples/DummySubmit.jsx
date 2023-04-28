@@ -7,9 +7,13 @@ import React, { useState } from 'react'
 const DummySubmit = () => {
   const [values, setValues] = useState()
 
+  const onSubmit = values => Promise.resolve(
+    setValues(values)
+  )
+
   return (
     <>
-      <Form onSubmit={ submit => setValues(submit.values) } debug>
+      <Form onSubmit={onSubmit} debug>
         <Field name="email" label="Email Address" required/>
         <Field name="password" type="password" label="Password" required/>
         <Submit text="Login"/>

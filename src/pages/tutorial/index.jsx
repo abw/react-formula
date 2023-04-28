@@ -6,6 +6,7 @@ import FormValidation from './FormValidation.jsx'
 import FormSubmission     from './FormSubmission.jsx'
 import SubmissionResponse from './SubmissionResponse.jsx'
 import SubmissionErrors from './SubmissionErrors.jsx'
+import CompleteExample from './CompleteExample.jsx'
 import { Routes, Route }  from 'react-router-dom'
 
 const Tutorial = () =>
@@ -17,6 +18,7 @@ const Tutorial = () =>
     <Route path="form-submission"     element={<FormSubmission/>}/>
     <Route path="submission-response" element={<SubmissionResponse/>}/>
     <Route path="submission-errors"   element={<SubmissionErrors/>}/>
+    <Route path="complete-example"    element={<CompleteExample/>}/>
   </Routes>
 
 

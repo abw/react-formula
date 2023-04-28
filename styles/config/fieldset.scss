@@ -4,7 +4,9 @@ $fieldset-border-width:     $input-border-width !default;
 // Corner radius for fieldset border
 $fieldset-border-radius:    $input-border-radius * 2 !default;
 // Padding for fieldset
-$fieldset-padding:          1rem 2rem 2rem 2rem !default;
+$fieldset-padding:          1rem 2rem 1rem 2rem !default;
+// margin for fieldset
+$fieldset-margin:           1rem 0 !default;
 // Padding for fieldset
 $fieldset-shadow:           2px 2px 4px rgba(0, 0, 0, 0.05);
 // Padding for legend

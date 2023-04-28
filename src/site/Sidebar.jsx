@@ -2,6 +2,7 @@ import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
 import { ComponentsMenu } from './Menus.jsx'
+import { TutorialMenu } from './Tutorial.jsx'
 
 const Sidebar = () =>
   <>
@@ -17,25 +18,7 @@ const Sidebar = () =>
     <Menu
       title="Tutorial"
       url="/tutorial"
-      items={[
-        ['simple-form',         'Defining a Form'],
-        ['field-validation',    'Field Validation'],
-        ['form-validation',     'Form Validation'],
-        ['form-submission',     'Form Submission'],
-        ['submission-response', 'Submission Response'],
-        ['submission-errors',   'Submission Errors'],
-      ]}
-    />
-
-    <Menu
-      title="Examples"
-      url="/examples"
-      items={[
-        ['simple',    'Simple Example'],
-        ['schema',    'Separate Schema'],
-        ['fields',    'Adding Multiple Fields'],
-        ['complete',  'Complete Example'],
-      ]}
+      items={TutorialMenu}
     />
 
     <Menu {...ComponentsMenu}/>

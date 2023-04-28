@@ -16,6 +16,8 @@
 
 ## State
 
+* default select value isn't being passed up to form or included in submission
+
 ## Validation
 
 * form validation

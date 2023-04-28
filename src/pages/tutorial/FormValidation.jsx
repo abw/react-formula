@@ -2,8 +2,8 @@ import React from 'react'
 import PasswordCheck    from './examples/PasswordCheck.jsx'
 import PasswordCheckSrc from './examples/PasswordCheck.jsx?raw'
 import Example from '../../site/Example.jsx'
-import PrevNext from '../../site/PrevNext.jsx'
 import { FieldsLink, FormLink } from '../../site/Links.jsx'
+import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const FormValidation = () =>
   <div>
@@ -55,10 +55,7 @@ const FormValidation = () =>
       Now that we&apos;ve handled the validation of the form we can talk
       about how the form is submitted.
     </p>
-    <PrevNext
-      prevLink="/tutorial/field-validation" prevText="Field Validation"
-      nextLink="/tutorial/form-submission"  nextText="Form Submission"
-    />
+    <TutorialPager uri="form-validation"/>
   </div>
 
 export default FormValidation

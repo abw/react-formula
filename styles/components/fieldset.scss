@@ -3,6 +3,7 @@ fieldset {
   border-radius: $fieldset-border-radius;
   background-color: $fieldset-back-color;
   padding: $fieldset-padding;
+  margin: $fieldset-margin;
   box-shadow: $fieldset-shadow;
   legend {
     font-size: $legend-font-size;
@@ -18,5 +19,8 @@ fieldset {
   }
   .field:last-child {
     margin-bottom: 0;
+  }
+  .field:last-child {
+    margin-bottom: 1rem;
   }
 }

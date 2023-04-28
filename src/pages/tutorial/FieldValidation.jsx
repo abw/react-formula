@@ -3,7 +3,7 @@ import LoginForm    from './examples/LoginFieldValidation.jsx'
 import LoginFormSrc from './examples/LoginFieldValidation.jsx?raw'
 import Example from '../../site/Example.jsx'
 import { FieldLink, FormLink } from '../../site/Links.jsx'
-import PrevNext from '../../site/PrevNext.jsx'
+import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const FieldValidation = () =>
   <div>
@@ -85,10 +85,7 @@ const FieldValidation = () =>
       to all of the submitted values then you can do that at the form level
       We&apos;ll look at that next.
     </p>
-    <PrevNext
-      prevLink="/tutorial/simple-form"     prevText="Defining a Form"
-      nextLink="/tutorial/form-validation" nextText="Form Validation"
-    />
+    <TutorialPager uri="field-validation"/>
   </div>
 
 export default FieldValidation

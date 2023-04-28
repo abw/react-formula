@@ -1,11 +1,13 @@
-import React from 'react'
-import Example from '../../site/Example.jsx'
-import PrevNext from '../../site/PrevNext.jsx'
+import React             from 'react'
+import Example           from '../../site/Example.jsx'
 import SubmitThrow       from './examples/SubmitThrow.jsx'
 import SubmitThrowSrc    from './examples/SubmitThrow.jsx?raw'
 import SubmitReject      from './examples/SubmitReject.jsx'
 import SubmitRejectSrc   from './examples/SubmitReject.jsx?raw'
+import OnError           from './examples/OnError.jsx'
+import OnErrorSrc        from './examples/OnError.jsx?raw'
 import { ErrorsLink }    from '../../site/Links.jsx'
+import { TutorialPager } from '../../site/Tutorial.jsx'
 // import { FormLink } from '../../site/Links.jsx'
 
 const SubmissionErrors = () =>
@@ -21,20 +23,14 @@ const SubmissionErrors = () =>
       an API request could fail or otherwise be rejected for any number of
       other reasons.  So we must know how to handle these cases.
     </p>
-    <h2>Failed Response</h2>
+
+    <h2>Simple Error</h2>
     <p>
       If a submission throws an error or returns an error via a rejected
       Promise then the form submission handler will set the internal{' '}
       <code>error</code> state variable. By default this error will be
       displayed in the form header.  See the <ErrorsLink/> component for
       more information about changing how and if errors are displayed.
-    </p>
-    <p>
-      You can provide an <code>onError</code> handler which will be called
-      with the error if you want to do any further processing.  In this
-      example we simply call a <code>setError()</code> function to store
-      the error in a React state variable and then display it beneath the
-      form.
     </p>
     <Example
       Element={SubmitThrow} code={SubmitThrowSrc}
@@ -77,10 +73,25 @@ const SubmissionErrors = () =>
       </p>
     </Example>
 
-    <PrevNext
-      prevLink="/tutorial/submission-response" prevText="Submission Response"
-      nextLink="/tutorial/form-validation" nextText="Form Validation..."
-    />
+    <h2><code>onError</code></h2>
+    <p>
+      You can provide an <code>onError</code> handler which will be called
+      when an error response is received.  In this example we simply call
+      a <code>setError()</code> function to store the error in a React state
+      variable and then display it beneath the form.
+    </p>
+    <Example
+      Element={OnError} code={OnErrorSrc}
+      caption="onError"
+    >
+      <p>
+        Try submitting the form to see the errors generated.  The {' '}
+        <code>onError</code> handler will store them in the state variable
+        and display them beneath the form.
+      </p>
+    </Example>
+
+    <TutorialPager uri="submission-errors"/>
   </div>
 
 export default SubmissionErrors

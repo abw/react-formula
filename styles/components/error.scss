@@ -19,6 +19,9 @@
     border-radius: $error-title-radius $error-title-radius 0 0;
     color: $error-title-color;
   }
+  h4:last-child {
+    margin-bottom: 0.5rem;
+  }
   p {
     margin-top: 0;
   }

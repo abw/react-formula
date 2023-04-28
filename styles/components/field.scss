@@ -19,8 +19,12 @@ div.field {
     &.option {
       white-space: nowrap;
       display: inline-flex;
+      align-items: center;
+      .input {
+        margin: 0;
+      }
       .label {
-        padding-left: 0.25em;
+        padding-left: 0.5em;
         padding-right: 0.5em;
       }
     }
@@ -211,6 +215,12 @@ div.field {
     .radio label.option,
     .checkbox label.option {
       width: 100%;
+      input {
+        flex-basis: auto;
+      }
+      span.label {
+        flex-basis: 100%;
+      }
     }
   }
   &.bare {
@@ -231,7 +241,8 @@ div.field {
     .inputs {
       input,
       textarea,
-      select {
+      select,
+      .option {
         background-color: $valid-back-color;
         border-color: $valid-border-color;
         color: $valid-text-color;
@@ -261,7 +272,8 @@ div.field {
     .inputs {
       input,
       textarea,
-      select {
+      select,
+      .option {
         background-color: $invalid-back-color;
         border-color: $invalid-border-color;
         color: $invalid-text-color;

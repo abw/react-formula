@@ -1,8 +1,8 @@
-import React from 'react'
-import Example from '../../site/Example.jsx'
-import PrevNext from '../../site/PrevNext.jsx'
+import React             from 'react'
+import Example           from '../../site/Example.jsx'
 import SubmitResponse    from './examples/SubmitResponse.jsx'
 import SubmitResponseSrc from './examples/SubmitResponse.jsx?raw'
+import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const SubmissionResponse = () =>
   <div>
@@ -14,7 +14,7 @@ const SubmissionResponse = () =>
       for some reason.
     </p>
 
-    <h2>Successful Response</h2>
+    <h2><code>onSuccess</code></h2>
     <p>
       Let&apos;s start by looking at the case there the submission is
       successful.  In this example we define an <code>onSubmit</code> function
@@ -26,7 +26,7 @@ const SubmissionResponse = () =>
     <p>
       The additional step is to defined an <code>onSuccess</code> handler
       which can do something to handle the successful response.  In this
-      case we&apos;re calling the <code>setValues</code> function to store
+      case we&apos;re calling the <code>setResponse</code> function to store
       the response data, much like in the previous example, except that this
       time we&apos;re emulating the full request and response cycle.
     </p>
@@ -38,14 +38,10 @@ const SubmissionResponse = () =>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button.  You should see the values returned by
         an emulated server response appear in a debugging window beneath the
-        form.
+        form.  Also note that the form is reset on a successful submission.
       </p>
     </Example>
-
-    <PrevNext
-      prevLink="/tutorial/form-submission" prevText="Form Submission"
-      nextLink="/tutorial/submission-errors" nextText="Submission Errors"
-    />
+    <TutorialPager uri="submission-response"/>
   </div>
 
 export default SubmissionResponse
