@@ -33,6 +33,7 @@ const Home = () =>
         </p>
       </div>
     </div>
+    <h3>WARNING - THIS IS A WORK IN PROGRESS</h3>
     <div>
       <ul className="large menu">
         <li><a href="getting-started">Getting Started</a></li>

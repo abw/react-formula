@@ -11,7 +11,7 @@ const SimpleForm = () =>
     <p className="intro">
       One of the underlying principles of this library is, to borrow a phrase
       from Larry Wall, to make simple things simple and hard things possible.
-      It should be just as easy, if not easier, to create a form using
+      It should be just as easy, if not easier, to create a form using{' '}
       <code>react-formula</code> as it should be using vanilla HTML.
     </p>
 
