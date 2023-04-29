@@ -8,19 +8,15 @@
 
 ## Form
 
-* submit, including validation
-
 * internal values shouldn't default to all values, but should cherry pick
   as fields are registered (and also go through the field prepareValue()
-  and/or validation
+  and/or validation)
 
 ## State
 
 * default select value isn't being passed up to form or included in submission
 
 ## Validation
-
-* form validation
 
 * focus/scroll to first invalid field
 
@@ -32,6 +28,10 @@
 
 * API / component reference
 
+* Changed component
+
+* Tutorial - examples of edit form with values
+
 ## Styling
 
 * thin/wide fields - be consistent and let it be set on form
@@ -39,3 +39,9 @@
 * prefix/suffix for checkboxes
 
 * wide radio buttons are on the wonk
+
+## Theming
+
+* Consistent prefix, e.g. Formula.Form, Formula.Field
+
+* Form and Field components should be themed (only Control/* so far)
