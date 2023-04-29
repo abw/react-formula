@@ -6,6 +6,7 @@ import { useField } from '../Field/Context.js'
 export const SelectInput = ({ field=useField() }) => {
   const {
     options=[],
+    placeholder,
     type='select',
     className='input',
     inputsClass='select inputs',
@@ -24,16 +25,20 @@ export const SelectInput = ({ field=useField() }) => {
         onChange={handler(field)}
         {...attrs}
         value={field.value}
+        required={field.required || Boolean(placeholder)}  // allows styling via :invalid for placeholder
       >
+        { Boolean(placeholder) &&
+          <option value="" hidden disabled selected>{placeholder}</option>
+        }
         { options.map(
           option => {
             option = valueOption(option)
-            // const checked = field.value == option.value
             return (
               <option
                 key={option.value}
                 className={optionClass}
                 value={option.value}
+                disabled={option.disabled}
               >
                 {option.text}
               </option>

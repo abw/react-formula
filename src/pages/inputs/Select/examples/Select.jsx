@@ -12,10 +12,12 @@ const SelectExample = () =>
     />
     <Field
       name="food" label="What is your favourite number?" type="select"
+      placeholder="Pick a number"
       options={[
         { value: 10, text: 'Ten' },
         { value: 11, text: 'Eleven (one louder)', className: 'bold' },
-        { value: 42, text: <>Forty-Two (the meaning of <i>life</i>)</> },
+        { value: 42, text: 'Forty-Two (the meaning of life)' },
+        { value: 69, text: 'Sixty nine, dude!', disabled: true }
       ]}
     />
   </Form>

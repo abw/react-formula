@@ -99,6 +99,14 @@ div.field {
       align-items: center;
       max-height: calc(1em + ($input-padding-vertical * 2) + ($input-border-width * 2));
     }
+    ::placeholder {
+      color: blue;
+    }
+    select:invalid,
+    select option:disabled,
+    select option:invalid {
+      color: $input-placeholder-color;
+    }
     &.prefixed, &.suffixed {
       border-radius: $input-border-radius;
     }
