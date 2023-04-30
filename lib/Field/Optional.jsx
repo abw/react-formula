@@ -1,10 +1,11 @@
 import React from 'react'
 import { useField } from './Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const FieldOptional = ({ field=useField() }) =>
+const Optional = ({ field=useField() }) =>
   ! field.required && field.showOptional &&
     <span className="optional">
       {field.optionalText || 'optional'}
     </span>
 
-export default FieldOptional
+export default Themed(Optional, 'Form.Field.Optional')

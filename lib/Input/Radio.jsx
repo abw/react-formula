@@ -2,8 +2,9 @@ import React from 'react'
 import Handlers from './Handlers.js'
 import { inputAttrs, propClasses, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const RadioInput = ({ field=useField() }) => {
+const Radio = ({ field=useField() }) => {
   const {
     options=[],
     type='radio',
@@ -50,4 +51,4 @@ export const RadioInput = ({ field=useField() }) => {
   )
 }
 
-export default RadioInput
+export default Themed(Radio, 'Form.Input.Radio')

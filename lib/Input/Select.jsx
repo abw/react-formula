@@ -2,8 +2,9 @@ import React from 'react'
 import Handlers from './Handlers.js'
 import { inputAttrs, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const SelectInput = ({ field=useField() }) => {
+const Select = ({ field=useField() }) => {
   const {
     options=[],
     placeholder,
@@ -26,13 +27,16 @@ export const SelectInput = ({ field=useField() }) => {
         {...attrs}
         value={field.value}
         required={field.required || Boolean(placeholder)}  // allows styling via :invalid for placeholder
+        // key={field.value}
       >
+        { console.log(`render select with value: ${field.value} (${typeof field.value})`) }
         { Boolean(placeholder) &&
           <option value="" hidden disabled selected>{placeholder}</option>
         }
         { options.map(
           option => {
             option = valueOption(option)
+            { console.log(`render option with value: ${option.value} (${typeof option.value}) = ${field.value === option.value ? 'SELECTED' : ''}`) }
             return (
               <option
                 key={option.value}
@@ -50,4 +54,4 @@ export const SelectInput = ({ field=useField() }) => {
   )
 }
 
-export default SelectInput
+export default Themed(Select, 'Form.Input.Select')

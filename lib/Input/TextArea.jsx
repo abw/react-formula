@@ -1,7 +1,8 @@
 import React from 'react'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const TextAreaInput = ({ field=useField() }) => {
+const TextArea = ({ field=useField() }) => {
   const {
     className='input',
     inputsClass='inputs',
@@ -29,4 +30,4 @@ export const TextAreaInput = ({ field=useField() }) => {
   )
 }
 
-export default TextAreaInput
+export default Themed(TextArea, 'Form.Input.TextArea')

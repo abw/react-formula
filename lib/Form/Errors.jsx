@@ -1,8 +1,9 @@
 import React from 'react'
 import DefaultError from './Error.jsx'
 import { useForm } from './Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const Errors = () => {
+const Errors = () => {
   const form = useForm()
   const {
     error,
@@ -40,5 +41,5 @@ export const Errors = () => {
   )
 }
 
-export default Errors
+export default Themed(Errors, 'Form.Errors')
 

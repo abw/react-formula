@@ -1,7 +1,8 @@
 import React from 'react'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const InputPrefix = ({ field=useField() }) => {
+const Prefix = ({ field=useField() }) => {
   const {prefix, prefixClass='prefix'} = field
   return prefix &&
     <div className={prefixClass}>
@@ -9,4 +10,4 @@ export const InputPrefix = ({ field=useField() }) => {
     </div>
 }
 
-export default InputPrefix
+export default Themed(Prefix, 'Form.Input.Prefix')

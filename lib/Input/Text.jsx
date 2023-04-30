@@ -4,8 +4,9 @@ import DefaultPrefix from '../Input/Prefix.jsx'
 import DefaultSuffix from '../Input/Suffix.jsx'
 import { inputAttrs, propClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const TextInput = ({ field=useField() }) => {
+export const Text = ({ field=useField() }) => {
   const {
     type='text',
     inputClass='input',
@@ -47,5 +48,5 @@ export const TextInput = ({ field=useField() }) => {
   )
 }
 
-export default TextInput
+export default Themed(Text, 'Form.Input.Text')
 

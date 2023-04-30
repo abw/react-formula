@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from './Context.js'
 import { capitalise } from '@abw/badger-utils'
+import { Themed } from '../Theme.jsx'
 
 const showable = ['values', 'config', 'status', 'fields']
 
@@ -21,4 +22,4 @@ export const Debug = ({show={ values: true }, showAll=false}) => {
   )
 }
 
-export default Debug
+export default Themed(Debug, 'Form.Debug')

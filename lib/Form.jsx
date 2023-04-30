@@ -1,15 +1,15 @@
 import React         from 'react'
 import DefaultLayout from './Form/Layout.jsx'
 import { Provider }  from './Form/Context.js'
+import { Themed }    from './Theme.jsx'
 
-export const Form = ({
-  // render,
+// TODO: render options like field
+
+const Form = ({
   children,
   Layout=DefaultLayout,
   ...props
 }) => {
-  // const { Provider, state, handlers } = formContext(props)
-
   return (
     <Provider {...props}>
       <Layout>
@@ -18,9 +18,5 @@ export const Form = ({
     </Provider>
   )
 }
-/*
-      { render
-        ? render({ state, handlers })
-*/
 
-export default Form
+export default Themed(Form, 'Form')

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useField } from './Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const Help = ({ field=useField() }) => {
+const Message = ({ field=useField() }) => {
   const { help, message } = field
   const text = message || help
   return text
@@ -9,4 +10,4 @@ export const Help = ({ field=useField() }) => {
     : null
 }
 
-export default Help
+export default Themed(Message, 'Form.Field.Message')

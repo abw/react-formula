@@ -2,8 +2,9 @@ import React from 'react'
 import Handlers from './Handlers.js'
 import { inputAttrs, propClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
+import { Themed } from '../Theme.jsx'
 
-export const CheckboxInput = ({ field=useField() }) => {
+const Checkbox = ({ field=useField() }) => {
   const {
     id,
     text,
@@ -43,4 +44,4 @@ export const CheckboxInput = ({ field=useField() }) => {
   )
 }
 
-export default CheckboxInput
+export default Themed(Checkbox, 'Form.Input.Checkbox')

@@ -3,11 +3,11 @@ import React from 'react'
 import DefaultLayout from './Field/Layout.jsx'
 import { useForm } from './Form/Context.js'
 import prepareField from './Field/Prepare.jsx'
-import { Provider }  from './Field/Context.js'
+import { Provider, Context }  from './Field/Context.js'
+import { Themed } from './Theme.jsx'
 
-export const Field = ({
+const Field = ({
   name,
-  // render,
   children,
   Layout=DefaultLayout,
   ...props
@@ -17,24 +17,14 @@ export const Field = ({
 
   return (
     <Provider form={form} {...field}>
-      <Layout>
-        {children}
-      </Layout>
-    </Provider>
-  )
-  /*
-  return (
-    <Provider>
-      FIELD: {state.name}
-      { render
-        ? render(state)
-        : <Layout>
+      { children
+        ? <Context.Consumer>
             {children}
-          </Layout>
+          </Context.Consumer>
+        : <Layout/>
       }
     </Provider>
   )
-  */
 }
 
-export default Field
+export default Themed(Field, 'Form.Field')

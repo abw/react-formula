@@ -1,7 +1,8 @@
 import React from 'react'
 import Fields from './Fields.jsx'
+import { Themed } from './Theme.jsx'
 
-export const Fieldset = ({
+const Fieldset = ({
   className='',
   legend,
   children,
@@ -13,4 +14,4 @@ export const Fieldset = ({
     { children }
   </fieldset>
 
-export default Fieldset
+export default Themed(Fieldset, 'Form.Fieldset')

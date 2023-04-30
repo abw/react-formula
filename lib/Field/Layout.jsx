@@ -5,8 +5,9 @@ import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
 import { useField } from './Context.js'
 import { DISABLED, FOCUS, INVALID, VALID } from '../Constants.jsx'
+import { Themed } from '../Theme.jsx'
 
-export const FieldLayout = ({ field=useField(), children }) => {
+const Layout = ({ field=useField(), children }) => {
   const {
     type,
     className,
@@ -41,4 +42,4 @@ export const FieldLayout = ({ field=useField(), children }) => {
   )
 }
 
-export default FieldLayout
+export default Themed(Layout, 'Form.Field.Layout')
