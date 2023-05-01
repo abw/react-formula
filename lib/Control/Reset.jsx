@@ -16,7 +16,7 @@ const Reset = ({
       type={type}
       text={text}
       className={className}
-      onClick={() => reset()}
+      onClick={reset}
       {...props}
     />
   )
