@@ -4,7 +4,6 @@ import EditFormSrc        from './examples/EditForm.jsx?raw'
 import Example            from '../../site/Example.jsx'
 import { TutorialPager }  from '../../site/Tutorial.jsx'
 import { FormLink } from '../../site/Links.jsx'
-import SelectBug from './examples/SelectBug.jsx'
 
 const EditFormExample = () =>
   <div>
@@ -12,8 +11,6 @@ const EditFormExample = () =>
     <p className="intro">
       Another common use case for form is in editing existing data records.
     </p>
-
-    <SelectBug/>
 
     <h2>Specifying <code>values</code></h2>
     <p>

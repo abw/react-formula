@@ -12,6 +12,9 @@
   as fields are registered (and also go through the field prepareValue()
   and/or validation)
 
+* change errorsInHeader to showErrors - it's simple enough to insert the
+  <Errors/> wherever you want them.
+
 ## State
 
 * default select value isn't being passed up to form or included in submission
@@ -30,7 +33,9 @@
 
 * Changed component
 
-* Tutorial - examples of edit form with values
+* Tutorial - examples of edit form with value
+
+* components/{fieldlayout,label,input,message,etc}
 
 ## Styling
 
