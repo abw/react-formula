@@ -7,6 +7,7 @@ import FocusBlur         from './FocusBlur/index.jsx'
 import OnChange          from './OnChange/index.jsx'
 import PrepareValue      from './PrepareValue/index.jsx'
 import Validation        from './Validation/index.jsx'
+import Label             from './Label/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Field = () =>
@@ -19,6 +20,7 @@ const Field = () =>
     <Route path="onchange"           element={<OnChange/>}/>
     <Route path="prepare-value"      element={<PrepareValue/>}/>
     <Route path="validation"         element={<Validation/>}/>
+    <Route path="label"              element={<Label/>}/>
   </Routes>
 
 export default Field

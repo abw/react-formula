@@ -3,13 +3,15 @@ export const TutorialMenu = {
   title: 'Tutorial',
   url:  '/tutorial',
   items: [
-    ['simple-form',         'Defining a Form'],
-    ['field-validation',    'Field Validation'],
-    ['form-validation',     'Form Validation'],
-    ['form-submission',     'Form Submission'],
-    ['submission-response', 'Submission Response'],
-    ['submission-errors',   'Submission Errors'],
-    ['complete-example',    'Complete Example'],
+    ['simple-form',           'Defining a Form'],
+    ['field-validation',      'Field Validation'],
+    ['form-validation',       'Form Validation'],
+    ['form-submission',       'Form Submission'],
+    ['submission-response',   'Submission Response'],
+    ['submission-errors',     'Submission Errors'],
+    ['complete-registration', 'Complete Registration Form'],
+    ['edit-form',             'Edit Form'],
+    ['headless-fields',       'Headless Fields'],
   ]
 }
 
@@ -33,6 +35,7 @@ export const FieldMenu = {
     ['onchange',          'onChange'],
     ['prepare-value',     'prepareValue'],
     ['validation',        'Validation'],
+    ['label',             'Label'],
   ]
 }
 

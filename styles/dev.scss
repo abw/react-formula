@@ -516,6 +516,12 @@ form.formula {
   }
 }
 
+.boxed {
+  border: 1px solid hsl($dev-hue, 30%, 80%);
+  background-color: hsl($dev-hue, 10%, 90%);
+  padding: 1rem;
+}
+
 @media (min-width: 1024px) {
   .lg-grid-2 {
     display: grid !important;

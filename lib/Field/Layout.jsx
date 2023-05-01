@@ -4,12 +4,13 @@ import DefaultMessage from './Message.jsx'
 import InputTypes from '../Input/index.js'
 import { propClasses } from '../Utils.js'
 import { useField } from './Context.js'
-import { DISABLED, FOCUS, INVALID, VALID } from '../Constants.jsx'
+import { FOCUS, INVALID, VALID } from '../Constants.jsx'
 import { Themed } from '../Theme.jsx'
 
 const Layout = ({ field=useField(), children }) => {
   const {
     type,
+    disabled,
     className,
     fieldClass,
     validClass,
@@ -26,18 +27,22 @@ const Layout = ({ field=useField(), children }) => {
     {
       [VALID]:    validClass,
       [INVALID]:  invalidClass,
-      [DISABLED]: disabledClass,
+      // [DISABLED]: disabledClass,
       [FOCUS]:    focusClass,
     },
-    fieldClass, className
+    fieldClass, className,
+    disabled ? disabledClass : null
   )
 
   return (
     <div className={classes}>
-      <Label field={field}/>
-      <Input field={field}/>
-      <Message field={field}/>
-      {children}
+      { children ||
+        <>
+          <Label field={field}/>
+          <Input field={field}/>
+          <Message field={field}/>
+        </>
+      }
     </div>
   )
 }

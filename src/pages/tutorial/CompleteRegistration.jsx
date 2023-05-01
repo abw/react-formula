@@ -7,9 +7,9 @@ import { TutorialPager } from '../../site/Tutorial.jsx'
 import { CheckboxLink, DebugLink, FieldLink, FieldsetLink, FormLink, RadioLink, SelectLink } from '../../site/Links.jsx'
 import CodeBlock from '../../site/CodeBlock.jsx'
 
-const CompleteExample = () =>
+const CompleteRegistration = () =>
   <div>
-    <h1>Complete Example</h1>
+    <h1>Complete Registration Form</h1>
     <p className="intro">
       Here&apos;s a more complete (albeit rather contrived) example of a
       user registration form.
@@ -74,7 +74,7 @@ const CompleteExample = () =>
     </p>
     <CodeBlock code={CustomCSS} language="css" className="mar-b-2"/>
 
-    <TutorialPager uri="complete-example"/>
+    <TutorialPager uri="complete-registration"/>
   </div>
 
-export default CompleteExample
+export default CompleteRegistration

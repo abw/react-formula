@@ -22,11 +22,26 @@ export const FieldsLink = () =>
 export const FieldsetLink = () =>
   <Link to="/components/fieldset"><code>Fieldset</code></Link>
 
+export const FieldLayoutLink = () =>
+  <Link to="/components/field/layout"><code>FieldLayout</code></Link>
+
+export const LabelLink = () =>
+  <Link to="/components/field/label"><code>Label</code></Link>
+
+export const MessageLink = () =>
+  <Link to="/components/message"><code>Message</code></Link>
+
 export const ResetLink = () =>
   <Link to="/components/reset"><code>Reset</code></Link>
 
 export const SubmitLink = () =>
   <Link to="/components/submit"><code>Submit</code></Link>
+
+export const TextLink = () =>
+  <Link to="/inputs/text"><code>Text</code></Link>
+
+export const TextArea = () =>
+  <Link to="/inputs/textarea"><code>TextArea</code></Link>
 
 export const CheckboxLink = () =>
   <Link to="/inputs/checkbox"><code>Checkbox</code></Link>
