@@ -37,6 +37,7 @@ export const Text = ({ field=useField() }) => {
         className={inputClass}
         ref={field.inputRef}
         aria-disabled={field.disabled}
+        // aria-invalid, aria-required
         tabIndex={field.disabled ? -1 : field.tabIndex}
         onFocus={field.onFocus}
         onBlur={field.onBlur}
