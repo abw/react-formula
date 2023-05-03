@@ -17,6 +17,19 @@ it(
 )
 
 it(
+  'has custom requiredText',
+  () => {
+    const { container } = render(
+      <Form>
+        <Field name="foo" label="Foo" required showRequired requiredText="Mandatory"/>
+      </Form>
+    )
+    expect(container.getElementsByClassName('required')[0])
+      .toHaveTextContent('Mandatory')
+  }
+)
+
+it(
   'should inherit showRequired from form',
   () => {
     render(
@@ -27,6 +40,19 @@ it(
     // screen.debug()
     expect(screen.getByText('Required'))
       .toHaveClass('required')
+  }
+)
+
+it(
+  'should inherit requiredText from form',
+  () => {
+    const { container } = render(
+      <Form requiredText="Mandatory">
+        <Field name="foo" label="Foo" required showRequired/>
+      </Form>
+    )
+    expect(container.getElementsByClassName('required')[0])
+      .toHaveTextContent('Mandatory')
   }
 )
 
