@@ -1,4 +1,4 @@
-import { Form, Field } from '../../../../../../lib/index.js'
+import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -22,9 +22,9 @@ const fields = {
   }
 }
 
-const OnChangeExample = () =>
+const ValidateOnChangeExample = () =>
   <Form fields={fields}>
     <Field name="vowels"/>
   </Form>
 
-export default OnChangeExample
+export default ValidateOnChangeExample

@@ -1,12 +1,13 @@
 import React          from 'react'
 import Example        from '../../../../site/Example.jsx'
-import OnChangeSource from './examples/OnChange.jsx?raw'
-import OnChange       from './examples/OnChange.jsx'
+import OnChangeSource from './OnChange.jsx?raw'
+import OnChange       from './OnChange.jsx'
 import { FieldLink }  from '../../../../site/Links.jsx'
 
 const OnChangeExamples = () =>
   <div>
-    <h1>onChange</h1>
+    <h1>Field Value</h1>
+    <h2><code>onChange</code></h2>
 
     <p>
       You can add an <code>onChange</code> handler to a <FieldLink/>{' '}

@@ -1,15 +1,17 @@
 import React              from 'react'
 import Example            from '../../../../site/Example.jsx'
-import PrepareValueSource from './examples/PrepareValue.jsx?raw'
-import PrepareValue       from './examples/PrepareValue.jsx'
+import PrepareValueSource from './PrepareValue.jsx?raw'
+import PrepareValue       from './PrepareValue.jsx'
+import { FieldLink } from '../../../../site/Links.jsx'
 
 const PrepareValueExamples = () =>
   <div>
-    <h1>prepareValue</h1>
+    <h1>Field Value</h1>
+    <h2><code>prepareValue</code></h2>
 
     <p>
       You can add a <code className="code">prepareValue</code> function to
-      a field to prepare the value before it&apos;s set.
+      a <FieldLink/> to prepare the value before it&apos;s set.
     </p>
     <Example
       Element={PrepareValue} code={PrepareValueSource}

@@ -1,46 +1,22 @@
 import React          from 'react'
 import Example        from '../../../../site/Example.jsx'
-import Required       from './examples/Required.jsx'
-import RequiredSrc    from './examples/Required.jsx?raw'
-import Validate       from './examples/Validate.jsx'
-import ValidateSrc    from './examples/Validate.jsx?raw'
-import Validator      from './examples/Validator.jsx'
-import ValidatorSrc   from './examples/Validator.jsx?raw'
-import OnChangeSrc    from './examples/OnChange.jsx?raw'
-import OnChange       from './examples/OnChange.jsx'
+import Validate       from './Validate.jsx'
+import ValidateSrc    from './Validate.jsx?raw'
+import Validator      from './Validator.jsx'
+import ValidatorSrc   from './Validator.jsx?raw'
+import { RequiredLink } from '../../../../site/Links.jsx'
 
-const ValidationExamples = () =>
+const ValidateExamples = () =>
   <div>
     <h1>Validation</h1>
     <p>
       There are a number of different ways to validate field input.
       For simple cases where a value must be provided you can use the{' '}
-      <code>required</code> property.  If you need to perform additional
+      <RequiredLink/> property.  If you need to perform additional
       validation then you can do that using a <code>validate</code> function.
     </p>
 
-    <h2>required</h2>
-    <p>
-      You can set the <code>required</code> option on a field to indicate
-      that it&apos;s required.  By default, validation will happen when the
-      field is submitted. You can set <code>validateOnBlur</code> to{' '}
-      <code>true</code> to force validation to happen when a field is
-      blurred (i.e. when the user moves focus away from a field).  This
-      can be set either on individual fields or on the form to act as the
-      default for all fields.
-    </p>
-    <Example
-      Element={Required} code={RequiredSrc}
-      caption="required"
-    >
-      <p>
-        Try submitting the form without entering anything.  The{' '}
-        <code>validateOnBlur</code> option is set so you can also focus on
-        a field and then click outside the field to trigger the validation.
-      </p>
-    </Example>
-
-    <h2>validate</h2>
+    <h2><code>validate</code></h2>
     <p>
       You can set the <code>validate</code> option to define an{' '}
       <code>async</code> validation
@@ -82,25 +58,7 @@ const ValidationExamples = () =>
       </p>
     </Example>
 
-    <h2>validateOnChange and minValidateLength</h2>
-    <p>
-      You can set the <code>validateOnChange</code> flag to enable validation
-      any time the field value changes.  The <code>minValidateLength</code> can
-      be set to only trigger validation when the input length exceeds a
-      threshold.
-    </p>
-    <Example
-      Element={OnChange} code={OnChangeSrc}
-      caption="onChange"
-    >
-      <p>
-        Enter some text in the field below.  Once you&apos;ve entered three
-        letters the validation will kick in.  You should see an error if you
-        enter any letters that aren&apos;t vowels.
-      </p>
-    </Example>
-
   </div>
 
 
-export default ValidationExamples
+export default ValidateExamples

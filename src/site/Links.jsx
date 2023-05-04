@@ -13,6 +13,9 @@ export const ErrorsLink = () =>
 export const FormLink = () =>
   <Link to="/components/form"><code>Form</code></Link>
 
+export const FormSetFocusLink = () =>
+  <Link to="/components/form/setfocus"><code>setFocus</code></Link>
+
 export const FieldLink = () =>
   <Link to="/components/field"><code>Field</code></Link>
 

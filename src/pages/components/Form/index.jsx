@@ -1,6 +1,7 @@
 import React        from 'react'
 import Home         from './Home.jsx'
 import Properties   from './Properties/index.jsx'
+import SetFocus     from './SetFocus/index.jsx'
 import Validation   from './Validation/index.jsx'
 import Set          from './Set/index.jsx'
 /*
@@ -15,6 +16,7 @@ const Form = () =>
   <Routes>
     <Route path="" end        element={<Home/>}/>
     <Route path="properties"  element={<Properties/>}/>
+    <Route path="setfocus"    element={<SetFocus/>}/>
     <Route path="validation"  element={<Validation/>}/>
     <Route path="set/*"         element={<Set/>}/>
     {/*
