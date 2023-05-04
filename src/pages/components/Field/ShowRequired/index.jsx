@@ -1,0 +1,38 @@
+import React            from 'react'
+import Example          from '../../../../site/Example.jsx'
+import ShowRequired     from './ShowRequired.jsx'
+import ShowRequiredSrc  from './ShowRequired.jsx?raw'
+import ShowRequiredForm     from './ShowRequiredForm.jsx'
+import ShowRequiredFormSrc  from './ShowRequiredForm.jsx?raw'
+import { FieldLink, FormLink, RequiredLink } from '../../../../site/Links.jsx'
+
+const ShowRequiredExample = () =>
+  <div>
+    <h1>Required Fields</h1>
+    <p>
+      This option applies to <FieldLink/> components that are marked as{' '}
+      <RequiredLink/>.
+    </p>
+
+    <h2><code>showRequired</code></h2>
+    <p>
+      If a <FieldLink/> is marked as <RequiredLink/> then the{' '}
+      <code>showRequired</code> property can be added to have an additional
+      label displayed indicating that it is required.
+    </p>
+    <Example
+      Element={ShowRequired} code={ShowRequiredSrc}
+      caption="showRequired on Field"
+    />
+
+    <p>
+      The <code>showRequired</code> property can also be added to the{' '}
+      <FormLink/> to have it apply to all <RequiredLink/> fields.
+    </p>
+    <Example
+      Element={ShowRequiredForm} code={ShowRequiredFormSrc}
+      caption="showRequired on Form"
+    />
+  </div>
+
+export default ShowRequiredExample
