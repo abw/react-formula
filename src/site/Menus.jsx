@@ -20,21 +20,38 @@ export const FormMenu = {
   title: 'Form',
   url:   '/form',
   items: [
-    ['properties',    'Properties'],
-    ['setfocus',      <code key="setfocus">setFocus()</code>],
+    [ null, 'Properties'],
+    ['properties',    'Properties - TODO'],
     ['validation',    'Validation'],
-    ['set',           'Setting Values'],
+    ['fields',        <code key='fields'>fields - TODO</code>],
+    ['values',        <code key='values'>values - TODO</code>],
+    ['hidden',        <code key='hidden'>hidden - TODO</code>],
+    ['validate',      <code key='validate'>validate - TODO</code>],
+    ['onSubmit',      <code key='onsubmit'>onSubmit - TODO</code>],
+    ['onSuccess',     <code key='onsuccess'>onSuccess - TODO</code>],
+    ['onError',       <code key='onsuccess'>onError - TODO</code>],
+    ['showErrors',    <code key='showerrors'>showErrors - TODO</code>],
+    [ null, 'Functions'],
+    ['setvalues',    <code key='setvalues'>setValues() - TODO</code>],
+    ['setfocus',      <code key="setfocus">setFocus()</code>],
+    [ null, 'Styling'],
+    ['className',       <code key='classname'>className - TODO</code>],
+    ['validatingClass', <code key='validatingclass'>validatingClass - TODO</code>],
+    ['validClass',      <code key='validclass'>validClass - TODO</code>],
+    ['invalidClass',    <code key='invalidclass'>invalidClass - TODO</code>],
+    ['errorsClass',     <code key='errorsclass'>errorsClass - TODO</code>],
+    ['fieldClass',      <code key='fieldclass'>fieldClass - TODO</code>],
   ]
 }
 export const FieldMenu = {
   title: 'Field',
   url:   '/field',
   items: [
-    ['properties',       'Properties'],
+    // ['properties',       'Properties'],
+    [ null, 'Properties'],
     ['prefix-suffix',    <span key='prefix-suffix'><code>prefix</code> and <code>suffix</code></span>],
     ['onfocus',          <code key='onfocus'>onFocus</code>],
     ['onblur',           <code key='onblur'>onBlur</code>],
-    ['setfocus',         <code key="setfocus">setFocus()</code>],
     ['onchange',         <code key='onchange'>onChange</code>],
     ['preparevalue',     <code key="preparevalue">prepareValue</code>],
     ['required',         <code key='required'>required</code>],
@@ -45,7 +62,8 @@ export const FieldMenu = {
     ['validate',         <code key='validate'>validate</code>],
     ['validateonblur',   <code key='validateonblur'>validateOnBlur</code>],
     ['validateonchange', <code key='validateonchange'>validateOnChange</code>],
-    ['label',            'Label'],
+    [ null, 'Functions'],
+    ['setfocus',         <code key="setfocus">setFocus()</code>],
   ]
 }
 
@@ -63,6 +81,7 @@ export const ComponentsMenu = {
     ['reset-submit',        'ResetSubmit'],
     ['cancel-submit',       'CancelSubmit'],
     ['cancel-reset-submit', 'CancelResetSubmit'],
+    ['label',               'Label'],
     ['errors',              'Errors'],
     ['debug',               'Debug'],
 

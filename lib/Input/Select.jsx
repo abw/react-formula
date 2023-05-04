@@ -31,7 +31,7 @@ const Select = ({ field=useField() }) => {
       >
         { console.log(`render select with value: ${field.value} (${typeof field.value})`) }
         { Boolean(placeholder) &&
-          <option value="" hidden disabled selected>{placeholder}</option>
+          <option value="" hidden disabled>{placeholder}</option>
         }
         { options.map(
           option => {

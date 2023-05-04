@@ -5,7 +5,6 @@ import PrefixSuffix      from './PrefixSuffix/index.jsx'
 import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
 import SetFocus          from './SetFocus/index.jsx'
-// import FocusBlur         from './FocusBlur/index.jsx'
 import OnChange          from './OnChange/index.jsx'
 import PrepareValue      from './PrepareValue/index.jsx'
 import Required          from './Required/index.jsx'
@@ -16,7 +15,6 @@ import OptionalLabel     from './OptionalLabel/index.jsx'
 import Validate          from './Validate/index.jsx'
 import ValidateOnChange  from './ValidateOnChange/index.jsx'
 import ValidateOnBlur    from './ValidateOnBlur/index.jsx'
-import Label             from './Label/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Field = () =>
@@ -27,7 +25,6 @@ const Field = () =>
     <Route path="onfocus"           element={<OnFocus/>}/>
     <Route path="onblur"            element={<OnBlur/>}/>
     <Route path="setfocus"          element={<SetFocus/>}/>
-    {/* <Route path="focus-blur"        element={<FocusBlur/>}/> */}
     <Route path="onchange"          element={<OnChange/>}/>
     <Route path="preparevalue"      element={<PrepareValue/>}/>
     <Route path="required"          element={<Required/>}/>
@@ -38,7 +35,6 @@ const Field = () =>
     <Route path="validate"          element={<Validate/>}/>
     <Route path="validateonchange"  element={<ValidateOnChange/>}/>
     <Route path="validateonblur"    element={<ValidateOnBlur/>}/>
-    <Route path="label"             element={<Label/>}/>
   </Routes>
 
 export default Field

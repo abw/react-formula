@@ -1,7 +1,7 @@
 import React               from 'react'
-import Example             from '../../../../site/Example.jsx'
-import Label               from './examples/Label.jsx'
-import LabelSrc            from './examples/Label.jsx?raw'
+import Example             from '../../../site/Example.jsx'
+import Label               from './Label.jsx'
+import LabelSrc            from './Label.jsx?raw'
 
 const LabelExamples = () =>
   <div>
