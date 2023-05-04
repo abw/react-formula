@@ -1,9 +1,9 @@
 import React from 'react'
 import FieldLayout from '../../../lib/Field/Layout.jsx'
-import { defaultConfig } from '../../../lib/Field/Config.js'
+import { fieldDefaultProperties } from '../../../lib/Config.js'
 
 const mockField = {
-  ...defaultConfig,
+  ...fieldDefaultProperties,
   label: 'Example Label',
   type: 'text',
   placeholder: 'Placeholder text',

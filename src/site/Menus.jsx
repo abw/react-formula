@@ -1,3 +1,4 @@
+import React from 'react'
 
 export const TutorialMenu = {
   title: 'Tutorial',
@@ -29,12 +30,18 @@ export const FieldMenu = {
   url:   '/field',
   items: [
     ['properties',        'Properties'],
-    ['required-optional', 'Required and Optional'],
     ['prefix-suffix',     'Prefix and Suffix'],
     ['focus-blur',        'Focus and Blur'],
     ['onchange',          'onChange'],
     ['prepare-value',     'prepareValue'],
+    ['required',          <code key='required'>required</code>],
+    ['show-required',     <code key='show-required'>showRequired</code>],
+    ['required-label',    <code key='required-label'>requiredLabel</code>],
+    ['show-optional',     <code key='show-optional'>showOptional</code>],
+    ['optional-label',    <code key='optional-label'>optionalLabel</code>],
     ['validation',        'Validation'],
+    ['validate-on-change', <code key='validate-on-change'>validateOnChange (TODO)</code>],
+    ['validate-on-blur',   <code key='validate-on-blur'>validateOnBlur (TODO)</code>],
     ['label',             'Label'],
   ]
 }
