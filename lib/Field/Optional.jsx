@@ -5,7 +5,7 @@ import { Themed } from '../Theme.jsx'
 const Optional = ({ field=useField() }) =>
   ! field.required && field.showOptional &&
     <span className="optional">
-      {field.optionalText || 'optional'}
+      {field.optionalLabel}
     </span>
 
 export default Themed(Optional, 'Form.Field.Optional')

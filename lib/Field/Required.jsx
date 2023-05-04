@@ -5,7 +5,7 @@ import { Themed } from '../Theme.jsx'
 const Required = ({ field=useField() }) =>
   field.required && field.showRequired &&
     <span className="required">
-      {field.requiredText}
+      {field.requiredLabel}
     </span>
 
 export default Themed(Required, 'Form.Field.Required')
