@@ -24,9 +24,17 @@ it(
   'should call onFocus',
   async () => {
     const { container } = render(<FocusTest/>)
+
+    // focus on foo field
     await userEvent.click(
       container.querySelector('#foo')
     )
+
+    // field container should have focus class
+    expect(container.getElementsByClassName('field')[0])
+      .toHaveClass('focus')
+
+    // onFocus should have been triggered
     expect(screen.getByTestId('msg'))
       .toHaveTextContent('Hello World')
   }

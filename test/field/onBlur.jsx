@@ -33,13 +33,27 @@ it(
     await userEvent.click(
       container.querySelector('#foo')
     )
+    // field container should have focus class
+    expect(container.getElementsByClassName('field')[0])
+      .toHaveClass('focus')
+
+    // no message
     expect(screen.queryAllByTestId('msg').length)
       .toBe(0)
 
-    // focus on bar field - expect foo's onBlur to be called
+    // focus on bar field
     await userEvent.click(
       container.querySelector('#bar')
     )
+    // first field container should NOT have focus class
+    expect(container.getElementsByClassName('field')[0])
+      .not.toHaveClass('focus')
+
+    // second field container should have focus class
+    expect(container.getElementsByClassName('field')[1])
+      .toHaveClass('focus')
+
+    // expect foo's onBlur to be called
     expect(screen.getByTestId('msg'))
       .toHaveTextContent('Hello World')
 
