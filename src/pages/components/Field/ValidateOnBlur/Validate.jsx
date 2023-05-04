@@ -28,7 +28,7 @@ const fields = {
 }
 
 const ValidateExample = () =>
-  <Form fields={fields}>
+  <Form fields={fields} validateOnBlur>
     <Fields names="username password"/>
     <Submit/>
   </Form>

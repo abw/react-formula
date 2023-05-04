@@ -43,8 +43,8 @@ export const FieldMenu = {
     ['showoptional',     <code key='showoptional'>showOptional</code>],
     ['optionallabel',    <code key='optionallabel'>optionalLabel</code>],
     ['validate',         <code key='validate'>validate</code>],
+    ['validateonblur',   <code key='validateonblur'>validateOnBlur</code>],
     ['validateonchange', <code key='validateonchange'>validateOnChange</code>],
-    ['validateonblur',   <code key='validateonblur'>validateOnBlur (TODO)</code>],
     ['label',            'Label'],
   ]
 }

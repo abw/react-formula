@@ -30,8 +30,8 @@ const ValidateExamples = () =>
       caption="validate"
     >
       <p>
-        Try switching focus from one field to another without entering
-        anything.  You can see the custom validation errors.
+        Try submitting the form without entering any values for either of
+        the fields. You should see the custom validation errors.
       </p>
     </Example>
     <p>

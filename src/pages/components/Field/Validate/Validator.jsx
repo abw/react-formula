@@ -26,7 +26,7 @@ const fields = {
 
 const ValidateExample = () =>
   <Form fields={fields}>
-    <Field name="username" debug/>
+    <Field name="username"/>
     <Submit/>
   </Form>
 

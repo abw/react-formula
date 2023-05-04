@@ -15,6 +15,7 @@ import ShowOptional      from './ShowOptional/index.jsx'
 import OptionalLabel     from './OptionalLabel/index.jsx'
 import Validate          from './Validate/index.jsx'
 import ValidateOnChange  from './ValidateOnChange/index.jsx'
+import ValidateOnBlur    from './ValidateOnBlur/index.jsx'
 import Label             from './Label/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
@@ -36,6 +37,7 @@ const Field = () =>
     <Route path="optionallabel"     element={<OptionalLabel/>}/>
     <Route path="validate"          element={<Validate/>}/>
     <Route path="validateonchange"  element={<ValidateOnChange/>}/>
+    <Route path="validateonblur"    element={<ValidateOnBlur/>}/>
     <Route path="label"             element={<Label/>}/>
   </Routes>
 
