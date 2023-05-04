@@ -17,11 +17,11 @@ it(
 )
 
 it(
-  'has custom optionalText',
+  'has custom optionalLabel',
   () => {
     const { container } = render(
       <Form>
-        <Field name="foo" label="Foo" showOptional optionalText="Maybe"/>
+        <Field name="foo" label="Foo" showOptional optionalLabel="Maybe"/>
       </Form>
     )
     expect(container.getElementsByClassName('optional')[0])
@@ -43,10 +43,10 @@ it(
 )
 
 it(
-  'should inherit optionalText from form',
+  'should inherit optionalLabel from form',
   () => {
     const { container } = render(
-      <Form optionalText="Maybe">
+      <Form optionalLabel="Maybe">
         <Field name="foo" label="Foo" showOptional/>
       </Form>
     )

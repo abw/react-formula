@@ -27,9 +27,7 @@ it(
     const { container } = render(<ChangeTest/>)
 
     // focus on foo field
-    await user.click(
-      container.querySelector('#foo')
-    )
+    await user.click( container.querySelector('#foo') )
     expect(screen.queryAllByTestId('msg').length)
       .toBe(0)
 

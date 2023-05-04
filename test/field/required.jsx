@@ -17,11 +17,11 @@ it(
 )
 
 it(
-  'has custom requiredText',
+  'has custom requiredLabel',
   () => {
     const { container } = render(
       <Form>
-        <Field name="foo" label="Foo" required showRequired requiredText="Mandatory"/>
+        <Field name="foo" label="Foo" required showRequired requiredLabel="Mandatory"/>
       </Form>
     )
     expect(container.getElementsByClassName('required')[0])
@@ -44,10 +44,10 @@ it(
 )
 
 it(
-  'should inherit requiredText from form',
+  'should inherit requiredLabel from form',
   () => {
     const { container } = render(
-      <Form requiredText="Mandatory">
+      <Form requiredLabel="Mandatory">
         <Field name="foo" label="Foo" required showRequired/>
       </Form>
     )
