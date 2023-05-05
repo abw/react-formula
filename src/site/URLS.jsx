@@ -1,7 +1,24 @@
 export const URLS = {
+  //--------------------------------------------------------------------------
+  // Form links
+  //--------------------------------------------------------------------------
+  'form:setFocus': {
+    url:    '/components/form/setFocus',
+    code:   'setFocus',
+    about:  'Programmatically focus a form field',
+  },
+  'form:setValues': {
+    url:    '/components/form/setValues',
+    code:   'setValues',
+    about:  'Programmatically set form values',
+  },
+
+  //--------------------------------------------------------------------------
+  // Field links
+  //--------------------------------------------------------------------------
   'field:onBlur': {
-    url:      '/components/field/onBlur',
-    code:     'onBlur',
+    url:    '/components/field/onBlur',
+    code:   'onBlur',
     about:  ' Define a handler to be called when a field loses focus',
   },
   'field:onChange': {
@@ -88,12 +105,6 @@ export const URLS = {
     url:    '/components/field/validateOnChange',
     code:   'validateOnChange',
     about:  'Run field validation when the value changes',
-  },
-
-  'form:setFocus': {
-    url:    '/components/form/setFocus',
-    code:   'setFocus',
-    about:  'Programmatically focus a form field',
   },
 }
 

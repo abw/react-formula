@@ -16,14 +16,4 @@ export const MenuItems = ({ url, items=[] }) => {
     </ul>
 }
 
-/*
-        ([path, text, submenu], n) =>
-          <li key={path||n}>
-            { path
-              ? <Link to={`${url}/${path}`} text={text}/>
-              : <h4>{text}</h4>
-            }
-            { submenu && open && <MenuItems {...submenu} url={`${url}/${path}`}/>}
-          </li>
-*/
 export default MenuItems
