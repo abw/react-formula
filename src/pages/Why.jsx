@@ -75,49 +75,80 @@ const Why = () =>
     <h2>Why I Like This Library</h2>
     <ul>
       <li>
-        It allows you to define the schema for your forms and all their
-        fields in a single place, away from the markup.  I like being able
-        to separate the &quot;logic&quot; of my forms from the presentational
-        aspects.  It make it easier to update both.  Separation of concerns
-        and all that.
+        Above all else, <b>simplicity</b>.  Building a form with{' '}
+        <code>react-formula</code> should be <i>at least</i> as easy as
+        defining a Vanilla HTML form, and ideally, easier.
+        I don&apos;t want to have to build every field from a dozen different
+        components to include a label, input, validation message, and so on.
       </li>
       <li>
-        Given a set of form fields it can (usually) automatically render the
-        whole form without any further intervention.  If you&apos;ve got a
-        text field with a label, a validation function and some other details
-        then you just need to say <i>where</i> you want the field and it&apos;ll
-        render everything for you.  I <i>usually</i> want all my form fields
-        to look the same.  I don&apos;t mind spending a bit of time up front
-        setting up the styles, or working with a designer to get everything
-        just right. But after that I just want to &quot;push a button&quot;
-        and get the same results every time with the minimum of fuss.  I
-        most certainly do <b>NOT</b> want to have to write out the markup
-        for every single field, label, error message, and so on.  Nor do I
-        want to have to go and update all that markup when the designer or
-        client decides they want it done a bit different.
+        Closely related to that is <b>consistency</b>.
+        In the vast majority of cases I want all my forms and fields to
+        look the same and conform to whatever branding and/or style guide
+        I&apos;ve got in place.  I don&apos;t mind spending a bit of time up
+        front to get everything looking right, but after that I just want to
+        &quot;push a button&quot; and get the same results every time with the
+        minimum of fuss.
       </li>
       <li>
-        You can define custom layouts for fields, or entire forms so you&apos;re
-        not limited to using the defaults.  You can also define custom field
-        inputs for those times when you want to do something other than get
-        some text input, offer a checkbox or pull-down select list.  For
-        example: integrating autocomplete fields, search boxes with
-        asynchronous API calls, Recaptcha inputs, and so on.
+        And that brings us on to <b>maintainability</b>.  The less markup
+        I have to write, the less I have to maintain, and the easier it will
+        be to do so.  If the client or a designer decides they want all the
+        form fields to have the label in a different place, be aligned
+        differently, have more padding, or something else, then I want to be
+        able to change that in a single place.  It might mean changing
+        some CSS, re-defining a style, or updating a single field layout
+        component.  But I certainly don&apos;t want to have to go and edit
+        every field in every form to make the change.
       </li>
       <li>
-        For those times when you want to take the wheel you can.  It supports
-        the usual &quot;render-prop&quot; approach so you can take full
-        responsibility for rendering a form, or individual fields inside it.
+        Of course there are times when you want to do something a bit different,
+        so <b>flexibility</b> is also important.  It&apos;s good to have a
+        default layout for <i>most</i> of your form fields, but you also need
+        to be able to switch something else in for those special cases.
+        This should be easy, not hard.
       </li>
       <li>
-        It supports client-side and server-side validation.  If for some
-        reason an invalid input gets past the client-side validation and
-        generates an angry response from the server then it can update the
-        form to display the errors and highlight the invalid field(s).
+        <b>Extensibility</b> is also important for those times when there
+        isn&apos;t something available off-the-shelf and you need to get your
+        hands dirty and write a custom component.  Maybe you need a custom
+        autocomplete component or search widget.  Maybe you need to include
+        Recaptcha validation, or something else that requires aynchronous
+        calls to an API.  I don&apos;t know what you might need.  I can&apos;t
+        even predict what I might need this time next week.  So it&apos;s
+        important that the library exposes enough of the internal workings to
+        allow you to plug new things in.  It might not be easy, but it should
+        be possible.
       </li>
       <li>
-        It comes with a default stylesheet that looks reasonable out of the
-        box.  It&apos;s written using SASS and almost everything is styled
+        None of that would be possible without <b>reliability</b>.  We need to
+        be able to trust the library to &apos;Do The Right Thing&apos; and
+        that means it has to be well tested.
+      </li>
+      <li>
+        Another concern is <b>security</b>. It supports client-side and
+        server-side validation.  If for some reason an invalid input gets past
+        the client-side validation and generates an angry response from the
+        server then it can update the form to display the errors and highlight
+        the invalid field(s).
+      </li>
+      <li>
+        And talking of concerns, we like to separate them, so <b>modularity</b>{' '}
+        is important.  You should be able to define the schema for a form and
+        all of its fields (including validation) in a single place, possibly
+        away from the markup used to render the form.  Being able to separate
+        the &quot;logic&quot; of a form from the presentational aspects make
+        it easier to update both in isolation.
+      </li>
+      <li>
+        TODO: <b>Usability</b> - WAI-ARIA compliance (although there&apos;s
+        still a bit of work to be done there).
+      </li>
+      <li>
+        Functionality is paramount, but we also care about <b>presentability</b>.
+        It comes with a default stylesheet that provides reasonable defaults
+        for styling different form components and all their states (focussed,
+        valid, invalid, disabled, etc).  It&apos;s written using SASS and almost everything is styled
         using variables that you can easily change.  There&apos;s a single
         variable that you can set to change the basic theme colour to match
         your brand so you can get up and running really quickly.  As and when
@@ -125,16 +156,15 @@ const Why = () =>
         then you generally can with the minimum of fuss.
       </li>
       <li>
-        It&apos;s simple, reasonably efficient and small (less than 4kB for
-        the compressed bundle at the time of writing).  It doesn&apos;t set
-        out to please all of the people all of the time.  Rather, it is
-        designed to please me, most of the time, and as such it may not
-        have (and may never have) all the features that other people might
-        want.  So in that sense, it is opinionated and selfish software.
-        But that&apos;s just how I roll these days.  I&apos;m more than
-        happy to share it with the world for other people to benefit from,
-        just as long as they understand what they&apos;re getting for the
-        money (or lack of it).
+        And last, but not least, <b>efficiency</b>.  The library is
+        comparatively small and simple (less than 10kB for the compressed
+        bundle at the time of writing). It only works with modern (v18+)
+        versions of React and there are no plans to port it to other web
+        frameworks.  It doesn&apos;t set out to please all of the people
+        all of the time.  Rather, it is designed to please me, most of the
+        time, and as such it may not have (and may never have) all the
+        features that other people might want.  You are, of course, free to
+        go and write your own form library.
       </li>
     </ul>
     <div className="badger">
