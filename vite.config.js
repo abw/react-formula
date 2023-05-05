@@ -11,7 +11,11 @@ export default defineConfig({
     globals: true,
     setupFiles: './test/setup.js',
     include: ['test/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['test/setup.js', 'test/lib']
+    exclude: ['test/setup.js', 'test/lib'],
+    coverage: {
+      provider: 'c8',
+      reporter: ['html']
+    },
   },
   build: {
     minify: true,
