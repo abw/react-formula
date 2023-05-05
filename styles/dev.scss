@@ -431,12 +431,24 @@ form.debug.valid {
 form.debug.invalid {
   border: 1px solid red;
 }
+$red-hue: 0;
 $green-hue: 120;
 $blue-hue: 210;
 $brown-hue: 30;
 $lilac-hue: 240;
 
 form.formula {
+  button.btn-red {
+    background-color: hsl($red-hue, 60%, 50%);
+    border-color: hsl($red-hue, 50%, 45%);
+    color: #fff;
+    &:focus {
+      outline: none;
+      box-shadow:
+        0 0 0 $button-ring-gap hsl($red-hue, 20%, 90%),
+        0 0 0 $button-ring-width hsl($red-hue, 50%, 70%);
+    }
+  }
   button.btn-green {
     background-color: hsl($green-hue, 50%, 40%);
     border-color: hsl($green-hue, 55%, 35%);

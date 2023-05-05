@@ -4,7 +4,7 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React, { useState } from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const SetFocusExample = () => {
+const ResetExample = () => {
   const [field1, setField1] = useState(false)
   const [field2, setField2] = useState(false)
 
@@ -16,20 +16,20 @@ const SetFocusExample = () => {
           name="field1" label="Field One"
         />
         <Field
-          onLoad={setField2}
+          onLoad={setField2} value="Initial value"
           name="field2" label="Field Two"
         />
       </Form>
       <div>
-        <button onClick={() => field1?.setFocus()}>
-          Focus Field One
+        <button className="btn-blue" onClick={field1.reset}>
+          Reset Field One
         </button>
-        <button onClick={() => field2?.setFocus()}>
-          Focus Field Two
+        <button className="btn-blue" onClick={field2.reset}>
+          Reset Field Two
         </button>
       </div>
     </>
   )
 }
 
-export default SetFocusExample
+export default ResetExample

@@ -29,6 +29,9 @@ export const FormLink = () =>
 export const FormSetFocusLink = () =>
   <Link to="/components/form/setFocus"><code>setFocus</code></Link>
 
+export const FormSetValuesLink = () =>
+  <Link to="/components/form/setValues"><code>setValues</code></Link>
+
 export const FieldLink = () =>
   <Link to="/components/field"><code>Field</code></Link>
 

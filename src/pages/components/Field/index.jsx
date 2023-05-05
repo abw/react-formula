@@ -5,6 +5,8 @@ import PrefixSuffix      from './PrefixSuffix/index.jsx'
 import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
 import SetFocus          from './SetFocus/index.jsx'
+import SetValue          from './SetValue/index.jsx'
+import Reset             from './Reset/index.jsx'
 import OnChange          from './OnChange/index.jsx'
 import OnValid           from './OnValid/index.jsx'
 import OnInvalid         from './OnInvalid/index.jsx'
@@ -30,6 +32,8 @@ const Field = () =>
     <Route path="onValid"           element={<OnValid/>}/>
     <Route path="onInvalid"         element={<OnInvalid/>}/>
     <Route path="setFocus"          element={<SetFocus/>}/>
+    <Route path="setValue"          element={<SetValue/>}/>
+    <Route path="Reset"             element={<Reset/>}/>
     <Route path="onChange"          element={<OnChange/>}/>
     <Route path="prepareValue"      element={<PrepareValue/>}/>
     <Route path="required"          element={<Required/>}/>

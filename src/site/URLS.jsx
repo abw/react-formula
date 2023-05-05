@@ -5,12 +5,12 @@ export const URLS = {
   'form:setFocus': {
     url:    '/components/form/setFocus',
     code:   'setFocus',
-    about:  'Programmatically focus a form field',
+    about:  'Focus a form field',
   },
   'form:setValues': {
     url:    '/components/form/setValues',
     code:   'setValues',
-    about:  'Programmatically set form values',
+    about:  'Set form values',
   },
 
   //--------------------------------------------------------------------------
@@ -71,10 +71,20 @@ export const URLS = {
     code:   'requiredMessage',
     about:  'Customise the error message generated for required fields',
   },
+  'field:reset': {
+    url:    '/components/field/reset',
+    code:   'reset',
+    about:  'Reset a field to its original state',
+  },
   'field:setFocus': {
     url:    '/components/field/setFocus',
     code:   'setFocus',
-    about:  'Programmatically focus a field',
+    about:  'Focus a field',
+  },
+  'field:setValue': {
+    url:    '/components/field/setValue',
+    code:   'setValue',
+    about:  'Set a field value',
   },
   'field:showOptional': {
     url:    '/components/field/showOptional',
