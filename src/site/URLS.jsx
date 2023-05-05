@@ -1,5 +1,24 @@
 export const URLS = {
   //--------------------------------------------------------------------------
+  // Component links
+  //--------------------------------------------------------------------------
+  'component:Form': {
+    url:    '/components/form',
+    code:   'Form',
+    about:  'Main component for a form',
+  },
+  'component:Field': {
+    url:    '/components/field',
+    code:   'Field',
+    about:  'Component to render a form field',
+  },
+  'component:Changed': {
+    url:    '/components/changed',
+    text:   'Changed',
+    about:  'Renders children only when a form state has changed',
+  },
+
+  //--------------------------------------------------------------------------
   // Form links
   //--------------------------------------------------------------------------
   'form:setFocus': {

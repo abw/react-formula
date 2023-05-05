@@ -10,6 +10,7 @@ import Cancel            from './Cancel/index.jsx'
 import CancelSubmit      from './CancelSubmit/index.jsx'
 import CancelResetSubmit from './CancelResetSubmit/index.jsx'
 import ResetSubmit       from './ResetSubmit/index.jsx'
+import Changed           from './Changed/index.jsx'
 import Label             from './Label/index.jsx'
 import Errors            from './Errors/index.jsx'
 import Debug             from './Debug/index.jsx'
@@ -28,6 +29,7 @@ const Components = () =>
     <Route path="cancel-submit/*"        element={<CancelSubmit/>}/>
     <Route path="reset-submit/*"         element={<ResetSubmit/>}/>
     <Route path="cancel-reset-submit/*"  element={<CancelResetSubmit/>}/>
+    <Route path="changed"                element={<Changed/>}/>
     <Route path="label"                  element={<Label/>}/>
     <Route path="errors/*"               element={<Errors/>}/>
     <Route path="debug/*"                element={<Debug/>}/>

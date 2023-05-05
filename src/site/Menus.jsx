@@ -88,6 +88,7 @@ export const ComponentsMenu = {
     ['reset-submit',        'ResetSubmit'],
     ['cancel-submit',       'CancelSubmit'],
     ['cancel-reset-submit', 'CancelResetSubmit'],
+    'component:Changed',
     ['label',               'Label'],
     ['errors',              'Errors'],
     ['debug',               'Debug'],
