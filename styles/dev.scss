@@ -6,6 +6,11 @@
 $dev-hue: 193;
 $hover-hue: 260;
 $note-hue: 210;
+$red-hue: 0;
+$green-hue: 120;
+$blue-hue: 210;
+$brown-hue: 30;
+$lilac-hue: 240;
 $radius: 0.25rem;
 $codeblock-radius: $radius;
 
@@ -227,6 +232,16 @@ a.github {
   height: 2rem;
 }
 
+ul.menu {
+  li .about {
+    color: hsl($dev-hue, 50%, 40%);
+    &:before {
+      content: '-';
+      margin: 0 0.5rem;
+    }
+  }
+}
+
 ul.menu ul.menu {
   font-size: 0.9em;
 }
@@ -298,11 +313,25 @@ table.sass-vars {
 .note {
   background-color: hsl($note-hue, 80%, 90%);
   border: 3px solid hsl($note-hue, 90%, 45%);
-  border-radius: 12px;
   color: hsl($note-hue, 80%, 20%);
+  border-radius: 12px;
   padding: 1em;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
 }
+.warning {
+  text-align: center;
+  background-color: hsl($red-hue, 80%, 90%);
+  border: 3px solid hsl($red-hue, 90%, 45%);
+  color: hsl($red-hue, 80%, 20%);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+  h3 {
+    margin: 0;
+    color: hsl($red-hue, 90%, 40%);
+  }
+}
+
 .caption {
   padding: 1rem 0;
   font-size: 0.8rem;
@@ -431,11 +460,6 @@ form.debug.valid {
 form.debug.invalid {
   border: 1px solid red;
 }
-$red-hue: 0;
-$green-hue: 120;
-$blue-hue: 210;
-$brown-hue: 30;
-$lilac-hue: 240;
 
 form.formula {
   button.btn-red {
@@ -542,6 +566,7 @@ form.formula {
   padding: 1rem;
 }
 
+
 div.see-also {
   font-size: 0.875rem;
   border: 1px solid hsl($dev-hue, 30%, 80%);
@@ -556,13 +581,6 @@ div.see-also {
   }
   ul {
     padding: 0 0 0 1rem;
-    li .about {
-      color: hsl($dev-hue, 50%, 40%);
-      &:before {
-        content: '-';
-        margin: 0 0.5rem;
-      }
-    }
   }
 }
 

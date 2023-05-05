@@ -34,6 +34,24 @@ const Why = () =>
         </p>
       </div>
     </div>
+    <h2>Buzzword Bingo</h2>
+    <p className="intro">
+      Here&apos;s the TL;DR about what this library aims to achieve.
+    </p>
+    <ul>
+      <li>Simplicity</li>
+      <li>Consistency</li>
+      <li>Maintainability</li>
+      <li>Flexibility</li>
+      <li>Extensibility</li>
+      <li>Reliability</li>
+      <li>Security</li>
+      <li>Modularity</li>
+      <li>Accessibility</li>
+      <li>Presentability</li>
+      <li>Efficiency</li>
+    </ul>
+
     <h2>Am I Fruit Loopy?</h2>
     <p>
       Yes, probably.  But I had my reasons.
@@ -141,7 +159,7 @@ const Why = () =>
         it easier to update both in isolation.
       </li>
       <li>
-        TODO: <b>Usability</b> - WAI-ARIA compliance (although there&apos;s
+        TODO: <b>Accessibility</b> - WAI-ARIA compliance (although there&apos;s
         still a bit of work to be done there).
       </li>
       <li>

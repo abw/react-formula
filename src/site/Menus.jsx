@@ -16,6 +16,27 @@ export const TutorialMenu = {
   ]
 }
 
+export const ComponentsMenu = {
+  title: 'Components',
+  url:   '/components',
+  items: [
+    'component:Form',
+    'component:Field',
+    'component:Fields',
+    'component:Fieldset',
+    'component:Submit',
+    'component:Reset',
+    'component:Cancel',
+    'component:ResetSubmit',
+    'component:CancelSubmit',
+    'component:CancelResetSubmit',
+    'component:Changed',
+    'component:Label',
+    'component:Errors',
+    'component:Debug',
+  ]
+}
+
 export const FormMenu = {
   title: 'Form',
   url:   '/form',
@@ -74,38 +95,16 @@ export const FieldMenu = {
   ]
 }
 
-export const ComponentsMenu = {
-  title: 'Components',
-  url:   '/components',
-  items: [
-    ['form',                'Form', FormMenu],
-    ['field',               'Field', FieldMenu],
-    ['fields',              'Fields'],
-    ['fieldset',            'Fieldset'],
-    ['submit',              'Submit'],
-    ['reset',               'Reset'],
-    ['cancel',              'Cancel'],
-    ['reset-submit',        'ResetSubmit'],
-    ['cancel-submit',       'CancelSubmit'],
-    ['cancel-reset-submit', 'CancelResetSubmit'],
-    'component:Changed',
-    ['label',               'Label'],
-    ['errors',              'Errors'],
-    ['debug',               'Debug'],
-
-  ]
-}
-
 export const InputsMenu = {
   title: 'Input Types',
   url:   '/inputs',
   items: [
-    ['text',      'Text'],
-    ['textarea',  'Text Area'],
+    'input:Text',
+    'input:TextArea',
+    'input:Checkbox',
+    'input:Radio',
+    'input:Select',
+    'input:Hidden',
     ['number',    'Number, Date, etc'],
-    ['checkbox',  'Checkbox'],
-    ['radio',     'Radio Buttons'],
-    ['select',    'Select Input'],
-    ['hidden',    'Hidden Input'],
   ]
 }

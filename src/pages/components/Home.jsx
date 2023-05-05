@@ -1,6 +1,6 @@
 import React from 'react'
+import MenuItem from '../../site/MenuItem.jsx'
 import { ComponentsMenu } from '../../site/Menus.jsx'
-import Link from '../../site/Link.jsx'
 
 const Components = () =>
   <div>
@@ -11,8 +11,7 @@ const Components = () =>
     </p>
     <ul className="menu">
       { ComponentsMenu.items.map(
-        ([uri, text]) => <li key={uri}>
-          <Link to={`/components/${uri}`} text={text}></Link></li>
+        (item, n) => <MenuItem key={n} item={item} showAbout/>
       )}
     </ul>
   </div>

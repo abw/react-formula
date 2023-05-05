@@ -18,21 +18,21 @@ import { Routes, Route } from 'react-router-dom'
 
 const Components = () =>
   <Routes>
-    <Route path="" end                   element={<Home/>}/>
-    <Route path="form/*"                 element={<Form/>}/>
-    <Route path="field/*"                element={<Field/>}/>
-    <Route path="fields/*"               element={<Fields/>}/>
-    <Route path="fieldset/*"             element={<Fieldset/>}/>
-    <Route path="submit/*"               element={<Submit/>}/>
-    <Route path="reset/*"                element={<Reset/>}/>
-    <Route path="cancel/*"               element={<Cancel/>}/>
-    <Route path="cancel-submit/*"        element={<CancelSubmit/>}/>
-    <Route path="reset-submit/*"         element={<ResetSubmit/>}/>
-    <Route path="cancel-reset-submit/*"  element={<CancelResetSubmit/>}/>
-    <Route path="changed"                element={<Changed/>}/>
-    <Route path="label"                  element={<Label/>}/>
-    <Route path="errors/*"               element={<Errors/>}/>
-    <Route path="debug/*"                element={<Debug/>}/>
+    <Route path="" end               element={<Home/>}/>
+    <Route path="Form/*"             element={<Form/>}/>
+    <Route path="Field/*"            element={<Field/>}/>
+    <Route path="Fields"             element={<Fields/>}/>
+    <Route path="Fieldset"           element={<Fieldset/>}/>
+    <Route path="Submit"             element={<Submit/>}/>
+    <Route path="Reset"              element={<Reset/>}/>
+    <Route path="Cancel"             element={<Cancel/>}/>
+    <Route path="CancelSubmit"       element={<CancelSubmit/>}/>
+    <Route path="ResetSubmit"        element={<ResetSubmit/>}/>
+    <Route path="CancelResetSubmit"  element={<CancelResetSubmit/>}/>
+    <Route path="Changed"            element={<Changed/>}/>
+    <Route path="Label"              element={<Label/>}/>
+    <Route path="Errors"             element={<Errors/>}/>
+    <Route path="Debug"              element={<Debug/>}/>
     {/*
     <Route path="controls"    element={<Controls/>}/>
     <Route path="validation"  element={<Validation/>}/>

@@ -1,6 +1,6 @@
 import React from 'react'
+import MenuItem from '../../site/MenuItem.jsx'
 import { InputsMenu } from '../../site/Menus.jsx'
-import Link from '../../site/Link.jsx'
 
 const Home = () =>
   <div>
@@ -10,9 +10,9 @@ const Home = () =>
       different input types.
     </p>
     <ul className="menu">
+      { console.log('menu: ', InputsMenu.items) }
       { InputsMenu.items.map(
-        ([uri, text]) => <li key={uri}>
-          <Link to={`/inputs/${uri}`} text={text}></Link></li>
+        (item, n) => <MenuItem key={n} item={item} showAbout/>
       )}
     </ul>
   </div>
