@@ -3,10 +3,11 @@ import Example       from '../../../../site/Example.jsx'
 import OnBlur        from './OnBlur.jsx'
 import OnBlurSrc     from './OnBlur.jsx?raw'
 import { FieldLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const OnBlurExamples = () =>
   <div>
-    <h1>Focus and Blur</h1>
+    <h1>Field Events</h1>
 
     <h2><code>onBlur</code></h2>
     <p>
@@ -20,10 +21,18 @@ const OnBlurExamples = () =>
     >
       <p>
         Focus on one of the fields below and then select the other field.
-        Watch the Javascript console for messages indicating when a field
-        is blurred.
+        A message should be displayed each time a field loses focus.
       </p>
     </Example>
+    <SeeAlso
+      links={[
+        'field:validateOnBlur',
+        'field:onFocus',
+        'field:onChange',
+        'field:onValid',
+        'field:onInvalid',
+      ]}
+    />
   </div>
 
 

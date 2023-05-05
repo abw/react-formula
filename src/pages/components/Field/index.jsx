@@ -6,10 +6,13 @@ import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
 import SetFocus          from './SetFocus/index.jsx'
 import OnChange          from './OnChange/index.jsx'
+import OnValid           from './OnValid/index.jsx'
+import OnInvalid         from './OnInvalid/index.jsx'
 import PrepareValue      from './PrepareValue/index.jsx'
 import Required          from './Required/index.jsx'
 import ShowRequired      from './ShowRequired/index.jsx'
 import RequiredLabel     from './RequiredLabel/index.jsx'
+import RequiredMessage   from './RequiredMessage/index.jsx'
 import ShowOptional      from './ShowOptional/index.jsx'
 import OptionalLabel     from './OptionalLabel/index.jsx'
 import Validate          from './Validate/index.jsx'
@@ -22,19 +25,22 @@ const Field = () =>
     <Route path="" end              element={<Home/>}/>
     <Route path="properties"        element={<Properties/>}/>
     <Route path="prefix-suffix"     element={<PrefixSuffix/>}/>
-    <Route path="onfocus"           element={<OnFocus/>}/>
-    <Route path="onblur"            element={<OnBlur/>}/>
-    <Route path="setfocus"          element={<SetFocus/>}/>
-    <Route path="onchange"          element={<OnChange/>}/>
-    <Route path="preparevalue"      element={<PrepareValue/>}/>
+    <Route path="onFocus"           element={<OnFocus/>}/>
+    <Route path="onBlur"            element={<OnBlur/>}/>
+    <Route path="onValid"           element={<OnValid/>}/>
+    <Route path="onInvalid"         element={<OnInvalid/>}/>
+    <Route path="setFocus"          element={<SetFocus/>}/>
+    <Route path="onChange"          element={<OnChange/>}/>
+    <Route path="prepareValue"      element={<PrepareValue/>}/>
     <Route path="required"          element={<Required/>}/>
-    <Route path="showrequired"      element={<ShowRequired/>}/>
-    <Route path="requiredlabel"     element={<RequiredLabel/>}/>
-    <Route path="showoptional"      element={<ShowOptional/>}/>
-    <Route path="optionallabel"     element={<OptionalLabel/>}/>
+    <Route path="requiredMessage"   element={<RequiredMessage/>}/>
+    <Route path="showRequired"      element={<ShowRequired/>}/>
+    <Route path="requiredLabel"     element={<RequiredLabel/>}/>
+    <Route path="showOptional"      element={<ShowOptional/>}/>
+    <Route path="optionalLabel"     element={<OptionalLabel/>}/>
     <Route path="validate"          element={<Validate/>}/>
-    <Route path="validateonchange"  element={<ValidateOnChange/>}/>
-    <Route path="validateonblur"    element={<ValidateOnBlur/>}/>
+    <Route path="validateOnChange"  element={<ValidateOnChange/>}/>
+    <Route path="validateOnBlur"    element={<ValidateOnBlur/>}/>
   </Routes>
 
 export default Field

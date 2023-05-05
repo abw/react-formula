@@ -3,10 +3,11 @@ import Example       from '../../../../site/Example.jsx'
 import SetFocusSrc   from './SetFocus.jsx?raw'
 import SetFocus      from './SetFocus.jsx'
 import { FieldLink, FormLink, FormSetFocusLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const SetFocusExamples = () =>
   <div>
-    <h1>Focus and Blur</h1>
+    <h1>Field Functions</h1>
 
     <h2><code>setFocus()</code></h2>
     <p>
@@ -30,6 +31,13 @@ const SetFocusExamples = () =>
       You can also focus on fields by name using the <FormLink/>{' '}
       <FormSetFocusLink/> method.
     </p>
+    <SeeAlso
+      links={[
+        'form:setFocus',
+        'field:onFocus',
+        'field:onBlur',
+      ]}
+    />
   </div>
 
 

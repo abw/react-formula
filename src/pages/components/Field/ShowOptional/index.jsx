@@ -2,26 +2,37 @@ import React            from 'react'
 import Example          from '../../../../site/Example.jsx'
 import ShowOptional     from './ShowOptional.jsx'
 import ShowOptionalSrc  from './ShowOptional.jsx?raw'
-import { FieldLink, FormLink, RequiredLink } from '../../../../site/Links.jsx'
+import SeeAlso          from '../../../../site/SeeAlso.jsx'
+import { FieldLink, FormLink, OptionalLabelLink, RequiredLink } from '../../../../site/Links.jsx'
 
 const ShowOptionalExample = () =>
   <div>
-    <h1>Optional Fields</h1>
-    <p>
-      This option applies to <FieldLink/> components that are <b>NOT</b>{' '}
-      marked as <RequiredLink/>.
-    </p>
-
+    <h1>Field Validation</h1>
     <h2><code>showOptional</code></h2>
     <p>
-      If you set the <code>showOptional</code> property on either the{' '}
-      <FormLink/> or <FieldLink/> then it will add an additional label to
-      the optional fields as shown in the examples below.
+      If a field is <b>NOT</b> marked as <RequiredLink/> then it is optional.
+      If you set the <code>showOptional</code> property then it will add an
+      additional label to a field to indicate that it&apos;s optional.  You
+      can set the property on individual <FieldLink/> components or on the
+      parent <FormLink/> to act as a default for all fields.
+    </p>
+    <p>
+      You can use the <OptionalLabelLink/> property to change the text of the
+      label that is displayed.
     </p>
     <Example
       Element={ShowOptional} code={ShowOptionalSrc}
       caption="showOptional"
     />
+    <SeeAlso
+      links={[
+        'field:required',
+        'field:optionalLabel',
+        'field:showRequired',
+        'field:requiredLabel',
+      ]}
+    />
+
   </div>
 
 export default ShowOptionalExample

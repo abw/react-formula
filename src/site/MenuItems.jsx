@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from './Link.jsx'
 import { useResolvedPath } from 'react-router-dom'
+import MenuItem from './MenuItem.jsx'
 
 export const MenuItems = ({ url, items=[] }) => {
   const resolved = useResolvedPath()
@@ -11,6 +11,12 @@ export const MenuItems = ({ url, items=[] }) => {
   return open &&
     <ul className="menu">
       { items.map(
+        (item, n) => <MenuItem key={n} item={item} url={url} open={open}/>
+      )}
+    </ul>
+}
+
+/*
         ([path, text, submenu], n) =>
           <li key={path||n}>
             { path
@@ -19,8 +25,5 @@ export const MenuItems = ({ url, items=[] }) => {
             }
             { submenu && open && <MenuItems {...submenu} url={`${url}/${path}`}/>}
           </li>
-      )}
-    </ul>
-}
-
+*/
 export default MenuItems

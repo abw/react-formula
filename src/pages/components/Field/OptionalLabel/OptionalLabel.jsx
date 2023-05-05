@@ -5,7 +5,7 @@ import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const OptionalLabel = () =>
-  <Form showOptional={true} optionalLabel="Not required">
+  <Form showOptional optionalLabel="Not required">
     <Field
       name="field1" label="Optional Field"
     />

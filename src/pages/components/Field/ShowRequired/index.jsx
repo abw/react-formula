@@ -5,14 +5,11 @@ import ShowRequiredSrc  from './ShowRequired.jsx?raw'
 import ShowRequiredForm     from './ShowRequiredForm.jsx'
 import ShowRequiredFormSrc  from './ShowRequiredForm.jsx?raw'
 import { FieldLink, FormLink, RequiredLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const ShowRequiredExample = () =>
   <div>
-    <h1>Required Fields</h1>
-    <p>
-      This option applies to <FieldLink/> components that are marked as{' '}
-      <RequiredLink/>.
-    </p>
+    <h1>Field Validation</h1>
 
     <h2><code>showRequired</code></h2>
     <p>
@@ -32,6 +29,15 @@ const ShowRequiredExample = () =>
     <Example
       Element={ShowRequiredForm} code={ShowRequiredFormSrc}
       caption="showRequired on Form"
+    />
+
+    <SeeAlso
+      links={[
+        'field:required',
+        'field:requiredLabel',
+        'field:showOptional',
+        'field:optionalLabel',
+      ]}
     />
   </div>
 

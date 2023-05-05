@@ -1,5 +1,18 @@
 import React from 'react'
 import Link from './Link.jsx'
+import URLS from './URLS.jsx'
+import { fail } from '@abw/badger-utils'
+
+export const CodeLink = ({to}) => {
+  const entry = URLS[to] || fail(`Invalid CodeLink specified: ${to}`)
+  const { url, code, text } = entry
+  return <Link to={url}>
+    { code
+      ? <code>{code}</code>
+      : text
+    }
+  </Link>
+}
 
 export const CancelLink = () =>
   <Link to="/components/cancel"><code>Cancel</code></Link>
@@ -14,7 +27,7 @@ export const FormLink = () =>
   <Link to="/components/form"><code>Form</code></Link>
 
 export const FormSetFocusLink = () =>
-  <Link to="/components/form/setfocus"><code>setFocus</code></Link>
+  <Link to="/components/form/setFocus"><code>setFocus</code></Link>
 
 export const FieldLink = () =>
   <Link to="/components/field"><code>Field</code></Link>
@@ -30,27 +43,6 @@ export const FieldLayoutLink = () =>
 
 export const LabelLink = () =>
   <Link to="/components/field/label"><code>Label</code></Link>
-
-export const RequiredLink = () =>
-  <Link to="/components/field/required"><code>required</code></Link>
-
-export const ShowRequiredLink = () =>
-  <Link to="/components/field/show-required"><code>showRequired</code></Link>
-
-export const RequiredLabelLink = () =>
-  <Link to="/components/field/required-label"><code>requiredLabel</code></Link>
-
-export const ShowOptionalLink = () =>
-  <Link to="/components/field/show-optional"><code>showOptional</code></Link>
-
-export const OptionalLabelLink = () =>
-  <Link to="/components/field/optional-label"><code>optionalLabel</code></Link>
-
-export const ValidateOnChangeLink = () =>
-  <Link to="/components/field/validate-on-change"><code>validateOnChange</code></Link>
-
-export const ValidateOnBlurLink = () =>
-  <Link to="/components/field/validate-on-blur"><code>validateOnBlur</code></Link>
 
 export const MessageLink = () =>
   <Link to="/components/message"><code>Message</code></Link>
@@ -75,4 +67,47 @@ export const RadioLink = () =>
 
 export const SelectLink = () =>
   <Link to="/inputs/select"><code>Select</code></Link>
+
+// field links
+export const OnBlurLink = () =>
+  <CodeLink to="field:onBlur"/>
+
+export const OnChangeLink = () =>
+  <CodeLink to="field:onChange"/>
+
+export const OnFocusLink = () =>
+  <CodeLink to="field:onFocus"/>
+
+export const OnInvalidLink = () =>
+  <CodeLink to="field:onInvalid"/>
+
+export const OnValidLink = () =>
+  <CodeLink to="field:onValid"/>
+
+export const OptionalLabelLink = () =>
+  <CodeLink to="field:optionalLabel"/>
+
+export const RequiredLink = () =>
+  <CodeLink to="field:required"/>
+
+export const RequiredLabelLink = () =>
+  <CodeLink to="field:requiredLabel"/>
+
+export const RequiredMessageLink = () =>
+  <CodeLink to="field:requiredMessage"/>
+
+export const ShowRequiredLink = () =>
+  <CodeLink to="field:showRequired"/>
+
+export const ShowOptionalLink = () =>
+  <CodeLink to="field:showOptional"/>
+
+export const ValidateLink = () =>
+  <CodeLink to="field:validate"/>
+
+export const ValidateOnBlurLink = () =>
+  <CodeLink to="field:validateOnBlur"/>
+
+export const ValidateOnChangeLink = () =>
+  <CodeLink to="field:validateOnChange"/>
 

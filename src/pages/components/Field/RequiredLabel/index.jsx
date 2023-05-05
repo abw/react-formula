@@ -3,15 +3,11 @@ import Example          from '../../../../site/Example.jsx'
 import RequiredLabelSrc from './RequiredLabel.jsx?raw'
 import RequiredLabel    from './RequiredLabel.jsx'
 import { FieldLink, FormLink, RequiredLink, ShowRequiredLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const RequiredLabelExample = () =>
   <div>
-    <h1>Required Fields</h1>
-    <p>
-      This option applies to <FieldLink/> components that are marked as{' '}
-      <RequiredLink/>.
-    </p>
-
+    <h1>Field Validation</h1>
     <h2><code>requiredLabel</code></h2>
     <p>
       You can use the <code className="code">requiredLabel</code> property
@@ -24,6 +20,14 @@ const RequiredLabelExample = () =>
       caption="requiredLabel"
     />
 
+    <SeeAlso
+      links={[
+        'field:required',
+        'field:showRequired',
+        'field:showOptional',
+        'field:optionalLabel',
+      ]}
+    />
   </div>
 
 export default RequiredLabelExample

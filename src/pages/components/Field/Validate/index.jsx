@@ -5,10 +5,11 @@ import ValidateSrc    from './Validate.jsx?raw'
 import Validator      from './Validator.jsx'
 import ValidatorSrc   from './Validator.jsx?raw'
 import { RequiredLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const ValidateExamples = () =>
   <div>
-    <h1>Validation</h1>
+    <h1>Field Validation</h1>
     <p>
       There are a number of different ways to validate field input.
       For simple cases where a value must be provided you can use the{' '}
@@ -18,9 +19,14 @@ const ValidateExamples = () =>
 
     <h2><code>validate</code></h2>
     <p>
-      You can set the <code>validate</code> option to define an{' '}
-      <code>async</code> validation
-      function.  In this example we&apos;re using{' '}
+      You can use the <RequiredLink/> property to mark a field as being
+      required, but it&apos;s a blunt instrument.  All it will do is check
+      that a field has some value entered. For more robust validation you can
+      use the <code>validate</code> property to define an <code>async</code>{' '}
+      validation function.
+    </p>
+    <p>
+      In this example we&apos;re using{' '}
       <a href="https://www.npmjs.com/package/yup">Yup</a> but you can
       use anything you like.  It should return the validated value on
       success or throw an error if the valid is invalid.
@@ -58,6 +64,13 @@ const ValidateExamples = () =>
       </p>
     </Example>
 
+    <SeeAlso
+      links={[
+        'field:required',
+        'field:validateOnChange',
+        'field:validateOnBlur',
+      ]}
+    />
   </div>
 
 

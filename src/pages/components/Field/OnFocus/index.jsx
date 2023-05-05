@@ -3,10 +3,11 @@ import Example       from '../../../../site/Example.jsx'
 import OnFocus       from './OnFocus.jsx'
 import OnFocusSrc    from './OnFocus.jsx?raw'
 import { FieldLink } from '../../../../site/Links.jsx'
+import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const OnFocusExamples = () =>
   <div>
-    <h1>Focus and Blur</h1>
+    <h1>Field Events</h1>
 
     <h2><code>onFocus</code></h2>
     <p>
@@ -19,10 +20,18 @@ const OnFocusExamples = () =>
       caption="onFocus"
     >
       <p>
-        Focus on the field below and watch the Javascript console for a
-        message.
+        Focus on each of the fields below.  A message should be displayed
+        each time a field gains focus.
       </p>
     </Example>
+    <SeeAlso
+      links={[
+        'field:onBlur',
+        'field:onChange',
+        'field:onValid',
+        'field:onInvalid',
+      ]}
+    />
   </div>
 
 

@@ -5,7 +5,7 @@ import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const ShowOptional = () =>
-  <Form showOptional={true}>
+  <Form showOptional>
     <Field
       name="field1" label="Required Field"
       required={true}

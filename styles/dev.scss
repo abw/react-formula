@@ -6,7 +6,8 @@
 $dev-hue: 193;
 $hover-hue: 260;
 $note-hue: 210;
-$codeblock-radius: 5px;
+$radius: 0.25rem;
+$codeblock-radius: $radius;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -527,6 +528,30 @@ form.formula {
   border: 1px solid hsl($dev-hue, 30%, 80%);
   background-color: hsl($dev-hue, 10%, 90%);
   padding: 1rem;
+}
+
+div.see-also {
+  font-size: 0.875rem;
+  border: 1px solid hsl($dev-hue, 30%, 80%);
+  background-color: hsl($dev-hue, 50%, 95%);
+  padding: 1rem 2rem;
+  border-radius: $radius;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+  h2 {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.2rem;
+    color: hsl($dev-hue, 40%, 40%);
+  }
+  ul {
+    padding: 0 0 0 1rem;
+    li .about {
+      color: hsl($dev-hue, 50%, 40%);
+      &:before {
+        content: '-';
+        margin: 0 0.5rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
