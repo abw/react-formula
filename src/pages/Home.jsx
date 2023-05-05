@@ -54,8 +54,8 @@ const Home = () =>
     </p>
     <div>
       <ul className="large menu">
-        <li><a href="getting-started">Getting Started</a></li>
-        <li><a href="why">Why Does This Exist?</a></li>
+        <li><Link to="getting-started">Getting Started</Link></li>
+        <li><Link to="why">Why Does This Exist?</Link></li>
       </ul>
     </div>
     <div className="badger">
