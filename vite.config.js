@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     minify: true,
-    sourcemap: false,
+    sourcemap: true,
     lib: {
       entry: 'lib/index.js',
       name: '@abw/react-formula',
