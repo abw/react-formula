@@ -4,16 +4,21 @@ import Layout from './Layout.jsx'
 import Home from '../pages/Home.jsx'
 import GettingStarted from '../pages/GettingStarted.jsx'
 import Why from '../pages/Why.jsx'
-import Tutorial from '../pages/tutorial/index.jsx'
-import Examples from '../pages/examples/index.jsx'
-// import Field from '../pages/field/index.jsx'
-import Components from '../pages/components/index.jsx'
-// import Form from '../pages/form/index.jsx'
-import Inputs from '../pages/inputs/index.jsx'
-import Customising from '../pages/customising/index.jsx'
-import Styling from '../pages/styling/index.jsx'
+// import Examples from '../pages/examples/index.jsx'
 import TestForm from '../test/Form.jsx'
 import LayoutTest from '../test/Layout.jsx'
+
+const Tutorial    = React.lazy(() => import('../pages/tutorial/index.jsx'))
+const Components  = React.lazy(() => import('../pages/components/index.jsx'))
+const Inputs      = React.lazy(() => import('../pages/inputs/index.jsx'))
+const Customising = React.lazy(() => import('../pages/customising/index.jsx'))
+const Styling     = React.lazy(() => import('../pages/styling/index.jsx'))
+
+const LazyRoute = ({Element}) => {
+  return <React.Suspense fallback={<h3>Loading...</h3>}>
+    <Element />
+  </React.Suspense>
+}
 
 const Router = createBrowserRouter(
   [
@@ -24,16 +29,14 @@ const Router = createBrowserRouter(
         { path: '/',                  element: <Home/> },
         { path: 'getting-started',    element: <GettingStarted/> },
         { path: 'why',                element: <Why/> },
-        { path: 'tutorial/*',         element: <Tutorial/> },
-        { path: 'examples/*',         element: <Examples/> },
-        { path: 'components/*',       element: <Components/> },
-        // { path: 'form/*',             element: <Form/> },
-        // { path: 'field/*',            element: <Field/> },
-        { path: 'inputs/*',           element: <Inputs/> },
-        { path: 'customising/*',      element: <Customising/> },
-        { path: 'styling/*',          element: <Styling/> },
+        { path: 'tutorial/*',         element: <LazyRoute Element={Tutorial}/> },
+        { path: 'components/*',       element: <LazyRoute Element={Components}/> },
+        { path: 'inputs/*',           element: <LazyRoute Element={Inputs}/> },
+        { path: 'customising/*',      element: <LazyRoute Element={Customising}/> },
+        { path: 'styling/*',          element: <LazyRoute Element={Styling}/> },
         { path: 'test-form',          element: <TestForm/> },
         { path: 'test-layout',        element: <LayoutTest/> },
+        // { path: 'examples/*',         element: <Examples/> },
       ]
     },
   ],
