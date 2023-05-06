@@ -87,6 +87,9 @@ export const HelpLink = () =>
 export const LabelLink = () =>
   <CodeLink to="field:label"/>
 
+export const MinValidateLengthLink = () =>
+  <CodeLink to="field:minValidateLength"/>
+
 export const OnBlurLink = () =>
   <CodeLink to="field:onBlur"/>
 

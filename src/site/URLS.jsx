@@ -119,6 +119,11 @@ export const URLS = {
     code:   'label',
     about:  'A label for the field',
   },
+  'field:minValidateLength': {
+    url:    '/components/Field/minValidateLength',
+    code:   'minValidateLength',
+    about:  'The minimum input length to trigger validation',
+  },
   'field:name': {
     url:    '/components/Field/name',
     code:   'name',

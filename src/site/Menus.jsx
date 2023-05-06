@@ -68,7 +68,6 @@ export const FieldMenu = {
   title: 'Field',
   url:   '/field',
   items: [
-    // ['properties',       'Properties'],
     { heading: 'Properties' },
     'field:name',
     'field:label',
@@ -87,6 +86,7 @@ export const FieldMenu = {
     'field:validate',
     'field:validateOnBlur',
     'field:validateOnChange',
+    'field:minValidateLength',
     { heading: 'Events' },
     'field:onFocus',
     'field:onBlur',

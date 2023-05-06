@@ -3,6 +3,7 @@ import Example        from '../../../../site/Example.jsx'
 import OnChangeSrc    from './OnChange.jsx?raw'
 import OnChange       from './OnChange.jsx'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
+import { MinValidateLengthLink } from '../../../../site/Links.jsx'
 
 const ValidateOnChangeExamples = () =>
   <div>
@@ -10,8 +11,8 @@ const ValidateOnChangeExamples = () =>
     <h2><code>validateOnChange</code></h2>
     <p>
       You can set the <code>validateOnChange</code> flag to enable validation
-      any time the field value changes.  The <code>minValidateLength</code> can
-      be set to only trigger validation when the input length exceeds a
+      any time the field value changes.  The <MinValidateLengthLink/> property
+      can be set to only trigger validation when the input length exceeds a
       threshold.
     </p>
     <Example
@@ -29,6 +30,7 @@ const ValidateOnChangeExamples = () =>
         'field:required',
         'field:validate',
         'field:validateOnBlur',
+        'field:minValidateLength',
       ]}
     />
   </div>
