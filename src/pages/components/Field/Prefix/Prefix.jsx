@@ -1,4 +1,4 @@
-import { Form, Field } from '../../../../../../lib/index.js'
+import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -7,9 +7,9 @@ import React from 'react'
 const PrefixExample = () =>
   <Form>
     <Field
-      name="prefix" type="text"
-      label="Field with a prefix"
-      prefix="😀"
+      name="money" type="number"
+      label="Price"
+      prefix="$"
     />
   </Form>
 

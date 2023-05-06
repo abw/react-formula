@@ -1,4 +1,4 @@
-import { Form, Field } from '../../../../../../lib/index.js'
+import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -7,8 +7,8 @@ import React from 'react'
 const SuffixExample = () =>
   <Form>
     <Field
-      name="suffix" type="text"
-      label="Field with a suffix"
+      name="suffix" type="password"
+      label="Enter your password"
       suffix="🔒"
     />
   </Form>

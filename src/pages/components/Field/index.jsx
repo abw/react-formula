@@ -5,7 +5,8 @@ import Name              from './Name/index.jsx'
 import Label             from './Label/index.jsx'
 import Type              from './Type/index.jsx'
 import Help              from './Help/index.jsx'
-import PrefixSuffix      from './PrefixSuffix/index.jsx'
+import Prefix            from './Prefix/index.jsx'
+import Suffix            from './Suffix/index.jsx'
 import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
 import SetFocus          from './SetFocus/index.jsx'
@@ -34,7 +35,8 @@ const Field = () =>
     <Route path="label"             element={<Label/>}/>
     <Route path="type"              element={<Type/>}/>
     <Route path="help"              element={<Help/>}/>
-    <Route path="prefix-suffix"     element={<PrefixSuffix/>}/>
+    <Route path="prefix"            element={<Prefix/>}/>
+    <Route path="suffix"            element={<Suffix/>}/>
     <Route path="onFocus"           element={<OnFocus/>}/>
     <Route path="onBlur"            element={<OnBlur/>}/>
     <Route path="onValid"           element={<OnValid/>}/>

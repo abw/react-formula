@@ -3,7 +3,7 @@ import Example  from '../../../../site/Example.jsx'
 import ResetSrc from './Reset.jsx?raw'
 import Reset    from './Reset.jsx'
 import SeeAlso  from '../../../../site/SeeAlso.jsx'
-import { FieldLink, FormLink, FormSetFocusLink } from '../../../../site/Links.jsx'
+import { FieldLink } from '../../../../site/Links.jsx'
 
 const ResetExamples = () =>
   <div>
@@ -28,10 +28,6 @@ const ResetExamples = () =>
         corresponding button to reset it to the original value.
       </p>
     </Example>
-    <p>
-      You can also focus on fields by name using the <FormLink/>{' '}
-      <FormSetFocusLink/> method.
-    </p>
     <SeeAlso
       links={[
         'form:setFocus',
