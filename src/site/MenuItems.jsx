@@ -8,12 +8,13 @@ export const MenuItems = ({ url, items=[] }) => {
   const open     = prefix === url + '/' || prefix === url  // better way?
   // console.log(`prefix:${prefix} url:${url} open:${open}`)
 
-  return open &&
-    <ul className="menu">
+  return (//open &&
+    <ul className={`menu ${open ? 'open' : 'closed '}`}>
       { items.map(
-        (item, n) => <MenuItem key={n} item={item} url={url} open={open}/>
+        (item, n) => <MenuItem key={n} item={item} url={url} open={true}/>
       )}
     </ul>
+  )
 }
 
 export default MenuItems

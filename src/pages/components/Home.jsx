@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuItem from '../../site/MenuItem.jsx'
 import { ComponentsMenu } from '../../site/Menus.jsx'
+import TOC from '../../site/TOC.jsx'
 
 const Components = () =>
   <div>
@@ -9,11 +9,7 @@ const Components = () =>
       This section of the documentation provides detailed information about
       each of the components.
     </p>
-    <ul className="menu">
-      { ComponentsMenu.items.map(
-        (item, n) => <MenuItem key={n} item={item} showAbout/>
-      )}
-    </ul>
+    <TOC menu={ComponentsMenu}/>
   </div>
 
 export default Components

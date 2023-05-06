@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '../../site/Link.jsx'
+import TOC from '../../site/TOC.jsx'
 import { TutorialMenu } from '../../site/Menus.jsx'
 
 const Home = () =>
@@ -9,12 +9,7 @@ const Home = () =>
       This section of the documentation provides a guided walk-through of the
       features to get you up and running as quickly as possible.
     </p>
-    <ul className="menu">
-      { TutorialMenu.items.map(
-        ([uri, text]) => <li key={uri}>
-          <Link to={`/tutorial/${uri}`} text={text}></Link></li>
-      )}
-    </ul>
+    <TOC menu={TutorialMenu} url="/tutorial"/>
   </div>
 
 

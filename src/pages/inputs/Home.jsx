@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuItem from '../../site/MenuItem.jsx'
 import { InputsMenu } from '../../site/Menus.jsx'
+import TOC from '../../site/TOC.jsx'
 
 const Home = () =>
   <div>
@@ -9,12 +9,7 @@ const Home = () =>
       This section of the documentation provides detailed information about
       different input types.
     </p>
-    <ul className="menu">
-      { console.log('menu: ', InputsMenu.items) }
-      { InputsMenu.items.map(
-        (item, n) => <MenuItem key={n} item={item} showAbout/>
-      )}
-    </ul>
+    <TOC menu={InputsMenu}/>
   </div>
 
 export default Home

@@ -30,7 +30,7 @@ export const MenuItem = ({ item, open, showAbout=false, url='' }) => {
   }
   if (isObject(item) && item.heading) {
     return (
-      <li>
+      <li className="heading">
         <h4>{item.heading}</h4>
       </li>
     )
