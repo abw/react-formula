@@ -26,12 +26,6 @@ export const ErrorsLink = () =>
 export const FormLink = () =>
   <Link to="/components/form"><code>Form</code></Link>
 
-export const FormSetFocusLink = () =>
-  <Link to="/components/form/setFocus"><code>setFocus</code></Link>
-
-export const FormSetValuesLink = () =>
-  <Link to="/components/form/setValues"><code>setValues</code></Link>
-
 export const FieldLink = () =>
   <Link to="/components/field"><code>Field</code></Link>
 
@@ -44,8 +38,6 @@ export const FieldsetLink = () =>
 export const FieldLayoutLink = () =>
   <Link to="/components/field/layout"><code>FieldLayout</code></Link>
 
-export const LabelLink = () =>
-  <Link to="/components/field/label"><code>Label</code></Link>
 
 export const MessageLink = () =>
   <Link to="/components/message"><code>Message</code></Link>
@@ -71,7 +63,30 @@ export const RadioLink = () =>
 export const SelectLink = () =>
   <Link to="/inputs/select"><code>Select</code></Link>
 
+// form links
+export const FormFieldsLink = () =>
+  <CodeLink to="form:fields"/>
+
+export const FormValuesLink = () =>
+  <CodeLink to="form:values"/>
+
+export const FormHiddenLink = () =>
+  <CodeLink to="form:hidden"/>
+
+export const FormSetFocusLink = () =>
+  <Link to="/components/form/setFocus"><code>setFocus</code></Link>
+
+export const FormSetValuesLink = () =>
+  <Link to="/components/form/setValues"><code>setValues</code></Link>
+
+
 // field links
+export const HelpLink = () =>
+  <CodeLink to="field:help"/>
+
+export const LabelLink = () =>
+  <CodeLink to="field:label"/>
+
 export const OnBlurLink = () =>
   <CodeLink to="field:onBlur"/>
 
@@ -105,6 +120,9 @@ export const ShowRequiredLink = () =>
 export const ShowOptionalLink = () =>
   <CodeLink to="field:showOptional"/>
 
+export const TypeLink = () =>
+  <CodeLink to="field:type"/>
+
 export const ValidateLink = () =>
   <CodeLink to="field:validate"/>
 
@@ -113,4 +131,23 @@ export const ValidateOnBlurLink = () =>
 
 export const ValidateOnChangeLink = () =>
   <CodeLink to="field:validateOnChange"/>
+
+// input types
+export const TextInputLink = () =>
+  <CodeLink to="input:Text"/>
+
+export const TextAreaInputLink = () =>
+  <CodeLink to="input:TextArea"/>
+
+export const CheckboxInputLink = () =>
+  <CodeLink to="input:Checkbox"/>
+
+export const RadioInputLink = () =>
+  <CodeLink to="input:Radio"/>
+
+export const SelectInputLink = () =>
+  <CodeLink to="input:Select"/>
+
+export const HiddenInputLink = () =>
+  <CodeLink to="input:Hidden"/>
 

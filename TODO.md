@@ -22,6 +22,8 @@
 
 * hide/show
 
+* ENTER triggers form submit
+
 ## Form
 
 * should fields initially go through the field prepareValue() before

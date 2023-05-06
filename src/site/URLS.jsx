@@ -80,6 +80,21 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Form links
   //--------------------------------------------------------------------------
+  'form:fields': {
+    url:    '/components/Form/fields',
+    code:   'fields',
+    about:  'Properties for form fields',
+  },
+  'form:values': {
+    url:    '/components/Form/values',
+    code:   'values',
+    about:  'Values for form fields',
+  },
+  'form:hidden': {
+    url:    '/components/Form/hidden',
+    code:   'hidden',
+    about:  'Hidden values for a form',
+  },
   'form:setFocus': {
     url:    '/components/Form/setFocus',
     code:   'setFocus',
@@ -94,10 +109,25 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Field links
   //--------------------------------------------------------------------------
+  'field:help': {
+    url:    '/components/Field/help',
+    code:   'help',
+    about:  'Additional help for a field',
+  },
+  'field:label': {
+    url:    '/components/Field/label',
+    code:   'label',
+    about:  'A label for the field',
+  },
+  'field:name': {
+    url:    '/components/Field/name',
+    code:   'name',
+    about:  'The field name',
+  },
   'field:onBlur': {
     url:    '/components/Field/onBlur',
     code:   'onBlur',
-    about:  ' Define a handler to be called when a field loses focus',
+    about:  'Define a handler to be called when a field loses focus',
   },
   'field:onChange': {
     url:    '/components/Field/onChange',
@@ -179,6 +209,11 @@ export const URLS = {
     code:   'suffix',
     about:  'Add a suffix to a field',
   },
+  'field:type': {
+    url:    '/components/Field/type',
+    code:   'type',
+    about:  'The input type for a field',
+  },
   'field:validate': {
     url:    '/components/Field/validate',
     code:   'validate',
@@ -198,6 +233,11 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Input links
   //--------------------------------------------------------------------------
+  'input:types': {
+    url:    '/inputs',
+    text:   'Input Types',
+    about:  'Input components',
+  },
   'input:Text': {
     url:    '/inputs/Text',
     text:   'Text',

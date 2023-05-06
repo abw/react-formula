@@ -1,6 +1,10 @@
 import React             from 'react'
 import Home              from './Home.jsx'
 import Properties        from './Properties/index.jsx'
+import Name              from './Name/index.jsx'
+import Label             from './Label/index.jsx'
+import Type              from './Type/index.jsx'
+import Help              from './Help/index.jsx'
 import PrefixSuffix      from './PrefixSuffix/index.jsx'
 import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
@@ -26,6 +30,10 @@ const Field = () =>
   <Routes>
     <Route path="" end              element={<Home/>}/>
     <Route path="properties"        element={<Properties/>}/>
+    <Route path="name"              element={<Name/>}/>
+    <Route path="label"             element={<Label/>}/>
+    <Route path="type"              element={<Type/>}/>
+    <Route path="help"              element={<Help/>}/>
     <Route path="prefix-suffix"     element={<PrefixSuffix/>}/>
     <Route path="onFocus"           element={<OnFocus/>}/>
     <Route path="onBlur"            element={<OnBlur/>}/>
