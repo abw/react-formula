@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import * as yup from 'yup'
 import { fail } from '@abw/badger-utils'
@@ -36,7 +36,9 @@ const ValidateFail = () => fail(
   'big heap of fail'
 )
 
-const ValidateStripSpaces = value => Promise.resolve(
+const ValidateStripSpaces = value => value.replaceAll(' ', '')
+
+const ValidateResolveStripSpaces = value => Promise.resolve(
   value.replaceAll(' ', '')
 )
 
@@ -127,6 +129,34 @@ it('should validate OK',
   }
 )
 
+it('should validate OK with custom validMessage',
+  async () => {
+    const user = userEvent.setup()
+    const { container } = render(
+      <Form>
+        <Field
+          name="foo" id="foo" validate={ValidateOK} validateOnBlur={true}
+          validMessage="This is fine"
+        />
+        <Field name="bar" id="bar"/>
+      </Form>
+    )
+    const foo = container.querySelector('#foo')
+    const bar = container.querySelector('#bar')
+
+    // focus on foo field, enter some text, then focus on bar
+    await user.click(foo)
+    await user.keyboard(' Hello World' )
+    await user.click(bar)
+
+    // field should be valid and input should be unchanged
+    const firstField = container.getElementsByClassName('field')[0]
+    expect(firstField).toHaveClass('valid')
+    expect(container.getElementsByClassName('help')[0])
+      .toHaveTextContent('This is fine')
+  }
+)
+
 it('should validate OK with message',
   async () => {
     const user = userEvent.setup()
@@ -164,6 +194,33 @@ it('should validate and remove spaces',
         <Field
           name="foo" id="foo"
           validate={ValidateStripSpaces} validateOnBlur={true}
+        />
+        <Field name="bar" id="bar"/>
+      </Form>
+    )
+    const foo = container.querySelector('#foo')
+    const bar = container.querySelector('#bar')
+
+    // focus on foo field, enter some text, then focus on bar
+    await user.click(foo)
+    await user.keyboard('Hello World')
+    await user.click(bar)
+
+    // field should be valid and input should have spaces removed
+    const firstField = container.getElementsByClassName('field')[0]
+    expect(firstField).toHaveClass('valid')
+    expect(foo).toHaveValue('HelloWorld')
+  }
+)
+
+it('should validate and resolve with spaces removed',
+  async () => {
+    const user = userEvent.setup()
+    const { container } = render(
+      <Form>
+        <Field
+          name="foo" id="foo"
+          validate={ValidateResolveStripSpaces} validateOnBlur={true}
         />
         <Field name="bar" id="bar"/>
       </Form>
