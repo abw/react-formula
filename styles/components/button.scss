@@ -27,6 +27,7 @@ button {
     color: $reset-text-color;
     border-color: $reset-border-color;
     background-color: $reset-back-color;
+    margin-bottom: 0;
     &:focus,
     &:focus-visible {
       box-shadow:
@@ -38,5 +39,6 @@ button {
     color: $submit-text-color;
     border-color: $submit-border-color;
     background-color: $submit-back-color;
+    margin-bottom: 0;
   }
 }

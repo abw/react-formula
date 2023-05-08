@@ -13,6 +13,12 @@ $brown-hue: 30;
 $lilac-hue: 240;
 $radius: 0.25rem;
 $codeblock-radius: $radius;
+$shadow1: 1px 1px 2px rgba(0, 0, 0, 0.06);
+$shadow2: 2px 2px 4px rgba(0, 0, 0, 0.05);
+$shadow3: 3px 3px 6px rgba(0, 0, 0, 0.04);
+$shadow4: 5px 5px 10px rgba(0, 0, 0, 0.03);
+$shadows: $shadow2, $shadow4;
+
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -351,7 +357,7 @@ table.sass-vars {
   color: hsl($note-hue, 80%, 20%);
   border-radius: 12px;
   padding: 1em;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: $shadows;
 }
 .warning {
   text-align: center;
@@ -360,7 +366,7 @@ table.sass-vars {
   color: hsl($red-hue, 80%, 20%);
   border-radius: 12px;
   padding: 1rem 2rem;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: $shadows;
   h3 {
     margin: 0;
     color: hsl($red-hue, 90%, 40%);
@@ -382,21 +388,33 @@ textarea {
 div.example {
   margin-bottom: 2rem;
 }
+
+div.codeblock,
+div.output {
+  position: relative;
+  border-radius: $codeblock-radius;
+  h4.caption {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: normal;
+    top: 0.25rem;
+    right: 0.75rem;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}
+
 div.codeblock {
   font-size: 0.9rem;
-  position: relative;
   padding: 0;
+  margin-bottom: 2rem;
+  box-shadow: $shadows;
   pre {
     border-radius: $codeblock-radius;
     margin: 0 !important;
   }
   h4.caption {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    margin: 0;
-    padding: 0;
-    text-align: right;
     color: white;
   }
   .clipboard {
@@ -423,6 +441,20 @@ div.codeblock {
     }
   }
 }
+div.output {
+  position: relative;
+  background-color: white;
+  border: 1px solid hsl($dev-hue, 20%, 80%);
+  box-shadow: $shadows;
+  // background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem 2rem;
+  h4.caption {
+    color: hsl($dev-hue, 40%, 30%);
+  }
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -561,7 +593,7 @@ form.formula {
   margin-top: 1rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: $shadows;
   transition: all 0.5s;
   h4 {
     transition: all 0.5s;
@@ -608,7 +640,7 @@ div.toc {
   background-color: hsl($dev-hue, 50%, 95%);
   padding: 1rem 2rem;
   border-radius: $radius;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: $shadows;
   h2 {
     margin: 0.5rem 0 1rem 0;
     font-size: 1.2rem;

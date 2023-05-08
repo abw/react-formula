@@ -10,7 +10,8 @@ export const Example = ({
     </div>
     {children}
     { Element
-      ? <div className="mar-t-2">
+      ? <div className="mar-t-2 output">
+          <h4 className="caption">Output</h4>
           <Element/>
         </div>
       : null

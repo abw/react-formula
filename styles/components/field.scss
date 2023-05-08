@@ -235,7 +235,7 @@ div.field {
     .inputs .option {
       border: none;
       background-color: transparent;
-      padding-left: 0;
+      // padding-left: 0.5em;
       &:hover {
         background-color: transparent;
         color: $focus-text-color;

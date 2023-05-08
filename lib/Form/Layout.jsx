@@ -9,6 +9,7 @@ export const Layout = ({children}) => {
   const form = useForm()
   // console.log('form layout useForm: ', form)
   const {
+    submit,
     className,
     bodyClass,
     validClass,
@@ -33,7 +34,7 @@ export const Layout = ({children}) => {
   const attrs = formAttrs(form)
 
   return (
-    <form className={classes} {...attrs}>
+    <form className={classes} {...attrs} onSubmit={submit}>
       <Header/>
       <div className={bodyClass}>
         {children}
