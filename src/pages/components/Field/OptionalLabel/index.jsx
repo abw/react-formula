@@ -19,7 +19,7 @@ const OptionalLabelExample = () =>
     </p>
     <Example
       Element={OptionalLabel} code={OptionalLabelSrc}
-      caption="optionalLabel"
+      caption="optionalLabel" expand
     />
     <SeeAlso
       links={[

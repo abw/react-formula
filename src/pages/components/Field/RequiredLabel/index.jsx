@@ -17,7 +17,7 @@ const RequiredLabelExample = () =>
     </p>
     <Example
       Element={RequiredLabel} code={RequiredLabelSrc}
-      caption="requiredLabel"
+      caption="requiredLabel" expand
     />
 
     <SeeAlso

@@ -19,7 +19,7 @@ const ShowRequiredExample = () =>
     </p>
     <Example
       Element={ShowRequired} code={ShowRequiredSrc}
-      caption="showRequired on Field"
+      caption="showRequired on Field" expand
     />
 
     <p>
@@ -28,7 +28,7 @@ const ShowRequiredExample = () =>
     </p>
     <Example
       Element={ShowRequiredForm} code={ShowRequiredFormSrc}
-      caption="showRequired on Form"
+      caption="showRequired on Form" expand
     />
 
     <SeeAlso

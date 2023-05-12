@@ -16,7 +16,7 @@ const PrefixExample = () =>
     </p>
     <Example
       Element={Prefix} code={PrefixSrc}
-      caption="prefix"
+      caption="prefix" expand
     />
     <SeeAlso
       links={[

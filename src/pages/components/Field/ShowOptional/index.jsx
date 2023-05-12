@@ -22,7 +22,7 @@ const ShowOptionalExample = () =>
     </p>
     <Example
       Element={ShowOptional} code={ShowOptionalSrc}
-      caption="showOptional"
+      caption="showOptional" expand
     />
     <SeeAlso
       links={[

@@ -16,7 +16,7 @@ const OnValidExamples = () =>
     </p>
     <Example
       Element={OnValid} code={OnValidSrc}
-      caption="onValid"
+      caption="onValid" expand
     >
       <p>
         Enter some text in one of the fields below and then select the other

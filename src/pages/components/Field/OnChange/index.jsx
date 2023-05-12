@@ -17,7 +17,7 @@ const OnChangeExamples = () =>
     </p>
     <Example
       Element={OnChange} code={OnChangeSource}
-      caption="onChange"
+      caption="onChange" expand
     >
       <p>
         Try entering some text in the field below.  You should see the

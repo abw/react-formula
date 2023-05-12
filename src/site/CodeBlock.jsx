@@ -13,23 +13,32 @@ SyntaxHighlighter.registerLanguage('css', css)
 SyntaxHighlighter.registerLanguage('scss', scss)
 SyntaxHighlighter.registerLanguage('bash', bash)
 
-export const CodeBlock = ({code, children, language='jsx', caption}) => {
+export const CodeBlock = ({code, children, language='jsx', caption, expand=false, fixed=expand}) => {
   const [copied, setCopied] = useState(false)
+  const [expanded, setExpanded] = useState(expand)
   const copy = () => {
     navigator.clipboard.writeText(code)
     setCopied(true)
     sleep(2000).then(() => setCopied(false))
   }
   return (
-    <div className="codeblock">
+    <div className={`codeblock ${expanded ? 'expanded' : ''} ${fixed ? 'fixed' : 'expandable'}`}>
       {Boolean(caption) && <h4 className="caption">{caption}</h4>}
-      <div
-        className={`clipboard ${copied ? 'copied' : ''}`}
-        onClick={copy}
-      >
-        { copied ? 'Copied' : 'Copy' }
+      <div className="controls">
+        <div className="expand" onClick={() => setExpanded(! expanded)}>
+          { expanded ? 'Compress' : 'Expand' }
+        </div>
+        <div
+          className={`clipboard ${copied ? 'copied' : ''}`}
+          onClick={copy}
+        >
+          { copied ? 'Copied' : 'Copy' }
+        </div>
       </div>
-      <SyntaxHighlighter language={language} style={a11yDark} showLineNumbers={true}>
+      <SyntaxHighlighter
+        language={language} style={a11yDark} showLineNumbers={true}
+        customStyle={{ paddingBottom: fixed ? '1rem' : '2rem' }}
+      >
         {code||children}
       </SyntaxHighlighter>
     </div>

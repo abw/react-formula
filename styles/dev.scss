@@ -12,6 +12,7 @@ $blue-hue: 210;
 $brown-hue: 30;
 $lilac-hue: 240;
 $radius: 0.25rem;
+$codeblock-back: rgba(43, 43, 43);
 $codeblock-radius: $radius;
 $shadow1: 1px 1px 2px rgba(0, 0, 0, 0.06);
 $shadow2: 2px 2px 4px rgba(0, 0, 0, 0.05);
@@ -412,34 +413,76 @@ div.codeblock {
   padding: 0;
   margin-bottom: 2rem;
   box-shadow: $shadows;
+  &.expandable {
+    // padding-bottom: 1rem;
+    background-color: rgba(43, 43, 43);
+  }
   pre {
     border-radius: $codeblock-radius;
     margin: 0 !important;
+    max-height: 18rem;
+    overflow-y: scroll;
+    transition: all 0.5s;
   }
   h4.caption {
     color: white;
   }
-  .clipboard {
+  div.controls {
     position: absolute;
-    bottom: 0rem;
-    right: 0rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // border: 1px solid red;
+    background-color: $codeblock-back;
+    background: linear-gradient(180deg, rgba(43,43,43,0) 0%, rgba(43,43,43,1) 100%);
+    display: flex;
+    justify-content: space-between;
     margin: 0;
-    padding: 0.25em 0.5em;
-    min-width: 8ch;
-    text-align: center;
-    color: white;
-    background-color: hsl($dev-hue, 90%, 30%);
-    border-radius: $codeblock-radius 0 $codeblock-radius 0;
+    border-radius: 0 0 $codeblock-radius $codeblock-radius;
+  }
+  .expand, .clipboard {
+    // position: absolute;
+    // bottom: 0rem;
     font-size: 0.8rem;
+    color: white;
+    background-color: hsla($dev-hue, 90%, 30%, 0.8);
+    padding: 0.25em 0.5em;
+    margin: 0;
+    min-width: 10ch;
+    text-align: center;
     transition: all 1s;
+    user-select: none;
     &:hover {
       transition: all 0.2s;
-      background-color: hsl($hover-hue, 90%, 40%);
+      background-color: hsla($hover-hue, 50%, 50%, 0.9);
       cursor: pointer;
     }
+  }
+  .expand {
+    left: 0%;
+    // transform: translateX(-50%);
+    // border-radius: $codeblock-radius $codeblock-radius 0 0;
+    border-radius: 0 $codeblock-radius 0 $codeblock-radius;
+  }
+  .clipboard {
+    right: 0rem;
+    border-radius: $codeblock-radius 0 $codeblock-radius 0;
+    transition: all 1s;
     &.copied {
-      background-color: hsl(120, 70%, 30%);
+      background-color: hsla(120, 70%, 30%, 0.9);
       cursor: pointer;
+    }
+  }
+  &.fixed {
+    .expand {
+      // display: none;
+      visibility: hidden;
+    }
+  }
+  &.expanded {
+    pre {
+      max-height: 250rem;
+      transition: all 0.5s;
     }
   }
 }

@@ -68,7 +68,7 @@ const CompleteRegistration = () =>
       similar which you can use instead.  Here&apos;s the CSS for those
       classes for completeness.
     </p>
-    <CodeBlock code={CustomCSS} language="css" className="mar-b-2"/>
+    <CodeBlock code={CustomCSS} language="css" className="mar-b-2" fixed/>
 
     <h2>Where Next?</h2>
     <p>

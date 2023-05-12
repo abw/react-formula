@@ -33,7 +33,7 @@ const TypeExamples = () =>
     </p>
     <Example
       Element={Type} code={TypeSrc}
-      caption="type"
+      caption="type" expand
     >
       <p>
         Enter some text in the input fields below. Note how the

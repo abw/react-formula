@@ -17,7 +17,7 @@ const LabelExamples = () =>
     </p>
     <Example
       Element={Label} code={LabelSrc}
-      caption="name"
+      caption="name" expand
     />
 
     <p>
@@ -28,7 +28,7 @@ const LabelExamples = () =>
 
     <Example
       Element={FormFields} code={FormFieldsSrc}
-      caption="Form fields"
+      caption="Form fields" expand
     >
       <p>
         Note how the first field has the <code>label</code> defined in the{' '}

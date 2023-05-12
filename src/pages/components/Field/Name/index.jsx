@@ -18,7 +18,7 @@ const NameExamples = () =>
     </p>
     <Example
       Element={Name} code={NameSrc}
-      caption="name"
+      caption="name" expand
     >
       <p>
         Enter some text in the input field.  The <DebugLink/> component is
@@ -37,7 +37,7 @@ const NameExamples = () =>
 
     <Example
       Element={FormFields} code={FormFieldsSrc}
-      caption="Form fields"
+      caption="Form fields" expand
     >
       <p>
         Note how the <FieldLink/> has now got a <code>label</code> and the{' '}

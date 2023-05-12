@@ -20,7 +20,7 @@ const RequiredMessageExample = () =>
     </p>
     <Example
       Element={RequiredMessage} code={RequiredMessageSrc}
-      caption="requiredMessage"
+      caption="requiredMessage" expand
     >
       <p>
         Try submitting the form without entering any values.

@@ -15,7 +15,7 @@ const PrepareValueExamples = () =>
     </p>
     <Example
       Element={PrepareValue} code={PrepareValueSource}
-      caption="onChange"
+      caption="onChange" expand
     >
       <p>
         Try entering some letters in the field below.  You should see that

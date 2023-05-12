@@ -17,7 +17,7 @@ const OnFocusExamples = () =>
     </p>
     <Example
       Element={OnFocus} code={OnFocusSrc}
-      caption="onFocus"
+      caption="onFocus" expand
     >
       <p>
         Focus on each of the fields below.  A message should be displayed

@@ -2,11 +2,11 @@ import React from 'react'
 import CodeBlock from './CodeBlock.jsx'
 
 export const Example = ({
-  Element, code, children='', className='', caption
+  Element, code, children='', className='', caption, fixed, expand
 }) => {
   return <div className={`example ${className}`}>
     <div className="mar-t-2">
-      <CodeBlock caption={caption} code={prepareCode(code)}/>
+      <CodeBlock caption={caption} code={prepareCode(code)} expand={expand} fixed={fixed}/>
     </div>
     {children}
     { Element

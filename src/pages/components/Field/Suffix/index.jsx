@@ -16,7 +16,7 @@ const PrefixSuffix = () =>
     </p>
     <Example
       Element={Suffix} code={SuffixSrc}
-      caption="suffix"
+      caption="suffix" expand
     />
 
     <p>
@@ -24,7 +24,7 @@ const PrefixSuffix = () =>
     </p>
     <Example
       Element={Both} code={BothSrc}
-      caption="prefix and suffix"
+      caption="prefix and suffix" expand
     />
     <SeeAlso
       links={[

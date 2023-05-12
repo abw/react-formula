@@ -17,7 +17,7 @@ const OnInvalidExamples = () =>
     </p>
     <Example
       Element={OnInvalid} code={OnInvalidSrc}
-      caption="onInvalid"
+      caption="onInvalid" expand
     >
       <p>
         Click one of the fields below and then select the other field without

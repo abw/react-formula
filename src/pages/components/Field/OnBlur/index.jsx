@@ -17,7 +17,7 @@ const OnBlurExamples = () =>
     </p>
     <Example
       Element={OnBlur} code={OnBlurSrc}
-      caption="onFocus"
+      caption="onFocus" expand
     >
       <p>
         Focus on one of the fields below and then select the other field.

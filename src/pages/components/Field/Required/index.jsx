@@ -15,7 +15,7 @@ const RequiredExample = () =>
     </p>
     <Example
       Element={Required} code={RequiredSrc}
-      caption="required"
+      caption="required" expand
     >
       <p>
         Try submitting the form without entering anything in the
