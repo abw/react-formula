@@ -1,0 +1,13 @@
+/* Debug variables */
+// Border width for component
+$debug-border-width:        $input-border-width !default;
+// Corner radius for debug border
+$debug-border-radius:       $input-border-radius * 2 !default;
+// Padding for inset debugging panels
+$debug-panel-padding:       0.5rem 1rem !default;
+// Margin for inset debugging panels
+$debug-panel-margin:        0.5rem !default;
+// Border radius for inset debugging panels
+$debug-panel-padding:       0.5rem 1rem !default;
+// Corner radius for inset debugging panels
+$debug-panel-border-radius: $input-border-radius !default;

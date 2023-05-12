@@ -22,7 +22,7 @@ $optional-hue:              210 !default;
 // Hue for errors.
 $error-hue:                 $invalid-hue !default;
 // Hue for debugging panel, not usually seen by customers.
-$debug-hue:                 230 !default;
+$debug-hue:                 250 !default;
 
 /* Labels, Including Required and Optional Tags */
 // Default saturation for labels
@@ -166,6 +166,18 @@ $legend-text-color:          hsl($brand-hue, $label-desaturation, 30%) !default;
 $legend-back-color:          hsl($brand-hue, 5%, 95%) !default;
 // Background color for fieldset legend
 $legend-border-color:        $input-border-color !default;
+
+/* Debugging Colors */
+// Background color for debugging component
+$debug-back-color:           hsl($debug-hue, 20%, 95%) !default;
+// Border color for debugging component
+$debug-border-color:         hsl($debug-hue, 30%, 85%) !default;
+// Background color for debugging component panels
+$debug-panel-back-color:     hsl($debug-hue, 10%, 97%) !default;
+// Border color for debugging component panels
+$debug-panel-border-color:   $debug-border-color !default;
+// Title color for debugging component panels
+$debug-panel-title-color:    hsl($debug-hue, 90%, 10%) !default;
 
 /* Other Colors */
 // Accent color for checkboxes, radio buttons, range sliders, etc., based on

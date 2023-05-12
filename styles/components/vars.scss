@@ -1,0 +1,19 @@
+:where(.#{$formula-namespace}) {
+  --input-border-radius:          #{$input-border-radius};
+  --shadow-1:                     1px 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-2:                     2px 2px 4px rgba(0, 0, 0, 0.08);
+
+  // debug panel
+  --debug-hue:                    #{$debug-hue};
+  --debug-back-color:             #{$debug-back-color};
+  --debug-border-color:           #{$debug-border-color};
+  --debug-border-radius:          #{$debug-border-radius};
+  --debug-panel-back-color:       #{$debug-panel-back-color};
+  --debug-panel-title-color:      #{$debug-panel-title-color};
+  --debug-panel-border-color:     #{$debug-panel-border-color};
+  --debug-panel-border-radius:    #{$debug-panel-border-radius};
+  --debug-panel-margin:           #{$debug-panel-margin};
+  --debug-panel-padding:          #{$debug-panel-padding};
+  --debug-box-shadow:             var(--shadow-2);
+  --debug-panel-box-shadow:       var(--shadow-1);
+}

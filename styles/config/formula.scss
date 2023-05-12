@@ -1,3 +1,5 @@
+$formula-namespace: 'formula' !default;
+
 @import "colors";
 @import "units";
 @import "button";
@@ -5,3 +7,4 @@
 @import "input";
 @import "error";
 @import "fieldset";
+@import "debug";
