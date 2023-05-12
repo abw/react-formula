@@ -94,7 +94,7 @@ it('should validate all fields',
     // submit the form
     await user.click(screen.getByRole('button', { name: /submit/i }))
 
-    screen.debug()
+    // screen.debug()
 
     // foo field should be valid and input should be trimmed
     const fooField = container.getElementsByClassName('foo')[0]
