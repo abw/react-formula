@@ -12,6 +12,7 @@ export const TutorialMenu = {
     ['submission-errors',     'Submission Errors'],
     ['complete-registration', 'Complete Registration Form'],
     ['edit-form',             'Edit Form'],
+    ['debugging',             'Debugging'],
     ['headless-fields',       'Headless Fields'],
   ]
 }
@@ -20,6 +21,7 @@ export const ComponentsMenu = {
   title: 'Components',
   url:   '/components',
   items: [
+    { heading: 'Form Components' },
     'component:Form',
     'component:Field',
     'component:Fields',
@@ -31,9 +33,12 @@ export const ComponentsMenu = {
     'component:CancelSubmit',
     'component:CancelResetSubmit',
     'component:Changed',
-    'component:Label',
     'component:Errors',
     'component:Debug',
+    { heading: 'Field Components' },
+    'component:Layout',
+    'component:Label',
+    'component:Message',
   ]
 }
 
@@ -48,10 +53,11 @@ export const FormMenu = {
     ['properties',    'Properties - TODO'],
     ['validation',    'Validation'],
     ['validate',      <code key='validate'>validate - TODO</code>],
+    ['showErrors',    <code key='showerrors'>showErrors - TODO</code>],
+    { heading: 'Events' },
     ['onSubmit',      <code key='onsubmit'>onSubmit - TODO</code>],
     ['onSuccess',     <code key='onsuccess'>onSuccess - TODO</code>],
     ['onError',       <code key='onsuccess'>onError - TODO</code>],
-    ['showErrors',    <code key='showerrors'>showErrors - TODO</code>],
     { heading: 'Functions' },
     ['setValues',    <code key='setValues'>setValues() - TODO</code>],
     ['setFocus',      <code key="setFocus">setFocus()</code>],

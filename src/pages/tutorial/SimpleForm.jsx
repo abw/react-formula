@@ -2,7 +2,7 @@ import React from 'react'
 import BasicLoginForm    from './examples/BasicLoginForm.jsx'
 import BasicLoginFormSrc from './examples/BasicLoginForm.jsx?raw'
 import Example from '../../site/Example.jsx'
-import { FieldLink, FormLink, SubmitLink } from '../../site/Links.jsx'
+import { FieldLabelLink, FieldLink, FormLink, NameLink, RequiredLink, SubmitLink, TypeLink } from '../../site/Links.jsx'
 import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const SimpleForm = () =>
@@ -27,24 +27,40 @@ const SimpleForm = () =>
       <p>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button. Also see what happens if you don&apos;t
-        enter a value for either field.
+        enter a value for either field.  Note that the &quot;Forgot your
+        password?&quot; link doesn&apos;t do anything useful - it&apos;t just
+        there to demonstrate how you can include your own markup in a form.
       </p>
     </Example>
-    <h2><code>Form</code>, <code>Field</code> and <code>Submit</code></h2>
+
+    <h2><code>Form</code></h2>
     <p>
-      A form is defined using the <FormLink/> component.  This example contains
-      two <FieldLink/> components and a <SubmitLink/> button.  Each <FieldLink/>{' '}
-      <b>MUST</b> define a <code>name</code> and everything else is optional.
-      In both cases we add a <code>label</code> and the <code>required</code>{' '}
-      flag to indicate that the user must enter a value.  In the case of the{' '}
-      <code>password</code> field we also set the input <code>type</code> to{' '}
-      <code>password</code>.  For the <SubmitLink/> component we set the{' '}
-      <code>text</code> property to customise the text displayed on the button.
-      Otherwise it defaults to &quot;Submit&quot;.
+      A form is defined using the <FormLink/> component.  You can include
+      any content you like inside the component, but most often you&apos;ll
+      want to include at least one <FieldLink/> and a <SubmitLink/> button.
     </p>
+
+    <h2><code>Field</code></h2>
+    <p>
+      The example contains two <FieldLink/> components.  Each <b>MUST</b>{' '}
+      define a <NameLink/> and everything else is optional.
+      In both cases we add a <FieldLabelLink/> and the <RequiredLink/>{' '}
+      property to indicate that the user must enter a value.  In the case of the{' '}
+      <code>password</code> field we also set the input <TypeLink/> to{' '}
+      <code>password</code>.
+    </p>
+
+    <h2><code>Submit</code></h2>
+    <p>
+      The <SubmitLink/> component is used to render a button to submit the
+      form.  In the example above we set the <code>text</code> property to
+      customise the text displayed on the button. Otherwise it defaults
+      to &quot;Submit&quot;.
+    </p>
+
     <h2>Where Next?</h2>
     <p>
-      The <code>required</code> property is useful for simple cases, but
+      The <RequiredLink/> property is useful for simple cases, but
       at some point you&apos;ll want to add more thorough validation for
       fields.  Let&apos;s look at that next.
     </p>

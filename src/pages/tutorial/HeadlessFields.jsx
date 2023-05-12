@@ -9,7 +9,7 @@ import HeadlessBuiltinsBare    from './examples/HeadlessBuiltinsBare.jsx'
 import HeadlessBuiltinsBareSrc from './examples/HeadlessBuiltinsBare.jsx?raw'
 import Example from '../../site/Example.jsx'
 import { TutorialPager } from '../../site/Tutorial.jsx'
-import { FieldLayoutLink, FieldLink, LabelLink } from '../../site/Links.jsx'
+import { FieldLink, LayoutLink, LabelLink, MessageLink, TextInputLink } from '../../site/Links.jsx'
 
 const HeadlessFieldsExample = () =>
   <div>
@@ -45,38 +45,25 @@ const HeadlessFieldsExample = () =>
     <h2>Builtin Components</h2>
     <p>
       You can mix and match your own layout with the builtin components.
-      This example shows how you can use the
+      This example shows how you can use the <LayoutLink/>, <LabelLink/>,{' '}
+      <TextInputLink/> and <MessageLink/> components to build up the field content.
     </p>
     <Example
       Element={HeadlessBuiltins} code={HeadlessBuiltinsSrc}
       caption="Builtin Components"
     />
 
-    <h2>Child Layout</h2>
+    <h2>Child Components</h2>
     <p>
       If you&apos;re using the default layout components and/or providing
       your own that can access the field context using <code>useField</code>{' '}
       then you don&apos;t need to define a function for the <FieldLink/> body.
+      You can just include them as children of the field component.
     </p>
     <Example
       Element={HeadlessBuiltinsBare} code={HeadlessBuiltinsBareSrc}
       caption="Builtin Components"
     />
-
-    <h2><code>FieldLayout</code></h2>
-    <p>
-      The <FieldLayoutLink/> component renders a <code>div</code> with the{' '}
-      <code>className</code> including <code>field</code> and any of{' '}
-      <code>focus</code>, <code>valid</code>, <code>invalid</code> or{' '}
-      <code>disabled</code> depending on the field state.
-    </p>
-    <h2><code>Label</code></h2>
-    <p>
-      The <LabelLink/> component renders a <code>div</code> with the{' '}
-      <code>className</code> including <code>field</code> and any of{' '}
-      <code>focus</code>, <code>valid</code>, <code>invalid</code> or{' '}
-      <code>disabled</code> depending on the field state.
-    </p>
 
     <TutorialPager uri="headless-fields"/>
   </div>

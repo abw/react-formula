@@ -1,9 +1,8 @@
-import { Form, Field, Fields, Fieldset, Submit, Debug } from '../../../../lib/index.js'
+import { Form, Field, Fields, Fieldset, Submit } from '../../../../lib/index.js'
 
 {/* START */}
-import React from 'react'
-import { useState } from 'react'
-// PRETEND: import { Form, Field, Fields, Fieldset, Submit, Debug } from '@abw/react-formula'
+import React, { useState } from 'react'
+// PRETEND: import { Form, Field, Fields, Fieldset, Submit } from '@abw/react-formula'
 import * as yup  from 'yup'
 
 const validateForm = values => new Promise(
@@ -145,7 +144,6 @@ const RegistrationForm = () => {
       </Fieldset>
       <Field name="terms"/>
       <Submit text="Register"/>
-      <Debug/>
     </Form>
   )
 }

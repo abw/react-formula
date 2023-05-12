@@ -2,7 +2,7 @@ import React from 'react'
 import Example from '../../site/Example.jsx'
 import DummySubmit    from './examples/DummySubmit.jsx'
 import DummySubmitSrc from './examples/DummySubmit.jsx?raw'
-import { FormLink } from '../../site/Links.jsx'
+import { FormLink, FormOnSubmitLink } from '../../site/Links.jsx'
 import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const FormSubmission = () =>
@@ -19,7 +19,7 @@ const FormSubmission = () =>
     <p>
       We&apos;ll create a function which stores the submitted{' '}
       <code>values</code> in a state variable and displays them on the
-      screen.  The <code>onSubmit</code> handler is passed an object
+      screen.  The <FormOnSubmitLink/> handler is passed an object
       containing the validated form values.  It should return a Promise which
       resolves on success.  If an error occurs then the Promise should reject,
       returning an object containing either an <code>error</code> and/or an
@@ -36,6 +36,14 @@ const FormSubmission = () =>
         appear in a debugging window beneath the form.
       </p>
     </Example>
+    <h2>Where Next?</h2>
+    <p>
+      When the form is submitted there are two possible outcomes.  Either
+      the submission is successful, or there&apos;s an error (or errors)
+      that need to be handled.  We&apos;ll look at these in the next few
+      pages.
+    </p>
+
     <TutorialPager uri="form-submission"/>
   </div>
 

@@ -6,7 +6,7 @@ import SubmitReject      from './examples/SubmitReject.jsx'
 import SubmitRejectSrc   from './examples/SubmitReject.jsx?raw'
 import OnError           from './examples/OnError.jsx'
 import OnErrorSrc        from './examples/OnError.jsx?raw'
-import { ErrorsLink }    from '../../site/Links.jsx'
+import { ErrorsLink, FormOnErrorLink }    from '../../site/Links.jsx'
 import { TutorialPager } from '../../site/Tutorial.jsx'
 // import { FormLink } from '../../site/Links.jsx'
 
@@ -75,7 +75,7 @@ const SubmissionErrors = () =>
 
     <h2><code>onError</code></h2>
     <p>
-      You can provide an <code>onError</code> handler which will be called
+      You can provide an <FormOnErrorLink/> handler which will be called
       when an error response is received.  In this example we simply call
       a <code>setError()</code> function to store the error in a React state
       variable and then display it beneath the form.
@@ -86,10 +86,15 @@ const SubmissionErrors = () =>
     >
       <p>
         Try submitting the form to see the errors generated.  The {' '}
-        <code>onError</code> handler will store them in the state variable
+        <FormOnErrorLink/> handler will store them in the state variable
         and display them beneath the form.
       </p>
     </Example>
+
+    <h2>Where Next?</h2>
+    <p>
+      We&apos;ve now enough in place to look at a more complete example.
+    </p>
 
     <TutorialPager uri="submission-errors"/>
   </div>

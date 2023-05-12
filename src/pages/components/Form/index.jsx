@@ -3,6 +3,9 @@ import Home         from './Home.jsx'
 import Properties   from './Properties/index.jsx'
 import SetFocus     from './SetFocus/index.jsx'
 import Validation   from './Validation/index.jsx'
+import OnSubmit     from './OnSubmit/index.jsx'
+import OnSuccess    from './OnSuccess/index.jsx'
+import OnError      from './OnError/index.jsx'
 import Set          from './Set/index.jsx'
 /*
 import Debug             from './Debug/index.jsx'
@@ -18,6 +21,9 @@ const Form = () =>
     <Route path="properties"  element={<Properties/>}/>
     <Route path="setfocus"    element={<SetFocus/>}/>
     <Route path="validation"  element={<Validation/>}/>
+    <Route path="onSubmit"    element={<OnSubmit/>}/>
+    <Route path="onSuccess"   element={<OnSuccess/>}/>
+    <Route path="onError"     element={<OnError/>}/>
     <Route path="set/*"         element={<Set/>}/>
     {/*
     <Route path="controls"    element={<Controls/>}/>

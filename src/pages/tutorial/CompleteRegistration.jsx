@@ -3,9 +3,12 @@ import RegistrationForm    from './examples/RegistrationForm.jsx'
 import RegistrationFormSrc from './examples/RegistrationForm.jsx?raw'
 import CustomCSS           from './examples/CustomCSS.css?raw'
 import Example from '../../site/Example.jsx'
-import { TutorialPager } from '../../site/Tutorial.jsx'
-import { CheckboxLink, DebugLink, FieldLink, FieldsetLink, FormLink, RadioLink, SelectLink } from '../../site/Links.jsx'
 import CodeBlock from '../../site/CodeBlock.jsx'
+import { TutorialPager } from '../../site/Tutorial.jsx'
+import {
+  FieldLink, FieldsetLink, FormLink,
+  CheckboxInputLink, RadioInputLink, SelectInputLink, TypeLink, ShowOptionalLink, ShowRequiredLink, OnChangeLink
+} from '../../site/Links.jsx'
 
 const CompleteRegistration = () =>
   <div>
@@ -18,15 +21,15 @@ const CompleteRegistration = () =>
     <h2>Input Types</h2>
     <p>
       This example demonstrates some of the other fields input types.
-      Set the <FieldLink/> <code>type</code> to <code>radio</code> for
-      a <RadioLink/> button input and provide some <code>options</code>,
+      Set the <FieldLink/> <TypeLink/> to <code>radio</code> for
+      a <RadioInputLink/> button input and provide some <code>options</code>,
       as shown here for the <code>experience</code> field.  Or set it
-      to <code>select</code> for a <SelectLink/> input as shown in the{' '}
+      to <code>select</code> for a <SelectInputLink/> input as shown in the{' '}
       <code>animal</code> field.  Set it to <code>checkbox</code> for a{' '}
-      <CheckboxLink/> and provide some <code>text</code> to go alongside it.
+      <CheckboxInputLink/> and provide some <code>text</code> to go alongside it.
     </p>
     <p>
-      You can also use the <code>type</code> to set other text input types,
+      You can also use the <TypeLink/> to set other text input types,
       like <code>number</code> and <code>date</code>.
     </p>
     <Example
@@ -41,16 +44,9 @@ const CompleteRegistration = () =>
       to group fields together in a set, complete with a <code>legend</code>.
     </p>
 
-    <h2><code>Debug</code> Component</h2>
-    <p>
-      This example also includes the <DebugLink/> component which, as the
-      name suggests, can be useful for debugging.
-    </p>
-
-
     <h2><code>showRequired</code> and <code>showOptional</code></h2>
     <p>
-      The <code>showOptional</code> and <code>showRequired</code> properties
+      The <ShowOptionalLink/> and <ShowRequiredLink/> properties
       can be set on the <FormLink/> or individual <FieldLink/> components
       to have an additional label displayed telling the user which fields
       they do and don&apos;t need to complete.
@@ -58,7 +54,7 @@ const CompleteRegistration = () =>
 
     <h2><code>onChange</code></h2>
     <p>
-      The <code>onChange</code> property can be added to a <FieldLink/> to
+      The <OnChangeLink/> property can be added to a <FieldLink/> to
       watch for changes in the field value.  You can see it in use above in
       the <code>color</code> field.
     </p>
@@ -73,6 +69,13 @@ const CompleteRegistration = () =>
       classes for completeness.
     </p>
     <CodeBlock code={CustomCSS} language="css" className="mar-b-2"/>
+
+    <h2>Where Next?</h2>
+    <p>
+      There&apos;s a lot to take in there.  For the next example we&apos;ll
+      scale things back a bit and look at the common case where you want to
+      edit some existing data using a form.
+    </p>
 
     <TutorialPager uri="complete-registration"/>
   </div>

@@ -1,11 +1,11 @@
 import {
-  Form, Field, FieldLayout, Label, Text, Message, Submit
+  Form, Field, Layout, Label, Text, Message, Submit
 } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
 // PRETEND: import {
-// PRETEND:   Form, Field, FieldLayout, Label, Text, Message, Submit
+// PRETEND:   Form, Field, Layout, Label, Text, Message, Submit
 // PRETEND: } from '@abw/react-formula'
 
 const fields = {
@@ -19,12 +19,12 @@ const HeadlessBuiltins = () =>
   <Form fields={fields}>
     <Field name="email">
       { field =>
-        <FieldLayout>
-          <h3>Custom Layout for {field.name}</h3>
+        <Layout>
+          <h2>Custom Layout for {field.name}</h2>
           <Label/>
           <Text/>
           <Message/>
-        </FieldLayout>
+        </Layout>
       }
     </Field>
     <Submit text="Login"/>

@@ -15,53 +15,57 @@ export const CodeLink = ({to}) => {
 }
 
 export const CancelLink = () =>
-  <Link to="/components/cancel"><code>Cancel</code></Link>
+  <CodeLink to="component:Cancel"/>
 
 export const DebugLink = () =>
-  <Link to="/components/debug"><code>Debug</code></Link>
+  <CodeLink to="component:Debug"/>
 
 export const ErrorsLink = () =>
-  <Link to="/components/errors"><code>Errors</code></Link>
+  <CodeLink to="component:Errors"/>
 
 export const FormLink = () =>
-  <Link to="/components/form"><code>Form</code></Link>
+  <CodeLink to="component:Form"/>
 
 export const FieldLink = () =>
-  <Link to="/components/field"><code>Field</code></Link>
+  <CodeLink to="component:Field"/>
 
 export const FieldsLink = () =>
-  <Link to="/components/fields"><code>Fields</code></Link>
+  <CodeLink to="component:Fields"/>
 
 export const FieldsetLink = () =>
-  <Link to="/components/fieldset"><code>Fieldset</code></Link>
+  <CodeLink to="component:Fieldset"/>
 
-export const FieldLayoutLink = () =>
-  <Link to="/components/field/layout"><code>FieldLayout</code></Link>
+export const LabelLink = () =>
+  <CodeLink to="component:Label"/>
 
+export const LayoutLink = () =>
+  <CodeLink to="component:Layout"/>
 
 export const MessageLink = () =>
-  <Link to="/components/message"><code>Message</code></Link>
+  <CodeLink to="component:Message"/>
 
 export const ResetLink = () =>
-  <Link to="/components/reset"><code>Reset</code></Link>
+  <CodeLink to="component:Reset"/>
 
 export const SubmitLink = () =>
-  <Link to="/components/submit"><code>Submit</code></Link>
+  <CodeLink to="component:Submit"/>
 
+/*
 export const TextLink = () =>
-  <Link to="/inputs/text"><code>Text</code></Link>
+  <CodeLink to="input:Text"/>
 
-export const TextArea = () =>
-  <Link to="/inputs/textarea"><code>TextArea</code></Link>
+export const TextAreaLink = () =>
+  <CodeLink to="input:TextArea"/>
 
 export const CheckboxLink = () =>
-  <Link to="/inputs/checkbox"><code>Checkbox</code></Link>
+  <CodeLink to="input:Checkbox"/>
 
 export const RadioLink = () =>
-  <Link to="/inputs/radio"><code>Radio</code></Link>
+  <CodeLink to="input:Radio"/>
 
 export const SelectLink = () =>
-  <Link to="/inputs/select"><code>Select</code></Link>
+  <CodeLink to="input:Select"/>
+*/
 
 // form links
 export const FormFieldsLink = () =>
@@ -73,22 +77,37 @@ export const FormValuesLink = () =>
 export const FormHiddenLink = () =>
   <CodeLink to="form:hidden"/>
 
+export const FormOnSubmitLink = () =>
+  <CodeLink to="form:onSubmit"/>
+
+export const FormOnSuccessLink = () =>
+  <CodeLink to="form:onSuccess"/>
+
+export const FormOnErrorLink = () =>
+  <CodeLink to="form:onError"/>
+
 export const FormSetFocusLink = () =>
-  <Link to="/components/form/setFocus"><code>setFocus</code></Link>
+  <CodeLink to="form:setFocus"/>
 
 export const FormSetValuesLink = () =>
-  <Link to="/components/form/setValues"><code>setValues</code></Link>
+  <CodeLink to="form:setValues"/>
+
+export const FormValidateLink = () =>
+  <CodeLink to="form:validate"/>
 
 
 // field links
+export const FieldLabelLink = () =>
+  <CodeLink to="field:label"/>
+
 export const HelpLink = () =>
   <CodeLink to="field:help"/>
 
-export const LabelLink = () =>
-  <CodeLink to="field:label"/>
-
 export const MinValidateLengthLink = () =>
   <CodeLink to="field:minValidateLength"/>
+
+export const NameLink = () =>
+  <CodeLink to="field:name"/>
 
 export const OnBlurLink = () =>
   <CodeLink to="field:onBlur"/>

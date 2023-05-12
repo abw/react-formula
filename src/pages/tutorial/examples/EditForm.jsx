@@ -1,9 +1,11 @@
-import { Form, Fields, ResetSubmit } from '../../../../lib/index.js'
+import { Form, Fields, ResetSubmit, Debug } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
 // PRETEND: import { Form, Fields, ResetSubmit, Debug } from '@abw/react-formula'
 
+// field definitions - these could be defined elsewhere and imported in
+// allowing them to be re-used in other forms, e.g. an "Add Product" form
 const fields = {
   name: {
     label:    'Product Name',
@@ -17,7 +19,6 @@ const fields = {
   manufacturer: {
     label:    'Manufacturer',
     type:     'select',
-    debug:    true,
     options:  [
       { value: '100', text: "Alan's Accessories" },
       { value: '101', text: "Brian's Bits" },
@@ -26,23 +27,35 @@ const fields = {
   },
   price: {
     type:  'number',
-    label: 'Price?',
+    label: 'Price',
     prefix: '$',
   },
 }
 
+// these values would typically be fetched from a database
 const values = {
   id:           '9876',
+  version:      123,
   name:         'Widget-2000',
   description:  'This is an awesome widget',
   manufacturer: '102',
   price:        12.99
 }
 
+// some hidden fields that will be included when the form is submitted
+const hidden = {
+  id:      values.id,
+  version: values.version,
+}
+
 const EditForm = () =>
-  <Form fields={fields} values={values}>
-    <Fields names="name description manufacturer price"/>
+  <Form fields={fields} values={values} hidden={hidden}>
+    <Fields names="name description"/>
+    <div className="lg-grid-2">
+      <Fields names="manufacturer price"/>
+    </div>
     <ResetSubmit submit={{ text: 'Save Changes' }}/>
+    <Debug state/>
   </Form>
 
 export default EditForm

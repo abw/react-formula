@@ -11,9 +11,11 @@ import CancelSubmit      from './CancelSubmit/index.jsx'
 import CancelResetSubmit from './CancelResetSubmit/index.jsx'
 import ResetSubmit       from './ResetSubmit/index.jsx'
 import Changed           from './Changed/index.jsx'
-import Label             from './Label/index.jsx'
 import Errors            from './Errors/index.jsx'
 import Debug             from './Debug/index.jsx'
+import Layout            from './Layout/index.jsx'
+import Label             from './Label/index.jsx'
+import Message           from './Message/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Components = () =>
@@ -30,9 +32,11 @@ const Components = () =>
     <Route path="ResetSubmit"        element={<ResetSubmit/>}/>
     <Route path="CancelResetSubmit"  element={<CancelResetSubmit/>}/>
     <Route path="Changed"            element={<Changed/>}/>
-    <Route path="Label"              element={<Label/>}/>
     <Route path="Errors"             element={<Errors/>}/>
     <Route path="Debug"              element={<Debug/>}/>
+    <Route path="Layout"             element={<Layout/>}/>
+    <Route path="Label"              element={<Label/>}/>
+    <Route path="Message"            element={<Message/>}/>
     {/*
     <Route path="controls"    element={<Controls/>}/>
     <Route path="validation"  element={<Validation/>}/>

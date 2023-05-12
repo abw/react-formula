@@ -6,9 +6,15 @@ import React from 'react'
 
 const BasicLoginForm = () =>
   <Form>
+    <h2>Login</h2>
     <Field name="email" label="Email Address" required/>
     <Field name="password" type="password" label="Password" required/>
-    <Submit text="Login"/>
+    <div className="flex space">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        Forgot your password?
+      </a>
+      <Submit text="Login"/>
+    </div>
   </Form>
 
 export default BasicLoginForm

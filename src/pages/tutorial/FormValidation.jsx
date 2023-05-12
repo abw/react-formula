@@ -2,7 +2,7 @@ import React from 'react'
 import PasswordCheck    from './examples/PasswordCheck.jsx'
 import PasswordCheckSrc from './examples/PasswordCheck.jsx?raw'
 import Example from '../../site/Example.jsx'
-import { FieldsLink, FormLink } from '../../site/Links.jsx'
+import { FieldsLink, FormLink, FormValidateLink } from '../../site/Links.jsx'
 import { TutorialPager } from '../../site/Tutorial.jsx'
 
 const FormValidation = () =>
@@ -18,7 +18,7 @@ const FormValidation = () =>
 
     <h2>Registration Form With Validation</h2>
     <p>
-      You can add a <code>validate</code> property to a form to provide a
+      You can add a <FormValidateLink/> property to a form to provide a
       function to validate the inputs from all fields.  The function will be
       called after the field-level validation, and only if all fields have
       validated successfully.

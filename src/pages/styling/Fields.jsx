@@ -1,5 +1,5 @@
 import React from 'react'
-import FieldLayout from '../../../lib/Field/Layout.jsx'
+import Layout from '../../../lib/Field/Layout.jsx'
 import { fieldDefaultProperties } from '../../../lib/Config.js'
 
 const mockField = {
@@ -20,25 +20,25 @@ const Fields = () =>
     </div>
     <form className="formula">
       <h3>Field With Placeholder Text</h3>
-      <FieldLayout field={mockField}/>
+      <Layout field={mockField}/>
 
       <h3>Field With Value</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World'}}/>
+      <Layout field={{...mockField, value: 'Hello World'}}/>
 
       <h3>Field With Help</h3>
-      <FieldLayout field={{...mockField, help: 'Your password must be between 11 and 42 characters'}}/>
+      <Layout field={{...mockField, help: 'Your password must be between 11 and 42 characters'}}/>
 
       <h3>Field With Required Label</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', required: true, showRequired: true }}/>
+      <Layout field={{...mockField, value: 'Hello World', required: true, showRequired: true }}/>
 
       <h3>Field With Optional Label</h3>
-      <FieldLayout field={{...mockField, value: 'Hello World', showOptional: true }}/>
+      <Layout field={{...mockField, value: 'Hello World', showOptional: true }}/>
 
       <h3>Field With Prefix and Suffix</h3>
-      <FieldLayout field={{...mockField, prefix: '$', suffix: '.00'}}/>
+      <Layout field={{...mockField, prefix: '$', suffix: '.00'}}/>
 
       <h3>Focussed Field With Placeholder Text</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           status: { focus: true }
@@ -46,7 +46,7 @@ const Fields = () =>
       />
 
       <h3>Focussed Field With Value</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World',
@@ -55,7 +55,7 @@ const Fields = () =>
       />
 
       <h3>Focussed Field With Help</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           help: 'Your password must be between 11 and 42 characters',
@@ -64,7 +64,7 @@ const Fields = () =>
       />
 
       <h3>Focussed Field With Prefix and Suffix</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField, prefix: '$', suffix: '.00',
           status: { focus: true }
@@ -72,7 +72,7 @@ const Fields = () =>
       />
 
       <h3>Valid Field</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World',
@@ -81,7 +81,7 @@ const Fields = () =>
       />
 
       <h3>Valid Field With Message</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           message: 'That username is available!',
@@ -90,7 +90,7 @@ const Fields = () =>
       />
 
       <h3>Valid Field With Prefix and Suffix</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World', prefix: '$', suffix: '.00',
@@ -99,7 +99,7 @@ const Fields = () =>
       />
 
       <h3>Focussed Valid Field With Prefix and Suffix</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World', prefix: '$', suffix: '.00',
@@ -108,7 +108,7 @@ const Fields = () =>
       />
 
       <h3>Invalid Field</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World',
@@ -117,7 +117,7 @@ const Fields = () =>
       />
 
       <h3>Invalid Field With Message</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           message: 'Something went wrong!',
@@ -126,7 +126,7 @@ const Fields = () =>
       />
 
       <h3>Invalid Field With Prefix and Suffix</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World', prefix: '$', suffix: '.00',
@@ -135,7 +135,7 @@ const Fields = () =>
       />
 
       <h3>Focussed Invalid Field With Prefix and Suffix</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           value: 'Hello World', prefix: '$', suffix: '.00',
@@ -144,7 +144,7 @@ const Fields = () =>
       />
 
       <h3>Disabled Field</h3>
-      <FieldLayout
+      <Layout
         field={{
           ...mockField,
           prefix: '£', message: 'Denied!',

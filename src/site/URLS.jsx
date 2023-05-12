@@ -65,11 +65,6 @@ export const URLS = {
     text:   'CancelResetSubmit',
     about:  'Render cancel, reset and submit buttons',
   },
-  'component:Label': {
-    url:    '/components/Label',
-    text:   'Label',
-    about:  'Render a label for a form field',
-  },
   'component:Errors': {
     url:    '/components/Errors',
     text:   'Errors',
@@ -80,6 +75,21 @@ export const URLS = {
     text:   'Debug',
     about:  'Render debugging information for a form',
   },
+  'component:Layout': {
+    url:    '/components/Layout',
+    text:   'Layout',
+    about:  'Renders the default content for a form field',
+  },
+  'component:Label': {
+    url:    '/components/Label',
+    text:   'Label',
+    about:  'Render a label for a form field',
+  },
+  'component:Message': {
+    url:    '/components/Message',
+    text:   'Message',
+    about:  'Render a message for a form field',
+  },
 
   //--------------------------------------------------------------------------
   // Form links
@@ -89,15 +99,25 @@ export const URLS = {
     code:   'fields',
     about:  'Properties for form fields',
   },
-  'form:values': {
-    url:    '/components/Form/values',
-    code:   'values',
-    about:  'Values for form fields',
-  },
   'form:hidden': {
     url:    '/components/Form/hidden',
     code:   'hidden',
     about:  'Hidden values for a form',
+  },
+  'form:onSubmit': {
+    url:    '/components/Form/onSubmit',
+    code:   'onSubmit',
+    about:  'Function to handle form submission',
+  },
+  'form:onSuccess': {
+    url:    '/components/Form/onSuccess',
+    code:   'onSuccess',
+    about:  'Function to handle successful form submission',
+  },
+  'form:onError': {
+    url:    '/components/Form/onError',
+    code:   'onError',
+    about:  'Function to handle failed form submission',
   },
   'form:setFocus': {
     url:    '/components/Form/setFocus',
@@ -108,6 +128,16 @@ export const URLS = {
     url:    '/components/Form/setValues',
     code:   'setValues',
     about:  'Set form values',
+  },
+  'form:validate': {
+    url:    '/components/Form/validate',
+    code:   'validate',
+    about:  'Validation function for a form',
+  },
+  'form:values': {
+    url:    '/components/Form/values',
+    code:   'values',
+    about:  'Values for form fields',
   },
 
   //--------------------------------------------------------------------------

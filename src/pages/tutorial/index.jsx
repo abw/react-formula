@@ -8,8 +8,9 @@ import SubmissionResponse   from './SubmissionResponse.jsx'
 import SubmissionErrors     from './SubmissionErrors.jsx'
 import CompleteRegistration from './CompleteRegistration.jsx'
 import EditForm             from './EditForm.jsx'
-import { Routes, Route }    from 'react-router-dom'
+import Debugging            from './Debugging.jsx'
 import HeadlessFields from './HeadlessFields.jsx'
+import { Routes, Route }    from 'react-router-dom'
 
 const Tutorial = () =>
   <Routes>
@@ -22,6 +23,7 @@ const Tutorial = () =>
     <Route path="submission-errors"     element={<SubmissionErrors/>}/>
     <Route path="complete-registration" element={<CompleteRegistration/>}/>
     <Route path="edit-form"             element={<EditForm/>}/>
+    <Route path="debugging"             element={<Debugging/>}/>
     <Route path="headless-fields"         element={<HeadlessFields/>}/>
   </Routes>
 
