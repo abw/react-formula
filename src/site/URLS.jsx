@@ -233,6 +233,16 @@ export const URLS = {
     code:   'setValue',
     about:  'Set a field value',
   },
+  'field:setValid': {
+    url:    '/components/Field/setValid',
+    code:   'setValid - TODO',
+    about:  'Set a field to be valid',
+  },
+  'field:setInvalid': {
+    url:    '/components/Field/setInvalid',
+    code:   'setInvalid - TODO',
+    about:  'Set a field to be invalid',
+  },
   'field:showOptional': {
     url:    '/components/Field/showOptional',
     code:   'showOptional',

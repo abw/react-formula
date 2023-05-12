@@ -1,7 +1,7 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { Form, Field, useForm } from '../../lib/index.js'
+import { Form, Field, Hidden, useForm } from '../../lib/index.js'
 
 const ShowHiddenValue = ({name}) => {
   const form = useForm()
@@ -18,6 +18,22 @@ it(
     const { container } = render(
       <Form>
         <Field name="foo" type="hidden" value="123"/>
+      </Form>
+    )
+    const input = container.querySelector('input')
+    expect(input).toHaveAttribute(
+      'type',
+      expect.stringContaining('hidden')
+    )
+  }
+)
+
+it(
+  'renders hidden component',
+  () => {
+    const { container } = render(
+      <Form>
+        <Hidden name="foo" value="123"/>
       </Form>
     )
     const input = container.querySelector('input')

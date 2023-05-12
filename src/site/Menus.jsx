@@ -102,6 +102,8 @@ export const FieldMenu = {
     { heading: 'Functions' },
     'field:setFocus',
     'field:setValue',
+    'field:setValid',
+    'field:setInvalid',
     'field:reset',
   ]
 }
