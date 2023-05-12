@@ -29,14 +29,12 @@ const Select = ({ field=useField() }) => {
         required={field.required || Boolean(placeholder)}  // allows styling via :invalid for placeholder
         // key={field.value}
       >
-        { console.log(`render select with value: ${field.value} (${typeof field.value})`) }
         { Boolean(placeholder) &&
           <option value="" hidden disabled>{placeholder}</option>
         }
         { options.map(
           option => {
             option = valueOption(option)
-            { console.log(`render option with value: ${option.value} (${typeof option.value}) = ${field.value === option.value ? 'SELECTED' : ''}`) }
             return (
               <option
                 key={option.value}
