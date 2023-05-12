@@ -10,6 +10,12 @@
 
 * also add `styles`?
 
+## Context
+
+* Looks like I broke the status change methods when I switch them to functions
+e.g. `Changed` doesn't work.  UPDATE - HUZZAH!  Fixed it (but write some
+tests)
+
 ## Components
 
 * Debug needs to be updated to reflect changes in form state
@@ -21,8 +27,6 @@
 * tests and docs for setValid() and setInvalid()
 
 * hide/show
-
-* ENTER triggers form submit
 
 ## Form
 
@@ -52,9 +56,7 @@ registering with the form?
 
 * Changed component
 
-* Tutorial - examples of edit form with value
-
-* components/{fieldlayout,label,input,message,etc}
+* Tutorial - examples of edit form with values
 
 * Move onSubmit() from Submit to Form
 
@@ -65,13 +67,26 @@ be `validate`
 
 * Form "Setting Values" -> `setValues()`
 
+* Form / Field `onLoad` event
+
+* Tutorial / Headless Fields
+
+* useForm() / useField()
+
+* Text input docs looks like the original first page of the tutorial
+
+* Debug properties
+
+* ...and properties for other components, too, e.g. Cancel, Reset, Submit, etc.
+
 ## Styling
 
 * thin/wide fields - be consistent and let it be set on form
 
 * prefix/suffix for checkboxes
 
-* wide radio buttons are on the wonk
+* bare radio buttons and checkboxes don't have any padding on left which shows
+when focussed
 
 ## Theming
 
