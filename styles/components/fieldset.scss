@@ -1,7 +1,7 @@
 fieldset {
-  border: $fieldset-border-width solid $fieldset-border-color;
+  border: $fieldset-border-width solid var(--fieldset-bd);
   border-radius: $fieldset-border-radius;
-  background-color: $fieldset-back-color;
+  background-color: var(--fieldset-bg);
   padding: $fieldset-padding;
   margin: $fieldset-margin;
   box-shadow: $fieldset-shadow;
@@ -9,9 +9,9 @@ fieldset {
     font-size: $legend-font-size;
     line-height: 1;
     padding: $legend-padding;
-    color: $legend-text-color;
-    background-color: $legend-back-color;
-    border: $legend-border-width solid $legend-border-color;
+    color: var(--legend-fg);
+    background-color: var(--legend-bg);
+    border: $legend-border-width solid var(--legend-bd);
     border-radius: $legend-border-radius;
   }
   .field:first-child {

@@ -193,6 +193,11 @@ export const URLS = {
     code:   'optionalLabel',
     about:  'Customise the label displayed for optional fields',
   },
+  'field:placeholder': {
+    url:    '/components/Field/placeholder',
+    code:   'placeholder',
+    about:  'Add a placeholder to a field',
+  },
   'field:prefix': {
     url:    '/components/Field/prefix',
     code:   'prefix',

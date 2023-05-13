@@ -1,4 +1,4 @@
-.#{$formula-namespace} div.debug {
+#{$formula-selector} div.debug {
   border: 1px solid var(--debug-border-color);
   background-color: var(--debug-back-color);
   box-shadow: var(--debug-box-shadow);
@@ -27,6 +27,7 @@
     }
     pre {
       margin: 0;
+      color: var(--debug-panel-text-color);
     }
   }
 }

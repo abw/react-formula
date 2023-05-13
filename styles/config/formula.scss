@@ -1,4 +1,5 @@
-$formula-namespace: 'formula' !default;
+$formula-selector:  '.formula' !default;
+$dark-selector:     '.dark' !default;
 
 @import "colors";
 @import "units";

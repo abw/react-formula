@@ -78,6 +78,7 @@ export const FieldMenu = {
     'field:name',
     'field:label',
     'field:type',
+    'field:placeholder',
     'field:help',
     'field:prefix',
     'field:suffix',

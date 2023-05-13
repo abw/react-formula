@@ -1,7 +1,7 @@
 .formula .errors {
-  color: $error-text-color;
-  background-color: $error-back-color;
-  border: 1px solid $error-border-color;
+  color: var(--error-fg);
+  background-color: var(--error-bg);
+  border: 1px solid var(--error-bd);
   border-width: $error-border-width;
   border-radius: $error-border-radius;
   padding: $error-padding-vertical $error-padding-horizontal;
@@ -13,11 +13,11 @@
     font-weight: $error-title-weight;
     font-size: $error-title-size;
     line-height: 1;
-    background-color: $error-border-color;
+    background-color: var(--error-bd);
     margin: -#{$error-padding-vertical} -#{$error-padding-horizontal} $error-padding-vertical -#{$error-padding-horizontal};
     padding: #{$error-title-padding};
     border-radius: $error-title-radius $error-title-radius 0 0;
-    color: $error-title-color;
+    color: var(--error-title-fg);
   }
   h4:last-child {
     margin-bottom: 0.5rem;
@@ -30,7 +30,7 @@
     li {
       margin: 0.5em 0;
       b {
-        color: $error-label-color;
+        color: var(--error-label-fg);
       }
     }
   }

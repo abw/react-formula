@@ -12,7 +12,7 @@ const Layout = () => {
       <div id="layout">
         <ScrollToTop/>
         <aside id="sidebar">
-          <h3>@abw/react-formula</h3>
+          <h3 className="sidebar-head">@abw/react-formula</h3>
           <Controls/>
           <Sidebar/>
         </aside>

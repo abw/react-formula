@@ -1,12 +1,15 @@
 import React from 'react'
 import { imgUrl } from '../site/Utils.js'
+import { ReactComponent as FruitLoop } from '../svg/fruit-loop.svg'
 
 const Why = () =>
   <div className="home">
     <h1>Why Does This Exist?</h1>
     <div className="pic-side">
       <div>
-        <img src={imgUrl('fruit-loop.svg')}/>
+        <div className="logo">
+          <FruitLoop/>
+        </div>
         <div className="caption">
           Fruit by Artem Yurov from{' '}
           <a href="https://thenounproject.com/browse/icons/term/fruit/" target="_blank" rel="noreferrer" title="Fruit Icons">Noun Project</a>.

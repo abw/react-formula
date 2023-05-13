@@ -10,11 +10,11 @@ const Controls = () => {
     <div id="controls">
       <a href="https://github.com/abw/react-formula" className="github control">
         <Github/>
-        <caption>Github</caption>
+        <div className="caption">Github</div>
       </a>
       <div className="theme control" onClick={toggleTheme}>
         { dark ? <Moon/> : <Sun/> }
-        <caption>{ dark ? 'Dark' : 'Light'}</caption>
+        <div className="caption">{ dark ? 'Dark' : 'Light'}</div>
       </div>
     </div>
   )

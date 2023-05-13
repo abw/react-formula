@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Generator } from '@abw/react-context'
 
+const PREFERS_DARK = '(prefers-color-scheme: dark)'
+
 const Theme = ({render}) => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  const [dark, setDark] = useState(prefersDark)
+  const getTheme = () => window.matchMedia(PREFERS_DARK).matches
+  const [dark, setDark] = useState(getTheme())
+  const mqListener = e => setDark(e.matches)
   const toggleTheme = () => setDark(! dark)
+  useEffect(
+    () => {
+      const darkThemeMq = window.matchMedia(PREFERS_DARK)
+      darkThemeMq.addEventListener('change', mqListener)
+      return () => darkThemeMq.removeEventListener('change', mqListener)
+    },
+    []
+  )
   return render({
     dark, setDark, toggleTheme,
     theme: dark ? 'dark' : 'light',

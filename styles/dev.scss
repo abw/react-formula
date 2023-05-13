@@ -6,19 +6,10 @@
 @import 'website/code.scss';
 @import 'website/nav.scss';
 
-
-.badger {
-  width: 100%;
-  padding: 2rem 0;
-  text-align: center;
-  img {
-    width: 100px;
-  }
-  .caption {
-    padding: 0.5rem 0;
-  }
+.formula {
+  // --brand-hue: 30;
+  // --error-hue: 120;
 }
-
 
 table.sass-vars {
   thead {
@@ -53,9 +44,6 @@ table.sass-vars {
   }
 }
 
-.bold {
-  font-weight: bold;
-}
 .note {
   background-color: hsl($note-hue, 80%, 90%);
   border: 3px solid hsl($note-hue, 90%, 45%);
@@ -92,14 +80,6 @@ textarea {
 }
 div.example {
   margin-bottom: 2rem;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }
 
 form.formula div.field label.option {

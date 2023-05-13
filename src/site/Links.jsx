@@ -127,6 +127,9 @@ export const OnValidLink = () =>
 export const OptionalLabelLink = () =>
   <CodeLink to="field:optionalLabel"/>
 
+export const PlaceholderLink = () =>
+  <CodeLink to="field:placeholder"/>
+
 export const RequiredLink = () =>
   <CodeLink to="field:required"/>
 

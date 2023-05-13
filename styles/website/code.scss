@@ -3,7 +3,7 @@ code:not(.codeblock code):not(.toc code) {
   color: var(--code-fg);
   border: 1px solid var(--code-bd);
   padding: 0 3px;
-  border-radius: 2px;
+  border-radius: $code-radius;
 }
 a code:not(.codeblock code):not(.toc code) {
   background-color: var(--code-link-bg);

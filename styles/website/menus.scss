@@ -9,6 +9,13 @@ ul.menu {
     max-height: 200rem;
     overflow: hidden;
   }
+  .about {
+    color: var(--toc-about);
+    &:before {
+      content: '-';
+      margin: 0 0.5rem;
+    }
+  }
 }
 
 ul.menu ul.menu {
@@ -64,6 +71,7 @@ div.toc ul.menu {
       border: 1px solid var(--code-link-bd);
       border-bottom: 1px solid var(--code-link-ul);
       padding: 0.1rem 0.25rem;
+      border-radius: $code-radius;
       &:hover {
         // background-color: hsl($hover-hue, 40%, 90%);
         // border-color: hsl($hover-hue, 50%, 80%);
@@ -73,13 +81,6 @@ div.toc ul.menu {
         background-color: var(--code-hv-bg);
         border-color: var(--code-hv-bd);
         border-bottom-color: var(--code-hv-ul);
-      }
-    }
-    .about {
-      color: var(--toc-about);
-      &:before {
-        content: '-';
-        margin: 0 0.5rem;
       }
     }
   }

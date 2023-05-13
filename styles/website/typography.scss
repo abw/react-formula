@@ -1,5 +1,4 @@
 h1, h2, h3 {
-  // color: hsl($dev-hue, 80%, 20%);
   color: var(--page-head);
 }
 h1 {
@@ -39,3 +38,7 @@ a {
     color: $active-color;
   }
 }
+.bold {
+  font-weight: bold;
+}
+
