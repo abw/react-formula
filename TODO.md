@@ -24,6 +24,8 @@ tests)
 
 * default values
 
+* Docs for Debug need updating
+
 ## Field
 
 * tests and docs for setValid() and setInvalid()
@@ -89,6 +91,8 @@ be `validate`
 
 * bare radio buttons and checkboxes don't have any padding on left which shows
 when focussed
+
+* CancelSubmit buttons are on the wonk
 
 ## Theming
 
