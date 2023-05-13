@@ -796,7 +796,7 @@ packages:
       '@jest/schemas': 29.4.3
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 18.15.11
+      '@types/node': 20.0.0
       '@types/yargs': 17.0.24
       chalk: 4.1.2
     dev: true
@@ -1114,10 +1114,6 @@ packages:
     dependencies:
       expect: 29.5.0
       pretty-format: 29.5.0
-    dev: true
-
-  /@types/node/18.15.11:
-    resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
     dev: true
 
   /@types/node/20.0.0:
@@ -2741,7 +2737,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.5.0
-      '@types/node': 18.15.11
+      '@types/node': 20.0.0
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11

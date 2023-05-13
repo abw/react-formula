@@ -4,7 +4,10 @@ import svgr from 'vite-plugin-svgr'
 import define from  './vite.defs.js'
 
 export default defineConfig({
-  plugins: [react(), svgr()],
+  plugins: [
+    react(),
+    svgr(),
+  ],
   define,
   test: {
     environment: 'jsdom',
