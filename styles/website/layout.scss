@@ -26,7 +26,10 @@ body {
   background-color: var(--page-bg);
   color: var(--page-fg);
   transition: color, background-color 500ms;
-
+  color-scheme: light;
+  &.dark {
+    color-scheme: dark;
+  }
 }
 #layout {
   min-width: 320px;

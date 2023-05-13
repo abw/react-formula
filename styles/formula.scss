@@ -1,16 +1,15 @@
+$formula-selector:  '.formula' !default;
+$dark-selector:     '.dark' !default;
+
 @import 'config/formula';
-@import 'utils/all';
+// @import 'utils/all';
 @import 'components/all';
 
 .formula {
   * {
     box-sizing: border-box;
   }
-}
-
-.wide {
-  width: 100%;
-}
-.mar-r {
-  margin-right: 0.5rem;
+  // .wide {
+    // width: 100%;
+  // }
 }

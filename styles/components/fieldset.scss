@@ -1,4 +1,4 @@
-fieldset {
+#{$formula-selector} fieldset {
   border: $fieldset-border-width solid var(--fieldset-bd);
   border-radius: $fieldset-border-radius;
   background-color: var(--fieldset-bg);

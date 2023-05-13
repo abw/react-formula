@@ -221,6 +221,7 @@
 }
 
 #{$dark-selector} #{$formula-selector} {
+  color-scheme: dark;
   --label-fg:                     hsl(var(--label-hue), 10%, 60%);
   --required-fg:                  hsl(var(--required-hue), 90%, 80%);
   --required-bg:                  hsl(var(--required-hue), 60%, 30%);

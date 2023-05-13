@@ -169,12 +169,13 @@ const Why = () =>
         Functionality is paramount, but we also care about <b>presentability</b>.
         It comes with a default stylesheet that provides reasonable defaults
         for styling different form components and all their states (focussed,
-        valid, invalid, disabled, etc).  It&apos;s written using SASS and almost everything is styled
-        using variables that you can easily change.  There&apos;s a single
-        variable that you can set to change the basic theme colour to match
-        your brand so you can get up and running really quickly.  As and when
-        you need to change styles, add new components, or make other changes
-        then you generally can with the minimum of fuss.
+        valid, invalid, disabled, etc).  It comes with both light and dark
+        themes and is written using SASS and CSS variables so you can easily
+        change the styling.
+        There&apos;s a single variable that you can set to change the basic
+        theme colour to match your brand so you can get up and running really
+        quickly.  As and when you need to change styles, add new components,
+        or make other changes then you generally can with the minimum of fuss.
       </li>
       <li>
         And last, but not least, <b>efficiency</b>.  The library is
