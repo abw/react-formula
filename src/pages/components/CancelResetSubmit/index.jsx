@@ -16,7 +16,7 @@ const CancelResetSubmitExamples = () =>
     </p>
     <Example
       Element={CancelResetSubmit} code={CancelResetSubmitSrc}
-      caption="CancelResetSubmit"
+      caption="CancelResetSubmit" expand
     />
     <p>
       You can define properties for the <CancelLink/> component using
@@ -27,7 +27,7 @@ const CancelResetSubmitExamples = () =>
     </p>
     <Example
       Element={CancelResetSubmitProps} code={CancelResetSubmitPropsSrc}
-      caption="Properties"
+      caption="Properties" expand
     />
   </div>
 

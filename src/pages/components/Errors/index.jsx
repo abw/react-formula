@@ -18,7 +18,7 @@ const ErrorsExamples = () =>
     </p>
     <Example
       Element={Required} code={RequiredSrc}
-      caption="Required Fields"
+      caption="Required Fields" expand
     >
       <p>
         Try submitting the form below without entering anything for either
@@ -35,7 +35,7 @@ const ErrorsExamples = () =>
     </p>
     <Example
       Element={ShowErrors} code={ShowErrorsSrc}
-      caption="Errors"
+      caption="Errors" expand
     />
 
     <h2>error</h2>

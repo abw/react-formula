@@ -22,7 +22,7 @@ const Validation = () =>
     </p>
     <Example
       Element={Required} code={RequiredSrc}
-      caption="Required Fields"
+      caption="Required Fields" expand
     >
       <p>
         Try entering some text in the fields below then click on the Submit

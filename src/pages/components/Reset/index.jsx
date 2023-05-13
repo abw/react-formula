@@ -20,7 +20,7 @@ const ResetExamples = () =>
     </p>
     <Example
       Element={Reset} code={ResetSrc}
-      caption="Reset"
+      caption="Reset" expand
     >
       <p>
         Try entering some text in the fields below then click on the Reset
@@ -35,7 +35,7 @@ const ResetExamples = () =>
     </p>
     <Example
       Element={Properties} code={PropertiesSrc}
-      caption="Properties"
+      caption="Properties" expand
     />
 
     <h2>onReset</h2>
@@ -45,7 +45,7 @@ const ResetExamples = () =>
     </p>
     <Example
       Element={OnReset} code={OnResetSrc}
-      caption="onReset"
+      caption="onReset" expand
     />
 
   </div>

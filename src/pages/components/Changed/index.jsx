@@ -17,7 +17,7 @@ const ChangedExamples = () =>
     </p>
     <Example
       Element={Changed} code={ChangedSrc}
-      caption="Changed"
+      caption="Changed" expand
     >
       <p>
         Edit one of the fields in the form and you should see the{' '}

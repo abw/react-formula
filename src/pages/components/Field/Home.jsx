@@ -15,7 +15,7 @@ const Home = () =>
     </p>
     <Example
       Element={ExampleElement} code={ExampleSrc}
-      caption="Field"
+      caption="Field" expand
     />
     <TOC menu={FieldMenu}/>
   </>

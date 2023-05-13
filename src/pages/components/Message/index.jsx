@@ -22,7 +22,7 @@ const MessageExamples = () =>
     </p>
     <Example
       Element={Message} code={MessageSrc}
-      caption="Message"
+      caption="Message" expand
     >
     </Example>
   </div>

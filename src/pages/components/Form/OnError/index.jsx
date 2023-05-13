@@ -13,7 +13,7 @@ const OnErrorExamples = () =>
     </p>
     <Example
       Element={OnError} code={OnErrorSrc}
-      caption="onError"
+      caption="onError" expand
     >
       <p>
         TODO

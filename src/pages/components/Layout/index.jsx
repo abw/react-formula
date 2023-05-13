@@ -22,7 +22,7 @@ const LayoutExamples = () =>
     </p>
     <Example
       Element={Layout} code={LayoutSrc}
-      caption="Layout"
+      caption="Layout" expand
     />
     <p>
       The <code>Layout</code> component renders a <LabelLink/>, one of the
@@ -35,7 +35,7 @@ const LayoutExamples = () =>
     </p>
     <Example
       Element={LayoutContent} code={LayoutContentSrc}
-      caption="Layout Content"
+      caption="Layout Content" expand
     />
   </div>
 

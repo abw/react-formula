@@ -13,7 +13,7 @@ const OnSuccessExamples = () =>
     </p>
     <Example
       Element={OnSuccess} code={OnSuccessSrc}
-      caption="onSuccess"
+      caption="onSuccess" expand
     >
       <p>
         TODO

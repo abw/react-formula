@@ -45,7 +45,7 @@ const DebugExamples = () =>
 
     <Example
       Element={ShowAll} code={ShowAllSrc}
-      caption="showAll"
+      caption="showAll" expand
     />
   </div>
 

@@ -13,7 +13,7 @@ const OnSubmitExamples = () =>
     </p>
     <Example
       Element={OnSubmit} code={OnSubmitSrc}
-      caption="onSubmit"
+      caption="onSubmit" expand
     >
       <p>
         TODO

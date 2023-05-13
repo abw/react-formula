@@ -49,7 +49,7 @@ const SetFocusExamples = () =>
       the event to the <code>setFocus()</code> method as the second argument
       and it will do it for you, as shown below.
     </p>
-    <CodeBlock code={prepareCode(FocusButtonSrc)}/>
+    <CodeBlock code={prepareCode(FocusButtonSrc)} expand/>
 
   </div>
 

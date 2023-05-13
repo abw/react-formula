@@ -15,7 +15,7 @@ const CancelExamples = () =>
     </p>
     <Example
       Element={Cancel} code={CancelSrc}
-      caption="Cancel"
+      caption="Cancel" expand
     >
       <p>
         Don&apos;t be surprised that the Cancel button doesn&apos;t do anything
@@ -31,7 +31,7 @@ const CancelExamples = () =>
     </p>
     <Example
       Element={CancelProps} code={CancelPropsSrc}
-      caption="Properties"
+      caption="Properties" expand
     />
   </div>
 

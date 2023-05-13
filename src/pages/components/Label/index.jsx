@@ -14,7 +14,7 @@ const LabelExamples = () =>
     </p>
     <Example
       Element={Label} code={LabelSrc}
-      caption="Label"
+      caption="Label" expand
     >
     </Example>
   </div>

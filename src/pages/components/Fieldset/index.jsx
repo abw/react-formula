@@ -16,7 +16,7 @@ const FieldsetExamples = () =>
     </p>
     <Example
       Element={Fieldset} code={FieldsetSrc}
-      caption="Fieldset"
+      caption="Fieldset" expand
     />
     <p>
       The <code className="code">fields</code> property can be used as
@@ -25,7 +25,7 @@ const FieldsetExamples = () =>
     </p>
     <Example
       Element={FieldsetFields} code={FieldsetFieldsSrc}
-      caption="Fieldset fields"
+      caption="Fieldset fields" expand
     />
   </div>
 

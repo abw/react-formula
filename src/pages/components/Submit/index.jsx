@@ -22,7 +22,7 @@ const SubmitExamples = () =>
     </p>
     <Example
       Element={Submit} code={SubmitSrc}
-      caption="Submit"
+      caption="Submit" expand
     >
       <p>
         Try entering some text in the fields below then click on the Submit
@@ -37,7 +37,7 @@ const SubmitExamples = () =>
     </p>
     <Example
       Element={SubmitProps} code={SubmitPropsSrc}
-      caption="Properties"
+      caption="Properties" expand
     />
 
     <h2>onSubmit</h2>
@@ -47,7 +47,7 @@ const SubmitExamples = () =>
     </p>
     <Example
       Element={OnSubmit} code={OnSubmitSrc}
-      caption="onSubmit"
+      caption="onSubmit" expand
     />
   </div>
 
