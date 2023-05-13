@@ -1,0 +1,34 @@
+#controls {
+  position: absolute;
+  z-index: 1;
+  top: 0.5rem;
+  right: 0.25rem;
+  display: flex;
+  text-align: center;
+  .control {
+    display: block;
+    min-width: 2.8rem;
+    color: var(--control-fg);
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+    & + .control {
+      // margin-left: 0.25rem;
+    }
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin: 0;
+    }
+    caption {
+      display: block;
+      margin-top: -0.25rem;
+      font-size: 0.7rem;
+      text-align: center;
+      user-select: none;
+    }
+    &:hover {
+      cursor: pointer;
+      color: var(--control-hv-fg);
+    }
+  }
+}

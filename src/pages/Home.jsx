@@ -1,16 +1,16 @@
 import React from 'react'
 import { imgUrl } from '../site/Utils.js'
-import { ReactComponent as Github } from '../svg/github.svg'
+import { ReactComponent as ReactFormula } from '../svg/react-formula.svg'
 import Link from '../site/Link.jsx'
 
 const Home = () =>
   <div className="home">
     <h1>@abw/react-formula</h1>
-    <a href="https://github.com/abw/react-formula" className="github">
-      <Github/>
-    </a>
     <div className="pic-side">
-      <img src={imgUrl('react-formula.svg')}/>
+      <div className="logo">
+        <ReactFormula/>
+      </div>
+      {/* <img src={imgUrl('react-formula.svg')}/> */}
       <div className="blurb">
         <p className="intro">
           <code className="code">react-formula</code> is yet another React

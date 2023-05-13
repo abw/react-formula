@@ -4,9 +4,9 @@ import Layout from './Layout.jsx'
 import Home from '../pages/Home.jsx'
 import GettingStarted from '../pages/GettingStarted.jsx'
 import Why from '../pages/Why.jsx'
-// import Examples from '../pages/examples/index.jsx'
 import TestForm from '../test/Form.jsx'
 import LayoutTest from '../test/Layout.jsx'
+import StyleTest from '../test/Styles.jsx'
 
 const Tutorial    = React.lazy(() => import('../pages/tutorial/index.jsx'))
 const Components  = React.lazy(() => import('../pages/components/index.jsx'))
@@ -36,6 +36,7 @@ const Router = createBrowserRouter(
         { path: 'styling/*',          element: <LazyRoute Element={Styling}/> },
         { path: 'test-form',          element: <TestForm/> },
         { path: 'test-layout',        element: <LayoutTest/> },
+        { path: 'test-styles',        element: <StyleTest/> },
         // { path: 'examples/*',         element: <Examples/> },
       ]
     },

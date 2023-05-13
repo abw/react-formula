@@ -22,6 +22,8 @@ tests)
 
 * Changed - docs and tests
 
+* default values
+
 ## Field
 
 * tests and docs for setValid() and setInvalid()

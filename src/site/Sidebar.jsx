@@ -42,6 +42,7 @@ const Sidebar = () =>
     <ul className="menu">
       <li><Link to="/test-form" text="Test Form"/></li>
       <li><Link to="/test-layout" text="Layout Test"/></li>
+      <li><Link to="/test-styles" text="Style Test"/></li>
     </ul>
     <footer>
       <div className="notes">

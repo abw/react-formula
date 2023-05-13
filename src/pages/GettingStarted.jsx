@@ -8,7 +8,7 @@ const GettingStarted = () =>
       Add the <code className="code">@abw/react-formula</code> module to
       your project using your favourite package manager.
     </p>
-    <CodeBlock language="bash">
+    <CodeBlock language="bash" expand>
       {`## using npm
 $ npm add @abw/react-formula
 
@@ -22,7 +22,7 @@ $ pnpm add @abw/react-formula
     <p>
       You can then import the modules and start using them.
     </p>
-    <CodeBlock>
+    <CodeBlock expand>
       {`import { Form, Field, Submit } from '@abw/react-formula'
 
 const MyFormExample = () =>
@@ -39,14 +39,14 @@ export default MyFormExample
       with) then you&apos;ll need to import the default CSS stylesheet into
       your React app.  Something like this:
     </p>
-    <CodeBlock>
+    <CodeBlock expand>
       {`import '@abw/react-formula/css/formula.css'`}
     </CodeBlock>
     <p>
       Or if you&apos;re using SASS then you can import the SASS components
       into your main stylesheet.
     </p>
-    <CodeBlock language="scss">
+    <CodeBlock language="scss" expand>
       {`@import '@abw/react-formula/scss/formula.scss';`}
     </CodeBlock>
     <p>

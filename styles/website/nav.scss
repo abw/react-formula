@@ -1,0 +1,32 @@
+.prev-next-link {
+  min-width: 20ch;
+  // background-color: hsl($dev-hue, 40%, 95%);
+  // border: 1px solid hsl($dev-hue, 50%, 80%);
+  background-color: var(--prev-next-bg);
+  border: 1px solid var(--prev-next-bd);
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  box-shadow: $shadows;
+  transition: all 0.5s;
+  h4 {
+    transition: all 0.5s;
+    // color: hsl($dev-hue, 80%, 40%);
+    color: var(--prev-next-fg);
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  &:hover {
+    // background-color: hsl($hover-hue, 40%, 95%);
+    // border: 1px solid hsl($hover-hue, 50%, 80%);
+    background-color: var(--prev-next-hv-bg);
+    border-color: var(--prev-next-hv-bd);
+    h4 {
+      // color: hsl($hover-hue, 70%, 40%);
+      color: var(--prev-next-hv-fg);
+    }
+  }
+}
