@@ -1,7 +1,7 @@
 {
   "name": "@abw/react-formula",
-  "private": true,
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
+  "description": "Yet another React form library",
   "type": "module",
   "files": [
     "dist"
@@ -15,6 +15,19 @@
     },
     "./css/*": "./dist/css/*",
     "./sass/*": "./dist/sass/*"
+  },
+  "author": "Andy Wardley",
+  "licence": "ISC",
+  "keywords": [
+    "react",
+    "form"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abw/react-formula.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abw/react-formula/issues"
   },
   "scripts": {
     "dev": "vite",
