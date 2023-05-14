@@ -5,7 +5,7 @@ import Submit from './Submit.jsx'
 import { Themed } from '../Theme.jsx'
 
 const CancelResetSubmit = ({
-  className='flex space',
+  className='controls',
   cancel={},
   reset={},
   submit={}
