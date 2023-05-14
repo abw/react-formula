@@ -8,8 +8,9 @@ const Radio = ({ field=useField() }) => {
   const {
     options=[],
     type='radio',
-    inputClass='input',
     inputsClass='radio inputs',
+    inputClass='input',
+    textClass='text',
     optionClass='option',
     checkedClass='checked',
     handler=Handlers[type]||Handlers.default
@@ -42,7 +43,7 @@ const Radio = ({ field=useField() }) => {
                 checked={checked}
                 value={option.value}
               />
-              <span className="label">{option.text}</span>
+              <span className={textClass}>{option.text}</span>
             </label>
           )
         }

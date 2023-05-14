@@ -79,6 +79,8 @@ be `validate`
 
 * Text input docs looks like the original first page of the tutorial
 
+* Update styling page to talk about CSS variables
+
 * Debug properties
 
 * ...and properties for other components, too, e.g. Cancel, Reset, Submit, etc.

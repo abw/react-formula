@@ -1,8 +1,26 @@
-$unit-margin:             0.5rem !default;
-$unit-padding:            0.5rem !default;
-$unit-padding-vertical:   $unit-padding !default;
-$unit-padding-horizontal: $unit-padding * 2 !default;
+$spacing:                 0.25em !default;
+$margin:                  $spacing !default;
+$padding:                 $spacing !default;
+$margin-2:                $margin * 2;
+$margin-3:                $margin * 3;
+$margin-4:                $margin * 4;
+$padding-2:               $padding * 2;
+$padding-3:               $padding * 3;
+$padding-4:               $padding * 4;
+$padding-y:               $padding-2 !default;
+$padding-x:               $padding-4 !default;
 $border-width:            1px !default;
 $border-radius:           3px !default;
-$ring-width:              3px !default;
-$ring-gap:                2px !default;
+$focus-ring-width:        3px !default;
+$focus-ring-gap:          2px !default;
+$smaller-size:            0.75em;
+$small-size:              0.875em;
+$large-size:              1.125em;
+$larger-size:             1.25em;
+
+
+// old names
+$unit-padding-vertical:   $padding-y;
+$unit-padding-horizontal: $padding-x;
+$ring-width:              $focus-ring-width;
+$ring-gap:                $focus-ring-gap;

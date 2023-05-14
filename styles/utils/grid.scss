@@ -14,18 +14,18 @@
 
 @for $n from 0 through 16 {
   .gap-#{$n} {
-    gap: $n * $unit-margin;
+    gap: $n * $margin;
   }
   .gap-h-#{$n} {
-    column-gap: $n * $unit-margin;
+    column-gap: $n * $margin;
   }
   .gap-v-#{$n} {
-    row-gap: $n * $unit-margin;
+    row-gap: $n * $margin;
   }
 }
 
 @for $n from 0 through 16 {
   .gap-#{$n} {
-    gap: $n * $unit-margin;
+    gap: $n * $margin;
   }
 }

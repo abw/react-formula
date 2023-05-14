@@ -3,12 +3,12 @@
 }
 @for $n from 2 through 16 {
   .mar-#{$n} {
-    margin: $n * $unit-margin;
+    margin: $n * $margin;
   }
   .mar-b-#{$n} {
-    margin-bottom: $n * $unit-margin;
+    margin-bottom: $n * $margin;
   }
   .mar-t-#{$n} {
-    margin-top: $n * $unit-margin;
+    margin-top: $n * $margin;
   }
 }

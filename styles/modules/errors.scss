@@ -1,0 +1,37 @@
+@include errors {
+  color: var(--errors-text);
+  background-color: var(--errors-back);
+  border: var(--errors-border-width) solid var(--errors-border);
+  border-radius: var(--errors-border-radius);
+  //padding: var(--errors-padding);
+  padding: 0;
+  margin: var(--errors-margin);
+  box-shadow: var(--errors-shadow);
+  h3 {
+    // font-weight: normal;
+    font-size: var(--error-larger-size);
+    line-height: 1;
+    background-color: var(--errors-border);
+    margin: 0;
+    padding: var(--errors-title-padding);
+    color: var(--errors-title-text);
+  }
+  .errors-body {
+    padding: var(--errors-padding);
+  }
+  h4:last-child {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 0;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      margin: 0.5em 0;
+      b {
+        color: var(--errors-label-text);
+      }
+    }
+  }
+}

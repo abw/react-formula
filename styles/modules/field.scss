@@ -1,0 +1,364 @@
+@include field {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--field-margin);
+  transition: 0.3s all;
+}
+
+@include field-label {
+  transition: 0.3s all;
+  &:not(#{$option}) {
+    display: block;
+    margin-right: 0.5em;
+    margin-bottom: var(--label-margin);
+    font-size: var(--label-size);
+    color: var(--label-text);
+    white-space: nowrap;
+  }
+  &#{$option} {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    #{$input} {
+      margin: 0;
+    }
+    #{$text} {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+  #{$required},
+  #{$optional} {
+    float: right;
+    font-size: var(--label-size);
+    line-height: 1.2;
+    padding: 0 0.5em;
+    margin-right: -0.5em;
+    border-radius: 0.25em;
+  }
+  #{$required} {
+    color: var(--required-text);
+    background-color: var(--required-back);
+    border: 1px solid var(--required-border);
+  }
+  #{$optional} {
+    color: var(--optional-text);
+    background-color: var(--optional-back);
+    border: 1px solid var(--optional-border);
+  }
+}
+
+@include field-inputs {
+  display: flex;
+  &#{$radio} {
+    flex-wrap: wrap;
+  }
+  input,
+  textarea,
+  select {
+    transition: 0.3s all;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    padding: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    outline: none !important;
+    flex-basis: 100%;
+    min-width: 0;
+    color: var(--input-text);
+    border: var(--input-border-width) solid var(--input-border);
+    background-color: var(--input-back);
+    &:hover {
+      border-color: var(--focus-border);
+      color: var(--focus-text);
+    }
+    &::placeholder {
+      color: var(--placeholder-text);
+      font-weight: 300;
+    }
+  }
+  textarea {
+    line-height: 1.25;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance : none;
+    font-size: 1em;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  input,
+  select,
+  #{$option} {
+    align-items: center;
+    max-height: var(--input-max-height);
+  }
+  ::placeholder {
+    color: blue;
+  }
+  select:invalid,
+  select option:disabled,
+  select option:invalid {
+    color: var(--placeholder-text);
+  }
+  &#{$prefixed}, &#{$suffixed} {
+    border-radius: var(--input-border-radius);
+  }
+  &#{$prefixed} input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &#{$suffixed} input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #{$prefix},
+  #{$suffix} {
+    transition: 0.3s all;
+    font-size: 1em;
+    line-height: 1;
+    padding: var(--prefix-padding);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--prefix-border);
+    background-color: var(--prefix-back);
+    color: var(--prefix-text);
+    user-select: none;
+    z-index: 99;
+  }
+  #{$prefix} {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #{$suffix} {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #{$option} {
+    font-size: 1em;
+    line-height: 1;
+    padding: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    color: var(--input-text);
+    border: var(--input-border-width) solid var(--input-border);
+    background-color: var(--input-back);
+    cursor: pointer;
+    &:hover {
+      border-color: var(--focus-border);
+      color: var(--focus-text);
+    }
+  }
+  &#{$radio} {
+    display: flex;
+    gap: var(--option-margin);
+    &#{$block} {
+      display: block;
+      gap: 0.5rem;
+      label {
+        display: block;
+        margin-bottom: var(--option-margin);
+      }
+    }
+  }
+  input[type=checkbox],
+  input[type=radio],
+  input[type=range] {
+    accent-color: var(--accent-color);
+    margin-left: 0;
+  }
+  input[type=color] {
+    padding: 0;
+    height: calc(1em + (var(--input-padding-y) * 2));
+    //&::-webkit-color-swatch,
+    //&::-moz-color-swatch {
+    //  //height: 1em;
+    //  //height: 32px !important;
+    //  //appearance: none;
+    //  //line-height: 1;
+    //}
+  }
+  input[type=date] {
+    max-height: var(--input-max-height);
+  }
+}
+
+@include field-help {
+  transition: 0.3s all;
+  display: block;
+  font-size: var(--help-size);
+  margin-right: 0.5em;
+  margin-top: var(--help-margin);
+  white-space: nowrap;
+  color: var(--help-text);
+}
+
+@include field-valid {
+  label:not(#{$option}) {
+    color: var(--valid-label-text);
+  }
+  #{$inputs} {
+    input,
+    textarea,
+    select,
+    #{$option} {
+      color: var(--valid-text);
+      background-color: var(--valid-back);
+      border-color: var(--valid-border);
+      &::placeholder {
+        color: var(--valid-placeholder-text);
+        font-weight: 300;
+      }
+    }
+    #{$prefix},
+    #{$suffix} {
+      color: var(--valid-prefix-text);
+      background-color: var(--valid-prefix-back);
+      border-color: var(--valid-border);
+    }
+  }
+  #{$help} {
+    color: var(--valid-help-text);
+    &::before {
+      content: var(--valid-help-before);
+    }
+  }
+}
+
+@include field-invalid {
+  label:not(#{$option}) {
+    color: var(--invalid-label-text);
+  }
+  #{$inputs} {
+    input,
+    textarea,
+    select,
+    #{$option} {
+      color: var(--invalid-text);
+      background-color: var(--invalid-back);
+      border-color: var(--invalid-border);
+      &::placeholder {
+        color: var(--invalid-placeholder-text);
+        font-weight: 300;
+      }
+    }
+    #{$prefix},
+    #{$suffix} {
+      color: var(--invalid-prefix-text);
+      background-color: var(--invalid-prefix-back);
+      border-color: var(--invalid-border);
+    }
+  }
+  #{$help} {
+    color: var(--invalid-help-text);
+    &::before {
+      content: var(--invalid-help-before);
+    }
+  }
+}
+
+@include field-focus {
+  &:not(#{$invalid}):not(#{$valid}) {
+    label:not(#{$option}) {
+      color: var(--focus-label-text);
+    }
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--focus-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--focus-ring);
+      }
+      input,
+      textarea,
+      select,
+      &#{$radio} label#{$checked},
+      &#{$checkbox} label {
+        color: var(--focus-text);
+        background-color: var(--focus-back);
+        border-color: var(--focus-border);
+        &::placeholder {
+          color: var(--focus-placeholder-text);
+          font-weight: 300;
+        }
+      }
+      #{$prefix},
+      #{$suffix} {
+        color: var(--focus-prefix-text);
+        border-color: var(--focus-border);
+        background-color: var(--focus-prefix-back);
+      }
+    }
+  }
+  &#{$invalid} {
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--invalid-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--invalid-ring);
+      }
+    }
+  }
+  &#{$valid} {
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--valid-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--valid-ring);
+      }
+    }
+  }
+}
+
+@include field-disabled {
+  cursor: not-allowed;
+  label:not(#{$option}) {
+    color: var(--disabled-label-text);
+  }
+  #{$inputs} {
+    input,
+    textarea,
+    select {
+      color: var(--disabled-text);
+      background-color: var(--disabled-back);
+      border-color: var(--disabled-border);
+      &::placeholder {
+        color: var(--disabled-placeholder-text);
+      }
+    }
+    #{$prefix},
+    #{$suffix} {
+      color: var(--disabled-prefix-text);
+      background-color: var(--disabled-prefix-back);
+      border-color: var(--disabled-border);
+    }
+  }
+  #{$help} {
+    color: var(--disabled-help-text);
+    &::before {
+      content: var(--disabled-help-before);
+    }
+  }
+}

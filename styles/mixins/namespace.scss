@@ -1,0 +1,79 @@
+@mixin where-formula {
+  :where(#{$formula}) {
+    @content;
+  }
+}
+
+@mixin where-dark {
+  :where(#{$dark} #{$formula}) {
+    @content;
+  }
+}
+
+@mixin formula {
+  #{$formula} {
+    @content;
+  }
+}
+
+@mixin field {
+  #{$formula} #{$field} {
+    @content;
+  }
+}
+
+@mixin field-label {
+  #{$formula} #{$field} label {
+    @content;
+  }
+}
+
+@mixin field-inputs {
+  #{$formula} #{$field} #{$inputs} {
+    @content;
+  }
+}
+
+@mixin field-help {
+  #{$formula} #{$field} #{$help} {
+    @content;
+  }
+}
+
+@mixin field-valid {
+  #{$formula} #{$field}#{$valid} {
+    @content;
+  }
+}
+
+@mixin field-invalid {
+  #{$formula} #{$field}#{$invalid} {
+    @content;
+  }
+}
+
+@mixin field-focus {
+  #{$formula} #{$field}#{$focus} {
+    @content;
+  }
+}
+
+@mixin field-disabled {
+  #{$formula} #{$field}#{$disabled} {
+    @content;
+  }
+}
+
+@mixin errors {
+  #{$formula} #{$errors} {
+    @content;
+  }
+}
+
+@mixin button {
+  #{$formula} button {
+    @content;
+  }
+}
+
+

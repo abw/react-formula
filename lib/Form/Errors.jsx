@@ -23,20 +23,22 @@ const Errors = () => {
   return (
     <div className={errorsClass}>
       { Boolean(errorsTitle) && <h3>{errorsTitle(n)}</h3> }
-      { hasError && <h4><Error error={error}/></h4> }
-      { errors.length !== 0 &&
-        <>
-          { Boolean(errorsPrompt) && <p>{errorsPrompt(errors.length)}</p>}
-          <ul>
-            { errors.map(
-              (error, n) =>
-                <li key={n}>
-                  <Error error={error}/>
-                </li>
-            )}
-          </ul>
-        </>
-      }
+      <div className="errors-body">
+        { hasError && <h4><Error error={error}/></h4> }
+        { errors.length !== 0 &&
+          <>
+            { Boolean(errorsPrompt) && <p>{errorsPrompt(errors.length)}</p>}
+            <ul>
+              { errors.map(
+                (error, n) =>
+                  <li key={n}>
+                    <Error error={error}/>
+                  </li>
+              )}
+            </ul>
+          </>
+        }
+      </div>
     </div>
   )
 }

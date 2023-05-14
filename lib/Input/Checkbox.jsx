@@ -11,6 +11,8 @@ const Checkbox = ({ field=useField() }) => {
     type='checkbox',
     inputClass='input',
     inputsClass='checkbox inputs',
+    textClass='text',
+    checkboxClass='checkbox',
     optionClass='option',
     checkedClass='checked',
     handler=Handlers[type]||Handlers.default
@@ -26,7 +28,7 @@ const Checkbox = ({ field=useField() }) => {
   return (
     <div className={inputsClass}>
       <label htmlFor={id} className={classes}>
-        <span className="checkbox">
+        <span className={checkboxClass}>
           <input
             className={inputClass}
             type={type}
@@ -38,7 +40,7 @@ const Checkbox = ({ field=useField() }) => {
             checked={field.value}
           />
         </span>
-        <span className="label">{text}</span>
+        <span className={textClass}>{text}</span>
       </label>
     </div>
   )

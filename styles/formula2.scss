@@ -1,0 +1,11 @@
+// NEW version
+@import 'config/all.scss';
+@import 'mixins/all.scss';
+@import 'properties/all.scss';
+@import 'modules/all';
+
+.formula {
+  * {
+    box-sizing: border-box;
+  }
+}

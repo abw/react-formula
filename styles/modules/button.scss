@@ -1,0 +1,39 @@
+@include button {
+  border: 0;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--button-text);
+  background-color: var(--button-back);
+  border: var(--button-border-width) solid var(--button-border);
+  transition: border-color 0.25s;
+  // margin-bottom: var(--field-margin);
+  cursor: pointer;
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--button-ring);
+  }
+  & + button {
+    margin-left: 0.5rem;
+  }
+  &[type=reset], &.cancel {
+    color: var(--reset-text);
+    background-color: var(--reset-back);
+    border-color: var(--reset-border);
+    margin-bottom: 0;
+    &:focus,
+    &:focus-visible {
+      box-shadow: var(--reset-ring);
+    }
+  }
+  &[type=submit] {
+    color: var(--submit-text);
+    border-color: var(--submit-border);
+    background-color: var(--submit-back);
+    // margin-bottom: 0;
+  }
+}

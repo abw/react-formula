@@ -1,0 +1,90 @@
+@include where-dark {
+  color-scheme: dark;
+  --label-text:                   hsl(var(--label-hue), 10%, 60%);
+  --required-text:                hsl(var(--required-hue), 90%, 80%);
+  --required-back:                hsl(var(--required-hue), 60%, 30%);
+  --required-border:              hsl(var(--required-hue), 30%, 35%);
+  --optional-text:                hsl(var(--optional-hue), 90%, 80%);
+  --optional-back:                hsl(var(--optional-hue), 35%, 35%);
+  --optional-border:              hsl(var(--optional-hue), 40%, 40%);
+
+  --input-text:                   hsl(var(--input-hue), 10%, 60%);
+  --input-back:                   hsl(var(--input-hue), 10%, 20%);
+  --input-border:                 hsl(var(--input-hue), 20%, 35%);
+  --prefix-text:                  hsl(var(--input-hue), 20%, 50%);
+  --prefix-back:                  hsl(var(--input-hue), 20%, 25%);
+  --placeholder-text:             hsl(var(--input-hue), 10%, 35%);
+
+  --focus-label-text:             hsl(var(--focus-hue), 40%, 70%);
+  --focus-text:                   hsl(var(--focus-hue), 10%, 80%);
+  --focus-back:                   hsl(var(--focus-hue), 15%, 15%);
+  --focus-border:                 hsl(var(--focus-hue), 30%, 45%);
+  --focus-ring-border:            hsla(var(--focus-hue), 40%, 50%, var(--focus-ring-opacity));
+  --focus-gap-border:             hsl(var(--focus-hue), 10%, 5%);
+  --focus-prefix-text:            hsl(var(--focus-hue), 20%, 60%);
+  --focus-prefix-back:            hsl(var(--focus-hue), 25%, 30%);
+  --focus-placeholder-text:       hsl(var(--focus-hue), 15%, 50%);
+/*
+  --focus-ring:
+    0 0 0 var(--focus-ring-gap)   var(--focus-gap-border),
+    0 0 0 var(--focus-ring-width) var(--focus-ring-border);
+*/
+
+  --valid-label-text:             hsl(var(--valid-hue), 10%, 50%);
+  --valid-text:                   hsl(var(--valid-hue), 5%, 65%);
+  --valid-back:                   hsl(var(--valid-hue), 10%, 15%);
+  --valid-border:                 hsl(var(--valid-hue), 15%, 40%);
+  --valid-ring-border:            hsla(var(--valid-hue), 40%, 50%, var(--valid-ring-opacity));
+  --valid-gap-border:             hsl(var(--valid-hue), 10%, 5%);
+  --valid-prefix-text:            hsl(var(--valid-hue), 10%, 50%);
+  --valid-prefix-back:            hsl(var(--valid-hue), 20%, 20%);
+  --valid-placeholder-text:       hsl(var(--valid-hue), 10%, 35%);
+  --valid-help-text:              hsl(var(--valid-hue), 60%, 40%);
+/*
+  --valid-ring:
+    0 0 0 var(--focus-ring-gap)   var(--valid-gap-border),
+    0 0 0 var(--focus-ring-width) var(--valid-ring-border);
+*/
+
+  --invalid-label-text:           hsl(var(--invalid-hue), 15%, 55%);
+  --invalid-text:                 hsl(var(--invalid-hue), 5%, 65%);
+  --invalid-back:                 hsl(var(--invalid-hue), 10%, 15%);
+  --invalid-border:               hsl(var(--invalid-hue), 30%, 45%);
+  --invalid-ring-border:          hsla(var(--invalid-hue), 60%, 50%, var(--invalid-ring-opacity));
+  --invalid-gap-border:           hsl(var(--invalid-hue), 10%, 5%);
+  --invalid-prefix-text:          hsl(var(--invalid-hue), 10%, 50%);
+  --invalid-prefix-back:          hsl(var(--invalid-hue), 20%, 20%);
+  --invalid-placeholder-text:     hsl(var(--invalid-hue), 10%, 40%);
+  --invalid-help-text:            hsl(var(--invalid-hue), 70%, 60%);
+/*
+  --invalid-ring:
+    0 0 0 var(--focus-ring-gap)   var(--invalid-gap-border),
+    0 0 0 var(--focus-ring-width) var(--invalid-ring-border);
+*/
+  --disabled-label-text:          hsl(var(--disabled-hue), var(--disabled-sat), 45%);
+  --disabled-text:                hsl(var(--disabled-hue), var(--disabled-sat), 40%);
+  --disabled-back:                hsl(var(--disabled-hue), var(--disabled-sat), 25%);
+  --disabled-border:              hsl(var(--disabled-hue), var(--disabled-sat), 40%);
+  --disabled-prefix-text:         hsl(var(--disabled-hue), var(--disabled-sat), 60%);
+  --disabled-prefix-back:         hsl(var(--disabled-hue), var(--disabled-sat), 30%);
+  --disabled-placeholder-text:    hsl(var(--disabled-hue), var(--disabled-sat), 45%);
+  --disabled-help-text:           hsl(var(--disabled-hue), var(--disabled-sat), 50%);
+
+  --errors-text:                  hsl(var(--errors-hue), 20%, 70%);
+  --errors-back:                  hsl(var(--errors-hue), 30%, 15%);
+  --errors-border:                hsl(var(--errors-hue), 60%, 35%);
+  --errors-title-text:            hsl(var(--errors-hue), 20%, 70%);
+  --errors-label-text:            hsl(var(--errors-hue), 80%, 70%);
+
+  --fieldset-back:              rgba(255, 255, 255, 0.05);
+  --fieldset-border:              var(--input-border);
+  --legend-text:                  hsl(var(--brand-hue), 10%, 70%);
+  --legend-back:                rgba(255, 255, 255, 0.15);
+  --legend-border:                var(--fieldset-border);
+
+  --debug-back-color:             hsl(var(--debug-hue), 2%, 15%);
+  --debug-border-color:           hsl(var(--debug-hue), 10%, 35%);
+  --debug-panel-back-color:       hsl(var(--debug-hue), 5%, 20%);
+  --debug-panel-text-color:       hsl(var(--debug-hue), 60%, 90%);
+  --debug-panel-title-color:      hsl(var(--debug-hue), 90%, 95%);
+}
