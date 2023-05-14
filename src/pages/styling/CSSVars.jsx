@@ -6,6 +6,7 @@ import BrandedSrc from './examples/Branded.jsx?raw'
 import Link from '../../site/Link.jsx'
 import CodeBlock from '../../site/CodeBlock.jsx'
 import { useTheme } from '../../site/Theme.jsx'
+import './examples/branded.css'
 
 const CSSVars = () => {
   const { dark, toggleTheme } = useTheme()

@@ -82,6 +82,16 @@
   --legend-back:                rgba(255, 255, 255, 0.15);
   --legend-border:                var(--fieldset-border);
 
+  --button-text:                  hsl(var(--button-hue), 10%, 95%);
+  --button-back:                  hsl(var(--button-hue), 45%, 40%);
+  --button-border:                hsl(var(--button-hue), 45%, 40%);
+  --button-gap-border:            hsl(var(--button-hue), 10%, 5%);
+  --reset-back:                   hsl(var(--button-hue), 5%, 30%);
+  --reset-text:                   hsl(var(--button-hue), 60%, 90%);
+  --reset-border:                 hsl(var(--button-hue), 10%, 40%);
+  --reset-ring-border:            hsla(var(--button-hue), 15%, 45%, var(--button-ring-opacity));
+  --reset-gap-border:             hsl(var(--button-hue), 10%, 5%);
+
   --debug-back-color:             hsl(var(--debug-hue), 2%, 15%);
   --debug-border-color:           hsl(var(--debug-hue), 10%, 35%);
   --debug-panel-back-color:       hsl(var(--debug-hue), 5%, 20%);

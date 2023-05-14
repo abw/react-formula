@@ -1,8 +1,8 @@
-import { Form, Field } from '../../../../lib/index.js'
+import { Form, Field, ResetSubmit } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Field } from '@abw/react-formula'
+// PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
 
 const SimpleForm = ({color}) =>
   <div className={`branded-${color}`}>
@@ -10,7 +10,9 @@ const SimpleForm = ({color}) =>
       <Field
         name="field1"
         label={`The ${color} field`}
-        placeholder={`The ${color} placeholder`}/>
+        placeholder={`The ${color} placeholder`}
+      />
+      <ResetSubmit/>
     </Form>
   </div>
 

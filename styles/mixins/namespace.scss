@@ -70,6 +70,12 @@
   }
 }
 
+@mixin controls {
+  #{$formula} #{$controls} {
+    @content;
+  }
+}
+
 @mixin button {
   #{$formula} button {
     @content;
