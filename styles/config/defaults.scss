@@ -1,7 +1,7 @@
-/* Spacing */
+//= Spacing
 // Default spacing unit for margin and padding
 $spacing:                 0.25em !default;
-/* Margins */
+//= Margins
 // Default margin unit
 $margin:                  $spacing !default;
 // Twice the default margin unit
@@ -10,7 +10,7 @@ $margin-2:                $margin * 2;
 $margin-3:                $margin * 3;
 // Four times the default margin unit
 $margin-4:                $margin * 4;
-/* Padding */
+//= Padding
 // Default padding unit
 $padding:                 $spacing !default;
 // Twice the default padding unit
@@ -23,17 +23,17 @@ $padding-4:               $padding * 4;
 $padding-y:               $padding-2 !default;
 // Default horizontal padding for inputs, buttons, etc.
 $padding-x:               $padding-4 !default;
-/* Borders */
+//= Borders
 // Default border width for inputs, buttons, etc.
 $border-width:            1px !default;
 // Default border radius for inputs, buttons, etc.
 $border-radius:           3px !default;
-/* Focus Ring */
+//= Focus Ring
 // Default width of focus ring for inputs, buttons, etc.
 $focus-ring-width:        3px !default;
 // Default gap between border and focus ring for inputs, buttons, etc.
 $focus-ring-gap:          2px !default;
-/* Text Sizes */
+//= Text Sizes
 // Default size of smaller text
 $smaller-size:            0.75em;
 // Default size of small text

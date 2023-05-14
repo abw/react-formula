@@ -10,13 +10,19 @@ export function parseSassVars(text) {
       continue
     }
     if ((match = line.match(/^\/\*\s*(.*?)\s*\*\/$/))) {
-      // reset on a section
+      /* SECTION HEADING */
+      comment = [ ]
+      defs.push({ section: match[1] })
+      continue
+    }
+    if ((match = line.match(/^\/\/=\s*(.*?)$/))) {
+      //= SECTION HEADING
       comment = [ ]
       defs.push({ section: match[1] })
       continue
     }
     if ((match = line.match(/\/\/\s*(.*)/))) {
-      // console.log(`comment: [${match[1]}]`)
+      // regular comment
       comment.push(match[1])
       continue
     }
