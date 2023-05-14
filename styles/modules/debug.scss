@@ -3,7 +3,7 @@
   border: var(--debug-border-width) solid var(--debug-border);
   border-radius: var(--debug-border-radius);
   box-shadow: var(--debug-shadow);
-  margin-top: var(--debug-margin);
+  margin: var(--debug-margin);
   #{$panel} {
     position: relative;
     border: var(--debug-panel-border-width) solid var(--debug-panel-border);
