@@ -1,29 +1,59 @@
+/* Namespace Variables */
+// CSS class for checkboxes and radio buttons without a border
 $bare:     '.bare'      !default;
+// CSS class for radio buttons displayed full-width
 $block:    '.block'     !default;
+// CSS class for checkbox inputs
 $checkbox: '.checkbox'  !default;
+// CSS class for checked checkboxes
 $checked:  '.checked'   !default;
+// CSS class for form controls: reset, submit, etc
 $controls: '.controls'  !default;
+// CSS class for dark theme
 $dark:     '.dark'      !default;
+// CSS class for debug component
 $debug:    '.debug'     !default;
+// CSS class for disabled fields
 $disabled: '.disabled'  !default;
+// CSS class for errors component
 $errors:   '.errors'    !default;
+// CSS class for fields
 $field:    '.field'     !default;
+// CSS class for focussed fields
 $focus:    '.focus'     !default;
+// Main CSS scope for all react-formula CSS rules
 $formula:  '.formula'   !default;
+// CSS class for help messages, include valid/invalid messages
 $help:     '.help'      !default;
+// CSS class for field input
 $input:    '.input'     !default;
+// CSS class for field inputs, including any prefix and/or suffix
 $inputs:   '.inputs'    !default;
+// CSS class for invalid field
 $invalid:  '.invalid'   !default;
+// CSS class for radio button option
 $option:   '.option'    !default;
+// CSS class for Optional label
 $optional: '.optional'  !default;
+// CSS class for panels inside debug component
 $panel:    '.panel'     !default;
+// CSS class for input prefix
 $prefix:   '.prefix'    !default;
+// CSS class for fields that have a prefix
 $prefixed: '.prefixed'  !default;
+// CSS class for radio button fields
 $radio:    '.radio'     !default;
+// CSS class for Required label
 $required: '.required'  !default;
+// CSS class for input suffix
 $suffix:   '.suffix'    !default;
+// CSS class for fields that have a suffix
 $suffixed: '.suffixed'  !default;
+// CSS class for text displayed with a checkbox or radio button
 $text:     '.text'      !default;
+// CSS class for thin fields that don't stretch to 100% width
 $thin:     '.thin'      !default;
+// CSS class for valid fields
 $valid:    '.valid'     !default;
+// CSS class for wide checkboxes and radio buttons
 $wide:     '.wide'      !default;

@@ -1,16 +1,16 @@
 import React from 'react'
-import colors from '../../../styles/config/colors.scss?raw'
-import input  from '../../../styles/config/input.scss?raw'
+import defaults from '../../../styles/config/defaults.scss?raw'
+import namespace  from '../../../styles/config/namespace.scss?raw'
 import { parseSassVars } from '../../site/ParseSassVars.js'
 
-const colorVars = parseSassVars(colors)
-const inputVars = parseSassVars(input)
+const namespaceVars = parseSassVars(namespace)
+const defaultsVars = parseSassVars(defaults)
 
 const Variables = () =>
   <div>
     <h1>SASS Variables</h1>
-    <Table title="Input" vars={inputVars}/>
-    <Table title="Colors" vars={colorVars}/>
+    <Table title="Namespace Variables" vars={namespaceVars}/>
+    <Table title="Default Values" vars={defaultsVars}/>
   </div>
 
 const Table = ({title, vars}) =>

@@ -10,27 +10,17 @@
 
 * also add `styles`?
 
-## Context
-
-* Looks like I broke the status change methods when I switch them to functions
-e.g. `Changed` doesn't work.  UPDATE - HUZZAH!  Fixed it (but write some
-tests)
-
 ## Components
 
 * Debug needs to be updated to reflect changes in form state
 
-* Changed - docs and tests
-
-* default values
+* default values - tests and docs
 
 * Docs for Debug need updating
 
 ## Field
 
-* tests and docs for setValid() and setInvalid()
-
-* hide/show
+* hide/show?
 
 ## Form
 
@@ -49,10 +39,6 @@ registering with the form?
 * focus/scroll to first invalid field
 
 * minLength, maxLength, pattern, etc.
-
-## Misc
-
-* placeholder for select as initial unselected/unselectable option
 
 ## Docs
 
@@ -77,6 +63,8 @@ be `validate`
 
 * useForm() / useField()
 
+* Docs for Field setValid() and setInvalid()
+
 * Text input docs looks like the original first page of the tutorial
 
 * Update styling page to talk about CSS variables
@@ -87,14 +75,13 @@ be `validate`
 
 ## Styling
 
+* finish cleaning up CSS props
+
 * thin/wide fields - be consistent and let it be set on form
 
 * prefix/suffix for checkboxes
 
-* bare radio buttons and checkboxes don't have any padding on left which shows
-when focussed
-
-* CancelSubmit buttons are on the wonk
+* .block style is redundant?
 
 ## Theming
 
