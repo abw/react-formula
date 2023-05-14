@@ -2,11 +2,6 @@
 @import 'utils/all.scss';
 @import 'modules/all.scss';
 
-.formula {
-  // --brand-hue: 30;
-  // --error-hue: 120;
-}
-
 .note {
   background-color: hsl($note-hue, 80%, 90%);
   border: 3px solid hsl($note-hue, 90%, 45%);
@@ -169,7 +164,6 @@ form.formula {
   }
 }
 
-
 form.formula {
   &.panel {
     background-color: rgba(255,255,255, 0.5);
@@ -189,7 +183,6 @@ form.formula {
   background-color: hsl($dev-hue, 10%, 90%);
   padding: 1rem;
 }
-
 
 .formula {
   h2 {
