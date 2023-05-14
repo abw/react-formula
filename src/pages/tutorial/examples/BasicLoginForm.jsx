@@ -10,7 +10,7 @@ const BasicLoginForm = () =>
     <Field name="email" label="Email Address" required/>
     <Field name="password" type="password" label="Password" required/>
     <div className="flex space">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <a href="https://tinyurl.com/576m4j6n">
         Forgot your password?
       </a>
       <Submit text="Login"/>

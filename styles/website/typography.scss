@@ -25,11 +25,13 @@ p.intro {
 p.subintro {
   font-size: 1.25em;
 }
-a {
+a, .link {
   font-weight: 500;
   color: var(--link-fg);
   text-decoration: inherit;
   transition: 500ms all;
+  cursor: pointer;
+  user-select: none;
   &:hover {
     transition: 200ms all;
     color: var(--link-hv-fg);

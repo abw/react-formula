@@ -4,10 +4,6 @@
   --input-border-width:           #{$border-width};
   // Border radius of field
   --input-border-radius:          #{$border-radius};
-  // Width of focus ring
-  --input-ring-width:             #{$ring-width};
-  // Gap between border and focus ring
-  --input-ring-gap:               #{$ring-gap};
   // Vertical padding
   --input-padding-vertical:       #{$unit-padding-vertical};
   // Horizontal padding
@@ -20,6 +16,10 @@
   --input-max-height:             calc(1em + (var(--input-padding-vertical) * 2) + (var(--input-border-width) * 2));
   // Tweak select to make same size
   --select-padding-tweak:         1.25px;
+  // Width of focus ring
+  --focus-ring-width:             #{$ring-width};
+  // Gap between border and focus ring
+  --focus-ring-gap:               #{$ring-gap};
 
   --input-border-radius:          #{$input-border-radius};
   --shadow-1:                     1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
   // `showOptional` option is set
   --optional-hue:                 210;
   // Hue for focussed inputs, defaulting to a sky blue.
-  --focus-hue:                    210;
+  --focus-hue:                    var(--brand-hue);
     // Hue for validated inputs, usually a green hue.
   --valid-hue:                    90;
   // Hue for invalid inputs, usually a red hue.
@@ -94,8 +94,9 @@
   --focus-bg:                     hsl(var(--focus-hue), 60%, 99%);
   // Border color for inputs in focussed fields.
   --focus-bd:                     hsl(var(--focus-hue), 60%, 70%);
+  --focus-ring-opacity:           0.5;
   // Border color for inputs in focussed fields.
-  --focus-ring-bd:                hsl(var(--focus-hue), 70%, 85%);
+  --focus-ring-bd:                hsla(var(--focus-hue), 70%, 60%, var(--focus-ring-opacity));
   // Color of gap between border and ring.
   --focus-gap-bd:                 hsl(var(--focus-hue), 10%, 95%);
   // Text color for prefix/suffix elements in focussed fields.
@@ -106,8 +107,8 @@
   --focus-placeholder-fg:         hsl(var(--focus-hue), 50%, 80%);
   // Box shadow for focus ring
   --focus-ring:
-    0 0 0 var(--input-ring-gap)   var(--focus-gap-bd),
-    0 0 0 var(--input-ring-width) var(--focus-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--focus-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--focus-ring-bd);
 
   /* Valid Field State */
   // Color for labels in valid fields.
@@ -132,8 +133,8 @@
   --valid-message-fg:             hsl(var(--valid-hue), 60%, 40%);
   // Box shadow for valid focus ring
   --valid-ring:
-    0 0 0 var(--input-ring-gap)   var(--valid-gap-bd),
-    0 0 0 var(--input-ring-width) var(--valid-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--valid-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--valid-ring-bd);
 
   /* Invalid Field State */
   // Color for labels in invalid fields.
@@ -158,8 +159,8 @@
   --invalid-message-fg:           hsl(var(--invalid-hue), 70%, 50%);
   // Box shadow for invalid focus ring
   --invalid-ring:
-    0 0 0 var(--input-ring-gap)   var(--invalid-gap-bd),
-    0 0 0 var(--input-ring-width) var(--invalid-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--invalid-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--invalid-ring-bd);
 
   /* Disabled Field State */
   // Saturation for disabled elements
@@ -239,16 +240,16 @@
 
   --focus-label-fg:               hsl(var(--focus-hue), 40%, 70%);
   --focus-fg:                     hsl(var(--focus-hue), 10%, 80%);
-  --focus-bg:                     hsl(var(--focus-hue), 10%, 25%);
+  --focus-bg:                     hsl(var(--focus-hue), 15%, 15%);
   --focus-bd:                     hsl(var(--focus-hue), 30%, 45%);
-  --focus-ring-bd:                hsl(var(--focus-hue), 40%, 50%);
+  --focus-ring-bd:                hsl(var(--focus-hue), 40%, 50%, var(--focus-ring-opacity));
   --focus-gap-bd:                 hsl(var(--focus-hue), 10%, 5%);
   --focus-prefix-fg:              hsl(var(--focus-hue), 20%, 60%);
   --focus-prefix-bg:              hsl(var(--focus-hue), 25%, 30%);
   --focus-placeholder-fg:         hsl(var(--focus-hue), 15%, 50%);
   --focus-ring:
-    0 0 0 var(--input-ring-gap)   var(--focus-gap-bd),
-    0 0 0 var(--input-ring-width) var(--focus-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--focus-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--focus-ring-bd);
 
   --valid-label-fg:               hsl(var(--valid-hue), 10%, 50%);
   --valid-fg:                     hsl(var(--valid-hue), 5%, 65%);
@@ -261,8 +262,8 @@
   --valid-placeholder-fg:         hsl(var(--valid-hue), 10%, 35%);
   --valid-message-fg:             hsl(var(--valid-hue), 60%, 40%);
   --valid-ring:
-    0 0 0 var(--input-ring-gap)   var(--valid-gap-bd),
-    0 0 0 var(--input-ring-width) var(--valid-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--valid-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--valid-ring-bd);
 
   --invalid-label-fg:             hsl(var(--invalid-hue), 15%, 55%);
   --invalid-fg:                   hsl(var(--invalid-hue), 5%, 65%);
@@ -275,8 +276,8 @@
   --invalid-placeholder-fg:       hsl(var(--invalid-hue), 10%, 40%);
   --invalid-message-fg:           hsl(var(--invalid-hue), 70%, 60%);
   --invalid-ring:
-    0 0 0 var(--input-ring-gap)   var(--invalid-gap-bd),
-    0 0 0 var(--input-ring-width) var(--invalid-ring-bd);
+    0 0 0 var(--focus-ring-gap)   var(--invalid-gap-bd),
+    0 0 0 var(--focus-ring-width) var(--invalid-ring-bd);
 
   --disabled-label-fg:            hsl(var(--disabled-hue), var(--disabled-sat), 45%);
   --disabled-fg:                  hsl(var(--disabled-hue), var(--disabled-sat), 40%);
@@ -296,8 +297,7 @@
   --fieldset-bg:                rgba(255, 255, 255, 0.05);
   --fieldset-bd:                  var(--input-bd);
   --legend-fg:                    hsl(var(--brand-hue), 10%, 70%);
-  // --legend-bg:                    hsl(var(--brand-hue), 5%, 40%);
-  --legend-bg:                    rgba(255, 255, 255, 0.15);
+  --legend-bg:                  rgba(255, 255, 255, 0.15);
   --legend-bd:                    var(--fieldset-bd);
 
   --debug-back-color:             hsl(var(--debug-hue), 2%, 15%);

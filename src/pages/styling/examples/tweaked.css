@@ -1,0 +1,5 @@
+.fat-ring .formula {
+  --input-ring-width: 4px;
+  --input-ring-gap: 2px;
+  --input-border-width: 2px;
+}
