@@ -48,7 +48,7 @@ const Sidebar = () =>
     <footer>
       <div className="notes">
         <div>
-          Version {version}
+          v{version}
         </div>
         <a href="https://github.com/abw">
           <Abw/>
