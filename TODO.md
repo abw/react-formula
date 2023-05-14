@@ -42,6 +42,8 @@ registering with the form?
 
 ## Docs
 
+* Codeblock/Example copy is broken when children are used
+
 * API / component reference
 
 * Changed component
