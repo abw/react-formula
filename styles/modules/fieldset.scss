@@ -1,0 +1,26 @@
+@include fieldset {
+  margin: var(--fieldset-margin);
+  padding: var(--fieldset-padding);
+  border: var(--fieldset-border-width) solid var(--fieldset-border);
+  border-radius: var(--fieldset-border-radius);
+  background-color: var(--fieldset-back);
+  box-shadow: var(--fieldset-shadow);
+  legend {
+    font-size: var(--legend-size);
+    line-height: 1;
+    padding: var(--legend-padding);
+    color: var(--legend-text);
+    background-color: var(--legend-back);
+    border: var(--legend-border-width) solid var(--legend-border);
+    border-radius: var(--legend-border-radius);
+  }
+  .field:first-child {
+    margin-top: 0;
+  }
+  .field:last-child {
+    margin-bottom: 0;
+  }
+  .field:last-child {
+    margin-bottom: 1rem;
+  }
+}

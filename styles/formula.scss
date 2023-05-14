@@ -1,16 +1,5 @@
-// OLD version
-$formula-selector:  '.formula' !default;
-$dark-selector:     '.dark' !default;
-
-@import 'config/formula';
-// @import 'utils/all';
-@import 'components/all';
-
-.formula {
-  * {
-    box-sizing: border-box;
-  }
-  // .wide {
-    // width: 100%;
-  // }
-}
+// NEW version
+@import 'config/all.scss';
+@import 'mixins/all.scss';
+@import 'properties/all.scss';
+@import 'modules/all';

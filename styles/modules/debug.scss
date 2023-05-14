@@ -1,0 +1,33 @@
+@include debug {
+  background-color: var(--debug-back);
+  border: var(--debug-border-width) solid var(--debug-border);
+  border-radius: var(--debug-border-radius);
+  box-shadow: var(--debug-shadow);
+  margin-top: var(--debug-margin);
+  #{$panel} {
+    position: relative;
+    border: var(--debug-panel-border-width) solid var(--debug-panel-border);
+    border-radius: var(--debug-panel-border-radius);
+    background-color: var(--debug-panel-back);
+    box-shadow: var(--debug-panel-shadow);
+    margin: var(--debug-panel-margin);
+    padding: var(--debug-panel-padding);
+    h4 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0.25em 0.75em;
+      font-size: 0.8rem;
+      line-height: 1;
+      text-align: right;
+      color: var(--debug-panel-title-text);
+      background-color: var(--debug-panel-border);
+      border-bottom-left-radius: var(--debug-panel-border-radius);
+    }
+    pre {
+      margin: 0;
+      color: var(--debug-panel-text);
+    }
+  }
+}

@@ -287,12 +287,32 @@
   --fieldset-back:              rgba(255, 255, 255, 0.5);
   // Color of fieldset border
   --fieldset-border:              var(--input-border);
+  // Width for fieldset border
+  --fieldset-border-width:        var(--border-width);
+  // Border radius for fieldset
+  --fieldset-border-radius:       var(--border-radius);
+  // Margin for fieldset
+  --fieldset-margin:              1em 0;
+  // Padding for fieldset
+  --fieldset-padding:             1em 2em;
+  // Box shadow for fieldset
+  --fieldset-shadow:              var(--shadow-2);
+
+  /* Fieldset legend */
   // Text color for fieldset legend
-  --legend-text:                  hsl(var(--brand-hue), 10%, 30%);
+  --legend-text:                  hsl(var(--brand-hue), 10%, 40%);
   // Background color for fieldset legend
   --legend-back:                  hsl(var(--brand-hue), 5%, 95%);
-  // Background color for fieldset legend
+  // Padding for fieldset legend
+  --legend-padding:               var(--padding) var(--padding-2);
+  // Text size for fieldset legend
+  --legend-size:                  var(--smaller-size);
+  // Border color for fieldset legend
   --legend-border:                var(--fieldset-border);
+  // Border width for fieldset legend
+  --legend-border-width:          var(--fieldset-border-width);
+  // Border radius for fieldset legend
+  --legend-border-radius:         var(--fieldset-border-radius);
 
   /* Button Variables */
   // Vertical padding
@@ -346,6 +366,39 @@
   --reset-ring:
     0 0 0 var(--focus-ring-gap)   var(--reset-gap-border),
     0 0 0 var(--focus-ring-width) var(--reset-ring-border);
+
+  /* Debug variables */
+   // Background color for debug component
+  --debug-back:                   hsl(var(--debug-hue), 20%, 95%);
+   // Border color for debug component
+  --debug-border:                 hsl(var(--debug-hue), 30%, 85%);
+  // Border width for debug component
+  --debug-border-width:           var(--input-border-width);
+  // Corner radius for debug component border
+  --debug-border-radius:          var(--border-radius);
+  // Margin for debug component
+  --debug-margin:                 2rem 0 0 0;
+  // Box shadow for debug component
+  --debug-shadow:                 var(--shadow-2);
+
+  // Text color for inset debugging panels
+  --debug-panel-text:             hsl(var(--debug-hue), 90%, 10%);
+  // Background color for inset debugging panels
+  --debug-panel-back:             hsl(var(--debug-hue), 10%, 97%);
+  // Title color for inset debugging panels
+  --debug-panel-title-text:       hsl(var(--debug-hue), 90%, 10%);
+  // Padding for inset debugging panels
+  --debug-panel-padding:          var(--padding-2) var(--padding-4);
+  // Margin for inset debugging panels
+  --debug-panel-margin:           var(--margin-2);
+  // Border color for inset debugging panels
+  --debug-panel-border:           var(--debug-border);
+  // Border width for inset debugging panels
+  --debug-panel-border-width:     var(--debug-border-width);
+  // Border radius for inset debugging panels
+  --debug-panel-border-radius:    var(--debug-border-radius);
+  // Box shadow for inset debugging panels
+  --debug-panel-shadow:           var(--shadow-1);
 
   /* TODO */
   --accent-color:                 hsl(var(--brand-hue), 60%, 30%);

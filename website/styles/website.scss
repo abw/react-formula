@@ -1,13 +1,6 @@
-@import 'config/units.scss';
+@import 'config/all.scss';
 @import 'utils/all.scss';
-@import 'website/config.scss';
-@import 'website/typography.scss';
-@import 'website/layout.scss';
-@import 'website/controls.scss';
-@import 'website/menus.scss';
-@import 'website/code.scss';
-@import 'website/nav.scss';
-@import 'website/icon.scss';
+@import 'modules/all.scss';
 
 .formula {
   // --brand-hue: 30;
@@ -159,8 +152,8 @@ form.formula {
     &:focus {
       outline: none;
       box-shadow:
-        0 0 0 $button-ring-gap hsl($red-hue, 20%, 90%),
-        0 0 0 $button-ring-width hsl($red-hue, 50%, 70%);
+        0 0 0 $focus-ring-gap hsl($red-hue, 20%, 90%),
+        0 0 0 $focus-ring-width hsl($red-hue, 50%, 70%);
     }
   }
   button.btn-green {
@@ -170,8 +163,8 @@ form.formula {
     &:focus {
       outline: none;
       box-shadow:
-        0 0 0 $button-ring-gap hsl($green-hue, 20%, 90%),
-        0 0 0 $button-ring-width hsl($green-hue, 50%, 70%);
+        0 0 0 $focus-ring-gap hsl($green-hue, 20%, 90%),
+        0 0 0 $focus-ring-width hsl($green-hue, 50%, 70%);
     }
   }
   button.btn-blue {
@@ -181,8 +174,8 @@ form.formula {
     &:focus {
       outline: none;
       box-shadow:
-        0 0 0 $button-ring-gap hsl($blue-hue, 20%, 90%),
-        0 0 0 $button-ring-width hsl($blue-hue, 50%, 70%);
+        0 0 0 $focus-ring-gap hsl($blue-hue, 20%, 90%),
+        0 0 0 $focus-ring-width hsl($blue-hue, 50%, 70%);
     }
   }
   button.btn-brown {
@@ -192,8 +185,8 @@ form.formula {
     &:focus {
       outline: none;
       box-shadow:
-        0 0 0 $button-ring-gap hsl($brown-hue, 20%, 90%),
-        0 0 0 $button-ring-width hsl($brown-hue, 50%, 70%);
+        0 0 0 $focus-ring-gap hsl($brown-hue, 20%, 90%),
+        0 0 0 $focus-ring-width hsl($brown-hue, 50%, 70%);
     }
   }
   button.btn-lilac {
@@ -203,8 +196,8 @@ form.formula {
     &:focus {
       outline: none;
       box-shadow:
-        0 0 0 $button-ring-gap hsl($lilac-hue, 10%, 90%),
-        0 0 0 $button-ring-width hsl($lilac-hue, 20%, 80%);
+        0 0 0 $focus-ring-gap hsl($lilac-hue, 10%, 90%),
+        0 0 0 $focus-ring-width hsl($lilac-hue, 20%, 80%);
     }
   }
 }
@@ -266,38 +259,3 @@ form.formula {
     text-align: right;
   }
 }
-/*
-.branded-red .formula {
-  --brand-hue: 0;
-}
-.branded-orange .formula {
-  --brand-hue: 30;
-}
-.branded-yellow .formula {
-  --brand-hue: 60;
-}
-.branded-green .formula {
-  --brand-hue: 120;
-}
-.branded-teal .formula {
-  --brand-hue: 160;
-}
-.branded-blue .formula {
-  --brand-hue: 200;
-}
-.branded-indigo .formula {
-  --brand-hue: 240;
-}
-.branded-violet .formula {
-  --brand-hue: 280;
-}
-.branded-maroon .formula {
-  --brand-hue: 320;
-}
-.wide-border .formula {
-  --input-border-width: 2px;
-  --focus-ring-width: 4px;
-  --focus-ring-gap: 1px;
-  --focus-ring-opacity: 0.4;
-}
-*/

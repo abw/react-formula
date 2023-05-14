@@ -1,6 +1,6 @@
-$formula:  '.formula' !default;
-$dark:     '.dark'    !default;
+$formula: '.my-formula';
+$field:   '.my-field';
+$dark:    '.my-dark-theme';
 
-@import "config/all.scss";
-@import "mixins/namespace.scss";
-@import "properties/all.scss";
+@import 'formula.scss';
+

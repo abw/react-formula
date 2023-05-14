@@ -1,8 +1,3 @@
-@import '../config/formula.scss';
-@import '../config/fonts.scss';
-@import '../utils/spacing.scss';
-
-// $dev-hue: 220;
 $dev-hue: 193;
 $hover-hue: 260;
 $note-hue: 210;
@@ -24,7 +19,6 @@ $shadows: $shadow2, $shadow4;
 $link-color: hsl($dev-hue, 60%, 30%);
 $hover-color: hsl($hover-hue, 40%, 55%);
 $active-color: hsl($dev-hue, 90%, 10%);
-
 
 $codeblock-bg-light: #292C2D;
 $codeblock-bg-dark:  #14191B;

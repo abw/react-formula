@@ -77,10 +77,8 @@
   --errors-label-text:            hsl(var(--errors-hue), 80%, 70%);
 
   --fieldset-back:              rgba(255, 255, 255, 0.05);
-  --fieldset-border:              var(--input-border);
   --legend-text:                  hsl(var(--brand-hue), 10%, 70%);
   --legend-back:                rgba(255, 255, 255, 0.15);
-  --legend-border:                var(--fieldset-border);
 
   --button-text:                  hsl(var(--button-hue), 10%, 95%);
   --button-back:                  hsl(var(--button-hue), 45%, 40%);
@@ -92,9 +90,9 @@
   --reset-ring-border:            hsla(var(--button-hue), 15%, 45%, var(--button-ring-opacity));
   --reset-gap-border:             hsl(var(--button-hue), 10%, 5%);
 
-  --debug-back-color:             hsl(var(--debug-hue), 2%, 15%);
-  --debug-border-color:           hsl(var(--debug-hue), 10%, 35%);
-  --debug-panel-back-color:       hsl(var(--debug-hue), 5%, 20%);
-  --debug-panel-text-color:       hsl(var(--debug-hue), 60%, 90%);
-  --debug-panel-title-color:      hsl(var(--debug-hue), 90%, 95%);
+  --debug-back:                   hsl(var(--debug-hue), 2%, 15%);
+  --debug-border:                 hsl(var(--debug-hue), 10%, 35%);
+  --debug-panel-back:             hsl(var(--debug-hue), 5%, 20%);
+  --debug-panel-text:             hsl(var(--debug-hue), 20%, 85%);
+  --debug-panel-title-text:       hsl(var(--debug-hue), 90%, 95%);
 }

@@ -64,6 +64,12 @@
   }
 }
 
+@mixin fieldset {
+  #{$formula} fieldset {
+    @content;
+  }
+}
+
 @mixin errors {
   #{$formula} #{$errors} {
     @content;
@@ -82,4 +88,9 @@
   }
 }
 
+@mixin debug {
+  #{$formula} #{$debug} {
+    @content;
+  }
+}
 
