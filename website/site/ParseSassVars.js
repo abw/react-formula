@@ -22,9 +22,12 @@ export function parseSassVars(text) {
     }
     if ((match = line.match(/(\$[\w-]*):\s*(.*?)\s*(!default)?;/))) {
       // console.log(`definition: [${match[1]}] = [${match[2]}]`)
+      const value  = match[2]
+      const quoted = value.match(/^'(.*?)'$/)
+      const result = quoted ? quoted[1] : value
       defs.push({
         variable:     match[1],
-        defaultValue: match[2],
+        defaultValue: result,
         description:  comment.join(' ')
       })
       comment = [ ]

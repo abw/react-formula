@@ -34,8 +34,8 @@ const Sidebar = () =>
       items={[
         ['forms',     'Form Styles'],
         ['fields',    'Field Styles'],
-        ['variables', 'SASS Variables'],
         ['css-variables', 'CSS Variables'],
+        ['sass-variables', 'SASS Variables'],
       ]}
     />
 

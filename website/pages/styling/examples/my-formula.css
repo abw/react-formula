@@ -1,0 +1,9 @@
+.formula {
+  --brand-hue:          123;
+  --input-border-width: 2px;
+  --focus-ring-width:   4px;
+  --focus-ring-gap:     1px;
+  --focus-ring-opacity: 0.4;
+  --valid-border:       #4a4;
+  --invalid-border:     #4a4;
+}

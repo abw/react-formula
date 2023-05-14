@@ -1,7 +1,7 @@
 .wide-border .formula {
   --input-border-width: 2px;
-  --focus-ring-width: 4px;
-  --focus-ring-gap: 1px;
+  --focus-ring-width:   4px;
+  --focus-ring-gap:     1px;
   --focus-ring-opacity: 0.4;
 }
 .branded-red .formula {

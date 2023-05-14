@@ -7,39 +7,6 @@
   // --error-hue: 120;
 }
 
-table.sass-vars {
-  thead {
-    tr th {
-      text-align: left;
-      padding: 0.25rem 0.5rem;
-      background-color: hsl($dev-hue, 30%, 90%);
-    }
-  }
-  tbody {
-    tr td {
-      text-align: left;
-      padding: 0.25rem 0.5rem;
-      background-color: rgba(#fff, 0.8);
-      vertical-align: top;
-      &.name,
-      &.default {
-        white-space: nowrap;
-        color: hsl($dev-hue, 80%, 20%);
-        font-weight: bold;
-        font-family: $monospace;
-        font-size: 0.8rem;
-      }
-    }
-    th.section {
-      // background-color: hsl($dev-hue, 80%, 90%);
-      background-color: hsl($dev-hue, 50%, 40%);
-      color: hsl($dev-hue, 80%, 90%);
-      font-size: 0.8em;
-      font-weight: normal;
-    }
-  }
-}
-
 .note {
   background-color: hsl($note-hue, 80%, 90%);
   border: 3px solid hsl($note-hue, 90%, 45%);
