@@ -1,0 +1,26 @@
+#{$formula-selector} fieldset {
+  border: $fieldset-border-width solid var(--fieldset-bd);
+  border-radius: $fieldset-border-radius;
+  background-color: var(--fieldset-bg);
+  padding: $fieldset-padding;
+  margin: $fieldset-margin;
+  box-shadow: $fieldset-shadow;
+  legend {
+    font-size: $legend-font-size;
+    line-height: 1;
+    padding: $legend-padding;
+    color: var(--legend-fg);
+    background-color: var(--legend-bg);
+    border: $legend-border-width solid var(--legend-bd);
+    border-radius: $legend-border-radius;
+  }
+  .field:first-child {
+    margin-top: 0;
+  }
+  .field:last-child {
+    margin-bottom: 0;
+  }
+  .field:last-child {
+    margin-bottom: 1rem;
+  }
+}

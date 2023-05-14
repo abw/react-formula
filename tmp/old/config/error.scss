@@ -1,0 +1,22 @@
+// DEPRECATED
+/* Error Variables */
+// Width of border
+$error-border-width:           $border-width * 2 !default;
+// Border radius of error panels
+$error-border-radius:          $border-radius * 2 !default;
+// Error box horizontal padding
+$error-padding-horizontal:     1.5rem !default;
+// Error box vertical padding
+$error-padding-vertical:       0.75rem !default;
+// Error title font-size
+$error-title-size:             1.25rem;
+// Error title padding
+$error-title-padding:          0.25em 0.5em 0.35em !default;
+// Error title font weight
+$error-title-weight:           normal !default;
+// Error box margin
+$error-margin:                 0 0 1em 0 !default;
+// Box shadow
+$error-box-shadow:             2px 2px 4px hsla($error-hue, 90%, 20%, 0.05);
+// Radius of title bar
+$error-title-radius:           $error-border-radius - $error-border-width !default;
