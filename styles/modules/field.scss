@@ -195,6 +195,53 @@
   color: var(--help-text);
 }
 
+@include field {
+  &#{$thin} {
+    #{$inputs} {
+      display: inline-flex;
+      input,
+      textarea,
+      select {
+        flex-basis: auto;
+      }
+    }
+    #{$radio} label#{$option},
+    #{$checkbox} label#{$option} {
+      width: 100%;
+    }
+  }
+  &#{$wide} {
+    #{$inputs} {
+      input,
+      textarea,
+      select {
+        flex-basis: 100%;
+      }
+    }
+    #{$radio} label#{$option},
+    #{$checkbox} label#{$option} {
+      width: 100%;
+      input {
+        flex-basis: auto;
+      }
+      span#{$text} {
+        flex-basis: 100%;
+      }
+    }
+  }
+  &.bare {
+    #{$inputs} #{$option} {
+      border: none;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+        color: var(--focus-fg);
+      }
+    }
+  }
+}
+
+
 @include field-valid {
   label:not(#{$option}) {
     color: var(--valid-label-text);
