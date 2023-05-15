@@ -17,7 +17,7 @@
     "./sass/*": "./dist/sass/*"
   },
   "author": "Andy Wardley",
-  "licence": "ISC",
+  "license": "ISC",
   "keywords": [
     "react",
     "form"
