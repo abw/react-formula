@@ -1,8 +1,7 @@
-import React from 'react'
-import CodeBlock from '../../site/CodeBlock.jsx'
-import install from '../../snippets/install.bash?raw'
-import Import  from '../../snippets/Import.jsx?raw'
-import IntroductionPager from '../../site/Pager/Introduction.jsx'
+import React      from 'react'
+import CodeBlock  from '../../site/CodeBlock.jsx'
+import install    from '../../snippets/install.bash?raw'
+import Pager      from '../../site/Pager/Introduction.jsx'
 
 const Installation = () =>
   <div>
@@ -13,15 +12,12 @@ const Installation = () =>
     </p>
     <CodeBlock language="bash" code={install} expand/>
     <p>
-      You can then import the modules and start using them.
+      There, that wasn&apos;t too hard now, was it?  The next step is to
+      add the default CSS stylesheet or SASS components to your project.
+      Your forms will be perfectly functional without them, but maybe a
+      little bland.
     </p>
-    <CodeBlock code={Import} expand/>
-    <p>
-      If you want to use the provided styles (and you probably will to start
-      with) then you&apos;ll need to import the default CSS stylesheet into
-      your React app.  Something like this:
-    </p>
-    <IntroductionPager uri="installation"/>
+    <Pager uri="installation"/>
   </div>
 
 export default Installation

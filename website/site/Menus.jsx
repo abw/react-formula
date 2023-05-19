@@ -5,8 +5,9 @@ export const IntroductionMenu = {
   url:  '/introduction',
   items: [
     ['installation',          'Installation'],
-    ['styling',               'Styling with CSS/SCSS'],
-    ['why',                   'Why Does This Exist?'],
+    ['styling',               'Adding Styling'],
+    ['first-form',            'Your First Form'],
+    // ['why',                   'Why Does This Exist?'],
   ]
 }
 export const TutorialMenu = {

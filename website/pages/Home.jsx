@@ -10,28 +10,36 @@ const Home = () =>
       <div className="logo">
         <ReactFormula/>
       </div>
-      {/* <img src={imgUrl('react-formula.svg')}/> */}
       <div className="blurb">
         <p className="intro">
           <code className="code">react-formula</code> is yet another React
           form component library.
         </p>
         <p className="subintro">
-          Yes, I know, there are plenty of other form libraries out there.
-          Some of them are good, some are excellent, and some are not so good.
-          This one isn&apos;t necessarily any better or worse than any other one.
-          At best it&apos;s just a bit <Link to="/why" text="different"/>.
-        </p>
-        <p className="subintro">
-          Should you use it?  Probably not.
-          If you haven&apos;t tried it then{' '}
-          <a href="https://final-form.org/react">React Final Form</a> is
-          definitely one of the better existing form libraries.  I&apos;d
-          recommend you start there.  Seriously, I&apos;m not looking to attract
-          new users or change the world.  Been there, done that, burned out.
+          I know what you&apos;re thinking.
+          What does the World need with another React form library?
+          What makes this different, better, and/or worse than all the
+          other form libraries?  Will this guy do my homework for me?
+          Why do we exist?  What is the meaning of life? Where did I leave
+          my car keys? And what is it with all the badgers?
         </p>
       </div>
     </div>
+    <p className="subintro">
+      None of these questions will be answered, at least not directly.
+      You can read the copious documentation provided here if you want to
+      find out more.  Or don&apos;t.  It makes no difference to me.  Seriously,
+      I&apos;m not looking to convince you that this is any better or worse
+      than any other form library.  I&apos;m not interested in attracting new
+      users or changing the world.  Been there, done that, burned out.
+    </p>
+    <p className="subintro">
+      I wrote this library to help me do my job and make the process of
+      working with forms less painful than I found it using other modules.
+      It&apos;s Open Source and you can use it if you want to for <b>free</b>.
+      Furthermore, you have full access to the source code which you want
+      adapt if you need to.  You don&apos;t owe me anything.
+    </p>
     <div className="warning">
       <h3>WARNING - THIS IS A WORK IN PROGRESS</h3>
       <p>
@@ -49,13 +57,29 @@ const Home = () =>
         look at it.  You&apos;ve seen enough of that one.
       </p>
     </div>
-    <p className="intro">
+    <p className="subintro">
       Still with me?  OK then, but proceed at your own risk.
     </p>
     <div>
       <ul className="large menu">
-        <li><Link to="getting-started">Getting Started</Link></li>
-        <li><Link to="why">Why Does This Exist?</Link></li>
+        <li>
+          <Link to="/introduction">Getting Started - installing the library and importing the styles</Link>
+        </li>
+        <li>
+          <Link to="/tutorial">Tutorial - a guided walk-through of the features</Link>
+        </li>
+        <li>
+          <Link to="/components">Components - detailed documentation for each of the components</Link>
+        </li>
+        <li>
+          <Link to="/inputs">Input Types - further information about the different types of input</Link>
+        </li>
+        <li>
+          <Link to="/customising">Customising - adapting existing modules and adding your own</Link>
+        </li>
+        <li>
+          <Link to="/styling">Styling - changing the default styles</Link>
+        </li>
       </ul>
     </div>
     <div className="badger">
