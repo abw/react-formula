@@ -1,98 +1,173 @@
 @include where-dark {
   color-scheme: dark;
+  /* Labels, including Required and Optional label tags */
+  // Text color for field labels in the default state
   --label-text:                   hsl(var(--label-hue), 10%, 60%);
+  // Text color for the "Required" label tag
   --required-text:                hsl(var(--required-hue), 90%, 80%);
+  // Background color for the "Required" label tag
   --required-back:                hsl(var(--required-hue), 60%, 30%);
+  // Border color for the "Required" label tag.
   --required-border:              hsl(var(--required-hue), 30%, 35%);
+  // Text color for the "Optional" label tag
   --optional-text:                hsl(var(--optional-hue), 90%, 80%);
+  // Background color for the "Optional" label tag
   --optional-back:                hsl(var(--optional-hue), 35%, 35%);
+  // Border color for the "Optional" label tag
   --optional-border:              hsl(var(--optional-hue), 40%, 40%);
 
+  /* Inputs */
+  // Text color for inputs in the default state.
   --input-text:                   hsl(var(--input-hue), 10%, 60%);
+  // Background color for inputs in the default state.
   --input-back:                   hsl(var(--input-hue), 10%, 20%);
+  // Border color for inputs in the default state.
   --input-border:                 hsl(var(--input-hue), 20%, 35%);
+
+  /* Prefix and suffix  */
+  // Text color for input prefix/suffix elements in the default state.
   --prefix-text:                  hsl(var(--input-hue), 20%, 50%);
+  // Background color for input prefix/suffix elements in the default state.
   --prefix-back:                  hsl(var(--input-hue), 20%, 25%);
+
+  /* Placeholder text */
+  // Color for input placeholder text in the default state.
   --placeholder-text:             hsl(var(--input-hue), 10%, 35%);
 
-  --focus-label-text:             hsl(var(--focus-hue), 40%, 70%);
+  /* Focussed Input State */
+  // Text color for inputs in focussed fields.
   --focus-text:                   hsl(var(--focus-hue), 10%, 80%);
+  // Background color for inputs in focussed fields.
   --focus-back:                   hsl(var(--focus-hue), 15%, 15%);
+  // Border color for inputs in focussed fields.
   --focus-border:                 hsl(var(--focus-hue), 30%, 45%);
+  // Border color for inputs in focussed fields.
   --focus-ring-border:            hsla(var(--focus-hue), 40%, 50%, var(--focus-ring-opacity));
+  // Color of gap between border and ring.
   --focus-gap-border:             hsl(var(--focus-hue), 10%, 5%);
+  // Color for labels in focussed fields.
+  --focus-label-text:             hsl(var(--focus-hue), 40%, 70%);
+  // Text color for prefix/suffix elements in focussed fields.
   --focus-prefix-text:            hsl(var(--focus-hue), 20%, 60%);
+  // Background color for prefix/suffix elements in focussed fields.
   --focus-prefix-back:            hsl(var(--focus-hue), 25%, 30%);
+  // Color for input placeholder text in focussed fields.
   --focus-placeholder-text:       hsl(var(--focus-hue), 15%, 50%);
-/*
-  --focus-ring:
-    0 0 0 var(--focus-ring-gap)   var(--focus-gap-border),
-    0 0 0 var(--focus-ring-width) var(--focus-ring-border);
-*/
 
-  --valid-label-text:             hsl(var(--valid-hue), 10%, 50%);
+  /* Valid Field State */
+  // Text color for inputs in valid fields.
   --valid-text:                   hsl(var(--valid-hue), 5%, 65%);
+  // Background color for inputs in valid fields.
   --valid-back:                   hsl(var(--valid-hue), 10%, 15%);
+  // Border color for inputs in valid fields.
   --valid-border:                 hsl(var(--valid-hue), 15%, 40%);
+  // Border color for valid inputs in focussed fields.
   --valid-ring-border:            hsla(var(--valid-hue), 40%, 50%, var(--valid-ring-opacity));
+  // Color of gap between border and ring.
   --valid-gap-border:             hsl(var(--valid-hue), 10%, 5%);
+  // Color for labels in valid fields.
+  --valid-label-text:             hsl(var(--valid-hue), 10%, 50%);
+  // Text color for prefix/suffix elements in valid fields.
   --valid-prefix-text:            hsl(var(--valid-hue), 10%, 50%);
+  // Background color for prefix/suffix elements in valid fields.
   --valid-prefix-back:            hsl(var(--valid-hue), 20%, 20%);
+  // Color for input placeholder text in valid fields.
   --valid-placeholder-text:       hsl(var(--valid-hue), 10%, 35%);
+  // Successful validation message displayed under field input
   --valid-help-text:              hsl(var(--valid-hue), 60%, 40%);
-/*
-  --valid-ring:
-    0 0 0 var(--focus-ring-gap)   var(--valid-gap-border),
-    0 0 0 var(--focus-ring-width) var(--valid-ring-border);
-*/
 
-  --invalid-label-text:           hsl(var(--invalid-hue), 15%, 55%);
+  /* Invalid Field State */
+  // Text color for inputs in invalid fields.
   --invalid-text:                 hsl(var(--invalid-hue), 5%, 65%);
+  // Background color for inputs in invalid fields.
   --invalid-back:                 hsl(var(--invalid-hue), 10%, 15%);
+  // Border color for inputs in invalid fields.
   --invalid-border:               hsl(var(--invalid-hue), 30%, 45%);
+  // Border color for invalid inputs in focussed fields.
   --invalid-ring-border:          hsla(var(--invalid-hue), 60%, 50%, var(--invalid-ring-opacity));
+  // Color of gap between border and ring.
   --invalid-gap-border:           hsl(var(--invalid-hue), 10%, 5%);
+  // Color for labels in invalid fields.
+  --invalid-label-text:           hsl(var(--invalid-hue), 15%, 55%);
+  // Text color for prefix/suffix elements in invalid fields.
   --invalid-prefix-text:          hsl(var(--invalid-hue), 10%, 50%);
+  // Background color for prefix/suffix elements in invalid fields.
   --invalid-prefix-back:          hsl(var(--invalid-hue), 20%, 20%);
+  // Color for input placeholder text in invalid fields.
   --invalid-placeholder-text:     hsl(var(--invalid-hue), 10%, 40%);
+  // Error message displayed under field input
   --invalid-help-text:            hsl(var(--invalid-hue), 70%, 60%);
-/*
-  --invalid-ring:
-    0 0 0 var(--focus-ring-gap)   var(--invalid-gap-border),
-    0 0 0 var(--focus-ring-width) var(--invalid-ring-border);
-*/
-  --disabled-label-text:          hsl(var(--disabled-hue), var(--disabled-sat), 45%);
+
+  /* Disabled Field State */
+  // Text color for inputs in disabled fields.
   --disabled-text:                hsl(var(--disabled-hue), var(--disabled-sat), 40%);
+  // Background color for inputs in disabled fields.
   --disabled-back:                hsl(var(--disabled-hue), var(--disabled-sat), 25%);
+  // Border color for inputs in disabled fields.
   --disabled-border:              hsl(var(--disabled-hue), var(--disabled-sat), 40%);
+  // Color for labels in invalid fields.
+  --disabled-label-text:          hsl(var(--disabled-hue), var(--disabled-sat), 45%);
+  // Text color for prefix/suffix elements in disabled fields.
   --disabled-prefix-text:         hsl(var(--disabled-hue), var(--disabled-sat), 60%);
+  // Background color for prefix/suffix elements in disabled fields.
   --disabled-prefix-back:         hsl(var(--disabled-hue), var(--disabled-sat), 30%);
+  // Color for input placeholder text in disabled fields.
   --disabled-placeholder-text:    hsl(var(--disabled-hue), var(--disabled-sat), 45%);
+  // Error message displayed under field input
   --disabled-help-text:           hsl(var(--disabled-hue), var(--disabled-sat), 50%);
 
+  /* Errors panel */
+  // Text color for errors
   --errors-text:                  hsl(var(--errors-hue), 20%, 70%);
+  // Background color for errors.
   --errors-back:                  hsl(var(--errors-hue), 30%, 15%);
+  // Color for errors border
   --errors-border:                hsl(var(--errors-hue), 60%, 35%);
+  // Color for errors title
   --errors-title-text:            hsl(var(--errors-hue), 20%, 70%);
+  // Color for labels in errors
   --errors-label-text:            hsl(var(--errors-hue), 80%, 70%);
 
+  /* Fieldset */
+  // Background color for fieldset
   --fieldset-back:              rgba(255, 255, 255, 0.05);
+
+  /* Fieldset legend */
+  // Text color for fieldset legend
   --legend-text:                  hsl(var(--brand-hue), 10%, 70%);
+  // Background color for fieldset legend
   --legend-back:                rgba(255, 255, 255, 0.15);
 
+  /* Button Variables */
+  // Default button text color
   --button-text:                  hsl(var(--button-hue), 10%, 95%);
+  // Default button background color
   --button-back:                  hsl(var(--button-hue), 45%, 40%);
+  // Default button border color
   --button-border:                hsl(var(--button-hue), 45%, 40%);
+  // Color of gap between border and ring.
   --button-gap-border:            hsl(var(--button-hue), 10%, 5%);
-  --reset-back:                   hsl(var(--button-hue), 5%, 30%);
+
+  // Reset button text color
   --reset-text:                   hsl(var(--button-hue), 60%, 90%);
+  // Reset button background color
+  --reset-back:                   hsl(var(--button-hue), 5%, 30%);
+  // Reset button border color
   --reset-border:                 hsl(var(--button-hue), 10%, 40%);
+  // Border color for focussed reset button.
   --reset-ring-border:            hsla(var(--button-hue), 15%, 45%, var(--button-ring-opacity));
+  // Color of gap between border and ring.
   --reset-gap-border:             hsl(var(--button-hue), 10%, 5%);
 
+  /* Debug variables */
+   // Background color for debug component
   --debug-back:                   hsl(var(--debug-hue), 2%, 15%);
+   // Border color for debug component
   --debug-border:                 hsl(var(--debug-hue), 10%, 35%);
-  --debug-panel-back:             hsl(var(--debug-hue), 5%, 20%);
+  // Text color for inset debugging panels
   --debug-panel-text:             hsl(var(--debug-hue), 20%, 85%);
+  // Background color for inset debugging panels
+  --debug-panel-back:             hsl(var(--debug-hue), 5%, 20%);
+  // Title color for inset debugging panels
   --debug-panel-title-text:       hsl(var(--debug-hue), 90%, 95%);
 }

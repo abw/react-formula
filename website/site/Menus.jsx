@@ -132,3 +132,17 @@ export const InputsMenu = {
     ['number',    'Number, Date, etc'],
   ]
 }
+
+export const StylingMenu = {
+  title: 'Styling',
+  url:  '/styling',
+  items: [
+    ['css-variables',    'CSS Variables'],
+    ['css-defaults',     'CSS Variables - Defaults'],
+    ['css-dark',         'CSS Variables - Dark Mode'],
+    ['sass-variables',   'SASS Variables'],
+    ['forms',            'Form Styles'],
+    ['fields',           'Field Styles'],
+  ]
+}
+

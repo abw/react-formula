@@ -22,12 +22,19 @@ const FirstFormPage = () => {
       >
         <p>
           If everything has gone according to plan then you should see a form
-          like this.  Don&apos;t forget to see what it looks like in{' '}
+          like this .
+          Don&apos;t forget to see what it looks like in{' '}
           <span className="link" onClick={toggleTheme}>
             { isDark ? 'light mode' : 'dark mode' }
           </span>.
         </p>
       </Example>
+      <p className="note">
+        <b>NOTE:</b> all the examples on this web site show the output contained
+        in a panel (with &quot;Output&quot; in the top right corner).
+        That&apos;s not part of the default form styling, but of course you
+        can style your own forms like that if you want to.
+      </p>
       <Pager uri="first-form"/>
     </div>
   )

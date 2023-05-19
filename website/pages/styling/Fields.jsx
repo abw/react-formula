@@ -14,6 +14,10 @@ const mockField = {
 const Fields = () =>
   <div>
     <h1>Field Styles</h1>
+    <p className="intro">
+      This page demonstrates the default form field styles in their various
+      states.
+    </p>
     <div className="note">
       <b>NOTE:</b> these are mockup fields and don&apos;t have full interactivity.
       For example, clicking on an input will not automatically focus it.

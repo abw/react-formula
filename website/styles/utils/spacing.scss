@@ -1,7 +1,10 @@
+.mar-t-none {
+  margin-top: none;
+}
 .mar-b-none {
   margin-bottom: none;
 }
-@for $n from 2 through 16 {
+@for $n from 0 through 16 {
   .mar-#{$n} {
     margin: $n * $margin;
   }

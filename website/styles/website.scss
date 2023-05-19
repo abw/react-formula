@@ -3,10 +3,11 @@
 @import 'modules/all.scss';
 
 .note {
-  background-color: hsl($note-hue, 80%, 90%);
-  border: 3px solid hsl($note-hue, 90%, 45%);
-  color: hsl($note-hue, 80%, 20%);
-  border-radius: 12px;
+  color: var(--note-text);
+  background-color: var(--note-back);
+  border: 1px solid var(--note-border);
+  border-left-width: 8px;
+  border-radius: $radius;
   padding: 1em;
   box-shadow: $shadows;
 }
@@ -21,6 +22,32 @@
   h3 {
     margin: 0;
     color: hsl($red-hue, 90%, 40%);
+  }
+}
+
+.variable {
+  padding-left: 1rem;
+  h4 {
+    margin-bottom: 0;
+    .var {
+      display: inline-block;
+      // min-width: 28ch;
+      margin-right: 0.5rem;
+    }
+    .val {
+      display: inline-block;
+      // margin-top: 0.25rem;
+      margin-left: 0.5rem;
+      font-weight: normal;
+      code {
+        color: var(--code-defn-fg) !important;
+        background-color: var(--code-defn-bg) !important;
+        border-color: var(--code-defn-bd) !important;
+      }
+    }
+  }
+  .description {
+    margin-left: 2rem;
   }
 }
 

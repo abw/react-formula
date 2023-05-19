@@ -2,6 +2,7 @@
   --brand-hue:            #{$brand-hue};
   --hover-hue:            #{$hover-hue};
   --note-hue:             #{$note-hue};
+  --defn-hue:             #{$defn-hue};
   --header-back:          hsl(var(--brand-hue), 30%, 30%);
   --header-text:          hsl(var(--brand-hue), 30%, 70%);
   --header-hover:         hsl(var(--brand-hue), 70%, 80%);
@@ -32,9 +33,12 @@
   --link-hv-fg:           hsl(var(--hover-hue), 60%, 55%);
   --control-fg:           hsl(var(--brand-hue), 60%, 30%);
   --control-hv-fg:        hsl(var(--hover-hue), 40%, 55%);
-  --code-bg:              hsl(var(--brand-hue), 25%, 92%);
   --code-fg:              hsl(var(--brand-hue), 90%, 25%);
+  --code-bg:              hsl(var(--brand-hue), 25%, 92%);
   --code-bd:              hsl(var(--brand-hue), 40%, 80%);
+  --code-defn-fg:         hsl(var(--defn-hue),  90%, 25%);
+  --code-defn-bg:         hsl(var(--defn-hue),  25%, 92%);
+  --code-defn-bd:         hsl(var(--defn-hue),  40%, 80%);
   --code-link-bg:         hsl(var(--brand-hue), 40%, 90%);
   --code-link-fg:         hsl(var(--brand-hue), 90%, 15%);
   --code-link-bd:         hsl(var(--brand-hue), 50%, 70%);
@@ -60,6 +64,9 @@
   --toc-hd:               hsl(var(--brand-hue), 30%, 10%);
   --toc-hd2:              hsl(var(--brand-hue), 40%, 30%);
   --toc-about:            hsl(var(--brand-hue), 30%, 40%);
+  --note-back:            hsl(var(--note-hue), 60%, 93%);
+  --note-text:            hsl(var(--note-hue), 80%, 40%);
+  --note-border:          hsl(var(--note-hue), 50%, 55%);
 }
 
 #page.dark {
@@ -89,6 +96,9 @@
   --code-bg:              hsl(var(--brand-hue), 25%, 18%);
   --code-fg:              hsl(var(--brand-hue), 40%, 75%);
   --code-bd:              hsl(var(--brand-hue), 40%, 20%);
+  --code-defn-bg:         hsl(var(--defn-hue),  25%, 18%);
+  --code-defn-fg:         hsl(var(--defn-hue),  40%, 75%);
+  --code-defn-bd:         hsl(var(--defn-hue),  40%, 20%);
   --code-link-bg:         hsl(var(--brand-hue), 35%, 20%);
   --code-link-fg:         hsl(var(--brand-hue), 45%, 75%);
   --code-link-bd:         hsl(var(--brand-hue), 50%, 25%);
@@ -114,4 +124,7 @@
   --toc-hd:               hsl(var(--brand-hue), 20%, 70%);
   --toc-hd2:              hsl(var(--brand-hue), 20%, 60%);
   --toc-about:            hsl(var(--brand-hue), 15%, 70%);
+  --note-back:            hsl(var(--note-hue), 40%, 15%);
+  --note-text:            hsl(var(--note-hue), 40%, 65%);
+  --note-border:          hsl(var(--note-hue), 50%, 35%);
 }

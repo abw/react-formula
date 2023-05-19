@@ -1,13 +1,13 @@
-import React from 'react'
-import Example from '../../site/Example.jsx'
-import BrandedCSS from './examples/branded.css?raw'
-import Branded    from './examples/Branded.jsx'
-import BrandedSrc from './examples/Branded.jsx?raw'
-import CodeBlock from '../../site/CodeBlock.jsx'
+import React        from 'react'
+import Example      from '../../site/Example.jsx'
+import Link         from '../../site/Link.jsx'
+import BrandedCSS   from './examples/branded.css?raw'
+import Branded      from './examples/Branded.jsx'
+import BrandedSrc   from './examples/Branded.jsx?raw'
+import CodeBlock    from '../../site/CodeBlock.jsx'
+import MyFormula    from './examples/my-formula.css?raw'
 import { useTheme } from '@abw/react-night-and-day'
-import MyFormula from './examples/my-formula.css?raw'
 import './examples/branded.css'
-import Link from '../../site/Link.jsx'
 
 const CSSVars = () => {
   const { isDark, toggleTheme } = useTheme()

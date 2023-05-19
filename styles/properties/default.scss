@@ -50,10 +50,6 @@
   --focus-hue:                    var(--brand-hue);
   // Hue for buttons.
   --button-hue:                   var(--brand-hue);
-  // Hue for submit buttons.
-  // --submit-hue:                   var(--button-hue);
-  // Hue for reset buttons.
-  // --reset-hue:                    var(--button-hue);
   // Hue for the "Required" label tag
   --required-hue:                 30;
   // Hue for the "Optional" label tag
@@ -70,8 +66,11 @@
   --debug-hue:                    240;
 
   /* Shadows */
+  // Small, tight shadow
   --shadow-1:                     1px 1px 2px rgba(0, 0, 0, 0.1);
+  // Medium shadow
   --shadow-2:                     2px 2px 4px rgba(0, 0, 0, 0.08);
+  // Larger shadow
   --shadow-3:                     3px 3px 6px rgba(0, 0, 0, 0.06);
 
   /* Fields */
@@ -129,10 +128,10 @@
   --select-padding-tweak:         1.25px;
 
   /* Prefix and suffix  */
-  // Background color for input prefix/suffix elements in the default state.
-  --prefix-back:                  hsl(var(--input-hue), 20%, 90%);
   // Text color for input prefix/suffix elements in the default state.
   --prefix-text:                  hsl(var(--input-hue), 70%, 20%);
+  // Background color for input prefix/suffix elements in the default state.
+  --prefix-back:                  hsl(var(--input-hue), 20%, 90%);
   // Border color for input prefix/suffix
   --prefix-border:                var(--input-border);
   // Combined padding for prefix/suffix
@@ -143,8 +142,6 @@
   --placeholder-text:             hsl(var(--input-hue), 20%, 75%);
 
   /* Focussed Input State */
-  // Color for labels in focussed fields.
-  --focus-label-text:             hsl(var(--focus-hue), 10%, 30%);
   // Text color for inputs in focussed fields.
   --focus-text:                   hsl(var(--focus-hue), 60%, 20%);
   // Background color for inputs in focussed fields.
@@ -157,6 +154,14 @@
   --focus-ring-border:            hsla(var(--focus-hue), 70%, 60%, var(--focus-ring-opacity));
   // Color of gap between border and ring.
   --focus-gap-border:             hsl(var(--focus-hue), 10%, 95%);
+  // Outer box shadow for focus ring
+  --focus-ring-outline:           0 0 0 var(--focus-ring-width) var(--focus-ring-border);
+  // Inner box shadow for focus ring
+  --focus-ring-inline:            0 0 0 var(--focus-ring-gap)   var(--focus-gap-border);
+  // Box shadow for focus ring
+  --focus-ring:                   var(--focus-ring-inline), var(--focus-ring-outline);
+  // Color for labels in focussed fields.
+  --focus-label-text:             hsl(var(--focus-hue), 10%, 30%);
   // Text color for prefix/suffix elements in focussed fields.
   --focus-prefix-text:            hsl(var(--focus-hue), 70%, 20%);
   // Background color for prefix/suffix elements in focussed fields.
@@ -165,14 +170,8 @@
   --focus-placeholder-text:       hsl(var(--focus-hue), 50%, 80%);
   // Color for help text in focussed fields.
   --focus-help-text:              var(--focus-label-text);
-  // Box shadow for focus ring
-  --focus-ring:
-    0 0 0 var(--focus-ring-gap)   var(--focus-gap-border),
-    0 0 0 var(--focus-ring-width) var(--focus-ring-border);
 
   /* Valid Field State */
-  // Color for labels in valid fields.
-  --valid-label-text:             hsl(var(--valid-hue), 50%, 30%);
   // Text color for inputs in valid fields.
   --valid-text:                   hsl(var(--valid-hue), 30%, 30%);
   // Background color for inputs in valid fields.
@@ -185,6 +184,14 @@
   --valid-ring-border:            hsla(var(--valid-hue), 60%, 75%, var(--valid-ring-opacity));
   // Color of gap between border and ring.
   --valid-gap-border:             hsl(var(--valid-hue), 10%, 95%);
+  // Outer box shadow for valid focus ring
+  --valid-ring-outline:           0 0 0 var(--focus-ring-width) var(--valid-ring-border);
+  // Inner box shadow for valid focus ring
+  --valid-ring-inline:            0 0 0 var(--focus-ring-gap)   var(--valid-gap-border);
+  // Box shadow for valid focus ring
+  --valid-ring:                   var(--valid-ring-inline), var(--valid-ring-outline);
+  // Color for labels in valid fields.
+  --valid-label-text:             hsl(var(--valid-hue), 50%, 30%);
   // Text color for prefix/suffix elements in valid fields.
   --valid-prefix-text:            hsl(var(--valid-hue), 70%, 20%);
   // Background color for prefix/suffix elements in valid fields.
@@ -195,14 +202,8 @@
   --valid-help-text:              hsl(var(--valid-hue), 60%, 40%);
   // Text to display at start of valid help message
   --valid-help-before:            '✔︎ ';
-  // Box shadow for valid focus ring
-  --valid-ring:
-    0 0 0 var(--focus-ring-gap)   var(--valid-gap-border),
-    0 0 0 var(--focus-ring-width) var(--valid-ring-border);
 
   /* Invalid Field State */
-  // Color for labels in invalid fields.
-  --invalid-label-text:           hsl(var(--invalid-hue), 50%, 30%);
   // Text color for inputs in invalid fields.
   --invalid-text:                 hsl(var(--invalid-hue), 50%, 30%);
   // Background color for inputs in invalid fields.
@@ -215,6 +216,14 @@
   --invalid-ring-border:          hsla(var(--invalid-hue), 70%, 85%, var(--invalid-ring-opacity));
   // Color of gap between border and ring.
   --invalid-gap-border:           hsl(var(--invalid-hue), 10%, 95%);
+  // Outer box shadow for invalid focus ring
+  --invalid-ring-outline:         0 0 0 var(--focus-ring-width) var(--invalid-ring-border);
+  // Inner box shadow for invalid focus ring
+  --invalid-ring-inline:          0 0 0 var(--focus-ring-gap)   var(--invalid-gap-border);
+  // Box shadow for invalid focus ring
+  --invalid-ring:                 var(--invalid-ring-inline), var(--invalid-ring-outline);
+  // Color for labels in invalid fields.
+  --invalid-label-text:           hsl(var(--invalid-hue), 50%, 30%);
   // Text color for prefix/suffix elements in invalid fields.
   --invalid-prefix-text:          hsl(var(--invalid-hue), 70%, 20%);
   // Background color for prefix/suffix elements in invalid fields.
@@ -225,26 +234,22 @@
   --invalid-help-text:            hsl(var(--invalid-hue), 70%, 50%);
   // Text to display at start of invalid help message
   --invalid-help-before:          '✘ ';
-  // Box shadow for invalid focus ring
-  --invalid-ring:
-    0 0 0 var(--focus-ring-gap)   var(--invalid-gap-border),
-    0 0 0 var(--focus-ring-width) var(--invalid-ring-border);
 
   /* Disabled Field State */
   // Saturation for disabled elements
   --disabled-sat:                 1%;
-  // Color for labels in invalid fields.
-  --disabled-label-text:          hsl(var(--disabled-hue), var(--disabled-sat), 70%);
   // Text color for inputs in disabled fields.
   --disabled-text:                hsl(var(--disabled-hue), var(--disabled-sat), 50%);
   // Background color for inputs in disabled fields.
   --disabled-back:                hsl(var(--disabled-hue), var(--disabled-sat), 95%);
   // Border color for inputs in disabled fields.
   --disabled-border:              hsl(var(--disabled-hue), var(--disabled-sat), 75%);
-  // Background color for prefix/suffix elements in disabled fields.
-  --disabled-prefix-back:         hsl(var(--disabled-hue), var(--disabled-sat), 90%);
+  // Color for labels in invalid fields.
+  --disabled-label-text:          hsl(var(--disabled-hue), var(--disabled-sat), 70%);
   // Text color for prefix/suffix elements in disabled fields.
   --disabled-prefix-text:         hsl(var(--disabled-hue), var(--disabled-sat), 50%);
+  // Background color for prefix/suffix elements in disabled fields.
+  --disabled-prefix-back:         hsl(var(--disabled-hue), var(--disabled-sat), 90%);
   // Color for input placeholder text in disabled fields.
   --disabled-placeholder-text:    hsl(var(--disabled-hue), var(--disabled-sat), 65%);
   // Error message displayed under field input
@@ -325,26 +330,28 @@
   --button-border-width:          var(--input-border-width);
   // Border radius of buttons
   --button-border-radius:         var(--border-radius);
-  // Width of focus ring
-  --button-ring-width:            var(--focus-ring-width);
-  // Gap between border and focus ring
-  --button-ring-gap:              var(--focus-ring-gap);
   // Default button text color
   --button-text:                  hsl(var(--brand-hue), 10%, 95%);
   // Default button background color
   --button-back:                  hsl(var(--brand-hue), 55%, 45%);
   // Default button border color
   --button-border:                hsl(var(--brand-hue), 55%, 45%);
+  // Width of focus ring
+  --button-ring-width:            var(--focus-ring-width);
+  // Gap between border and focus ring
+  --button-ring-gap:              var(--focus-ring-gap);
   // Opacity of button focus ring
   --button-ring-opacity:          var(--focus-ring-opacity);
   // Border color for focussed button.
   --button-ring-border:           hsla(var(--button-hue), 70%, 60%, var(--button-ring-opacity));
   // Color of gap between border and ring.
   --button-gap-border:            hsl(var(--button-hue), 10%, 95%);
-  // Button focus ring
-  --button-ring:
-    0 0 0 var(--focus-ring-gap)   var(--button-gap-border),
-    0 0 0 var(--focus-ring-width) var(--button-ring-border);
+  // Outer box shadow for button focus ring
+  --button-ring-outline:         0 0 0 var(--focus-ring-width) var(--button-ring-border);
+  // Inner box shadow for button focus ring
+  --button-ring-inline:          0 0 0 var(--focus-ring-gap)   var(--button-gap-border);
+  // Box shadow for button focus ring
+  --button-ring:                 var(--button-ring-inline), var(--button-ring-outline);
 
   // Submit button background color
   --submit-back:                  var(--button-back);
@@ -352,20 +359,22 @@
   --submit-text:                  var(--button-text);
   // Submit button border color
   --submit-border:                var(--button-border);
-  // Reset button background color
-  --reset-back:                   hsl(var(--button-hue), 5%, 90%);
   // Reset button text color
   --reset-text:                   hsl(var(--button-hue), 60%, 10%);
+  // Reset button background color
+  --reset-back:                   hsl(var(--button-hue), 5%, 90%);
   // Reset button border color
   --reset-border:                 hsl(var(--button-hue), 10%, 80%);
   // Border color for focussed reset button.
   --reset-ring-border:            hsla(var(--button-hue), 15%, 85%, var(--button-ring-opacity));
   // Color of gap between border and ring.
   --reset-gap-border:             hsl(var(--button-hue), 10%, 95%);
-  // Reset button focus ring
-  --reset-ring:
-    0 0 0 var(--focus-ring-gap)   var(--reset-gap-border),
-    0 0 0 var(--focus-ring-width) var(--reset-ring-border);
+  // Outer box shadow for reset focus ring
+  --reset-ring-outline:           0 0 0 var(--focus-ring-width) var(--reset-ring-border);
+  // Inner box shadow for reset focus ring
+  --reset-ring-inline:            0 0 0 var(--focus-ring-gap)   var(--reset-gap-border);
+  // Box shadow for reset focus ring
+  --reset-ring:                   var(--reset-ring-inline), var(--reset-ring-outline);
 
   /* Debug variables */
    // Background color for debug component
