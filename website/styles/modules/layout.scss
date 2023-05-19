@@ -36,7 +36,7 @@ body {
   max-width: $container-max;
   margin: 0 auto;
   padding: $layout-gap;
-  min-height: 100vh;
+  min-height: $layout-height;
   display: flex;
   flex-wrap: wrap;
   gap: $layout-gap;

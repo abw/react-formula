@@ -1,5 +1,7 @@
 $header-height:       2.5rem;
+$layout-height:       calc(100vh - $header-height);
 $layout-gap:          1rem;
+
 $main-height:         calc(100vh - $header-height - (2 * $layout-gap));
 $container-min:       480px;
 $container-max:       1280px;

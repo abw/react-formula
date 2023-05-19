@@ -15,7 +15,7 @@ const Home = () =>
           <code className="code">react-formula</code> is yet another React
           form component library.
         </p>
-        <p className="subintro">
+        <p className="intro">
           I know what you&apos;re thinking.
           What does the World need with another React form library?
           What makes this different, better, and/or worse than all the
@@ -43,7 +43,7 @@ const Home = () =>
     <div className="warning">
       <h3>WARNING - THIS IS A WORK IN PROGRESS</h3>
       <p>
-        Do not use this library unless you like living dangerously.
+        <b>Do not use this library unless you like living dangerously.</b>
       </p>
       <p>
         It&apos;s in the process of being re-written and it&apos;s special.
@@ -52,7 +52,7 @@ const Home = () =>
         No one... no one... no!  Don&apos;t touch it. Don&apos;t point, even.
         No.  It can&apos;t be played... never... I mean...
       </p>
-      <p>
+      <p className="bold mar-b-0">
         Don&apos;t even
         look at it.  You&apos;ve seen enough of that one.
       </p>
@@ -62,21 +62,21 @@ const Home = () =>
     </p>
     <p className="subintro">
       Read on for more information about what this library sets out to
-      achieve.  If you just to see it in action then you can skip the rest
-      of this page and go straight to{' '}
+      achieve.  If you just want to see it in action then feel free to skip
+      the rest of this page and go straight to{' '}
       <Link to="/introduction" text="Getting Started"/>.
     </p>
     <h2>Key Features</h2>
     <p className="subintro">
-      Like I said, I&apos;m not claiming this is better (or worse) than
-      any other form library, just different.  These are some of the things
-      that I think are important and influenced the design.
+      As I&apos;ve already said, I&apos;m not claiming this is better (or
+      worse) than any other form library, just different.  These are some of
+      the things that I think are important and influenced the design.
     </p>
     <ul>
       <li>
         Above all else, <b>simplicity</b>.  Building a form with{' '}
         <code>react-formula</code> should be <i>at least</i> as easy as
-        defining a Vanilla HTML form, and ideally, easier.
+        defining a vanilla HTML form, and ideally, easier.
         I don&apos;t want to have to build every field manually from separate
         components.  In most cases I want my fields to include a label, an
         input, and somewhere for validation messages to go.  So there
