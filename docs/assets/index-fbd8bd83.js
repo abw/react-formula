@@ -1,4 +1,4 @@
-import{j as t,a as e,T as n,am as c,F as l,c as a,E as o,p as s,S as d,d as i,_ as m,$ as r}from"./index-9e1389a5.js";const h=()=>t("div",{children:[e("h1",{children:"Inputs"}),e("p",{className:"intro",children:"This section of the documentation provides detailed information about different input types."}),e(n,{menu:c})]}),p=`import { Form, Field } from '../../../../../lib/index.js'
+import{j as t,a as e,T as n,am as c,F as l,c as a,E as o,p as s,S as d,d as i,_ as m,$ as r}from"./index-860d35d1.js";const h=()=>t("div",{children:[e("h1",{children:"Inputs"}),e("p",{className:"intro",children:"This section of the documentation provides detailed information about different input types."}),e(n,{menu:c})]}),p=`import { Form, Field } from '../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
