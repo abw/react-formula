@@ -1,9 +1,11 @@
 import React              from 'react'
+import Example            from '../../site/Example.jsx'
+import TutorialPager      from '../../site/Pager/Tutorial.jsx'
 import Debugging          from './examples/Debugging.jsx'
 import DebuggingSrc       from './examples/Debugging.jsx?raw'
-import Example            from '../../site/Example.jsx'
-import { TutorialPager }  from '../../site/Tutorial.jsx'
-import { DebugLink, FieldLink, FieldsLink, FormLink }      from '../../site/Links.jsx'
+import {
+  DebugLink, FieldLink, FieldsLink, FormLink
+} from '../../site/Links.jsx'
 
 const DebuggingExample = () =>
   <div>

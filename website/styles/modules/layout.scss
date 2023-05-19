@@ -32,23 +32,24 @@ body {
   }
 }
 #layout {
-  min-width: 320px;
-  max-width: 1280px;
+  min-width: $container-min;
+  max-width: $container-max;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: $layout-gap;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  gap: $layout-gap;
 }
 
 #layout aside {
   position: relative;
   flex-basis: 20rem;
   flex-grow: 1;
-  margin-right: 1rem;
+  margin: 0;
   padding: 1rem;
   background-color: var(--side-bg);
-  max-height: calc(100vh - 2rem);
+  max-height: $main-height;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -169,7 +170,7 @@ body {
   flex-grow: 999;
   padding: 2rem;
   background-color: var(--main-bg);
-  max-height: calc(100vh - 2rem);
+  max-height: $main-height;
   overflow-y: scroll;
   transition: color, background-color 500ms;
   h1:first-child {

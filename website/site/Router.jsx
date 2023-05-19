@@ -2,8 +2,7 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from '../pages/Home.jsx'
-import GettingStarted from '../pages/GettingStarted.jsx'
-import Why from '../pages/Why.jsx'
+import Introduction from '../pages/introduction/index.jsx'
 import TestForm from '../test/Form.jsx'
 import LayoutTest from '../test/Layout.jsx'
 import StyleTest from '../test/Styles.jsx'
@@ -27,8 +26,7 @@ const Router = createBrowserRouter(
       element:  <Layout/>,
       children: [
         { path: '/',                  element: <Home/> },
-        { path: 'getting-started',    element: <GettingStarted/> },
-        { path: 'why',                element: <Why/> },
+        { path: 'introduction/*',     element: <Introduction/> },
         { path: 'tutorial/*',         element: <LazyRoute Element={Tutorial}/> },
         { path: 'components/*',       element: <LazyRoute Element={Components}/> },
         { path: 'inputs/*',           element: <LazyRoute Element={Inputs}/> },

@@ -1,5 +1,5 @@
-import React from 'react'
-import TOC from '../../site/TOC.jsx'
+import React            from 'react'
+import TOC              from '../../site/TOC.jsx'
 import { TutorialMenu } from '../../site/Menus.jsx'
 
 const Home = () =>

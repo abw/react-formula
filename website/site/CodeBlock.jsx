@@ -7,15 +7,17 @@ import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { sleep } from '@abw/badger-utils'
-import { useTheme } from './Theme.jsx'
+import { useTheme } from '@abw/react-night-and-day'
 
 SyntaxHighlighter.registerLanguage('jsx', jsx)
 SyntaxHighlighter.registerLanguage('css', css)
 SyntaxHighlighter.registerLanguage('scss', scss)
 SyntaxHighlighter.registerLanguage('bash', bash)
 
-export const CodeBlock = ({code, children, language='jsx', caption, expand=false, fixed=expand}) => {
-  const { dark } = useTheme()
+export const CodeBlock = ({
+  code, children, language='jsx', caption, expand=false, fixed=expand
+}) => {
+  const { isDark } = useTheme()
   const [copied, setCopied] = useState(false)
   const [expanded, setExpanded] = useState(expand)
   const copy = () => {
@@ -41,7 +43,7 @@ export const CodeBlock = ({code, children, language='jsx', caption, expand=false
         language={language} style={a11yDark} showLineNumbers={true}
         customStyle={{
           paddingBottom: fixed ? '1rem' : '2rem',
-          backgroundColor: dark ? '#14191B' : '#292C2D'
+          backgroundColor: isDark ? '#14191B' : '#292C2D'
         }}
       >
         {code||children}

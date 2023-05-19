@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuItem from './MenuItem.jsx'
 
-const TOC = ({menu, url, title='Table of Contents'}) =>
+const TOC = ({menu, url=menu.url, title='Table of Contents'}) =>
   <div className="toc">
     <h2>{title}</h2>
     <ul className="menu">

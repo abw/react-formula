@@ -1,14 +1,15 @@
-import React             from 'react'
-import Example           from '../../site/Example.jsx'
-import SubmitThrow       from './examples/SubmitThrow.jsx'
-import SubmitThrowSrc    from './examples/SubmitThrow.jsx?raw'
-import SubmitReject      from './examples/SubmitReject.jsx'
-import SubmitRejectSrc   from './examples/SubmitReject.jsx?raw'
-import OnError           from './examples/OnError.jsx'
-import OnErrorSrc        from './examples/OnError.jsx?raw'
-import { ErrorsLink, FormOnErrorLink }    from '../../site/Links.jsx'
-import { TutorialPager } from '../../site/Tutorial.jsx'
-// import { FormLink } from '../../site/Links.jsx'
+import React              from 'react'
+import Example            from '../../site/Example.jsx'
+import TutorialPager      from '../../site/Pager/Tutorial.jsx'
+import SubmitThrow        from './examples/SubmitThrow.jsx'
+import SubmitThrowSrc     from './examples/SubmitThrow.jsx?raw'
+import SubmitReject       from './examples/SubmitReject.jsx'
+import SubmitRejectSrc    from './examples/SubmitReject.jsx?raw'
+import OnError            from './examples/OnError.jsx'
+import OnErrorSrc         from './examples/OnError.jsx?raw'
+import {
+  ErrorsLink, FormOnErrorLink
+}    from '../../site/Links.jsx'
 
 const SubmissionErrors = () =>
   <div>

@@ -1,21 +1,13 @@
 import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
-import { ComponentsMenu, InputsMenu, TutorialMenu } from './Menus.jsx'
+import { ComponentsMenu, InputsMenu, IntroductionMenu, TutorialMenu } from './Menus.jsx'
 import { date, version } from './Utils.js'
 import { ReactComponent as Abw } from '../svg/abw.svg'
 
 const Sidebar = () =>
   <>
-    <h4>Overview</h4>
-    <div className="menu">
-      <ul className="menu mar-b-2">
-        <li><Link to="/" end text="Home"/></li>
-        <li><Link to="/getting-started" text="Getting Started"/></li>
-        <li><Link to="/why" text="Why Does This Exist?"/></li>
-      </ul>
-    </div>
-
+    <Menu {...IntroductionMenu}/>
     <Menu {...TutorialMenu}/>
     <Menu {...ComponentsMenu}/>
     <Menu {...InputsMenu}/>

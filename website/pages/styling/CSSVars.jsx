@@ -4,13 +4,13 @@ import BrandedCSS from './examples/branded.css?raw'
 import Branded    from './examples/Branded.jsx'
 import BrandedSrc from './examples/Branded.jsx?raw'
 import CodeBlock from '../../site/CodeBlock.jsx'
-import { useTheme } from '../../site/Theme.jsx'
+import { useTheme } from '@abw/react-night-and-day'
 import MyFormula from './examples/my-formula.css?raw'
 import './examples/branded.css'
 import Link from '../../site/Link.jsx'
 
 const CSSVars = () => {
-  const { dark, toggleTheme } = useTheme()
+  const { isDark, toggleTheme } = useTheme()
   return (
     <div>
       <h1>CSS Variables</h1>
@@ -48,7 +48,7 @@ const CSSVars = () => {
         <p>
           Try clicking on the fields to see the different
           colored focus rings.  Don&apos;t forget to check it out in{' '}
-          <span onClick={toggleTheme} className="link">{dark ? 'light' : 'dark'} mode</span>{' '}
+          <span onClick={toggleTheme} className="link">{isDark ? 'light' : 'dark'} mode</span>{' '}
           too!
         </p>
       </Example>

@@ -1,9 +1,12 @@
-import React from 'react'
-import BasicLoginForm    from './examples/BasicLoginForm.jsx'
-import BasicLoginFormSrc from './examples/BasicLoginForm.jsx?raw'
-import Example from '../../site/Example.jsx'
-import { FieldLabelLink, FieldLink, FormLink, NameLink, RequiredLink, SubmitLink, TypeLink } from '../../site/Links.jsx'
-import { TutorialPager } from '../../site/Tutorial.jsx'
+import React              from 'react'
+import Example            from '../../site/Example.jsx'
+import TutorialPager      from '../../site/Pager/Tutorial.jsx'
+import BasicLoginForm     from './examples/BasicLoginForm.jsx'
+import BasicLoginFormSrc  from './examples/BasicLoginForm.jsx?raw'
+import {
+  FieldLabelLink, FieldLink, FormLink, NameLink, RequiredLink,
+  SubmitLink, TypeLink
+} from '../../site/Links.jsx'
 
 const SimpleForm = () =>
   <div>

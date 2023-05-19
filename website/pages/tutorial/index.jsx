@@ -9,7 +9,7 @@ import SubmissionErrors     from './SubmissionErrors.jsx'
 import CompleteRegistration from './CompleteRegistration.jsx'
 import EditForm             from './EditForm.jsx'
 import Debugging            from './Debugging.jsx'
-import HeadlessFields from './HeadlessFields.jsx'
+import HeadlessFields       from './HeadlessFields.jsx'
 import { Routes, Route }    from 'react-router-dom'
 
 const Tutorial = () =>

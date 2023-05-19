@@ -1,0 +1,33 @@
+header.site {
+  color: var(--header-text);
+  background-color: var(--header-back);
+  box-shadow: 0 2px 4px var(--header-shadow);
+  a, .link, .night-and-day--switcher {
+    color: var(--header-text);
+    &:hover {
+      color: var(--header-hover);
+    }
+  }
+  .container {
+    height: $header-height;
+    min-width: $container-min;
+    max-width: $container-max;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $layout-gap;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 1.2em;
+      height: 1.2em;
+      overflow: visible;
+      vertical-align: -.2em;
+      margin-left: 1rem;
+    }
+  }
+}

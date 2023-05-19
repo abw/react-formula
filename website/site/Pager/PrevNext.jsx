@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './Link.jsx'
+import Link from '../Link.jsx'
 
 const PrevNext = ({prevLink, prevText, nextLink, nextText}) =>
   <div className="flex space">

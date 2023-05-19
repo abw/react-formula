@@ -1,5 +1,14 @@
 import React from 'react'
 
+export const IntroductionMenu = {
+  title: 'Getting Started',
+  url:  '/introduction',
+  items: [
+    ['installation',          'Installation'],
+    ['styling',               'Styling with CSS/SCSS'],
+    ['why',                   'Why Does This Exist?'],
+  ]
+}
 export const TutorialMenu = {
   title: 'Tutorial',
   url:  '/tutorial',

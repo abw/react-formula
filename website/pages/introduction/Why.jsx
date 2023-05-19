@@ -1,6 +1,7 @@
 import React from 'react'
-import { imgUrl } from '../site/Utils.js'
-import { ReactComponent as FruitLoop } from '../svg/fruit-loop.svg'
+import { imgUrl } from '../../site/Utils.js'
+import { ReactComponent as FruitLoop } from '../../svg/fruit-loop.svg'
+import IntroductionPager from '../../site/Pager/Introduction.jsx'
 
 const Why = () =>
   <div className="home">
@@ -189,6 +190,7 @@ const Why = () =>
         go and write your own form library.
       </li>
     </ul>
+    <IntroductionPager uri="why"/>
     <div className="badger">
       <img src={imgUrl('badger.svg')} alt="badger"/>
       <div className="caption">

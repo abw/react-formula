@@ -1,9 +1,11 @@
-import React              from 'react'
-import EditForm           from './examples/EditForm.jsx'
-import EditFormSrc        from './examples/EditForm.jsx?raw'
-import Example            from '../../site/Example.jsx'
-import { TutorialPager }  from '../../site/Tutorial.jsx'
-import { DebugLink, FormHiddenLink, FormLink, FormValuesLink } from '../../site/Links.jsx'
+import React         from 'react'
+import Example       from '../../site/Example.jsx'
+import TutorialPager from '../../site/Pager/Tutorial.jsx'
+import EditForm      from './examples/EditForm.jsx'
+import EditFormSrc   from './examples/EditForm.jsx?raw'
+import {
+  DebugLink, FormHiddenLink, FormLink, FormValuesLink
+} from '../../site/Links.jsx'
 
 const EditFormExample = () =>
   <div>

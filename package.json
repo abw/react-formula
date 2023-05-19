@@ -31,10 +31,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm build:vite && pnpm build:css && pnpm build:sass",
+    "build": "pnpm build:vite && pnpm build:css && pnpm build:scss",
     "build:vite": "vite build",
-    "build:css": "mkdir -p dist/css && sass styles/formula.scss > dist/css/formula.css",
-    "build:sass": "mkdir -p dist/sass && cp -r styles/* dist/sass",
+    "build:css": "mkdir -p dist/styles && sass styles/formula.scss > dist/styles/formula.css",
+    "build:scss": "mkdir -p dist/styles && cp -r styles/* dist/styles",
     "build:docs": "vite build --outDir docs --config vite.docs.js",
     "build:all": "pnpm build && pnpm build:docs",
     "preview": "vite preview --outDir docs --config vite.docs.js",
@@ -45,6 +45,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@abw/react-night-and-day": "^0.0.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",

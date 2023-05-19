@@ -1,9 +1,11 @@
-import React from 'react'
+import React            from 'react'
+import Example          from '../../site/Example.jsx'
+import TutorialPager    from '../../site/Pager/Tutorial.jsx'
 import PasswordCheck    from './examples/PasswordCheck.jsx'
 import PasswordCheckSrc from './examples/PasswordCheck.jsx?raw'
-import Example from '../../site/Example.jsx'
-import { FieldsLink, FormLink, FormValidateLink } from '../../site/Links.jsx'
-import { TutorialPager } from '../../site/Tutorial.jsx'
+import {
+  FieldsLink, FormLink, FormValidateLink
+} from '../../site/Links.jsx'
 
 const FormValidation = () =>
   <div>

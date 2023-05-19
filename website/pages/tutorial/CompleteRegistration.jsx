@@ -1,13 +1,14 @@
-import React from 'react'
-import RegistrationForm    from './examples/RegistrationForm.jsx'
-import RegistrationFormSrc from './examples/RegistrationForm.jsx?raw'
-import CustomCSS           from './examples/CustomCSS.css?raw'
-import Example from '../../site/Example.jsx'
-import CodeBlock from '../../site/CodeBlock.jsx'
-import { TutorialPager } from '../../site/Tutorial.jsx'
+import React                from 'react'
+import Example              from '../../site/Example.jsx'
+import CodeBlock            from '../../site/CodeBlock.jsx'
+import TutorialPager        from '../../site/Pager/Tutorial.jsx'
+import RegistrationForm     from './examples/RegistrationForm.jsx'
+import RegistrationFormSrc  from './examples/RegistrationForm.jsx?raw'
+import CustomCSS            from './examples/CustomCSS.css?raw'
 import {
   FieldLink, FieldsetLink, FormLink,
-  CheckboxInputLink, RadioInputLink, SelectInputLink, TypeLink, ShowOptionalLink, ShowRequiredLink, OnChangeLink
+  CheckboxInputLink, RadioInputLink, SelectInputLink, TypeLink,
+  ShowOptionalLink, ShowRequiredLink, OnChangeLink
 } from '../../site/Links.jsx'
 
 const CompleteRegistration = () =>

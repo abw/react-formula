@@ -1,9 +1,11 @@
-import React             from 'react'
-import Example           from '../../site/Example.jsx'
-import SubmitResponse    from './examples/SubmitResponse.jsx'
-import SubmitResponseSrc from './examples/SubmitResponse.jsx?raw'
-import { TutorialPager } from '../../site/Tutorial.jsx'
-import { FormOnSubmitLink, FormOnSuccessLink } from '../../site/Links.jsx'
+import React              from 'react'
+import Example            from '../../site/Example.jsx'
+import TutorialPager      from '../../site/Pager/Tutorial.jsx'
+import SubmitResponse     from './examples/SubmitResponse.jsx'
+import SubmitResponseSrc  from './examples/SubmitResponse.jsx?raw'
+import {
+  FormOnSubmitLink, FormOnSuccessLink
+} from '../../site/Links.jsx'
 
 const SubmissionResponse = () =>
   <div>
