@@ -60,6 +60,12 @@ const Home = () =>
     <p className="subintro">
       Still with me?  OK then, but proceed at your own risk.
     </p>
+    <p className="subintro">
+      Read on for more information about what this library sets out to
+      achieve.  If you just to see it in action then you can skip the rest
+      of this page and go straight to{' '}
+      <Link to="/introduction" text="Getting Started"/>.
+    </p>
     <h2>Key Features</h2>
     <p className="subintro">
       Like I said, I&apos;m not claiming this is better (or worse) than
@@ -212,8 +218,8 @@ const Home = () =>
     <p>
       But the best reason of all is that I built it because I <i>wanted</i> to.
       I like writing software.  I like solving problems.  Sometimes that means
-      spending my weekends re-inventing wheels that happen to fit my car a
-      bit better than all the other wheels out there.  That&apos;s all the
+      spending my weekends re-inventing wheels that happen to fit my skateboard
+      a bit better than all the other wheels out there.  That&apos;s all the
       justification I need.  You are, of course, free to have a different
       opinion and use whatever tools best fit your needs.
     </p>

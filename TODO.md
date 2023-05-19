@@ -28,7 +28,7 @@
 registering with the form?
 
 * change errorsInHeader to showErrors - it's simple enough to insert the
-  <Errors/> wherever you want them.
+  <Errors/> wherever you want them.  Maybe also make it false by default.
 
 ## State
 
@@ -38,17 +38,17 @@ registering with the form?
 
 * focus/scroll to first invalid field
 
-* minLength, maxLength, pattern, etc.
+* minLength, maxLength, pattern, etc.  Maybe also "format" to define some
+basic format, e.g. email
 
 ## Docs
 
-* Codeblock/Example copy is broken when children are used
+* Codeblock/Example copy is broken when children are used - should be fixed
+(solution: use external code, not children)
 
 * API / component reference
 
 * Changed component
-
-* Tutorial - examples of edit form with values
 
 * Move onSubmit() from Submit to Form
 
@@ -74,6 +74,8 @@ be `validate`
 * Debug properties
 
 * ...and properties for other components, too, e.g. Cancel, Reset, Submit, etc.
+
+* consistent p.intro on each section index page (and component page?)
 
 ## Styling
 

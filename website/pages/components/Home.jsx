@@ -5,7 +5,7 @@ import TOC from '../../site/TOC.jsx'
 const Components = () =>
   <div>
     <h1>Components</h1>
-    <p>
+    <p className="intro">
       This section of the documentation provides detailed information about
       each of the components.
     </p>
