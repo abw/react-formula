@@ -25,6 +25,7 @@ const Home = () =>
         </p>
       </div>
     </div>
+    <img src="/badger.jpg"/>
     <p className="subintro">
       None of these questions will be answered, at least not directly.
       You can read the copious documentation provided here if you want to

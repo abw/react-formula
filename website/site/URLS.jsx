@@ -148,6 +148,11 @@ export const URLS = {
     code:   'help',
     about:  'Additional help for a field',
   },
+  'field:Input': {
+    url:    '/components/Field/Input',
+    code:   'Input',
+    about:  'Custom input component for a field',
+  },
   'field:label': {
     url:    '/components/Field/label',
     code:   'label',
@@ -321,6 +326,15 @@ export const URLS = {
     url:    '/inputs/Hidden',
     text:   'Hidden',
     about:  'Hidden input',
+  },
+
+  //--------------------------------------------------------------------------
+  // Customising links
+  //--------------------------------------------------------------------------
+  'custom:Input': {
+    url:    '/customising/Input',
+    text:   'Custom Input',
+    about:  'Custom input component for a field',
   },
 }
 

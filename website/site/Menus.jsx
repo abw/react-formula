@@ -116,6 +116,8 @@ export const FieldMenu = {
     'field:setValid',
     'field:setInvalid',
     'field:reset',
+    { heading: 'Components' },
+    'field:Input',
   ]
 }
 
@@ -130,6 +132,14 @@ export const InputsMenu = {
     'input:Select',
     'input:Hidden',
     ['number',    'Number, Date, etc'],
+  ]
+}
+
+export const CustomisingMenu = {
+  title: 'Customising',
+  url:   '/customising',
+  items: [
+    ['input',    'Custom Input'],
   ]
 }
 

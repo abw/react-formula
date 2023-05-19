@@ -103,6 +103,9 @@ export const FieldLabelLink = () =>
 export const HelpLink = () =>
   <CodeLink to="field:help"/>
 
+export const InputLink = () =>
+  <CodeLink to="field:Input"/>
+
 export const MinValidateLengthLink = () =>
   <CodeLink to="field:minValidateLength"/>
 
@@ -175,4 +178,7 @@ export const SelectInputLink = () =>
 
 export const HiddenInputLink = () =>
   <CodeLink to="input:Hidden"/>
+
+export const CustomInputLink = () =>
+  <CodeLink to="custom:Input"/>
 

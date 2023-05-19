@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
-import { ComponentsMenu, InputsMenu, IntroductionMenu, StylingMenu, TutorialMenu } from './Menus.jsx'
+import { ComponentsMenu, CustomisingMenu, InputsMenu, IntroductionMenu, StylingMenu, TutorialMenu } from './Menus.jsx'
 import { date, version } from './Utils.js'
 import { ReactComponent as Abw } from '../svg/abw.svg'
 
@@ -11,15 +11,7 @@ const Sidebar = () =>
     <Menu {...TutorialMenu}/>
     <Menu {...ComponentsMenu}/>
     <Menu {...InputsMenu}/>
-
-    <Menu
-      title="Customising"
-      url="/customising"
-      items={[
-        ['components', 'Custom Components'],
-      ]}
-    />
-
+    <Menu {...CustomisingMenu}/>
     <Menu {...StylingMenu}/>
 
     <h4>Tests</h4>

@@ -27,6 +27,7 @@ import OptionalLabel     from './OptionalLabel/index.jsx'
 import Validate          from './Validate/index.jsx'
 import ValidateOnChange  from './ValidateOnChange/index.jsx'
 import ValidateOnBlur    from './ValidateOnBlur/index.jsx'
+import Input             from './Input/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Field = () =>
@@ -59,6 +60,7 @@ const Field = () =>
     <Route path="setFocus"          element={<SetFocus/>}/>
     <Route path="setValue"          element={<SetValue/>}/>
     <Route path="Reset"             element={<Reset/>}/>
+    <Route path="Input"             element={<Input/>}/>
   </Routes>
 
 export default Field
