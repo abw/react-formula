@@ -23,7 +23,10 @@ export const prepareCode = code =>
   code
     .replace(/^[^]*?{?\/\*\s*START\s*\*\/}?\n/, '')  // remove everything up to {/* START */}
     .replace(/[\n\s]*{?\/\*\s*END\s*\*\/}?[^]*/, '') // and everything from {/* END */} onwards
-    .replaceAll(/\/\/\s*PRETEND:\s/g, '')           // and the // PRETEND: prefix
+    .replaceAll(/\/\/\s*PRETEND:\s/g, '')            // and the // PRETEND: prefix
+    .replaceAll(/\/\*\s*REAL\s*\*\/.*?\/\*\s*UNREAL\s*\*\//g, '')
+    .replaceAll(/{\/\*\s*(UN?)PRETEND\s*\*\/}/g, '')
+    // .replaceAll(/*REAL:\s*\n.*?\n/g, '')       // and any line after // REAL:
 
 
 export default Example

@@ -22,6 +22,10 @@
 
 * hide/show?
 
+* Should there be a default Input component which selects the appropriate
+input and renders it.  This might be useful if we want to change the Layout
+to define custom label and message, but keep the default Input.
+
 ## Form
 
 * should fields initially go through the field prepareValue() before

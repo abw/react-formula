@@ -1,11 +1,13 @@
 import { useField } from '../../../../../lib/index.js'
-
+import badgerUrl from '/badger.jpg'
+import kittenUrl from '/kitten.jpg'
+import gorillaUrl from '/gorilla.jpg'
 {/* START */}
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const animals = ['badger', 'gorilla', 'kitten']
-
+/* REAL */const URLS = { badger: badgerUrl, kitten: kittenUrl, gorilla: gorillaUrl }/* UNREAL */
 const PictureInput = () => {
   const { value, onChange } = useField()
   return (
@@ -29,7 +31,8 @@ const Picture = ({ animal, select, selected }) =>
     onClick={select}
   >
     <img
-      src={`/${animal}.jpg`} width="120" height="120"
+      /* REAL */src={URLS[animal]}/* UNREAL */// PRETEND: src={`/${animal}.jpg`}
+      width="120" height="120"
       alt={animal}
     />
   </div>
