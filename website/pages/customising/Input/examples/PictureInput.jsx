@@ -15,8 +15,8 @@ const PictureInput = () => {
           <Picture
             key={animal}
             animal={animal}
-            select={() => onChange(animal)}
             selected={value === animal}
+            select={() => onChange(animal)}
           />
       )}
     </div>

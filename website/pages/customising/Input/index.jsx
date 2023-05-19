@@ -18,7 +18,7 @@ const CustomInput = () =>
       The <InputLink/> property can be set on a field to contain a custom
       component for rendering the field input.  In this example we define
       a <code>PictureInput</code> component to show some pictures of animals
-      for the user to select.
+      for the user to select an animal guide from.
     </p>
     <Example
       Element={PictureForm}
@@ -36,19 +36,24 @@ const CustomInput = () =>
     </Example>
     <p>
       Here&apos;s the implementation of the <code>PictureInput</code> component.
-      On line 7 we use <code>useField()</code> to get the current field{' '}
-      <code>value</code> and the <code>onChange</code> function to set the
-      value.  We iterate over a list of animals and render a picture for
-      each one.  If the animal name matches the current <code>value</code> then
-      it has the <code>selected</code> CSS class added.  When the user clicks
-      on an animal picture it calls the <code>onChange</code> handler, passing
-      the animal name.
     </p>
     <CodeBlock
       code={prepareCode(PictureInputSrc)}
       caption="PictureInput"
       expand
     />
+    <p>
+      On line 7 we call <code>useField()</code> to get the current field{' '}
+      <code>value</code> and the <code>onChange</code> function to set the
+      value.  We iterate over a list of animals on line 10 and render the{' '}
+      <code>Picture</code> component for each.  We pass the <code>selected</code>{' '}
+      flag on line 15 to indicate if the animal name matches the current{' '}
+      <code>value</code>.  This is used to add the <code>selected</code> CSS
+      class to the picture container on line 25.  We also pass a <code>select</code>{' '}
+      function on line 16 which calls the <code>onChange</code> handler to select
+      the animal.  This is added to the picture container as an <code>onClick</code>{' '}
+      handler on line 26.
+    </p>
     <p>
       For completeness, here&apos;s the additional CSS we&apos;re using to
       apply the styling.
