@@ -47,9 +47,6 @@ basic format, e.g. email
 
 ## Docs
 
-* Codeblock/Example copy is broken when children are used - should be fixed
-(solution: use external code, not children)
-
 * API / component reference
 
 * Changed component
@@ -73,13 +70,13 @@ be `validate`
 
 * Text input docs looks like the original first page of the tutorial
 
-* Update styling page to talk about CSS variables
-
 * Debug properties
 
 * ...and properties for other components, too, e.g. Cancel, Reset, Submit, etc.
 
 * consistent p.intro on each section index page (and component page?)
+
+* Added pager to pages in components
 
 ## Styling
 
