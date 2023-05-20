@@ -10,11 +10,12 @@ import { isArray, isFunction } from '@abw/badger-utils'
 const Field = ({
   name,
   children,
-  Layout=DefaultLayout,
   ...props
 }) => {
   const form  = useForm()
   const field = prepareField(form.fieldSpec(name, props))
+  // console.log('field: ', field)
+  const { Layout=DefaultLayout } = field
 
   // console.log('children: ', children);
   const childArray = children

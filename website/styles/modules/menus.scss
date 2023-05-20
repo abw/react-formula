@@ -30,6 +30,81 @@ li {
   margin-bottom: 1rem;
 }
 
+#layout aside {
+  div.menu {
+    // margin: 0 -1rem 0.25rem;
+    margin: 0 0rem 0.25rem;
+    margin: 0 0rem 0rem;
+    font-size: 0.9rem;
+  }
+
+  ul.menu {
+    padding: 0;
+    margin: 0 0 0 0.5rem;
+    list-style: none;
+    li {
+      margin: 0;
+      padding: 0;
+      h4 {
+        font-size: 0.8rem;
+        padding: 0.25em 0.5em 0.25em 0.25em;
+        margin-bottom: 0.25em;
+        color: var(--menu-secn-fg);
+        font-weight: normal;
+      }
+      a {
+        display: block;
+        background-color: var(--menu-bg);
+        color: var(--menu-fg);
+        padding: 0.25em 0.5em;
+        margin-bottom: 0.25em;
+        // border-right: 5px solid var(--menu-bd);
+        border-left: 5px solid var(--menu-bd);
+        &.active {
+          background-color: var(--menu-ac-bg);
+          border-color: var(--menu-ac-bd);
+          color: var(--menu-ac-fg);
+        }
+        &:hover {
+          background-color: var(--menu-hv-bg);
+          border-color: var(--menu-hv-bd);
+        }
+        &.active:hover {
+          background-color: var(--menu-ac-bg);
+        }
+      }
+    }
+  }
+  .menu-head {
+    background-color: var(--menu-head-bg);
+    &:hover {
+      background-color: var(--menu-head-hv-bg);
+    }
+    margin: 0 0 0.25rem 0;
+    padding: 0.25em 0.5em;
+    a {
+      color: var(--menu-head-fg);
+      flex-basis: 100%;
+      h4 {
+        line-height: 1.5;
+        margin: 0;
+      }
+      svg.icon {
+        margin: 0 0.25em 0 -0.25em;
+      }
+      &.active {
+        color: var(--menu-head-ac-fg);
+      }
+      &:hover {
+        background-color: var(--menu-head-hv-bg);
+        color: var(--menu-head-hv-fg);
+      }
+    }
+    .icon {
+      transition: all 300ms;
+    }
+  }
+}
 
 div.see-also,
 div.toc {

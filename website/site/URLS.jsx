@@ -158,6 +158,11 @@ export const URLS = {
     code:   'label',
     about:  'A label for the field',
   },
+  'field:Layout': {
+    url:    '/components/Field/Layout',
+    code:   'Layout',
+    about:  'Custom layout component for a field',
+  },
   'field:minValidateLength': {
     url:    '/components/Field/minValidateLength',
     code:   'minValidateLength',

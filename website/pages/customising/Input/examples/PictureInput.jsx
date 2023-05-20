@@ -4,7 +4,7 @@ import kittenUrl from '/kitten.jpg'
 import gorillaUrl from '/gorilla.jpg'
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Field } from '@abw/react-formula'
+// PRETEND: import { useField } from '@abw/react-formula'
 
 const animals = ['badger', 'gorilla', 'kitten']
 /* REAL */const URLS = { badger: badgerUrl, kitten: kittenUrl, gorilla: gorillaUrl }/* UNREAL */

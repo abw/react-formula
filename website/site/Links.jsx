@@ -106,6 +106,9 @@ export const HelpLink = () =>
 export const InputLink = () =>
   <CodeLink to="field:Input"/>
 
+export const FieldLayoutLink = () =>
+  <CodeLink to="field:Layout"/>
+
 export const MinValidateLengthLink = () =>
   <CodeLink to="field:minValidateLength"/>
 

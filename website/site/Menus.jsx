@@ -140,6 +140,7 @@ export const CustomisingMenu = {
   url:   '/customising',
   items: [
     ['input',    'Custom Input'],
+    ['layout',   'Custom Layout'],
   ]
 }
 

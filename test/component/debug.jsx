@@ -2,6 +2,7 @@ import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
+import { act } from 'react-dom/test-utils'
 import { Form, Field, Debug } from '../../lib/index.js'
 
 const DebugExample = () =>
@@ -15,18 +16,18 @@ it(
   'should display Debug panel',
   async () => {
     const user = userEvent.setup()
-    const { container } = render(<DebugExample/>)
+    const { container } = await act(() => render(<DebugExample/>))
     const foo = container.querySelector('#foo')
     const bar = container.querySelector('#bar')
 
     // focus on foo field and enter some text
-    await user.click(foo)
-    await user.keyboard('Hello')
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello') )
     expect(foo).toHaveValue('Hello')
 
     // focus on bar field and enter some text
-    await user.click(bar)
-    await user.keyboard('!')
+    await act( () => user.click(bar) )
+    await act( () => user.keyboard('!') )
     expect(bar).toHaveValue('World!')
 
     // check debug panel is displaying values
