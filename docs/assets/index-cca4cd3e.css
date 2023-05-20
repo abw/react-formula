@@ -1,1 +1,0 @@
-div.animals{display:flex;gap:1rem}div.animal{font-size:0;line-height:0;border:6px solid white;box-shadow:2px 2px 4px #0000001a;transition:border-color .5s}div.animal:hover{border-color:#ccf;cursor:pointer}div.animal.selected{border-color:#88f}
