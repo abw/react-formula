@@ -8,7 +8,7 @@ import OptionSrc       from './examples/Option.jsx?raw'
 import SummarySrc      from './examples/Summary.jsx?raw'
 import PizzaCSS        from './examples/pizza.scss?raw'
 import Example         from '../../../site/Example.jsx'
-import { FieldLayoutLink }   from '../../../site/Links.jsx'
+import { FieldLayoutLink, LabelLink }   from '../../../site/Links.jsx'
 import CodeBlock from '../../../site/CodeBlock.jsx'
 import { prepareCode } from '../../../site/Example.jsx'
 
@@ -71,7 +71,19 @@ const CustomLayout = () =>
       On line 10 we call the <code>toppingSelector()</code> factory function
       which returns a function for selecting a topping (or unselecting one
       that&apos;s already selected) and calling the <code>onChange</code> handler
-      to update the field.  Here&apos;s the definitions for those functions.
+      to update the field.  We&apos;ll look at the definitions of those functions
+      shortly.
+    </p>
+    <p>
+      We have some explanatory text from lines 14 to 20.  Note how this
+      includes the <code>free</code> and <code>price</code> values defined
+      in our field schema. On line 21 we render the default <LabelLink/>{' '}
+      component to generate the field label. On line 23 we render a custom{' '}
+      <code>Options</code> component and on line 27 a custom{' '}
+      <code>Summary</code> component.
+    </p>
+    <p>
+      Here&apos;s the definitions for those utility functions.
     </p>
     <CodeBlock
       code={prepareCode(UtilsSrc)}
