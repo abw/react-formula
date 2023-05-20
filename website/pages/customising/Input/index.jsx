@@ -1,11 +1,13 @@
-import React from 'react'
+import React           from 'react'
 import PictureForm     from './examples/PictureForm.jsx'
 import PictureFormSrc  from './examples/PictureForm.jsx?raw'
 import PictureInputSrc from './examples/PictureInput.jsx?raw'
+import PictureSrc      from './examples/Picture.jsx?raw'
 import AnimalsCSS      from './examples/animals.css?raw'
 import Example         from '../../../site/Example.jsx'
+import CodeBlock       from '../../../site/CodeBlock.jsx'
+import Pager           from '../../../site/Pager/Customising.jsx'
 import { InputLink }   from '../../../site/Links.jsx'
-import CodeBlock from '../../../site/CodeBlock.jsx'
 import { prepareCode } from '../../../site/Example.jsx'
 
 const CustomInput = () =>
@@ -48,12 +50,18 @@ const CustomInput = () =>
       value.  We iterate over a list of animals on line 10 and render the{' '}
       <code>Picture</code> component for each.  We pass the <code>selected</code>{' '}
       flag on line 15 to indicate if the animal name matches the current{' '}
-      <code>value</code>.  This is used to add the <code>selected</code> CSS
-      class to the picture container on line 25.  We also pass a <code>select</code>{' '}
+      <code>value</code>.  We also pass a <code>select</code>{' '}
       function on line 16 which calls the <code>onChange</code> handler to select
-      the animal.  This is added to the picture container as an <code>onClick</code>{' '}
-      handler on line 26.
+      the animal.
     </p>
+    <p>
+      Here&apos;s the <code>Picture</code> component.
+    </p>
+    <CodeBlock
+      code={prepareCode(PictureSrc)}
+      caption="Picture"
+      expand
+    />
     <p>
       For completeness, here&apos;s the additional CSS we&apos;re using to
       apply the styling.
@@ -70,6 +78,8 @@ const CustomInput = () =>
       <li>Gorilla photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/images/animals/monkey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
       <li>Kitten photo by <a href="https://unsplash.com/@feneek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sergey Semin</a> on <a href="https://unsplash.com/images/animals/kitten?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
     </ul>
+
+    <Pager uri="input"/>
   </div>
 
 export default CustomInput

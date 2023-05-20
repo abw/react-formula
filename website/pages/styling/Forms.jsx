@@ -1,4 +1,5 @@
 import React from 'react'
+import Pager from '../../site/Pager/Styling.jsx'
 
 const Forms = () =>
   <div>
@@ -13,7 +14,7 @@ const Forms = () =>
     <p>
       This is TODO
     </p>
-
+    <Pager uri="forms"/>
   </div>
 
 export default Forms

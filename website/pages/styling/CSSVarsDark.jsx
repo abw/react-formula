@@ -2,7 +2,8 @@ import React        from 'react'
 import parseCSSVars from '../../site/ParseCSSVars.js'
 import VarsList     from './VarsList.jsx'
 import dark         from '../../../styles/properties/dark.scss?raw'
-import Link from '../../site/Link.jsx'
+import Pager        from '../../site/Pager/Styling.jsx'
+import Link         from '../../site/Link.jsx'
 
 const darkVars = parseCSSVars(dark)
 
@@ -15,6 +16,7 @@ const CSSVarsDark = () =>
       in dark mode.
     </p>
     <VarsList vars={darkVars}/>
+    <Pager uri="css-dark"/>
   </div>
 
 export default CSSVarsDark

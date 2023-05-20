@@ -1,5 +1,6 @@
-import React from 'react'
+import React  from 'react'
 import Layout from '../../../lib/Field/Layout.jsx'
+import Pager  from '../../site/Pager/Styling.jsx'
 import { fieldDefaultProperties } from '../../../lib/Config.js'
 
 const mockField = {
@@ -155,9 +156,8 @@ const Fields = () =>
           status: { disabled: true }
         }}
       />
-
-
     </form>
+    <Pager uri="fields"/>
   </div>
 
 export default Fields

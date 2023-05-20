@@ -1,4 +1,4 @@
-import React from 'react'
+import React           from 'react'
 import PizzaForm       from './examples/PizzaForm.jsx'
 import PizzaFormSrc    from './examples/PizzaForm.jsx?raw'
 import ToppingsSrc     from './examples/Toppings.jsx?raw'
@@ -8,9 +8,10 @@ import OptionSrc       from './examples/Option.jsx?raw'
 import SummarySrc      from './examples/Summary.jsx?raw'
 import PizzaCSS        from './examples/pizza.scss?raw'
 import Example         from '../../../site/Example.jsx'
-import { FieldLayoutLink, LabelLink }   from '../../../site/Links.jsx'
-import CodeBlock from '../../../site/CodeBlock.jsx'
+import CodeBlock       from '../../../site/CodeBlock.jsx'
+import Pager           from '../../../site/Pager/Customising.jsx'
 import { prepareCode } from '../../../site/Example.jsx'
+import { FieldLayoutLink, LabelLink }   from '../../../site/Links.jsx'
 
 const CustomLayout = () =>
   <div>
@@ -44,7 +45,7 @@ const CustomLayout = () =>
     >
       <p>
         Before we go any further into the code, let&apos;s see how it looks.
-        Select some toppings for you pizza!
+        Select some toppings for your pizza!
       </p>
     </Example>
     <p>
@@ -130,6 +131,8 @@ const CustomLayout = () =>
       language="css"
       expand
     />
+
+    <Pager uri="layout"/>
   </div>
 
 export default CustomLayout

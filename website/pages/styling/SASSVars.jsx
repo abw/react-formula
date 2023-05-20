@@ -1,12 +1,13 @@
-import React from 'react'
-import defaults from '../../../styles/config/defaults.scss?raw'
-import namespace  from '../../../styles/config/namespace.scss?raw'
-import namespaces  from './examples/namespaces.scss?raw'
-import defaultsScss from './examples/defaults.scss?raw'
-import { parseSassVars } from '../../site/ParseSassVars.js'
-import CodeBlock from '../../site/CodeBlock.jsx'
-import Link from '../../site/Link.jsx'
-import VarsList from './VarsList.jsx'
+import React              from 'react'
+import CodeBlock          from '../../site/CodeBlock.jsx'
+import Link               from '../../site/Link.jsx'
+import Pager              from '../../site/Pager/Styling.jsx'
+import defaults           from '../../../styles/config/defaults.scss?raw'
+import namespace          from '../../../styles/config/namespace.scss?raw'
+import namespaces         from './examples/namespaces.scss?raw'
+import defaultsScss       from './examples/defaults.scss?raw'
+import VarsList           from './VarsList.jsx'
+import { parseSassVars }  from '../../site/ParseSassVars.js'
 
 const namespaceVars = parseSassVars(namespace)
 const defaultsVars = parseSassVars(defaults)
@@ -49,6 +50,7 @@ const SASSVars = () =>
     </p>
     <CodeBlock language="scss" code={defaultsScss} expand caption="your-formula.scss"/>
     <VarsList vars={defaultsVars}/>
+    <Pager uri="sass-variables"/>
   </div>
 
 

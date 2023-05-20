@@ -1,8 +1,9 @@
 import React        from 'react'
 import parseCSSVars from '../../site/ParseCSSVars.js'
-import VarsList     from './VarsList.jsx'
 import defaults     from '../../../styles/properties/default.scss?raw'
 import Link         from '../../site/Link.jsx'
+import Pager        from '../../site/Pager/Styling.jsx'
+import VarsList     from './VarsList.jsx'
 
 const defaultVars = parseCSSVars(defaults)
 
@@ -15,6 +16,7 @@ const CSSVarsDefault = () =>
       <Link to="/styling/sass-variables" text="SASS Variables"/>.
     </p>
     <VarsList vars={defaultVars}/>
+    <Pager uri="css-defaults"/>
   </div>
 
 export default CSSVarsDefault

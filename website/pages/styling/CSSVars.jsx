@@ -1,10 +1,11 @@
 import React        from 'react'
 import Example      from '../../site/Example.jsx'
 import Link         from '../../site/Link.jsx'
+import CodeBlock    from '../../site/CodeBlock.jsx'
+import Pager        from '../../site/Pager/Styling.jsx'
 import BrandedCSS   from './examples/branded.css?raw'
 import Branded      from './examples/Branded.jsx'
 import BrandedSrc   from './examples/Branded.jsx?raw'
-import CodeBlock    from '../../site/CodeBlock.jsx'
 import MyFormula    from './examples/my-formula.css?raw'
 import { useTheme } from '@abw/react-night-and-day'
 import './examples/branded.css'
@@ -60,6 +61,8 @@ const CSSVars = () => {
         properties are defined as {' '}
         <Link to="/styling/sass-variables" text="SASS variables"/>.
       </p>
+
+      <Pager uri="css-variables"/>
     </div>
   )
 }
