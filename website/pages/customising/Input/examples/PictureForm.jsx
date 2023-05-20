@@ -9,11 +9,6 @@ import './animals.css'
 const PictureForm = () =>
   <Form>
     <Field
-      name="name" label="Your name"
-      requiredMessage="You must enter your name"
-      required
-    />
-    <Field
       name="animal" label="Pick an animal guide"
       requiredMessage="You must pick an animal"
       required
