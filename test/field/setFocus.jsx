@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -38,12 +38,12 @@ it(
     const focbar = screen.getByTestId('focus-bar')
 
     // focus on foo field
-    await user.click(focfoo)
+    await act( () => user.click(focfoo) )
     expect(fields[0]).toHaveClass('focus')
     expect(fields[1]).not.toHaveClass('focus')
 
     // focus on bar field
-    await user.click(focbar)
+    await act( () => user.click(focbar) )
     expect(fields[0]).not.toHaveClass('focus')
     expect(fields[1]).toHaveClass('focus')
   }

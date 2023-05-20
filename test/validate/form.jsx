@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, Submit } from '../../lib/index.js'
 import * as yup from 'yup'
 import { fail } from '@abw/badger-utils'
@@ -72,27 +72,27 @@ it('should validate all fields',
     const bam = container.querySelector('#bam')
 
     // focus on foo field, enter some text
-    await user.click(foo)
-    await user.keyboard(' Hello World ')
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' Hello World ') )
 
     // focus on bar field, enter some text
-    await user.click(bar)
-    await user.keyboard(' Hello World ')
+    await act( () => user.click(bar) )
+    await act( () => user.keyboard(' Hello World ') )
 
     // focus on wig field, enter some text
-    await user.click(wig)
-    await user.keyboard(' Hello World ')
+    await act( () => user.click(wig) )
+    await act( () => user.keyboard(' Hello World ') )
 
     // focus on wam field, enter some text
-    await user.click(wam)
-    await user.keyboard(' Breathe, breathe in the air ')
+    await act( () => user.click(wam) )
+    await act( () => user.keyboard(' Breathe, breathe in the air ') )
 
     // focus on bam field, enter some text
-    await user.click(bam)
-    await user.keyboard(" Don't be afraid to care ")
+    await act( () => user.click(bam) )
+    await act( () => user.keyboard(" Don't be afraid to care ") )
 
     // submit the form
-    await user.click(screen.getByRole('button', { name: /submit/i }))
+    await act( () => user.click(screen.getByRole('button', { name: /submit/i })) )
 
     // screen.debug()
 

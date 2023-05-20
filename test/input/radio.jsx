@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, useForm } from '../../lib/index.js'
 
 const ShowValue = ({name}) => {
@@ -31,13 +31,13 @@ it(
     const output  = screen.getByTestId('value-foo')
     expect(output).toHaveTextContent('')
 
-    await userEvent.click(alpha)
+    await act( () => userEvent.click(alpha) )
     expect(output).toHaveTextContent('alpha')
 
-    await userEvent.click(bravo)
+    await act( () => userEvent.click(bravo) )
     expect(output).toHaveTextContent('bravo')
 
-    await userEvent.click(charlie)
+    await act( () => userEvent.click(charlie) )
     expect(output).toHaveTextContent('charlie')
   }
 )
@@ -64,13 +64,13 @@ it(
     const output  = screen.getByTestId('value-foo')
     expect(output).toHaveTextContent('')
 
-    await userEvent.click(alpha)
+    await act( () => userEvent.click(alpha) )
     expect(output).toHaveTextContent('letter-a')
 
-    await userEvent.click(bravo)
+    await act( () => userEvent.click(bravo) )
     expect(output).toHaveTextContent('letter-b')
 
-    await userEvent.click(charlie)
+    await act( () => userEvent.click(charlie) )
     expect(output).toHaveTextContent('letter-c')
   }
 )

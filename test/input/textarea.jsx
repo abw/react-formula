@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, useForm } from '../../lib/index.js'
 
 const ShowValue = ({name}) => {
@@ -45,8 +45,8 @@ it(
     const input = container.querySelector('textarea')
 
     // type some input
-    await user.click(input)
-    await user.keyboard('Hello')
+    await act( () => user.click(input) )
+    await act( () => user.keyboard('Hello') )
 
     expect(screen.getByTestId('value-foo'))
       .toHaveTextContent('Hello')

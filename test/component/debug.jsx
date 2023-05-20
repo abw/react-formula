@@ -1,8 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render } from '@testing-library/react'
-import { act } from 'react-dom/test-utils'
+import { render, act } from '@testing-library/react'
 import { Form, Field, Debug } from '../../lib/index.js'
 
 const DebugExample = () =>
@@ -16,7 +15,7 @@ it(
   'should display Debug panel',
   async () => {
     const user = userEvent.setup()
-    const { container } = await act(() => render(<DebugExample/>))
+    const { container } = render(<DebugExample/>)
     const foo = container.querySelector('#foo')
     const bar = container.querySelector('#bar')
 

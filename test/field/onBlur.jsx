@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -28,11 +28,12 @@ it(
   'should call onBlur',
   async () => {
     const { container } = render(<BlurTest/>)
+    const user = userEvent.setup()
+    const foo = container.querySelector('#foo')
+    const bar = container.querySelector('#bar')
 
     // focus on foo field
-    await userEvent.click(
-      container.querySelector('#foo')
-    )
+    await act( () => user.click(foo) )
     // field container should have focus class
     expect(container.getElementsByClassName('field')[0])
       .toHaveClass('focus')
@@ -42,9 +43,8 @@ it(
       .toBe(0)
 
     // focus on bar field
-    await userEvent.click(
-      container.querySelector('#bar')
-    )
+    await act( () => user.click(bar) )
+
     // first field container should NOT have focus class
     expect(container.getElementsByClassName('field')[0])
       .not.toHaveClass('focus')
@@ -58,9 +58,8 @@ it(
       .toHaveTextContent('Hello World')
 
     // focus on foo field - expect bar's onBlur to be called
-    await userEvent.click(
-      container.querySelector('#foo')
-    )
+    await act( () => user.click(foo) )
+
     expect(screen.getByTestId('msg'))
       .toHaveTextContent('Goodbye World')
   }

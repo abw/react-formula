@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form } from '../../lib/index.js'
 import Status from '../lib/Form/Status.jsx'
 import SetStatus from '../lib/Form/SetStatus.jsx'
@@ -43,7 +43,7 @@ describe(
         )
         // screen.debug()
         // changed
-        await userEvent.click(screen.getByTestId('set-changed-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-changed-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -58,7 +58,7 @@ describe(
           .toHaveTextContent('FALSE')
 
         // validating
-        await userEvent.click(screen.getByTestId('set-validating-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-validating-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -73,7 +73,7 @@ describe(
           .toHaveTextContent('FALSE')
 
         // invalid
-        await userEvent.click(screen.getByTestId('set-invalid-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-invalid-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -88,7 +88,7 @@ describe(
           .toHaveTextContent('FALSE')
 
         // valid
-        await userEvent.click(screen.getByTestId('set-valid-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-valid-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -103,7 +103,7 @@ describe(
           .toHaveTextContent('FALSE')
 
         // submitting
-        await userEvent.click(screen.getByTestId('set-submitting-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-submitting-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -118,7 +118,7 @@ describe(
           .toHaveTextContent('FALSE')
 
         // submitted
-        await userEvent.click(screen.getByTestId('set-submitted-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-submitted-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('TRUE')
         expect(screen.getByTestId('validating'))
@@ -133,7 +133,7 @@ describe(
           .toHaveTextContent('TRUE')
 
         // reset
-        await userEvent.click(screen.getByTestId('set-reset-state'))
+        await act( () => userEvent.click(screen.getByTestId('set-reset-state')) )
         expect(screen.getByTestId('changed'))
           .toHaveTextContent('FALSE')
         expect(screen.getByTestId('validating'))

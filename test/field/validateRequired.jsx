@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render } from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 
 const RequiredTest = () =>
@@ -22,10 +22,10 @@ it(
     const { container } = render(<RequiredTest/>)
 
     // focus on foo field
-    await user.click( container.querySelector('#foo') )
+    await act( () => user.click( container.querySelector('#foo') ) )
 
     // focus on bar field
-    await user.click( container.querySelector('#bar') )
+    await act( () => user.click( container.querySelector('#bar') ) )
 
     const firstField = container.getElementsByClassName('field')[0]
     expect(firstField).toHaveClass('invalid')
@@ -42,10 +42,10 @@ it(
     const { container } = render(<RequiredTest/>)
 
     // focus on bar field
-    await user.click( container.querySelector('#bar') )
+    await act( () => user.click( container.querySelector('#bar') ) )
 
     // focus on foo field
-    await user.click( container.querySelector('#foo') )
+    await act( () => user.click( container.querySelector('#foo') ) )
 
     // second field should be invalid
     const firstField = container.getElementsByClassName('field')[1]

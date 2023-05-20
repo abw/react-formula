@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -33,20 +33,20 @@ it(
     const bar = container.querySelector('#bar')
 
     // focus on foo field
-    await userEvent.click(foo)
+    await act( () => userEvent.click(foo) )
 
     // no message yet
     expect(screen.queryAllByTestId('msg').length).toBe(0)
 
     // focus on bar field
-    await userEvent.click(bar)
+    await act( () => userEvent.click(bar) )
 
     // onInvalid should have been triggered
     expect(screen.getByTestId('msg'))
       .toHaveTextContent('Foo is not valid: A value is required')
 
     // focus on foo field
-    await userEvent.click(foo)
+    await act( () => userEvent.click(foo) )
 
     // onInvalid should have been triggered
     expect(screen.getByTestId('msg'))

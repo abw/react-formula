@@ -1,8 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import { act } from 'react-dom/test-utils'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, Changed, ResetSubmit } from '../../lib/index.js'
 
 const ChangedExample = () =>
@@ -19,7 +18,7 @@ it(
   'should display ResetSubmit when changed',
   async () => {
     const user = userEvent.setup()
-    const { container } = await act( () => render(<ChangedExample/>) )
+    const { container } = render(<ChangedExample/>)
     const foo = container.querySelector('#foo')
     const bar = container.querySelector('#bar')
 

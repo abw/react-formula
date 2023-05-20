@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, ResetSubmit } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -30,29 +30,29 @@ it(
     const submit = screen.getByRole('button', { name: /submit/i })
 
     // click on submit button
-    await user.click(submit)
+    await act( () => user.click(submit) )
 
     // msg should be rendered
     expect(msg).toHaveTextContent('Foo is Hello')
 
     // focus on foo field and type some more input
-    await user.click(foo)
-    await user.keyboard(' World')
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' World') )
 
     // click on submit button
-    await user.click(submit)
+    await act( () => user.click(submit) )
 
     // updated msg should be rendered
     expect(msg).toHaveTextContent('Hello World')
 
     // click on reset button
-    await user.click(reset)
+    await act( () => user.click(reset) )
 
     // foo field should be reset
     expect(foo).toHaveValue('Hello')
 
     // click on submit button
-    await user.click(submit)
+    await act( () => user.click(submit) )
 
     // msg should be rendered
     expect(msg).toHaveTextContent('Foo is Hello')

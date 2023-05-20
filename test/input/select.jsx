@@ -1,7 +1,7 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import userEvent from '@testing-library/user-event'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, act, fireEvent } from '@testing-library/react'
 import { Form, Field, useForm } from '../../lib/index.js'
 
 const ShowValue = ({name}) => {
@@ -68,16 +68,16 @@ it(
     expect(options[1]).toHaveTextContent('bravo')
     expect(options[2]).toHaveTextContent('charlie')
 
-    await userEvent.selectOptions(select, options[0])
+    await act( () => userEvent.selectOptions(select, options[0]) )
     expect(options[0].selected).toBe(true)
     expect(output).toHaveTextContent('letter-a')
 
-    await userEvent.selectOptions(select, options[1])
+    await act( () => userEvent.selectOptions(select, options[1]) )
     expect(options[0].selected).toBe(false)
     expect(options[1].selected).toBe(true)
     expect(output).toHaveTextContent('letter-b')
 
-    await userEvent.selectOptions(select, options[2])
+    await act( () => userEvent.selectOptions(select, options[2]) )
     expect(options[0].selected).toBe(false)
     expect(options[1].selected).toBe(false)
     expect(options[2].selected).toBe(true)
@@ -110,16 +110,16 @@ it(
     expect(options[2]).toHaveTextContent('bravo')
     expect(options[3]).toHaveTextContent('charlie')
 
-    await userEvent.selectOptions(select, options[1])
+    await act( () => userEvent.selectOptions(select, options[1]) )
     expect(options[1].selected).toBe(true)
     expect(output).toHaveTextContent('alpha')
 
-    await userEvent.selectOptions(select, options[2])
+    await act( () => userEvent.selectOptions(select, options[2]) )
     expect(options[1].selected).toBe(false)
     expect(options[2].selected).toBe(true)
     expect(output).toHaveTextContent('bravo')
 
-    await userEvent.selectOptions(select, options[3])
+    await act( () => userEvent.selectOptions(select, options[3]) )
     expect(options[1].selected).toBe(false)
     expect(options[2].selected).toBe(false)
     expect(options[3].selected).toBe(true)

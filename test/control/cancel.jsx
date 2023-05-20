@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field, Cancel } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -28,7 +28,7 @@ it(
     expect(msg).toHaveTextContent('')
 
     // click on cancel button
-    await user.click(cancel)
+    await act( () => user.click(cancel) )
 
     // message should say clicked
     expect(msg).toHaveTextContent('Clicked on cancel')

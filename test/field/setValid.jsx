@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -33,12 +33,12 @@ it(
     const invalid = screen.getByTestId('invalid')
 
     // click on valid button
-    await user.click(valid)
+    await act( () => user.click(valid) )
     expect(field).toHaveClass('valid')
     expect(field.querySelector('div.help')).toHaveTextContent('This is OK')
 
     // click on invalid button
-    await user.click(invalid)
+    await act( () => user.click(invalid) )
     expect(field).toHaveClass('invalid')
     expect(field.querySelector('div.help')).toHaveTextContent('This is not OK')
   }

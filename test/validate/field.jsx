@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render } from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import * as yup from 'yup'
 import { fail } from '@abw/badger-utils'
@@ -44,7 +44,7 @@ const ValidateResolveStripSpaces = value => Promise.resolve(
 
 const ValidateBadJS = value => {
   const newval = value.nukeAll(' ')     // not a valid function
-  console.log('newval: ', newval)
+  // console.log('newval: ', newval)
   return Promise.resolve(newval)
   // Promise.resolve(value.removeAll(' '))
 }
@@ -64,9 +64,9 @@ it('should validate with Yup',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard(' Hello World ')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' Hello World ') )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should be trimmed
     const firstField = container.getElementsByClassName('field')[0]
@@ -90,9 +90,9 @@ it('should fail with Yup',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard(' Hello World ')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' Hello World ') )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should be trimmed
     const firstField = container.getElementsByClassName('field')[0]
@@ -118,9 +118,9 @@ it('should validate OK',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should be unchanged
     const firstField = container.getElementsByClassName('field')[0]
@@ -145,9 +145,9 @@ it('should validate OK with custom validMessage',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard(' Hello World' )
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' Hello World' ) )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should be unchanged
     const firstField = container.getElementsByClassName('field')[0]
@@ -172,9 +172,9 @@ it('should validate OK with message',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard(' Hello World' )
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard(' Hello World' ) )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should be unchanged
     const firstField = container.getElementsByClassName('field')[0]
@@ -202,9 +202,9 @@ it('should validate and remove spaces',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should have spaces removed
     const firstField = container.getElementsByClassName('field')[0]
@@ -229,9 +229,9 @@ it('should validate and resolve with spaces removed',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be valid and input should have spaces removed
     const firstField = container.getElementsByClassName('field')[0]
@@ -256,9 +256,9 @@ it('should reject validation',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be invalid and return an error message
     const firstField = container.getElementsByClassName('field')[0]
@@ -284,9 +284,9 @@ it('should throw an error on validation',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be invalid and return an error message
     const firstField = container.getElementsByClassName('field')[0]
@@ -312,9 +312,9 @@ it('should fail validation',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be invalid and return an error message
     const firstField = container.getElementsByClassName('field')[0]
@@ -340,9 +340,9 @@ it('should catch JS syntax error',
     const bar = container.querySelector('#bar')
 
     // focus on foo field, enter some text, then focus on bar
-    await user.click(foo)
-    await user.keyboard('Hello World')
-    await user.click(bar)
+    await act( () => user.click(foo) )
+    await act( () => user.keyboard('Hello World') )
+    await act( () => user.click(bar) )
 
     // field should be invalid and return an error message
     const firstField = container.getElementsByClassName('field')[0]

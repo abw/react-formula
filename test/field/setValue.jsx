@@ -1,7 +1,7 @@
 import React from 'react'
 import userEvent from '@testing-library/user-event'
 import { it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import { Form, Field } from '../../lib/index.js'
 import { useState } from 'react'
 
@@ -33,18 +33,18 @@ it(
     const badger   = screen.getByTestId('badger')
 
     // focus on animal field
-    await user.click(animal)
+    await act( () => user.click(animal) )
 
     // type some input
-    await user.keyboard('Zebra')
+    await act( () => user.keyboard('Zebra') )
     expect(animal).toHaveValue('Zebra')
 
     // click on antelope button
-    await user.click(antelope)
+    await act( () => user.click(antelope) )
     expect(animal).toHaveValue('Antelope')
 
     // click on badger button
-    await user.click(badger)
+    await act( () => user.click(badger) )
     expect(animal).toHaveValue('Badger')
 
   }
