@@ -9,7 +9,7 @@ const Radio = ({ field=useField() }) => {
     options=[],
     type='radio',
     inputsClass='radio inputs',
-    inputClass='input',
+    // inputClass='input',
     textClass='text',
     optionClass='option',
     checkedClass='checked',
@@ -32,7 +32,7 @@ const Radio = ({ field=useField() }) => {
           return (
             <label key={option.value} htmlFor={id} className={classes}>
               <input
-                className={inputClass}
+                // className={inputClass}
                 type={type}
                 ref={field.inputRef}
                 aria-disabled={field.disabled}

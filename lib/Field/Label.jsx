@@ -10,7 +10,7 @@ const Label = ({ field=useField() }) => {
   const showRequired = field.showRequired  && required
   const showOptional = field.showOptional  && ! required
   const hasLabel     = label || showRequired || showOptional
-  const className    = selectClass('label', classes)
+  const className    = selectClass(classes, 'label')
 
   return hasLabel &&
     <label htmlFor={id} className={className}>

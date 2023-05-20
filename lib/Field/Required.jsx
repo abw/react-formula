@@ -5,7 +5,7 @@ import { selectClass } from '../Utils.js'
 
 const Required = ({ field=useField() }) =>
   field.required && field.showRequired &&
-    <span className={selectClass('required', field.classes)}>
+    <span className={selectClass(field.classes, 'required')}>
       {field.requiredLabel}
     </span>
 

@@ -4,7 +4,7 @@ import { Themed } from '../Theme.jsx'
 
 const TextArea = ({ field=useField() }) => {
   const {
-    className='input',
+    // className='input',
     inputsClass='inputs',
     rows=5
   } = field
@@ -13,7 +13,7 @@ const TextArea = ({ field=useField() }) => {
       <textarea
         id={field.id}
         ref={field.inputRef}
-        className={className}
+        // className={className}
         name={field.name}
         value={field.value}
         disabled={field.disabled}

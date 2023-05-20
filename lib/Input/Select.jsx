@@ -9,7 +9,7 @@ const Select = ({ field=useField() }) => {
     options=[],
     placeholder,
     type='select',
-    className='input',
+    // className='input',
     inputsClass='select inputs',
     optionClass='option',
     handler=Handlers[type]||Handlers.default
@@ -19,7 +19,7 @@ const Select = ({ field=useField() }) => {
   return (
     <div className={inputsClass}>
       <select
-        className={className}
+        // className={className}
         ref={field.inputRef}
         aria-disabled={field.disabled}
         tabIndex={field.disabled ? -1 : field.tabIndex}

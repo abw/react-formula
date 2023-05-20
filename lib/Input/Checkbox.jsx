@@ -9,7 +9,7 @@ const Checkbox = ({ field=useField() }) => {
     id,
     text,
     type='checkbox',
-    inputClass='input',
+    // inputClass='input',
     inputsClass='checkbox inputs',
     textClass='text',
     // checkboxClass='checkbox',
@@ -29,7 +29,7 @@ const Checkbox = ({ field=useField() }) => {
     <div className={inputsClass}>
       <label htmlFor={id} className={classes}>
         <input
-          className={inputClass}
+          // className={inputClass}
           type={type}
           ref={field.inputRef}
           aria-disabled={field.disabled}

@@ -5,11 +5,13 @@ import DefaultSuffix from '../Input/Suffix.jsx'
 import { inputAttrs, propClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
+import { hasValue } from '@abw/badger-utils'
 
 export const Text = ({ field=useField() }) => {
   const {
     type='text',
-    inputClass='input',
+    prefix, suffix,
+    // inputClass='input',
     inputsClass='inputs',
     prefixedClass='prefixed',
     suffixedClass='suffixed',
@@ -26,10 +28,10 @@ export const Text = ({ field=useField() }) => {
 
   return (
     <div className={classes}>
-      <Prefix field={field}/>
+      { hasValue(prefix) && <Prefix field={field}/> }
       <input
         type={type}
-        className={inputClass}
+        // className={inputClass}
         ref={field.inputRef}
         aria-disabled={field.disabled}
         // aria-invalid, aria-required
@@ -39,7 +41,7 @@ export const Text = ({ field=useField() }) => {
         onChange={handler(field)}
         {...attrs}
       />
-      <Suffix field={field}/>
+      { hasValue(suffix) && <Suffix field={field}/> }
     </div>
   )
 }

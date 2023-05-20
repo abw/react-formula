@@ -5,7 +5,7 @@ import { selectClass } from '../Utils.js'
 
 const Optional = ({ field=useField() }) =>
   ! field.required && field.showOptional &&
-    <span className={selectClass('optional', field.classes)}>
+    <span className={selectClass(field.classes, 'optional')}>
       {field.optionalLabel}
     </span>
 
