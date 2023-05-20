@@ -4,7 +4,7 @@ import DefaultMessage from './Message.jsx'
 import InputTypes from '../Input/index.js'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
-import { fieldClass } from './Config.js'
+import { fieldClass } from '../Utils.js'
 
 const Layout = ({ field=useField(), children }) => {
   const {

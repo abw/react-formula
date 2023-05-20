@@ -6,6 +6,7 @@ import Introduction from '../pages/introduction/index.jsx'
 import TestForm from '../test/Form.jsx'
 import LayoutTest from '../test/Layout.jsx'
 import StyleTest from '../test/Styles.jsx'
+import TestValidate from '../test/Validate.jsx'
 
 const Tutorial    = React.lazy(() => import('../pages/tutorial/index.jsx'))
 const Components  = React.lazy(() => import('../pages/components/index.jsx'))
@@ -35,6 +36,7 @@ const Router = createBrowserRouter(
         { path: 'test-form',          element: <TestForm/> },
         { path: 'test-layout',        element: <LayoutTest/> },
         { path: 'test-styles',        element: <StyleTest/> },
+        { path: 'test-validate',      element: <TestValidate/> },
         // { path: 'examples/*',         element: <Examples/> },
       ]
     },

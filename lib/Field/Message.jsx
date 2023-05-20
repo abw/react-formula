@@ -1,12 +1,14 @@
 import React from 'react'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
+import { selectClass } from '../Utils.js'
 
 const Message = ({ field=useField() }) => {
-  const { help, message } = field
-  const text = message || help
+  const { help, message, classes } = field
+  const text = message ?? help
+  const className = selectClass('help', classes)
   return text
-    ? <div className="help">{text}</div>
+    ? <div className={className}>{text}</div>
     : null
 }
 

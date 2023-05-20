@@ -7,7 +7,7 @@ it(
   'inherits custom fieldClass from form',
   () => {
     const { container } = render(
-      <Form fieldClass="my-field">
+      <Form classes={{ field: 'my-field' }}>
         <Field name="foo" label="Foo"/>
       </Form>
     )

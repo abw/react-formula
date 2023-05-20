@@ -51,17 +51,17 @@ it('should validate all fields',
     const user = userEvent.setup()
     const { container } = render(
       <Form>
-        <Field name="foo" id="foo" fieldClass="foo" validate={ValidateYupOK}/>
-        <Field name="bar" id="bar" fieldClass="bar" validate={ValidateYup20}/>
-        <Field name="baz" id="baz" fieldClass="baz" validate={ValidateOK}/>
-        <Field name="boz" id="boz" fieldClass="boz" validate={ValidateOK} validMessage="This is fine"/>
-        <Field name="wig" id="wig" fieldClass="wig" validate={ValidateOKMessage}/>
-        <Field name="wam" id="wam" fieldClass="wam" validate={ValidateStripSpaces}/>
-        <Field name="bam" id="bam" fieldClass="bam" validate={ValidateResolveStripSpaces}/>
-        <Field name="zig" id="zig" fieldClass="zig" validate={ValidateReject}/>
-        <Field name="zag" id="zag" fieldClass="zag" validate={ValidateThrow}/>
-        <Field name="zog" id="zog" fieldClass="zog" validate={ValidateFail}/>
-        <Field name="zug" id="zug" fieldClass="zug" validate={ValidateBadJS}/>
+        <Field name="foo" id="foo" className="foo" validate={ValidateYupOK}/>
+        <Field name="bar" id="bar" className="bar" validate={ValidateYup20}/>
+        <Field name="baz" id="baz" className="baz" validate={ValidateOK}/>
+        <Field name="boz" id="boz" className="boz" validate={ValidateOK} validMessage="This is fine"/>
+        <Field name="wig" id="wig" className="wig" validate={ValidateOKMessage}/>
+        <Field name="wam" id="wam" className="wam" validate={ValidateStripSpaces}/>
+        <Field name="bam" id="bam" className="bam" validate={ValidateResolveStripSpaces}/>
+        <Field name="zig" id="zig" className="zig" validate={ValidateReject}/>
+        <Field name="zag" id="zag" className="zag" validate={ValidateThrow}/>
+        <Field name="zog" id="zog" className="zog" validate={ValidateFail}/>
+        <Field name="zug" id="zug" className="zug" validate={ValidateBadJS}/>
         <Submit/>
       </Form>
     )
@@ -93,8 +93,6 @@ it('should validate all fields',
 
     // submit the form
     await act( () => user.click(screen.getByRole('button', { name: /submit/i })) )
-
-    // screen.debug()
 
     // foo field should be valid and input should be trimmed
     const fooField = container.getElementsByClassName('foo')[0]

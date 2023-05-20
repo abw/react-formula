@@ -14,11 +14,12 @@ const Sidebar = () =>
     <Menu {...CustomisingMenu}/>
     <Menu {...StylingMenu}/>
 
-    <h4>Tests</h4>
+    <h4 style={{ marginTop: '2rem' }}>Developer Tests</h4>
     <ul className="menu">
       <li><Link to="/test-form" text="Test Form"/></li>
       <li><Link to="/test-layout" text="Layout Test"/></li>
       <li><Link to="/test-styles" text="Style Test"/></li>
+      <li><Link to="/test-validate" text="Validation Test"/></li>
     </ul>
     <footer>
       <div className="notes">
@@ -33,38 +34,6 @@ const Sidebar = () =>
         </div>
       </div>
     </footer>
-
   </>
-
-/*
-    <Menu
-      title="Form"
-      url="/form"
-      items={[
-        ['properties', 'Properties'],
-        ['reset',      'Reset'],
-        ['submit',     'Submit'],
-        ['controls',   'Controls'],
-        ['validation', 'Validation'],
-        ['errors',     'Errors'],
-        ['debug',      'Debug'],
-        ['set',        'Setting Values'],
-      ]}
-    />
-
-    <Menu
-      title="Field"
-      url="/field"
-      items={[
-        ['properties',        'Properties'],
-        ['required-optional', 'Required and Optional'],
-        ['prefix-suffix',     'Prefix and Suffix'],
-        ['focus-blur',        'Focus and Blur'],
-        ['onchange',          'onChange'],
-        ['prepare-value',     'prepareValue'],
-        ['validation',        'Validation'],
-      ]}
-    />
-*/
 
 export default Sidebar

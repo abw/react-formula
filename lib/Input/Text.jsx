@@ -17,11 +17,6 @@ export const Text = ({ field=useField() }) => {
     Suffix=DefaultSuffix,
     handler=Handlers[type]||Handlers.default
   } = field
-  //let classes = [
-  //  inputsClass,
-  //  field.prefix && prefixedClass,
-  //  field.suffix && suffixedClass
-  //].filter(i => i).join(' ')
   let classes = propClasses(
     field,
     { prefix: prefixedClass, suffix: suffixedClass },

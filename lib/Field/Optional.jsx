@@ -1,10 +1,11 @@
 import React from 'react'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
+import { selectClass } from '../Utils.js'
 
 const Optional = ({ field=useField() }) =>
   ! field.required && field.showOptional &&
-    <span className="optional">
+    <span className={selectClass('optional', field.classes)}>
       {field.optionalLabel}
     </span>
 

@@ -12,7 +12,7 @@ const Checkbox = ({ field=useField() }) => {
     inputClass='input',
     inputsClass='checkbox inputs',
     textClass='text',
-    checkboxClass='checkbox',
+    // checkboxClass='checkbox',
     optionClass='option',
     checkedClass='checked',
     handler=Handlers[type]||Handlers.default
@@ -28,18 +28,16 @@ const Checkbox = ({ field=useField() }) => {
   return (
     <div className={inputsClass}>
       <label htmlFor={id} className={classes}>
-        <span className={checkboxClass}>
-          <input
-            className={inputClass}
-            type={type}
-            ref={field.inputRef}
-            aria-disabled={field.disabled}
-            tabIndex={field.disabled ? -1 : field.tabIndex}
-            onChange={handler(field)}
-            {...attrs}
-            checked={field.value}
-          />
-        </span>
+        <input
+          className={inputClass}
+          type={type}
+          ref={field.inputRef}
+          aria-disabled={field.disabled}
+          tabIndex={field.disabled ? -1 : field.tabIndex}
+          onChange={handler(field)}
+          {...attrs}
+          checked={field.value}
+        />
         <span className={textClass}>{text}</span>
       </label>
     </div>

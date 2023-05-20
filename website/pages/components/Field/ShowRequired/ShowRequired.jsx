@@ -5,7 +5,7 @@ import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const ShowRequired = () =>
-  <Form debug>
+  <Form>
     <Field
       name="field1" label="Required Field"
       required showRequired
