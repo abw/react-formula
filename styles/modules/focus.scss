@@ -1,0 +1,72 @@
+@include field-focus {
+  &:not(#{$invalid}):not(#{$valid}) {
+    label:not(#{$option}) {
+      color: var(--focus-label-text);
+    }
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--focus-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--focus-ring);
+      }
+      input,
+      textarea,
+      select,
+      &#{$radio} label#{$checked},
+      &#{$checkbox} label {
+        color: var(--focus-text);
+        background-color: var(--focus-back);
+        border-color: var(--focus-border);
+        &::placeholder {
+          color: var(--focus-placeholder-text);
+          font-weight: 300;
+        }
+      }
+      #{$prefix},
+      #{$suffix} {
+        color: var(--focus-prefix-text);
+        border-color: var(--focus-border);
+        background-color: var(--focus-prefix-back);
+      }
+    }
+  }
+  &#{$invalid} {
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--invalid-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--invalid-ring);
+      }
+    }
+  }
+  &#{$valid} {
+    #{$inputs} {
+      &:not(#{$prefixed}):not(#{$suffixed}) {
+        input:not([type=checkbox]):not([type=radio]),
+        textarea,
+        select,
+        &#{$radio} label#{$checked},
+        &#{$checkbox} label {
+          box-shadow: var(--valid-ring);
+        }
+      }
+      &#{$prefixed}, &#{$suffixed} {
+        box-shadow: var(--valid-ring);
+      }
+    }
+  }
+}

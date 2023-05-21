@@ -1,0 +1,30 @@
+@include field-disabled {
+  cursor: not-allowed;
+  label:not(#{$option}) {
+    color: var(--disabled-label-text);
+  }
+  #{$inputs} {
+    input,
+    textarea,
+    select {
+      color: var(--disabled-text);
+      background-color: var(--disabled-back);
+      border-color: var(--disabled-border);
+      &::placeholder {
+        color: var(--disabled-placeholder-text);
+      }
+    }
+    #{$prefix},
+    #{$suffix} {
+      color: var(--disabled-prefix-text);
+      background-color: var(--disabled-prefix-back);
+      border-color: var(--disabled-border);
+    }
+  }
+  #{$help} {
+    color: var(--disabled-help-text);
+    &::before {
+      content: var(--disabled-help-before);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@include field-label {
+  transition: 0.3s all;
+  &:not(#{$option}) {
+    display: block;
+    margin-right: 0.5em;
+    margin-bottom: var(--label-margin);
+    font-size: var(--label-size);
+    line-height: 1;
+    color: var(--label-text);
+    white-space: nowrap;
+  }
+  &#{$option} {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    input {
+      margin: 0;
+    }
+    #{$text} {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+  #{$required},
+  #{$optional} {
+    float: right;
+    font-size: var(--label-size);
+    line-height: 1.2;
+    padding: 0 0.5em;
+    margin-right: -0.5em;
+    border-radius: 0.25em;
+  }
+  #{$required} {
+    color: var(--required-text);
+    background-color: var(--required-back);
+    border: 1px solid var(--required-border);
+  }
+  #{$optional} {
+    color: var(--optional-text);
+    background-color: var(--optional-back);
+    border: 1px solid var(--optional-border);
+  }
+}
+

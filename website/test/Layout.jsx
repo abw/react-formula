@@ -83,6 +83,48 @@ const LayoutTest = () =>
         />
         <Submit className="mar-b field"/>
       </div>
+      <div className="grid-3 start gap-h-2">
+        <Field
+          name="checkbox1"
+          className=""
+          label="Normal Checkbox Field"
+          type="checkbox"
+          text="Checkbox"
+        />
+        <Field
+          name="checkbox2"
+          className="wide"
+          label="Wide Checkbox Field"
+          type="checkbox"
+          text="Checkbox"
+        />
+        <Field
+          name="checkbox2"
+          className="bare"
+          label="Bare Checkbox Field"
+          type="checkbox"
+          text="Checkbox"
+        />
+      </div>
+      <div className="grid-2 start gap-h-2">
+        <Field
+          name="prefix-checkbox1"
+          className=""
+          label="Prefix Checkbox"
+          type="checkbox"
+          text="Checkbox"
+          prefix="X"
+        />
+        <Field
+          name="prefix-checkbox2"
+          className=""
+          label="Suffix Checkbox"
+          type="checkbox"
+          text="Checkbox"
+          suffix="Y"
+        />
+      </div>
+
     </Form>
   </div>
 

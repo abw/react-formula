@@ -1,0 +1,9 @@
+@include field-help {
+  transition: 0.3s all;
+  display: block;
+  font-size: var(--help-size);
+  margin-right: 0.5em;
+  margin-top: var(--help-margin);
+  white-space: nowrap;
+  color: var(--help-text);
+}

@@ -1,0 +1,31 @@
+@include field-invalid {
+  label:not(#{$option}) {
+    color: var(--invalid-label-text);
+  }
+  #{$inputs} {
+    input,
+    textarea,
+    select,
+    #{$option} {
+      color: var(--invalid-text);
+      background-color: var(--invalid-back);
+      border-color: var(--invalid-border);
+      &::placeholder {
+        color: var(--invalid-placeholder-text);
+        font-weight: 300;
+      }
+    }
+    #{$prefix},
+    #{$suffix} {
+      color: var(--invalid-prefix-text);
+      background-color: var(--invalid-prefix-back);
+      border-color: var(--invalid-border);
+    }
+  }
+  #{$help} {
+    color: var(--invalid-help-text);
+    &::before {
+      content: var(--invalid-help-before);
+    }
+  }
+}
