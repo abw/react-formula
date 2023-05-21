@@ -4,7 +4,7 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const TextExample = () =>
+const Variants = () =>
   <Form>
     <Field name="one"   type="number"   label="A number field"/>
     <Field name="two"   type="date"     label="A date field"/>
@@ -12,4 +12,4 @@ const TextExample = () =>
     <Field name="four"  type="color"    label="A color field"/>
   </Form>
 
-export default TextExample
+export default Variants

@@ -4,13 +4,14 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const RadioBare = () =>
+const Fluid = () =>
   <Form>
     <Field
-      name="cheese" label="What is your favourite cheese?" type="radio"
-      options={[ 'Cheddar', 'Brie', 'Emmental' ]}
-      className="bare"
+      name="one"
+      type="textarea"
+      label="Fluid Text Area"
+      className="fluid"
     />
   </Form>
 
-export default RadioBare
+export default Fluid

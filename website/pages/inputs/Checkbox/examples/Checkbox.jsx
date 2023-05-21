@@ -7,8 +7,10 @@ import React from 'react'
 const Checkbox = () =>
   <Form>
     <Field
-      name="one" label="A checkbox example"
-      type="checkbox" text="I like badgers!"
+      name="one"
+      type="checkbox"
+      label="A checkbox example"
+      text="I like badgers!"
     />
   </Form>
 

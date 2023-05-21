@@ -131,7 +131,7 @@ export const InputsMenu = {
     'input:Radio',
     'input:Select',
     'input:Hidden',
-    ['number',    'Number, Date, etc'],
+    // ['number',    'Number, Date, etc'],
   ]
 }
 

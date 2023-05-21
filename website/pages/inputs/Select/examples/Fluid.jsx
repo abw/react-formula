@@ -4,26 +4,23 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const Select = () =>
+const FluidSelect = () =>
   <Form>
     <Field
       name="animal"
       type="select"
       label="What is your favourite animal?"
       options={[ 'Badger', 'Ferret', 'Stoat' ]}
+      className="fluid"
     />
     <Field
       name="food"
       type="select"
       label="What is your favourite number?"
       placeholder="Pick a number"
-      options={[
-        { value: 10, text: 'Ten' },
-        { value: 11, text: 'Eleven (one louder)', className: 'bold' },
-        { value: 42, text: 'Forty-Two (the meaning of life)' },
-        { value: 69, text: 'Sixty nine, dude!', disabled: true }
-      ]}
+      options={[ 10, 11, 42, 69 ]}
+      className="fluid"
     />
   </Form>
 
-export default Select
+export default FluidSelect

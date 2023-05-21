@@ -6,13 +6,13 @@ import HiddenValuesSrc  from './HiddenValues.jsx?raw'
 import HiddenValues     from './HiddenValues.jsx'
 import HiddenFormSrc    from './HiddenForm.jsx?raw'
 import HiddenForm       from './HiddenForm.jsx'
-import { FormLink }     from '../../../site/Links.jsx'
+import { FieldLink, FormLink, TypeLink }     from '../../../site/Links.jsx'
 
 const HiddenExample = () =>
   <div>
     <h1>Hidden Input</h1>
     <p>
-      Set the <code>type</code> to <code>hidden</code> to embed a hidden
+      Set the <FieldLink/> <TypeLink/> to <code>hidden</code> to embed a hidden
       value in the <FormLink/>.  A hidden value will be included in the
       form <code>values</code> that will be submitted.  But otherwise it is
       invisible to the naked eye.

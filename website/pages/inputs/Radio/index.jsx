@@ -1,58 +1,58 @@
-import React from 'react'
+import React        from 'react'
 import Example      from '../../../site/Example.jsx'
-import Source       from './examples/Radio.jsx?raw'
-import Element      from './examples/Radio.jsx'
-import SourceWide   from './examples/RadioWide.jsx?raw'
-import ElementWide  from './examples/RadioWide.jsx'
-import SourceBare   from './examples/RadioBare.jsx?raw'
-import ElementBare  from './examples/RadioBare.jsx'
+import Radio        from './examples/Radio.jsx'
+import RadioSrc     from './examples/Radio.jsx?raw'
+import Fluid        from './examples/Fluid.jsx'
+import FluidSrc     from './examples/Fluid.jsx?raw'
+import Inline       from './examples/Inline.jsx'
+import InlineSrc    from './examples/Inline.jsx?raw'
+import Bare         from './examples/Bare.jsx'
+import BareSrc      from './examples/Bare.jsx?raw'
+import { FieldLink, TypeLink } from '../../../site/Links.jsx'
 
-const Radio = () =>
+const RadioExamples = () =>
   <div>
-    <h1>Radio Button Fields</h1>
+    <h1>Radio Button Input</h1>
     <p>
-      Set the <code className="code">type</code> to{' '}
-      <code className="code">radio</code> to create a radio button set.
-      The <code className="code">options</code> property should be used to
-      define the options.  In simple cases where the value and text are the
-      same then you only need to provide an array of values.  Otherwise,
-      provide an array of objects containing{' '}
-      <code className="code">value</code> and <code className="code">text</code>{' '}
+      Set the <FieldLink/> <TypeLink/> to <code>radio</code> to create a radio
+      button set. The <code>options</code> property should be used to define
+      the options. In simple cases where the value and text are the same then
+      you only need to provide an array of values.  Otherwise, provide an
+      array of objects containing <code>value</code> and <code>text</code>{' '}
       properties.
     </p>
     <p>
-      You can also add <code className="code">className</code> if
-      you want to add a particular class to an option.  Or for more
-      complex markup, define the <code className="code">text</code> as a
-      JSX snippet.  All of these properties can be defined in a{' '}
-      <a href="schema">separate scheme</a> or you can &quot;inline&quot;
-      them as shown here.  Whatever floats your boat.
+      You can also add <code>className</code> if you want to add a particular
+      class to an option.  Or for more complex markup, define the{' '}
+      <code>text</code> as a JSX snippet.
     </p>
-    <Example Element={Element} code={Source}/>
+    <Example Element={Radio} code={RadioSrc} expand/>
 
-    <h2>Wide Radio Button Options</h2>
+    <h2>Fluid Radio Button Input</h2>
     <p>
-      The default behaviour is for radio button options to only take up as
-      much room as is required for the text.  Add the{' '}
-      <code className="code">wide</code> CSS class using the{' '}
-      <code className="code">className</code> property
-      to make them extend across the full width of the container.
+      The default behaviour is for radio button options to expand to the
+      full width of the container.  Add the <code>fluid</code> CSS class
+      using the <code>className</code> property to give them fluid width.
     </p>
+    <Example Element={Fluid} code={FluidSrc} expand/>
+
+    <h2>Inline Radio Button Input</h2>
+    <p>
+      Add the <code>inline</code> CSS class to have the options inline.
+      Note that a margin is added between each option, but there isn&apos;t
+      any margin applied to the right side of the field.
+    </p>
+    <Example Element={Inline} code={InlineSrc} expand/>
+
+    <h2>Bare Radio Button Input</h2>
     <p>
       If you don&apos;t like the &quot;boxy&quot; look then add the{' '}
-      <code className="code">bare</code> class to remove the border and
-      background.
+      <code>bare</code> class to remove the border and
+      background.  The focus ring will still appear when the input is
+      focussed.
     </p>
-    <Example Element={ElementWide} code={SourceWide}/>
-
-    <h2>Bare Radio Button Options</h2>
-    <p>
-      If you don&apos;t like the &quot;boxy&quot; look then add the{' '}
-      <code className="code">bare</code> class to remove the border and
-      background.
-    </p>
-    <Example Element={ElementBare} code={SourceBare}/>
+    <Example Element={Bare} code={BareSrc} expand/>
 
   </div>
 
-export default Radio
+export default RadioExamples

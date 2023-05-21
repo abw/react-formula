@@ -22,10 +22,6 @@
 
 * hide/show?
 
-* Should there be a default Input component which selects the appropriate
-input and renders it.  This might be useful if we want to change the Layout
-to define custom label and message, but keep the default Input.
-
 ## Form
 
 * should fields initially go through the field prepareValue() before
@@ -80,13 +76,7 @@ be `validate`
 
 ## Styling
 
-* finish cleaning up CSS props
-
-* thin/wide fields - be consistent and let it be set on form
-
-* prefix/suffix for checkboxes
-
-* .block style is redundant?
+* down caret icon for select
 
 ## Theming
 

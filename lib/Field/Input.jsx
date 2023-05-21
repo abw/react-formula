@@ -6,11 +6,12 @@ import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
 import { selectClass } from '../Utils.js'
 import { hasValue } from '@abw/badger-utils'
+import { TEXT } from '../Constants.jsx'
 
 const Input = ({ field=useField() }) => {
   const {
     classes, prefix, suffix,
-    type='text' ,
+    type=TEXT,
     Prefix=DefaultPrefix,
     Suffix=DefaultSuffix,
   } = field

@@ -62,7 +62,7 @@ const fields = {
     label:    'What is your level of experience?',
     type:     'radio',
     options:  ['Beginner', 'Intermediate', 'Expert'],
-    className: 'wide',
+    className: 'inline wide',
     inputsClass: 'radio inputs lg-grid-3',
   },
   dob: {
@@ -100,7 +100,7 @@ const fields = {
     label:    'Terms and conditions',
     type:     'checkbox',
     text:     'I accept the Terms and Conditions',
-    className: 'wide',
+    className: 'fluid',
     required:  true,
     requiredMessage: 'You must accept the Terms and Conditions'
   },

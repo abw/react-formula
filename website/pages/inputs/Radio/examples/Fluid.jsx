@@ -4,7 +4,7 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const RadioWide = () =>
+const FluidRadio = () =>
   <Form>
     <Field
       name="food" label="What is your favourite number?" type="radio"
@@ -13,8 +13,8 @@ const RadioWide = () =>
         { value: 11, text: 'Eleven (one louder)', className: 'bold' },
         { value: 42, text: <>Forty-Two (the meaning of <i>life</i>)</> },
       ]}
-      className="wide"
+      className="fluid"
     />
   </Form>
 
-export default RadioWide
+export default FluidRadio

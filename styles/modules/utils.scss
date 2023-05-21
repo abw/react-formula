@@ -1,4 +1,13 @@
 @include formula {
+  .mar-b-none {
+    margin-bottom: none;
+  }
+  .mar-l-option {
+    margin-left: var(--option-margin);
+  }
+  .mar-r-option {
+    margin-right: var(--option-margin);
+  }
   .mar-t-label {
     margin-top: calc(var(--label-size) + var(--label-margin));
   }

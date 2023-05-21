@@ -341,6 +341,15 @@ export const URLS = {
     text:   'Custom Input',
     about:  'Custom input component for a field',
   },
+
+  //--------------------------------------------------------------------------
+  // Styling Links
+  //--------------------------------------------------------------------------
+  'styling:css-variables': {
+    url:    '/styling/css-variables',
+    text:   'CSS Variables',
+    about:  'Styling with CSS variables',
+  },
 }
 
 

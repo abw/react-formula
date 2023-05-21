@@ -4,12 +4,12 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const TextThin = () =>
+const Fluid = () =>
   <Form>
     <Field
       name="one"
-      label="A text field"
-      className="thin"
+      label="A fluid field"
+      className="fluid"
       size="25"
     />
     <Field
@@ -17,8 +17,8 @@ const TextThin = () =>
       label="A text field with prefix and suffix"
       prefix="$" suffix=".00"
       size="6"
-      className="thin"
+      className="fluid"
     />
   </Form>
 
-export default TextThin
+export default Fluid

@@ -6,7 +6,6 @@
   &#{$fluid} {
     #{$input} {
       width: min-content;
-      // border: 1px solid green;
     }
   }
   &#{$inline} {
@@ -31,7 +30,10 @@
       width: 100%;
     }
   }
+  */
   &#{$wide} {
+    width: 100%;
+    /*
     #{$input} {
       input,
       textarea,
@@ -49,8 +51,8 @@
         flex-basis: 100%;
       }
     }
+    */
   }
-  */
   &.bare {
     #{$input} #{$option} {
       border: none;
