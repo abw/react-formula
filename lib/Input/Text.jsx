@@ -8,6 +8,7 @@ import { TEXT } from '../Constants.jsx'
 export const Text = ({ field=useField() }) => {
   const {
     type=TEXT,
+    inputClass='',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
@@ -16,6 +17,7 @@ export const Text = ({ field=useField() }) => {
     <input
       type={type}
       ref={field.inputRef}
+      className={inputClass}
       aria-disabled={field.disabled}
       // aria-invalid, aria-required
       tabIndex={field.disabled ? -1 : field.tabIndex}

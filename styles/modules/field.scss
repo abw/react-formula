@@ -5,7 +5,7 @@
   transition: 0.3s all;
 
   &#{$thin} {
-    #{$inputs} {
+    #{$input} {
       display: inline-flex;
       input,
       textarea,
@@ -20,7 +20,7 @@
   }
 
   &#{$wide} {
-    #{$inputs} {
+    #{$input} {
       input,
       textarea,
       select {
@@ -39,7 +39,7 @@
     }
   }
   &.bare {
-    #{$inputs} #{$option} {
+    #{$input} #{$option} {
       border: none;
       background-color: transparent;
       &:hover {

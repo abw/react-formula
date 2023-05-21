@@ -3,7 +3,7 @@
   label:not(#{$option}) {
     color: var(--disabled-label-text);
   }
-  #{$inputs} {
+  #{$input} {
     input,
     textarea,
     select {

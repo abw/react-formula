@@ -3,7 +3,7 @@
     label:not(#{$option}) {
       color: var(--focus-label-text);
     }
-    #{$inputs} {
+    #{$input} {
       &:not(#{$prefixed}):not(#{$suffixed}) {
         input:not([type=checkbox]):not([type=radio]),
         textarea,
@@ -38,7 +38,7 @@
     }
   }
   &#{$invalid} {
-    #{$inputs} {
+    #{$input} {
       &:not(#{$prefixed}):not(#{$suffixed}) {
         input:not([type=checkbox]):not([type=radio]),
         textarea,
@@ -54,7 +54,7 @@
     }
   }
   &#{$valid} {
-    #{$inputs} {
+    #{$input} {
       &:not(#{$prefixed}):not(#{$suffixed}) {
         input:not([type=checkbox]):not([type=radio]),
         textarea,
