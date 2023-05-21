@@ -3,7 +3,20 @@
   width: 100%;
   margin-bottom: var(--field-margin);
   transition: 0.3s all;
-
+  &#{$fluid} {
+    #{$input} {
+      width: min-content;
+      // border: 1px solid green;
+    }
+  }
+  &#{$inline} {
+    display: inline-block;
+    width: min-content;
+    #{$input}#{$radio} {
+      flex-wrap: unset;
+    }
+  }
+  /*
   &#{$thin} {
     #{$input} {
       display: inline-flex;
@@ -18,7 +31,6 @@
       width: 100%;
     }
   }
-
   &#{$wide} {
     #{$input} {
       input,
@@ -38,6 +50,7 @@
       }
     }
   }
+  */
   &.bare {
     #{$input} #{$option} {
       border: none;

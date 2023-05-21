@@ -6,12 +6,18 @@
 }
 @for $n from 0 through 16 {
   .mar-#{$n} {
-    margin: $n * $margin;
+    margin: $n * $margin !important;
   }
   .mar-b-#{$n} {
-    margin-bottom: $n * $margin;
+    margin-bottom: $n * $margin !important;
   }
   .mar-t-#{$n} {
-    margin-top: $n * $margin;
+    margin-top: $n * $margin !important;
+  }
+  .mar-r-#{$n} {
+    margin-right: $n * $margin !important;
+  }
+  .mar-l-#{$n} {
+    margin-left: $n * $margin !important;
   }
 }

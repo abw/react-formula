@@ -19,16 +19,18 @@ $disabled: '.disabled'  !default;
 $errors:   '.errors'    !default;
 // CSS class for fields
 $field:    '.field'     !default;
+// CSS class for fluid fields
+$fluid:    '.fluid'     !default;
 // CSS class for focussed fields
 $focus:    '.focus'     !default;
 // Main CSS scope for all react-formula CSS rules
 $formula:  '.formula'   !default;
 // CSS class for help messages, include valid/invalid messages
 $help:     '.help'      !default;
+// CSS class for inline field
+$inline:   '.inline'    !default;
 // CSS class for field input
 $input:    '.input'     !default;
-// CSS class for field inputs, including any prefix and/or suffix
-// $inputs:   '.inputs'    !default;
 // CSS class for invalid field
 $invalid:  '.invalid'   !default;
 // CSS class for radio button option
