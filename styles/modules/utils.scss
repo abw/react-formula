@@ -1,0 +1,8 @@
+@include formula {
+  .mar-t-label {
+    margin-top: calc(var(--label-size) + var(--label-margin));
+  }
+  .pad-t-label {
+    padding-top: calc(var(--label-size) + var(--label-margin));
+  }
+}

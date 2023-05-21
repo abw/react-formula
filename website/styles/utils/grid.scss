@@ -1,6 +1,9 @@
 // le fancy new grid
 [class*="grid-"] {
   display: grid;
+  &.start {
+    align-items: start;
+  }
   &.end {
     align-items: end;
   }
