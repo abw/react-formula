@@ -9,46 +9,40 @@ const Select = ({ field=useField() }) => {
     options=[],
     placeholder,
     type='select',
-    // className='input',
-    inputsClass='select inputs',
     optionClass='option',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
 
   return (
-    <div className={inputsClass}>
-      <select
-        // className={className}
-        ref={field.inputRef}
-        aria-disabled={field.disabled}
-        tabIndex={field.disabled ? -1 : field.tabIndex}
-        onChange={handler(field)}
-        {...attrs}
-        value={field.value}
-        required={field.required || Boolean(placeholder)}  // allows styling via :invalid for placeholder
-        // key={field.value}
-      >
-        { Boolean(placeholder) &&
-          <option value="" hidden disabled>{placeholder}</option>
+    <select
+      ref={field.inputRef}
+      aria-disabled={field.disabled}
+      tabIndex={field.disabled ? -1 : field.tabIndex}
+      onChange={handler(field)}
+      {...attrs}
+      value={field.value}
+      required={field.required || Boolean(placeholder)}  // allows styling via :invalid for placeholder
+    >
+      { Boolean(placeholder) &&
+        <option value="" hidden disabled>{placeholder}</option>
+      }
+      { options.map(
+        option => {
+          option = valueOption(option)
+          return (
+            <option
+              key={option.value}
+              className={optionClass}
+              value={option.value}
+              disabled={option.disabled}
+            >
+              {option.text}
+            </option>
+          )
         }
-        { options.map(
-          option => {
-            option = valueOption(option)
-            return (
-              <option
-                key={option.value}
-                className={optionClass}
-                value={option.value}
-                disabled={option.disabled}
-              >
-                {option.text}
-              </option>
-            )
-          }
-        )}
-      </select>
-    </div>
+      )}
+    </select>
   )
 }
 

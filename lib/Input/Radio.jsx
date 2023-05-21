@@ -8,8 +8,6 @@ const Radio = ({ field=useField() }) => {
   const {
     options=[],
     type='radio',
-    inputsClass='radio inputs',
-    // inputClass='input',
     textClass='text',
     optionClass='option',
     checkedClass='checked',
@@ -18,7 +16,7 @@ const Radio = ({ field=useField() }) => {
   const attrs = inputAttrs(field)
 
   return (
-    <div className={inputsClass}>
+    <>
       { options.map(
         option => {
           option = valueOption(option)
@@ -48,7 +46,7 @@ const Radio = ({ field=useField() }) => {
           )
         }
       )}
-    </div>
+    </>
   )
 }
 

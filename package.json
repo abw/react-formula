@@ -37,6 +37,7 @@
     "build:scss": "mkdir -p dist/styles && cp -r styles/* dist/styles",
     "build:docs": "vite build --config vite.docs.js",
     "build:all": "pnpm build && pnpm build:docs",
+    "lint": "eslint 'lib/**/*.{js,jsx}'",
     "preview": "vite preview --config vite.docs.js",
     "test": "vitest --ui --coverage"
   },
