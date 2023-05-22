@@ -1,7 +1,7 @@
-import{j as n,a as e,B as f,ar as w,a1 as c,as as y,P as k,at as C,L as a,au as $,p as B,F as T,c as F,D as z,av as D,E as V,_ as W,$ as h}from"./index-3a1c635d.js";const N=`$brand-hue:   123;
+import{j as r,a as e,B as n,as as w,a1 as p,at as k,P as F,au as T,L as a,av as $,p as C,aw as B,F as R,c as D,D as W,ax as V,E as z,_ as q,$ as c}from"./index-de3ef2ff.js";const H=`$brand-hue:   123;
 $valid-hue:   40;
 $invalid-hue: 12;
-@import '@abw/react-formula/styles/formula.scss';`,q=`@import '@abw/react-formula/styles/formula.scss';
+@import '@abw/react-formula/styles/formula.scss';`,N=`@import '@abw/react-formula/styles/formula.scss';
 
 .formula {
   .field {
@@ -11,9 +11,9 @@ $invalid-hue: 12;
       }
     }
   }
-}`,H=()=>n("div",{children:[e("h1",{children:"Styling the Forms"}),e("p",{className:"intro",children:"There's good news and bad news when it comes to styling..."}),e("h2",{className:"hint",children:"The Good News"}),e("p",{children:"The good news is that there's a default stylesheet which should give you reasonable results as a starting point.  You can import it into the top-level of your React app with something like this:"}),e(f,{code:w,expand:!0}),n("p",{children:["The gooder news is that the stylesheet is built using SASS (specifically SCSS) and you can import the styles into your own SASS stylesheet. There are numerous "," ",e(c,{to:"/styling/sass-variables",text:"configuration variables"})," ","which you can tweak to change the styling.  They're all defined using the ",e("code",{className:"code",children:"!default"})," directive which means you can provide your own values before importing the main SCSS file and it'll use your values instead of the defaults."]}),e(f,{code:N,language:"scss",expand:!0}),n("p",{children:["The goodest news of all is that most of these variables are then defined as ",e(c,{to:"/styling/css-variables",text:"CSS variables"})," that you can change without having to mess around with SASS.  Just add something like this to your CSS stylesheet."]}),e(f,{code:y,language:"css",expand:!0}),n("p",{children:["Or you can rewrite large chunks of the styling if you prefer. Every element has its own CSS class and they're all scoped inside"," ",e("code",{className:"code",children:".formula"})," (which you can change if you want to).  For example, you can import the main stylesheet and then selectively override the things you want to change."]}),e(f,{code:q,language:"scss",expand:!0}),e("h2",{className:"hint",children:"The Bad News"}),e("p",{children:"The bad news is that CSS/SASS is currently all there is.  If you want to use styled components or any other CSS-in-JS solution then you're bang out of luck.  I'm personally not a huge fan of putting CSS in JS (although I totally respect that it may be what works for you), and given that I wrote this library to help me get my job done, it's understandably focussed on what works for me."}),e("p",{children:"That said, I have plans to add it.  It shouldn't be particularly hard because the library is designed to make changes like that relatively simple.  But I just haven't got around to it yet because it's not high on my list of priorities."})]}),b=({uri:o})=>e(k,{uri:o,menu:C}),R=()=>n("div",{children:[e("h1",{children:"Form Styles"}),e("p",{children:"This page demonstrates the default form styles."}),n("div",{className:"note",children:[e("b",{children:"NOTE:"})," these are mockup forms and don't have full interactivity. For example, clicking on an input will not automatically focus it."]}),e("p",{children:"This is TODO"}),e(b,{uri:"forms"})]}),i={...$,label:"Example Label",type:"text",placeholder:"Placeholder text",form:{},status:{}},I=()=>n("div",{children:[e("h1",{children:"Field Styles"}),e("p",{className:"intro",children:"This page demonstrates the default form field styles in their various states."}),n("div",{className:"note",children:[e("b",{children:"NOTE:"})," these are mockup fields and don't have full interactivity. For example, clicking on an input will not automatically focus it."]}),n("form",{className:"formula",children:[e("h3",{children:"Field With Placeholder Text"}),e(a,{field:i}),e("h3",{children:"Field With Value"}),e(a,{field:{...i,value:"Hello World"}}),e("h3",{children:"Field With Help"}),e(a,{field:{...i,help:"Your password must be between 11 and 42 characters"}}),e("h3",{children:"Field With Required Label"}),e(a,{field:{...i,value:"Hello World",required:!0,showRequired:!0}}),e("h3",{children:"Field With Optional Label"}),e(a,{field:{...i,value:"Hello World",showOptional:!0}}),e("h3",{children:"Field With Prefix and Suffix"}),e(a,{field:{...i,prefix:"$",suffix:".00"}}),e("h3",{children:"Focussed Field With Placeholder Text"}),e(a,{field:{...i,status:{focus:!0}}}),e("h3",{children:"Focussed Field With Value"}),e(a,{field:{...i,value:"Hello World",status:{focus:!0}}}),e("h3",{children:"Focussed Field With Help"}),e(a,{field:{...i,help:"Your password must be between 11 and 42 characters",status:{focus:!0}}}),e("h3",{children:"Focussed Field With Prefix and Suffix"}),e(a,{field:{...i,prefix:"$",suffix:".00",status:{focus:!0}}}),e("h3",{children:"Valid Field"}),e(a,{field:{...i,value:"Hello World",status:{valid:!0}}}),e("h3",{children:"Valid Field With Message"}),e(a,{field:{...i,message:"That username is available!",status:{valid:!0}}}),e("h3",{children:"Valid Field With Prefix and Suffix"}),e(a,{field:{...i,value:"Hello World",prefix:"$",suffix:".00",status:{valid:!0}}}),e("h3",{children:"Focussed Valid Field With Prefix and Suffix"}),e(a,{field:{...i,value:"Hello World",prefix:"$",suffix:".00",status:{valid:!0,focus:!0}}}),e("h3",{children:"Invalid Field"}),e(a,{field:{...i,value:"Hello World",status:{invalid:!0}}}),e("h3",{children:"Invalid Field With Message"}),e(a,{field:{...i,message:"Something went wrong!",status:{invalid:!0}}}),e("h3",{children:"Invalid Field With Prefix and Suffix"}),e(a,{field:{...i,value:"Hello World",prefix:"$",suffix:".00",status:{invalid:!0}}}),e("h3",{children:"Focussed Invalid Field With Prefix and Suffix"}),e(a,{field:{...i,value:"Hello World",prefix:"$",suffix:".00",status:{invalid:!0,focus:!0}}}),e("h3",{children:"Disabled Field"}),e(a,{field:{...i,prefix:"£",message:"Denied!",status:{disabled:!0}}})]}),e(b,{uri:"fields"})]}),O=`//= Spacing
+}`,O=()=>r("div",{children:[e("h1",{children:"Styling the Forms"}),e("p",{className:"intro",children:"There's good news and bad news when it comes to styling..."}),e("h2",{className:"hint",children:"The Good News"}),e("p",{children:"The good news is that there's a default stylesheet which should give you reasonable results as a starting point.  You can import it into the top-level of your React app with something like this:"}),e(n,{code:w,expand:!0}),r("p",{children:["The gooder news is that the stylesheet is built using SASS (specifically SCSS) and you can import the styles into your own SASS stylesheet. There are numerous "," ",e(p,{to:"/styling/sass-variables",text:"configuration variables"})," ","which you can tweak to change the styling.  They're all defined using the ",e("code",{className:"code",children:"!default"})," directive which means you can provide your own values before importing the main SCSS file and it'll use your values instead of the defaults."]}),e(n,{code:H,language:"scss",expand:!0}),r("p",{children:["The goodest news of all is that most of these variables are then defined as ",e(p,{to:"/styling/css-variables",text:"CSS variables"})," that you can change without having to mess around with SASS.  Just add something like this to your CSS stylesheet."]}),e(n,{code:k,language:"css",expand:!0}),r("p",{children:["Or you can rewrite large chunks of the styling if you prefer. Every element has its own CSS class and they're all scoped inside"," ",e("code",{className:"code",children:".formula"})," (which you can change if you want to).  For example, you can import the main stylesheet and then selectively override the things you want to change."]}),e(n,{code:N,language:"scss",expand:!0}),e("h2",{className:"hint",children:"The Bad News"}),e("p",{children:"The bad news is that CSS/SASS is currently all there is.  If you want to use styled components or any other CSS-in-JS solution then you're bang out of luck.  I'm personally not a huge fan of putting CSS in JS (although I totally respect that it may be what works for you), and given that I wrote this library to help me get my job done, it's understandably focussed on what works for me."}),e("p",{children:"That said, I have plans to add it.  It shouldn't be particularly hard because the library is designed to make changes like that relatively simple.  But I just haven't got around to it yet because it's not high on my list of priorities."})]}),f=({uri:t})=>e(F,{uri:t,menu:T}),I=()=>r("div",{children:[e("h1",{children:"Form Styles"}),e("p",{children:"This page demonstrates the default form styles."}),r("div",{className:"note",children:[e("b",{children:"NOTE:"})," these are mockup forms and don't have full interactivity. For example, clicking on an input will not automatically focus it."]}),e("p",{children:"This is TODO"}),e(f,{uri:"forms"})]}),l={...$,label:"Example Label",type:"text",placeholder:"Placeholder text",form:{},status:{}},P=()=>r("div",{children:[e("h1",{children:"Field Styles"}),e("p",{className:"intro",children:"This page demonstrates the default form field styles in their various states."}),r("div",{className:"note",children:[e("b",{children:"NOTE:"})," these are mockup fields and don't have full interactivity. For example, clicking on an input will not automatically focus it."]}),r("form",{className:"formula",children:[e("h3",{children:"Field With Placeholder Text"}),e(a,{field:l}),e("h3",{children:"Field With Value"}),e(a,{field:{...l,value:"Hello World"}}),e("h3",{children:"Field With Help"}),e(a,{field:{...l,help:"Your password must be between 11 and 42 characters"}}),e("h3",{children:"Field With Required Label"}),e(a,{field:{...l,value:"Hello World",required:!0,showRequired:!0}}),e("h3",{children:"Field With Optional Label"}),e(a,{field:{...l,value:"Hello World",showOptional:!0}}),e("h3",{children:"Field With Prefix and Suffix"}),e(a,{field:{...l,prefix:"$",suffix:".00"}}),e("h3",{children:"Focussed Field With Placeholder Text"}),e(a,{field:{...l,status:{focus:!0}}}),e("h3",{children:"Focussed Field With Value"}),e(a,{field:{...l,value:"Hello World",status:{focus:!0}}}),e("h3",{children:"Focussed Field With Help"}),e(a,{field:{...l,help:"Your password must be between 11 and 42 characters",status:{focus:!0}}}),e("h3",{children:"Focussed Field With Prefix and Suffix"}),e(a,{field:{...l,prefix:"$",suffix:".00",status:{focus:!0}}}),e("h3",{children:"Valid Field"}),e(a,{field:{...l,value:"Hello World",status:{valid:!0}}}),e("h3",{children:"Valid Field With Message"}),e(a,{field:{...l,message:"That username is available!",status:{valid:!0}}}),e("h3",{children:"Valid Field With Prefix and Suffix"}),e(a,{field:{...l,value:"Hello World",prefix:"$",suffix:".00",status:{valid:!0}}}),e("h3",{children:"Focussed Valid Field With Prefix and Suffix"}),e(a,{field:{...l,value:"Hello World",prefix:"$",suffix:".00",status:{valid:!0,focus:!0}}}),e("h3",{children:"Invalid Field"}),e(a,{field:{...l,value:"Hello World",status:{invalid:!0}}}),e("h3",{children:"Invalid Field With Message"}),e(a,{field:{...l,message:"Something went wrong!",status:{invalid:!0}}}),e("h3",{children:"Invalid Field With Prefix and Suffix"}),e(a,{field:{...l,value:"Hello World",prefix:"$",suffix:".00",status:{invalid:!0}}}),e("h3",{children:"Focussed Invalid Field With Prefix and Suffix"}),e(a,{field:{...l,value:"Hello World",prefix:"$",suffix:".00",status:{invalid:!0,focus:!0}}}),e("h3",{children:"Disabled Field"}),e(a,{field:{...l,prefix:"£",message:"Denied!",status:{disabled:!0}}})]}),e(f,{uri:"fields"})]}),E=`//= Spacing
 // Default spacing unit for margin and padding
-$spacing:                 0.25em !default;
+$spacing:                 0.25rem !default;
 //= Margins
 // Default margin unit
 $margin:                  $spacing !default;
@@ -55,75 +55,71 @@ $small-size:              0.875em;
 $large-size:              1.125em;
 // Default size of larger text
 $larger-size:             1.25em;
-`,P=`//= Namespace Variables
-// CSS class for checkboxes and radio buttons without a border
-$bare:     '.bare'      !default;
-// CSS class for radio buttons displayed full-width
-$block:    '.block'     !default;
-// CSS class for checkbox inputs
-$checkbox: '.checkbox'  !default;
-// CSS class for checked checkboxes
-$checked:  '.checked'   !default;
-// CSS class for form controls: reset, submit, etc
-$controls: '.controls'  !default;
-// CSS class for dark theme
-$dark:     '.dark'      !default;
-// CSS class for debug component
-$debug:    '.debug'     !default;
-// CSS class for disabled fields
-$disabled: '.disabled'  !default;
-// CSS class for errors component
-$errors:   '.errors'    !default;
-// CSS class for fields
-$field:    '.field'     !default;
-// CSS class for focussed fields
-$focus:    '.focus'     !default;
+`,y=`//= Namespace Variables
 // Main CSS scope for all react-formula CSS rules
 $formula:  '.formula'   !default;
-// CSS class for help messages, include valid/invalid messages
+// Checkboxes and radio buttons without a border
+$bare:     '.bare'      !default;
+// Checkbox inputs
+$checkbox: '.checkbox'  !default;
+// Checked checkboxes and radio button options
+$checked:  '.checked'   !default;
+// Form controls: reset, submit, etc
+$controls: '.controls'  !default;
+// Dark theme
+$dark:     '.dark'      !default;
+// Debug component
+$debug:    '.debug'     !default;
+// Disabled fields
+$disabled: '.disabled'  !default;
+// Errors component
+$errors:   '.errors'    !default;
+// Fields
+$field:    '.field'     !default;
+// Fluid fields
+$fluid:    '.fluid'     !default;
+// Focussed fields
+$focus:    '.focus'     !default;
+// Help messages, include valid/invalid messages
 $help:     '.help'      !default;
-// CSS class for field input
+// Inline field
+$inline:   '.inline'    !default;
+// Field input
 $input:    '.input'     !default;
-// CSS class for field inputs, including any prefix and/or suffix
-$inputs:   '.inputs'    !default;
-// CSS class for invalid field
+// Invalid field
 $invalid:  '.invalid'   !default;
-// CSS class for radio button option
+// Radio button option
 $option:   '.option'    !default;
-// CSS class for Optional label
+// Optional label
 $optional: '.optional'  !default;
-// CSS class for panels inside debug component
+// Panels inside debug component
 $panel:    '.panel'     !default;
-// CSS class for input prefix
+// Input prefix
 $prefix:   '.prefix'    !default;
-// CSS class for fields that have a prefix
+// Fields that have a prefix
 $prefixed: '.prefixed'  !default;
-// CSS class for radio button fields
+// Radio button fields
 $radio:    '.radio'     !default;
-// CSS class for Required label
+// Required label
 $required: '.required'  !default;
-// CSS class for input suffix
+// Input suffix
 $suffix:   '.suffix'    !default;
-// CSS class for fields that have a suffix
+// Fields that have a suffix
 $suffixed: '.suffixed'  !default;
-// CSS class for text displayed with a checkbox or radio button
-$text:     '.text'      !default;
-// CSS class for thin fields that don't stretch to 100% width
-$thin:     '.thin'      !default;
-// CSS class for valid fields
+// Valid fields
 $valid:    '.valid'     !default;
-// CSS class for wide checkboxes and radio buttons
+// Wide fields, checkboxes and radio buttons
 $wide:     '.wide'      !default;
-`,E=`$formula: '.my-formula';
+`,M=`$formula: '.my-formula';
 $field:   '.my-field';
 $dark:    '.my-dark-theme';
 
-@import '@abw/react-formula/sass/formula.scss';`,M=`$spacing:           0.5rem;
+@import '@abw/react-formula/sass/formula.scss';`,A=`$spacing:           0.5rem;
 $border-width:      2px;
 $focus-ring-width:  5px;
 $smaller-size:      0.65rem;
 
-@import '@abw/react-formula/sass/formula.scss';`,v=({vars:o})=>e(B,{children:o.map(({variable:u,defaultValue:d,description:l,section:r},t)=>r?e("h3",{children:r},t):n("div",{className:"variable",children:[n("h4",{className:"name-default smallish",children:[e("div",{className:"var",children:e("code",{children:u})}),":",e("div",{className:"val",children:e("code",{children:d})})]}),e("div",{className:"description smallish",children:l})]},u))});function x(o){const u=o.split(/[\r\n]+/);let d=[],l=[],r;for(let t of u){if(t.match(/^\s*$/)){l=[];continue}if(r=t.match(/^\/\*\s*(.*?)\s*\*\/$/)){l=[],d.push({section:r[1]});continue}if(r=t.match(/^\/\/=\s*(.*?)$/)){l=[],d.push({section:r[1]});continue}if(r=t.match(/\/\/\s*(.*)/)){l.push(r[1]);continue}if(r=t.match(/(\$[\w-]*):\s*(.*?)\s*(!default)?;/)){const p=r[2],g=p.match(/^'(.*?)'$/),m=g?g[1]:p;d.push({variable:r[1],defaultValue:m,description:l.join(" ")}),l=[]}}return d}const A=x(P),L=x(O),j=()=>n("div",{children:[e("h1",{children:"SASS Variables"}),n("p",{className:"intro",children:["The easiest way to modify the styles is by use of"," ",e(c,{to:"/styling/css-variables",text:"CSS variables"}),". If you want or need to go a bit deeper then you can generate your own variant of the default CSS file, customised using SASS variables."]}),e("h2",{children:"CSS Classes"}),n("p",{children:["The CSS classes used in the main stylesheet are defined using the variables listed in the table below.  Everything is scoped inside the main ",e("code",{children:".formula"})," namespace."]}),n("p",{children:["If you want to use different class names then you can define the following SASS variables before importing the main"," ",e("code",{children:"formula.scss"})," file, as show in this example.  Note that you will also need to configure the React components to use these new CSS classes."]}),e(f,{language:"scss",code:E,expand:!0,caption:"your-formula.scss"}),e(v,{vars:A}),e("h2",{children:"Default Values"}),e("p",{children:"There are a few SASS variables that are used to define some common units, shown in the table below."}),n("p",{children:["If you want to create your own stylesheet with different default values then the process is the same as shown above.  Define your own SASS stylesheet that defines custom values for these variables before importing the main ",e("code",{children:"formula.scss"}),"."]}),e(f,{language:"scss",code:M,expand:!0,caption:"your-formula.scss"}),e(v,{vars:L}),e(b,{uri:"sass-variables"})]}),Y=`.wide-border .formula {
+@import '@abw/react-formula/sass/formula.scss';`,v=({vars:t})=>e(C,{children:t.map(({variable:u,defaultValue:s,description:o,section:i},d)=>i?e("h3",{children:i},d):r("div",{className:"variable",children:[r("h4",{className:"name-default smallish",children:[e("div",{className:"var",children:e("code",{children:u})}),":",e("div",{className:"val",children:e("code",{children:s})})]}),e("div",{className:"description smallish",children:o})]},u))});function x(t){const u=t.split(/[\r\n]+/);let s=[],o=[],i;for(let d of u){if(d.match(/^\s*$/)){o=[];continue}if(i=d.match(/^\/\*\s*(.*?)\s*\*\/$/)){o=[],s.push({section:i[1]});continue}if(i=d.match(/^\/\/=\s*(.*?)$/)){o=[],s.push({section:i[1]});continue}if(i=d.match(/\/\/\s*(.*)/)){o.push(i[1]);continue}if(i=d.match(/(\$[\w-]*):\s*(.*?)\s*(!default)?;/)){const b=i[2],g=b.match(/^'(.*?)'$/),m=g?g[1]:b;s.push({variable:i[1],defaultValue:m,description:o.join(" ")}),o=[]}}return s}const L=x(y),j=x(E),Y=()=>r("div",{children:[e("h1",{children:"SASS Variables"}),r("p",{className:"intro",children:["The easiest way to modify the styles is by use of"," ",e(p,{to:"/styling/css-variables",text:"CSS variables"}),". If you want or need to go a bit deeper then you can generate your own variant of the default CSS file, customised using SASS variables."]}),e("h2",{children:"CSS Classes"}),r("p",{children:["The CSS classes used in the main stylesheet are defined using the variables listed in the table below.  Everything is scoped inside the main ",e("code",{children:".formula"})," namespace."]}),r("p",{children:["If you want to use different class names then you can define the following SASS variables before importing the main"," ",e("code",{children:"formula.scss"})," file, as show in this example.  Note that you will also need to configure the React components to use these new CSS classes.  You can do that with the ",e(B,{})," property."]}),e(n,{language:"scss",code:M,expand:!0,caption:"your-formula.scss"}),e(v,{vars:L}),e("h2",{children:"Default Values"}),e("p",{children:"There are a few SASS variables that are used to define some common units, shown in the table below."}),r("p",{children:["If you want to create your own stylesheet with different default values then the process is the same as shown above.  Define your own SASS stylesheet that defines custom values for these variables before importing the main ",e("code",{children:"formula.scss"}),"."]}),e(n,{language:"scss",code:A,expand:!0,caption:"your-formula.scss"}),e(v,{vars:j}),e(f,{uri:"sass-variables"})]}),J=`.wide-border .formula {
   --input-border-width: 2px;
   --focus-ring-width:   4px;
   --focus-ring-gap:     1px;
@@ -155,7 +151,7 @@ $smaller-size:      0.65rem;
 }
 .branded-maroon .formula {
   --brand-hue: 320;
-}`,s=({color:o})=>e("div",{className:`branded-${o}`,children:n(T,{children:[e(F,{name:"field1",label:`The ${o} field`,placeholder:`The ${o} placeholder`}),e(z,{})]})}),J=()=>n("div",{className:"wide-border lg-grid-3",children:[e(s,{color:"red"}),e(s,{color:"orange"}),e(s,{color:"yellow"}),e(s,{color:"green"}),e(s,{color:"teal"}),e(s,{color:"blue"}),e(s,{color:"indigo"}),e(s,{color:"violet"}),e(s,{color:"maroon"})]}),G=`import { Form, Field, ResetSubmit } from '../../../../lib/index.js'
+}`,h=({color:t})=>e("div",{className:`branded-${t}`,children:r(R,{children:[e(D,{name:"field1",label:`The ${t} field`,placeholder:`The ${t} placeholder`}),e(W,{})]})}),G=()=>r("div",{className:"wide-border lg-grid-3",children:[e(h,{color:"red"}),e(h,{color:"orange"}),e(h,{color:"yellow"}),e(h,{color:"green"}),e(h,{color:"teal"}),e(h,{color:"blue"}),e(h,{color:"indigo"}),e(h,{color:"violet"}),e(h,{color:"maroon"})]}),_=`import { Form, Field, ResetSubmit } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -186,7 +182,7 @@ const BrandedForms = () =>
     <SimpleForm color="maroon"/>
   </div>
 
-export default BrandedForms`,_=`.formula {
+export default BrandedForms`,K=`.formula {
   --brand-hue:          123;
   --input-border-width: 2px;
   --focus-ring-width:   4px;
@@ -194,7 +190,134 @@ export default BrandedForms`,_=`.formula {
   --focus-ring-opacity: 0.4;
   --valid-border:       #4a4;
   --invalid-border:     #4a4;
-}`;const K=()=>{const{isDark:o,toggleTheme:u}=D();return n("div",{children:[e("h1",{children:"CSS Variables"}),n("p",{className:"intro",children:["The CSS file makes heavy use of CSS variable (also known as ",e("i",{children:"CSS Custom Properties"}),") for styling."]}),e("h2",{children:"Redefining Variables"}),n("p",{children:["To change the styling you simply need to define a ",e("code",{children:".formula"})," ","block in your CSS file with the new variable definitions."]}),e(f,{language:"css",code:_,caption:"your-stylesheet.css",expand:!0}),n("p",{children:["The ",e("code",{children:"--brand-hue"})," CSS variable defines the default hue for field input and other elements.  You can easily set this to match your site branding. Here's an extract of CSS which sets it to 9 different colors. We're also increasing the width of the border and focus ring to make it a bit more prominent."]}),e(f,{language:"css",code:Y}),e("p",{children:"Here's the same form rendered 9 times inside each of those CSS scopes."}),e(V,{Element:J,code:G,caption:"Branded Forms",children:n("p",{children:["Try clicking on the fields to see the different colored focus rings.  Don't forget to check it out in"," ",n("span",{onClick:u,className:"link",children:[o?"light":"dark"," mode"]})," ","too!"]})}),n("p",{children:["If for some reason you need to change the CSS class names that are used (e.g. to change ",e("code",{children:".formula"})," to ",e("code",{children:".my-formula"}),") then you can do that by creating your own version of the CSS stylesheet from the SASS sources.  The class names and a number of other core properties are defined as "," ",e(c,{to:"/styling/sass-variables",text:"SASS variables"}),"."]}),e(b,{uri:"css-variables"})]})};function S(o){o=o.replaceAll(/(:|,)\s*\n/g,"$1");const u=o.split(/[\r\n]+/);let d=[],l=[],r;for(let t of u)if(!t.match(/^(@|})/)){if(t.match(/^\s*$/)){l=[];continue}if(r=t.match(/^\s*\/\*\s*(.*?)\s*\*\/$/)){l=[],d.push({section:r[1]});continue}if(r=t.match(/^\s*\/\/=\s*(.*?)$/)){l=[],d.push({section:r[1]});continue}if(r=t.match(/\/\/\s*(.*)/)){l.push(r[1]);continue}if(r=t.match(/(--[\w-]*):\s*(.*?);/)){const p=r[2],g=p.match(/^'(.*?)'$/),m=g?g[1]:p;d.push({variable:r[1],defaultValue:m,description:l.join(" ")}),l=[];continue}console.log("failed to match: ",t)}return d}const Q=`@include where-formula {
+}`;const Q=()=>{const{isDark:t,toggleTheme:u}=V();return r("div",{children:[e("h1",{children:"CSS Variables"}),r("p",{className:"intro",children:["The CSS file makes heavy use of CSS variable (also known as ",e("i",{children:"CSS Custom Properties"}),") for styling."]}),e("h2",{children:"Redefining Variables"}),r("p",{children:["To change the styling you simply need to define a ",e("code",{children:".formula"})," ","block in your CSS file with the new variable definitions."]}),e(n,{language:"css",code:K,caption:"your-stylesheet.css",expand:!0}),r("p",{children:["The ",e("code",{children:"--brand-hue"})," CSS variable defines the default hue for field input and other elements.  You can easily set this to match your site branding. Here's an extract of CSS which sets it to 9 different colors. We're also increasing the width of the border and focus ring to make it a bit more prominent."]}),e(n,{language:"css",code:J}),e("p",{children:"Here's the same form rendered 9 times inside each of those CSS scopes."}),e(z,{Element:G,code:_,caption:"Branded Forms",children:r("p",{children:["Try clicking on the fields to see the different colored focus rings.  Don't forget to check it out in"," ",r("span",{onClick:u,className:"link",children:[t?"light":"dark"," mode"]})," ","too!"]})}),r("p",{children:["If for some reason you need to change the CSS class names that are used (e.g. to change ",e("code",{children:".formula"})," to ",e("code",{children:".my-formula"}),") then you can do that by creating your own version of the CSS stylesheet from the SASS sources.  The class names and a number of other core properties are defined as "," ",e(p,{to:"/styling/sass-variables",text:"SASS variables"}),"."]}),e(f,{uri:"css-variables"})]})},U=x(y),X=()=>r("div",{children:[e("h1",{children:"CSS Classes"}),e("p",{className:"intro",children:"The CSS classes used in the main stylesheet are shown in the table below."}),e(Z,{}),e(f,{uri:"css-classes"})]}),Z=()=>r("table",{className:"wide vars table",children:[e("thead",{children:r("tr",{children:[e("th",{children:"CSS Class"}),e("th",{children:"Description"})]})}),e("tbody",{children:U.map(({variable:t,defaultValue:u,description:s,section:o})=>o?null:r("tr",{children:[e("td",{className:"default",children:u}),e("td",{className:"description",children:s})]},t))})]}),ee=`<form class="formula">
+  ...
+</form>`,ne=`<div class="field">
+  ...
+</div>`,re=`<div class="field focus">
+  ...
+</div>`,ie=`<div class="field valid">
+  ...
+</div>`,ae=`<div class="field invalid">
+  ...
+</div>`,le=`<div class="field disabled">
+  ...
+</div>`,te=`<div class="field fluid">
+  ...
+</div>`,oe=`<div class="field inline">
+  ...
+</div>`,de=`<div class="field wide">
+  ...
+</div>`,se=`<div class="field">
+  <label for="xxx" class="label">Text Field</label>
+  <div class="input text">
+    <input type="text" id="xxx" name="yyy" value=""/>
+  </div>
+</div>`,ue=`<div class="field">
+  <label for="xxx" class="label">Textarea Field</label>
+  <div class="input textarea">
+    <textarea id="xxx" name="yyy" rows="5"></textarea>
+  </div>
+</div>`,ce=`<div class="field">
+  <label for="xxx" class="label">Select Field</label>
+  <div class="input select">
+    <select id="xxx" name="yyy">
+      <option class="option" value="One">One</option>
+      <option class="option" value="Two">Two</option>
+      <option class="option" value="Three">Three</option>
+    </select>
+  </div>
+</div>`,he=`<div class="field">
+  <label for="xxx" class="label">Checkbox Field</label>
+  <div class="input checkbox">
+    <label for="xxx" class="option checked">
+      <input type="checkbox" id="xxx" name="yyy">
+      <span>This is a checkbox</span>
+    </label>
+  </div>
+</div>`,fe=`<div class="field">
+  <label for="xxx" class="label">Radio Field</label>
+  <div class="input radio">
+    <label for="xxx-One" class="option checked">
+      <input type="radio" id="xxx-One" name="yyy" value="One">
+      <span>One</span>
+    </label>
+    <label for="xxx-Two" class="option">
+      <input type="radio" id="xxx-Two" name="yyy" value="Two">
+      <span>Two</span>
+    </label>
+    <label for="xxx-Three" class="option">
+      <input type="radio" id="xxx-Three" name="yyy" value="Three">
+      <span>Three</span>
+    </label>
+  </div>
+</div>`,pe=`<div class="field">
+  <label for="xxx" class="label">Field With Help</label>
+  <div class="input">
+    ...
+  </div>
+  <div class="help">Help or validation message</div>
+</div>`,be=`<div class="field">
+  <label for="xxx" class="label">Field With Prefix</label>
+  <div class="input prefixed">
+    <div class="prefix">prefix</div>
+    <input type="text" id="xxx">
+  </div>
+</div>`,ge=`<div class="field">
+  <label for="xxx" class="label">Field With Suffix</label>
+  <div class="input suffixed">
+    <input type="text" id="xxx">
+    <div class="suffix">suffix</div>
+  </div>
+</div>`,ve=`<div class="field">
+  <label for="xxx" class="label">
+    Required Field
+    <span class="required">Required</span>
+  </label>
+  <div class="input">
+    ...
+  </div>
+</div>
+`,me=`<div class="field">
+  <label for="xxx" class="label">
+    Optional Field
+    <span class="optional">Optional</span>
+  </label>
+  <div class="input">
+    ...
+  </div>
+</div>
+`,xe='<button type="submit" class="submit">Submit</button>',ye='<button type="reset" class="reset">Reset</button>',Se='<button type="button" class="cancel">Cancel</button>',we=`<div class="controls">
+  <button type="reset" class="reset">Reset</button>
+  <button type="submit" class="submit">Submit</button>
+</div>`,ke=`<div class="controls">
+  <button type="button" class="cancel">Cancel</button>
+  <button type="submit" class="submit">Submit</button>
+</div>`,Fe=`<div class="controls">
+  <div>
+    <button type="button" class="cancel">Cancel</button>
+    <button type="reset" class="reset">Reset</button>
+  </div>
+  <button type="submit" class="submit">Submit</button>
+</div>`,Te=`<div class="errors">
+  <h3>Form Submission Errors</h3>
+  <div>
+    <p>
+      Please correct these problems and re-submit:
+    </p>
+    <ul>
+      <li><b>Field one: </b>A value is required</li>
+      <li><b>Field two: </b>A value is required</li>
+    </ul>
+  </div>
+</div>`,$e=`<div class="debug">
+  <div class="panel">
+    <h4>Values</h4>
+    <pre>
+      ...
+    </pre>
+  </div>
+</div>`,Ce=()=>r("div",{children:[e("h1",{children:"Markup Examples"}),e("p",{className:"intro",children:"These examples show the HTML markup that is typically generated by the components."}),e("h2",{children:"Form"}),e(n,{code:ee,caption:"Form",language:"html",expand:!0}),e("h2",{children:"Field"}),e(n,{code:ne,caption:"Field",language:"html",expand:!0}),e("h2",{children:"Focussed Field"}),e(n,{code:re,caption:"Focussed Field",language:"html",expand:!0}),e("h2",{children:"Valid Field"}),e(n,{code:ie,caption:"Valid Field",language:"html",expand:!0}),e("h2",{children:"Invalid Field"}),e(n,{code:ae,caption:"Invalid Field",language:"html",expand:!0}),e("h2",{children:"Disabled Field"}),e(n,{code:le,caption:"Disabled Field",language:"html",expand:!0}),e("h2",{children:"Fluid Field"}),e(n,{code:te,caption:"Fluid Field",language:"html",expand:!0}),e("h2",{children:"Inline Field"}),e(n,{code:oe,caption:"Inline Field",language:"html",expand:!0}),e("h2",{children:"Wide Field"}),e(n,{code:de,caption:"Wide Field",language:"html",expand:!0}),e("h2",{children:"Text Field"}),e(n,{code:se,caption:"Text Field",language:"html",expand:!0}),e("h2",{children:"Text Area Field"}),e(n,{code:ue,caption:"Textarea Field",language:"html",expand:!0}),e("h2",{children:"Select Field"}),e(n,{code:ce,caption:"Select Field",language:"html",expand:!0}),e("h2",{children:"Checkbox Field"}),e(n,{code:he,caption:"Checkbox Field",language:"html",expand:!0}),e("h2",{children:"Radio Field"}),e(n,{code:fe,caption:"Radio Field",language:"html",expand:!0}),e("h2",{children:"Field With Help"}),e(n,{code:pe,caption:"Help Field",language:"html",expand:!0}),e("h2",{children:"Field With Prefix"}),e(n,{code:be,caption:"Prefix Field",language:"html",expand:!0}),e("h2",{children:"Field With Suffix"}),e(n,{code:ge,caption:"Suffix Field",language:"html",expand:!0}),e("h2",{children:"Required Label"}),e(n,{code:ve,caption:"Required Label",language:"html",expand:!0}),e("h2",{children:"Optional Label"}),e(n,{code:me,caption:"Optional",language:"html",expand:!0}),e("h2",{children:"Submit Button"}),e(n,{code:xe,caption:"Submit",language:"html",expand:!0}),e("h2",{children:"Reset Button"}),e(n,{code:ye,caption:"Reset",language:"html",expand:!0}),e("h2",{children:"Cancel Button"}),e(n,{code:Se,caption:"Cancel",language:"html",expand:!0}),e("h2",{children:"ResetSubmit Buttons"}),e(n,{code:we,caption:"ResetSubmit",language:"html",expand:!0}),e("h2",{children:"CancelSubmit Buttons"}),e(n,{code:ke,caption:"CancelSubmit",language:"html",expand:!0}),e("h2",{children:"CancelResetSubmit Buttons"}),e(n,{code:Fe,caption:"CancelResetSubmit",language:"html",expand:!0}),e("h2",{children:"Errors"}),e(n,{code:Te,caption:"Errors",language:"html",expand:!0}),e("h2",{children:"Debug"}),e(n,{code:$e,caption:"Debug",language:"html",expand:!0}),e(f,{uri:"markup"})]});function S(t){t=t.replaceAll(/(:|,)\s*\n/g,"$1");const u=t.split(/[\r\n]+/);let s=[],o=[],i;for(let d of u)if(!d.match(/^(@|})/)){if(d.match(/^\s*$/)){o=[];continue}if(i=d.match(/^\s*\/\*\s*(.*?)\s*\*\/$/)){o=[],s.push({section:i[1]});continue}if(i=d.match(/^\s*\/\/=\s*(.*?)$/)){o=[],s.push({section:i[1]});continue}if(i=d.match(/\/\/\s*(.*)/)){o.push(i[1]);continue}if(i=d.match(/(--[\w-]*):\s*(.*?);/)){const b=i[2],g=b.match(/^'(.*?)'$/),m=g?g[1]:b;s.push({variable:i[1],defaultValue:m,description:o.join(" ")}),o=[];continue}console.log("failed to match: ",d)}return s}const Be=`@include where-formula {
   /* Base units */
   // The default unit of spacing
   --spacing:                      #{$spacing};
@@ -293,7 +416,7 @@ export default BrandedForms`,_=`.formula {
   // Font size of label
   --label-size:                   var(--small-size);
   // Margin between label and input
-  --label-margin:                 var(--margin);
+  --label-margin:                 var(--margin-2);
   // Text color for help text in the default state
   --help-text:                    var(--label-text);
   // Size of help text
@@ -611,7 +734,7 @@ export default BrandedForms`,_=`.formula {
 
 }
 
-`,U=S(Q),X=()=>n("div",{children:[e("h1",{children:"CSS Variables - Defaults"}),n("p",{className:"intro",children:["These are the default values defined for CSS variables.  Note that some of the base units are defined in terms of "," ",e(c,{to:"/styling/sass-variables",text:"SASS Variables"}),"."]}),e(v,{vars:U}),e(b,{uri:"css-defaults"})]}),Z=`@include where-dark {
+`,Re=S(Be),De=()=>r("div",{children:[e("h1",{children:"CSS Variables - Defaults"}),r("p",{className:"intro",children:["These are the default values defined for CSS variables.  Note that some of the base units are defined in terms of "," ",e(p,{to:"/styling/sass-variables",text:"SASS Variables"}),"."]}),e(v,{vars:Re}),e(f,{uri:"css-defaults"})]}),We=`@include where-dark {
   color-scheme: dark;
   /* Labels, including Required and Optional label tags */
   // Text color for field labels in the default state
@@ -783,4 +906,4 @@ export default BrandedForms`,_=`.formula {
   --debug-panel-back:             hsl(var(--debug-hue), 5%, 20%);
   // Title color for inset debugging panels
   --debug-panel-title-text:       hsl(var(--debug-hue), 90%, 95%);
-}`,ee=S(Z),ne=()=>n("div",{children:[e("h1",{children:"CSS Variables - Dark Mode"}),n("p",{className:"intro",children:["These are the modified values that override the"," ",e(c,{to:"/styling/css-defaults",text:"default CSS variable values"})," ","in dark mode."]}),e(v,{vars:ee}),e(b,{uri:"css-dark"})]}),ae=()=>n(W,{children:[e(h,{path:"",exact:!0,element:e(H,{})}),e(h,{path:"forms",element:e(R,{})}),e(h,{path:"fields",element:e(I,{})}),e(h,{path:"css-variables",element:e(K,{})}),e(h,{path:"css-defaults",element:e(X,{})}),e(h,{path:"css-dark",element:e(ne,{})}),e(h,{path:"sass-variables",element:e(j,{})})]});export{ae as default};
+}`,Ve=S(We),ze=()=>r("div",{children:[e("h1",{children:"CSS Variables - Dark Mode"}),r("p",{className:"intro",children:["These are the modified values that override the"," ",e(p,{to:"/styling/css-defaults",text:"default CSS variable values"})," ","in dark mode."]}),e(v,{vars:Ve}),e(f,{uri:"css-dark"})]}),He=()=>r(q,{children:[e(c,{path:"",exact:!0,element:e(O,{})}),e(c,{path:"forms",element:e(I,{})}),e(c,{path:"fields",element:e(P,{})}),e(c,{path:"css-classes",element:e(X,{})}),e(c,{path:"css-variables",element:e(Q,{})}),e(c,{path:"css-defaults",element:e(De,{})}),e(c,{path:"css-dark",element:e(ze,{})}),e(c,{path:"sass-variables",element:e(Y,{})}),e(c,{path:"markup",element:e(Ce,{})})]});export{He as default};
