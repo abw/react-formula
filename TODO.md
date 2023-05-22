@@ -78,6 +78,8 @@ be `validate`
 
 * Field functions: setValid() and setInvalid()
 
+* Utilities - prefixClasses(), selectClass(), etc.
+
 ## Input Types
 
 * Checkbox classes

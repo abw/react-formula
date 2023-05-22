@@ -1,0 +1,30 @@
+$namespace: 'formula'               !default;
+$formula:  '.#{$namespace}'         !default;
+$bare:     '#{$formula}--bare'      !default;
+$checkbox: '#{$formula}--checkbox'  !default;
+$checked:  '#{$formula}--checked'   !default;
+$controls: '#{$formula}--controls'  !default;
+$debug:    '#{$formula}--debug'     !default;
+$disabled: '#{$formula}--disabled'  !default;
+$errors:   '#{$formula}--errors'    !default;
+$field:    '#{$formula}--field'     !default;
+$fluid:    '#{$formula}--fluid'     !default;
+$focus:    '#{$formula}--focus'     !default;
+$help:     '#{$formula}--help'      !default;
+$inline:   '#{$formula}--inline'    !default;
+$input:    '#{$formula}--input'     !default;
+$invalid:  '#{$formula}--invalid'   !default;
+$option:   '#{$formula}--option'    !default;
+$optional: '#{$formula}--optional'  !default;
+$panel:    '#{$formula}--panel'     !default;
+$prefix:   '#{$formula}--prefix'    !default;
+$prefixed: '#{$formula}--prefixed'  !default;
+$radio:    '#{$formula}--radio'     !default;
+$required: '#{$formula}--required'  !default;
+$suffix:   '#{$formula}--suffix'    !default;
+$suffixed: '#{$formula}--suffixed'  !default;
+$valid:    '#{$formula}--valid'     !default;
+$wide:     '#{$formula}--wide'      !default;
+
+@import 'formula.scss';
+

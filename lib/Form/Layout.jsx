@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from './Context.js'
-import { formAttrs } from '../Utils.js'
+import { formAttrs, selectClass } from '../Utils.js'
 import DefaultHeader from './Header.jsx'
 import DefaultFooter from './Footer.jsx'
 import { statusClasses } from '../Utils.js'
@@ -17,6 +17,7 @@ export const Layout = ({children}) => {
   const className = statusClasses(
     form.status,
     form.classes,
+    selectClass(form.classes, 'formula'),
     form.className
   )
   const attrs = formAttrs(form)

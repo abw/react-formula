@@ -360,6 +360,11 @@ export const URLS = {
     text:   'CSS Variables',
     about:  'Styling with CSS variables',
   },
+  'styling:sass-variables': {
+    url:    '/styling/SASS-variables',
+    text:   'SASS Variables',
+    about:  'SASS variable definitions',
+  },
 }
 
 

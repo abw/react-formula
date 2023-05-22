@@ -188,6 +188,13 @@ export const HiddenInputLink = () =>
 export const CustomInputLink = () =>
   <CodeLink to="custom:Input"/>
 
+// styling
+export const CSSClassesLink = () =>
+  <CodeLink to="styling:css-classes"/>
+
 export const CSSVarsLink = () =>
   <CodeLink to="styling:css-variables"/>
+
+export const SASSVarsLink = () =>
+  <CodeLink to="styling:sass-variables"/>
 

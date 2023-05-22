@@ -149,12 +149,12 @@ export const StylingMenu = {
   title: 'Styling',
   url:  '/styling',
   items: [
+    ['css-classes',      'CSS Classes'],
     ['css-variables',    'CSS Variables'],
     ['css-defaults',     'CSS Variables - Defaults'],
     ['css-dark',         'CSS Variables - Dark Mode'],
     ['sass-variables',   'SASS Variables'],
     ['markup',           'HTML Markup'],
-    ['css-classes',      'CSS Classes'],
     ['forms',            'Form Styles'],
     ['fields',           'Field Styles'],
   ]
