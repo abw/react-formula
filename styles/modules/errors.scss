@@ -16,7 +16,7 @@
     padding: var(--errors-title-padding);
     color: var(--errors-title-text);
   }
-  .errors-body {
+  & > div {
     padding: var(--errors-padding);
   }
   h4:last-child {

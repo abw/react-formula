@@ -30,6 +30,10 @@ registering with the form?
 * change errorsInHeader to showErrors - it's simple enough to insert the
   <Errors/> wherever you want them.  Maybe also make it false by default.
 
+* Submit button should be disabled when form is submitting
+
+* Overlay / spinner when saving
+
 ## State
 
 * default select value isn't being passed up to form or included in submission
@@ -42,8 +46,6 @@ registering with the form?
 basic format, e.g. email
 
 ## Docs
-
-* API / component reference
 
 * Changed component
 
@@ -62,21 +64,32 @@ be `validate`
 
 * useForm() / useField()
 
-* Docs for Field setValid() and setInvalid()
-
-* Text input docs looks like the original first page of the tutorial
-
 * Debug properties
 
 * ...and properties for other components, too, e.g. Cancel, Reset, Submit, etc.
 
 * consistent p.intro on each section index page (and component page?)
 
-* Added pager to pages in components
+* Pager doesn't work with menus defined using shorthand 'section:name' links
+
+* Add Pager to pages in components and input types
+
+* Field properties: value, default
+
+* Field functions: setValid() and setInvalid()
+
+## Input Types
+
+* Checkbox classes
+* Radio classes
+* Select classes
+* Text attrs
 
 ## Styling
 
 * down caret icon for select
+
+* better name than mar-r-option for inline margins
 
 ## Theming
 

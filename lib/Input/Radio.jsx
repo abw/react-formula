@@ -1,16 +1,14 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs, propClasses, valueOption } from '../Utils.js'
+import { inputAttrs, joinClasses, selectClass, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
 
 const Radio = ({ field=useField() }) => {
   const {
+    classes,
     options=[],
     type='radio',
-    textClass='text',
-    optionClass='option',
-    checkedClass='checked',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
@@ -22,13 +20,13 @@ const Radio = ({ field=useField() }) => {
           option = valueOption(option)
           const id = `${field.id}-${option.value}`
           const checked = field.value == option.value
-          const classes = propClasses(
-            { checked },
-            { checked: checkedClass },
-            optionClass, option.className
-          )
+          const labelClass = joinClasses([
+            selectClass(classes, 'option'),
+            option.className,
+            checked ? selectClass(classes, 'checked') : null
+          ])
           return (
-            <label key={option.value} htmlFor={id} className={classes}>
+            <label key={option.value} htmlFor={id} className={labelClass}>
               <input
                 // className={inputClass}
                 type={type}
@@ -41,7 +39,7 @@ const Radio = ({ field=useField() }) => {
                 checked={checked}
                 value={option.value}
               />
-              <span className={textClass}>{option.text}</span>
+              <span>{option.text}</span>
             </label>
           )
         }

@@ -15,43 +15,8 @@
       flex-wrap: unset;
     }
   }
-  /*
-  &#{$thin} {
-    #{$input} {
-      display: inline-flex;
-      input,
-      textarea,
-      select {
-        flex-basis: auto;
-      }
-    }
-    #{$radio} label#{$option},
-    #{$checkbox} label#{$option} {
-      width: 100%;
-    }
-  }
-  */
   &#{$wide} {
     width: 100%;
-    /*
-    #{$input} {
-      input,
-      textarea,
-      select {
-        flex-basis: 100%;
-      }
-    }
-    #{$radio} label#{$option},
-    #{$checkbox} label#{$option} {
-      width: 100%;
-      input {
-        flex-basis: auto;
-      }
-      span#{$text} {
-        flex-basis: 100%;
-      }
-    }
-    */
   }
   &.bare {
     #{$input} #{$option} {

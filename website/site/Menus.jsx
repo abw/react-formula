@@ -60,6 +60,7 @@ export const FormMenu = {
     'form:fields',
     'form:values',
     'form:hidden',
+    'form:classes',
     ['properties',    'Properties - TODO'],
     ['validation',    'Validation'],
     ['validate',      <code key='validate'>validate - TODO</code>],
@@ -152,6 +153,8 @@ export const StylingMenu = {
     ['css-defaults',     'CSS Variables - Defaults'],
     ['css-dark',         'CSS Variables - Dark Mode'],
     ['sass-variables',   'SASS Variables'],
+    ['markup',           'HTML Markup'],
+    ['css-classes',      'CSS Classes'],
     ['forms',            'Form Styles'],
     ['fields',           'Field Styles'],
   ]

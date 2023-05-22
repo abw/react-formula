@@ -8,6 +8,7 @@ import namespaces         from './examples/namespaces.scss?raw'
 import defaultsScss       from './examples/defaults.scss?raw'
 import VarsList           from './VarsList.jsx'
 import { parseSassVars }  from '../../site/ParseSassVars.js'
+import { FormClassesLink } from '../../site/Links.jsx'
 
 const namespaceVars = parseSassVars(namespace)
 const defaultsVars = parseSassVars(defaults)
@@ -32,7 +33,8 @@ const SASSVars = () =>
       following SASS variables before importing the main{' '}
       <code>formula.scss</code> file,
       as show in this example.  Note that you will also need to configure
-      the React components to use these new CSS classes.
+      the React components to use these new CSS classes.  You can do that
+      with the <FormClassesLink/> property.
     </p>
     <CodeBlock language="scss" code={namespaces} expand caption="your-formula.scss"/>
     <VarsList vars={namespaceVars}/>

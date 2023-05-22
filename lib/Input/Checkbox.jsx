@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs, propClasses } from '../Utils.js'
+import { inputAttrs, joinClasses, selectClass } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
 
@@ -8,24 +8,19 @@ const Checkbox = ({ field=useField() }) => {
   const {
     id,
     text,
+    classes,
     type='checkbox',
-    textClass='text',
-    optionClass='option',
-    checkedClass='checked',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs   = inputAttrs(field)
-  const checked = field.value
-  const classes = propClasses(
-    { checked },
-    { checked: checkedClass },
-    optionClass
-  )
+  const labelClass = joinClasses([
+    selectClass(classes, 'option'),
+    field.value ? selectClass(classes, 'checked') : null
+  ])
 
   return (
-    <label htmlFor={id} className={classes}>
+    <label htmlFor={id} className={labelClass}>
       <input
-        // className={inputClass}
         type={type}
         ref={field.inputRef}
         aria-disabled={field.disabled}
@@ -34,7 +29,7 @@ const Checkbox = ({ field=useField() }) => {
         {...attrs}
         checked={field.value}
       />
-      <span className={textClass}>{text}</span>
+      <span>{text}</span>
     </label>
   )
 }

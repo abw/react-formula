@@ -77,6 +77,9 @@ export const FormValuesLink = () =>
 export const FormHiddenLink = () =>
   <CodeLink to="form:hidden"/>
 
+export const FormClassesLink = () =>
+  <CodeLink to="form:classes"/>
+
 export const FormOnSubmitLink = () =>
   <CodeLink to="form:onSubmit"/>
 

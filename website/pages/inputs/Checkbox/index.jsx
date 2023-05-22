@@ -1,5 +1,6 @@
 import React        from 'react'
 import Example      from '../../../site/Example.jsx'
+// import Pager        from '../../../site/Pager/Inputs.jsx'
 import Checkbox     from './examples/Checkbox.jsx'
 import CheckboxSrc  from './examples/Checkbox.jsx?raw'
 import Fluid        from './examples/Fluid.jsx'
@@ -48,7 +49,7 @@ const CheckboxExamples = () =>
       <code>bare</code> class will strip them naked.
     </p>
     <Example Element={Bare} code={BareSrc} expand/>
-
+    {/* <Pager uri="checkbox"/> */}
   </div>
 
 export default CheckboxExamples

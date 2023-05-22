@@ -94,6 +94,11 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Form links
   //--------------------------------------------------------------------------
+  'form:classes': {
+    url:    '/components/Form/classes',
+    code:   'classes',
+    about:  'Custom CSS classes for form components',
+  },
   'form:fields': {
     url:    '/components/Form/fields',
     code:   'fields',
@@ -345,6 +350,11 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Styling Links
   //--------------------------------------------------------------------------
+  'styling:css-classes': {
+    url:    '/styling/css-classes',
+    text:   'CSS Classes',
+    about:  'Defining custom CSS classes',
+  },
   'styling:css-variables': {
     url:    '/styling/css-variables',
     text:   'CSS Variables',
