@@ -67,6 +67,10 @@
   --note-back:            hsl(var(--note-hue), 60%, 93%);
   --note-text:            hsl(var(--note-hue), 80%, 40%);
   --note-border:          hsl(var(--note-hue), 50%, 55%);
+  --table-head-back:      hsl(var(--brand-hue), 30%, 90%);
+  --table-head-text:      hsl(var(--brand-hue), 50%, 10%);
+  --table-body-back:      hsl(var(--brand-hue), 50%, 97%);
+  --table-body-var:       hsl(var(--brand-hue), 80%, 20%);
 }
 
 #page.dark {
@@ -127,4 +131,8 @@
   --note-back:            hsl(var(--note-hue), 40%, 15%);
   --note-text:            hsl(var(--note-hue), 40%, 65%);
   --note-border:          hsl(var(--note-hue), 50%, 35%);
+  --table-head-back:      hsl(var(--brand-hue), 30%, 25%);
+  --table-head-text:      hsl(var(--brand-hue), 30%, 90%);
+  --table-body-back:      hsl(var(--brand-hue), 30%, 20%);
+  --table-body-var:       hsl(var(--brand-hue), 30%, 80%);
 }

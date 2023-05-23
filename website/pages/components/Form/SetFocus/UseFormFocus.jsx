@@ -16,7 +16,6 @@ const FieldFocusButton = ({name, caption}) => {
   const { setFocus } = useForm()
   return (
     <button
-      className="btn-blue"
       onClick={ e => { e.preventDefault(); setFocus(name) } }
     >
       {caption}

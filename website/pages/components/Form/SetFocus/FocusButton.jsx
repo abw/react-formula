@@ -7,7 +7,7 @@ import React  from 'react'
 const FieldFocusButton = ({name, caption}) => {
   const { setFocus } = useForm()
   return (
-    <button className="btn-blue" onClick={ e => setFocus(name, e) }>
+    <button onClick={ e => setFocus(name, e) }>
       {caption}
     </button>
   )

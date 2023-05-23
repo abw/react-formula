@@ -61,10 +61,11 @@ export const FormMenu = {
     'form:values',
     'form:hidden',
     'form:classes',
-    ['properties',    'Properties - TODO'],
-    ['validation',    'Validation'],
-    ['validate',      <code key='validate'>validate - TODO</code>],
+    { heading: 'Validation' },
+    'form:validate',
     ['showErrors',    <code key='showerrors'>showErrors - TODO</code>],
+    // ['properties',    'Properties - TODO'],
+    // ['validation',    'Validation'],
     { heading: 'Events' },
     ['onSubmit',      <code key='onsubmit'>onSubmit - TODO</code>],
     ['onSuccess',     <code key='onsuccess'>onSuccess - TODO</code>],
@@ -72,13 +73,6 @@ export const FormMenu = {
     { heading: 'Functions' },
     ['setValues',    <code key='setValues'>setValues() - TODO</code>],
     ['setFocus',      <code key="setFocus">setFocus()</code>],
-    { heading: 'Styling' },
-    ['className',       <code key='classname'>className - TODO</code>],
-    ['validatingClass', <code key='validatingClass'>validatingClass - TODO</code>],
-    ['validClass',      <code key='validClass'>validClass - TODO</code>],
-    ['invalidClass',    <code key='invalidClass'>invalidClass - TODO</code>],
-    ['errorsClass',     <code key='errorsClass'>errorsClass - TODO</code>],
-    ['fieldClass',      <code key='fieldClass'>fieldClass - TODO</code>],
   ]
 }
 export const FieldMenu = {

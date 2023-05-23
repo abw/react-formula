@@ -1,5 +1,9 @@
 import React        from 'react'
 import Home         from './Home.jsx'
+import Fields       from './fields/index.jsx'
+import Values       from './values/index.jsx'
+import Hidden       from './hidden/index.jsx'
+import Classes      from './classes/index.jsx'
 import Properties   from './Properties/index.jsx'
 import SetFocus     from './SetFocus/index.jsx'
 import Validation   from './Validation/index.jsx'
@@ -18,6 +22,10 @@ import { Routes, Route } from 'react-router-dom'
 const Form = () =>
   <Routes>
     <Route path="" end        element={<Home/>}/>
+    <Route path="fields"      element={<Fields/>}/>
+    <Route path="values"      element={<Values/>}/>
+    <Route path="hidden"      element={<Hidden/>}/>
+    <Route path="classes"     element={<Classes/>}/>
     <Route path="properties"  element={<Properties/>}/>
     <Route path="setfocus"    element={<SetFocus/>}/>
     <Route path="validation"  element={<Validation/>}/>
