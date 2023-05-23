@@ -13,8 +13,7 @@
       "import": "./dist/react-formula.js",
       "require": "./dist/react-formula.umd.cjs"
     },
-    "./css/*": "./dist/css/*",
-    "./sass/*": "./dist/sass/*"
+    "./styles/*": "./dist/styles/*"
   },
   "author": "Andy Wardley",
   "license": "ISC",
