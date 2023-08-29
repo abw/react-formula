@@ -13,6 +13,8 @@ const LayoutTest = () =>
         <Field
           name="seven"
           label="Text Field"
+          className="wide"
+          inputClass="wide"
         />
         <Field name="ten"
           label="Number Field"

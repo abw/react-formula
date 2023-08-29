@@ -26,7 +26,10 @@ const Radio = ({ field=useField() }) => {
             checked ? selectClass(classes, 'checked') : null
           ])
           return (
-            <label key={option.value} htmlFor={id} className={labelClass}>
+            <label key={option.value} htmlFor={id}
+              // className={labelClass}
+
+            >
               <input
                 // className={inputClass}
                 type={type}

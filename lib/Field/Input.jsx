@@ -10,7 +10,7 @@ import { TEXT } from '../Constants.jsx'
 
 const Input = ({ field=useField() }) => {
   const {
-    classes, prefix, suffix,
+    classes, prefix, suffix, inputsClass, wide,
     type=TEXT,
     Prefix=DefaultPrefix,
     Suffix=DefaultSuffix,
@@ -25,6 +25,12 @@ const Input = ({ field=useField() }) => {
   }
   if (hasValue(suffix)) {
     classNames.push(selectClass(classes, 'suffixed'))
+  }
+  if (wide) {
+    classNames.push(selectClass(classes, 'wide'))
+  }
+  if (hasValue(inputsClass)) {
+    classNames.push(inputsClass)
   }
   const className = classNames.join(' ')
 

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Router from './site/Router.jsx'
 import { RouterProvider, } from 'react-router-dom'
 import { ThemeProvider } from '@abw/react-night-and-day'
-import '../styles/formula.scss'
+// import '../styles/formula.scss'
 import './styles/website.scss'
 
 

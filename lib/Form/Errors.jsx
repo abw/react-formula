@@ -16,7 +16,8 @@ const Errors = () => {
   } = form
   const hasError = Boolean(error)
   const n = errors.length + (hasError ? 1 : 0)
-  const className = selectClass(classes, 'errors')
+  // const className = selectClass(classes, 'error alert border')
+  const className = selectClass(classes, 'error alert')
 
   if (n === 0 ) {
     return null
@@ -24,7 +25,7 @@ const Errors = () => {
 
   return (
     <div className={className}>
-      { Boolean(errorsTitle) && <h3>{errorsTitle(n)}</h3> }
+      { Boolean(errorsTitle) && <div className="headline">{errorsTitle(n)}</div> }
       <div>
         { hasError && <h4><Error error={error}/></h4> }
         { errors.length !== 0 &&

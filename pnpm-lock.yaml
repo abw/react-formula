@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@abw/badger-css': ^0.0.9
   '@abw/badger-utils': ^1.0.19
   '@abw/react-context': ^2.0.3
   '@abw/react-night-and-day': ^0.0.4
@@ -28,6 +29,7 @@ specifiers:
   yup: ^1.0.2
 
 dependencies:
+  '@abw/badger-css': 0.0.9
   '@abw/badger-utils': 1.0.19
   '@abw/react-context': 2.0.3
   '@abw/react-one-louder': 0.0.5
@@ -38,7 +40,7 @@ devDependencies:
   '@abw/react-night-and-day': 0.0.4_biqbaboplfbrettd7655fr4n2y
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
-  '@testing-library/user-event': 14.4.3_@testing-library+dom@9.3.0
+  '@testing-library/user-event': 14.4.3_@testing-library+dom@9.3.1
   '@types/react': 18.0.31
   '@types/react-dom': 18.0.11
   '@vitejs/plugin-react': 3.1.0_vite@4.2.1
@@ -57,6 +59,10 @@ devDependencies:
   yup: 1.0.2
 
 packages:
+
+  /@abw/badger-css/0.0.9:
+    resolution: {integrity: sha512-1PMJ9plLw1aDqXfQcDUFRdu4R0QtwtlhVnmyZf8OAzTAvp7kq3u/wHJQ/LDFAp7mkZCnufGjNq1VSXoE1+Fesg==}
+    dev: false
 
   /@abw/badger-utils/1.0.19:
     resolution: {integrity: sha512-rwkfAbhyS4M17Bwu/3tSiSW3kxR2n/43xUc2F6tfmwwd0BZ2NsP457GYHUYdhsxBXTyDc3YNIE18+HnG/Hl5/g==}
@@ -105,11 +111,12 @@ packages:
       '@babel/highlight': 7.18.6
     dev: true
 
-  /@babel/code-frame/7.21.4:
-    resolution: {integrity: sha512-LYvhNKfwWSPpocw8GI7gpK2nq3HSDuEPC/uSYaALSJu9xjsalaaYFOq0Pwt5KmVqwEbZlDu81aLXwBOmD/Fv9g==}
+  /@babel/code-frame/7.22.13:
+    resolution: {integrity: sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/highlight': 7.18.6
+      '@babel/highlight': 7.22.13
+      chalk: 2.4.2
     dev: true
 
   /@babel/compat-data/7.21.0:
@@ -236,6 +243,11 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
+  /@babel/helper-validator-identifier/7.22.5:
+    resolution: {integrity: sha512-aJXu+6lErq8ltp+JhkJUfk1MTGyuA4v7f3pA+BJ5HLfNC6nAQ0Cpi9uOquUj8Hehg0aUiHzWQbOVJGao6ztBAQ==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/helper-validator-option/7.21.0:
     resolution: {integrity: sha512-rmL/B8/f0mKS2baE9ZpyTcTavvEuWhTTW8amjzXNvYG4AwBsqTLikfXsEofsJEfKHf+HQVQbFOHy6o+4cnC/fQ==}
     engines: {node: '>=6.9.0'}
@@ -257,6 +269,15 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.19.1
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+    dev: true
+
+  /@babel/highlight/7.22.13:
+    resolution: {integrity: sha512-C/BaXcnnvBCmHTpz/VGZ8jgtE2aYlW4hxDhseJAWZb7gqGM/qtCK6iZUb0TyKFf7BOUsBH7Q7fkRsDRhg1XklQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.22.5
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
@@ -296,11 +317,11 @@ packages:
       regenerator-runtime: 0.13.11
     dev: true
 
-  /@babel/runtime/7.21.5:
-    resolution: {integrity: sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==}
+  /@babel/runtime/7.22.11:
+    resolution: {integrity: sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      regenerator-runtime: 0.13.11
+      regenerator-runtime: 0.14.0
     dev: true
 
   /@babel/template/7.20.7:
@@ -1052,12 +1073,12 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/dom/9.3.0:
-    resolution: {integrity: sha512-Dffe68pGwI6WlLRYR2I0piIkyole9cSBH5jGQKCGMRpHW5RHCqAUaqc2Kv0tUyd4dU4DLPKhJIjyKOnjv4tuUw==}
+  /@testing-library/dom/9.3.1:
+    resolution: {integrity: sha512-0DGPd9AR3+iDTjGoMpxIkAsUihHZ3Ai6CneU6bRRrffXMgzCdlNk43jTrD2/5LT6CBb3MWTP8v510JzYtahD2w==}
     engines: {node: '>=14'}
     dependencies:
-      '@babel/code-frame': 7.21.4
-      '@babel/runtime': 7.21.5
+      '@babel/code-frame': 7.22.13
+      '@babel/runtime': 7.22.11
       '@types/aria-query': 5.0.1
       aria-query: 5.1.3
       chalk: 4.1.2
@@ -1095,13 +1116,13 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.4.3_@testing-library+dom@9.3.0:
+  /@testing-library/user-event/14.4.3_@testing-library+dom@9.3.1:
     resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
-      '@testing-library/dom': 9.3.0
+      '@testing-library/dom': 9.3.1
     dev: true
 
   /@tootallnate/once/2.0.0:
@@ -1593,7 +1614,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /ci-info/3.8.0:
@@ -2255,8 +2276,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -3452,6 +3473,10 @@ packages:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
 
+  /regenerator-runtime/0.14.0:
+    resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
+    dev: true
+
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
     engines: {node: '>= 0.4'}
@@ -3510,7 +3535,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rollup/3.21.5:
@@ -3518,7 +3543,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rrweb-cssom/0.6.0:
@@ -3988,7 +4013,7 @@ packages:
       rollup: 3.20.2
       sass: 1.60.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vite/4.3.5_vlcxagkae4flvf6edqlwy2zklu:
@@ -4022,7 +4047,7 @@ packages:
       rollup: 3.21.5
       sass: 1.60.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest/0.31.0_h3e3zndpqejzjhpljktawrbkwu:

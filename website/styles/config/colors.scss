@@ -1,4 +1,8 @@
-$brand-hue: 193;
+$brand-color:   'blue'   !default;
+$default-color: 'grey'   !default;
+$brand-hue:     206      !default;
+
+// $brand-hue: 193;
 $dev-hue: $brand-hue;   // old name
 $hover-hue: 260;
 $note-hue: 210;

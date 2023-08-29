@@ -1,6 +1,6 @@
 import React from 'react'
-import Optional from './Optional.jsx'
-import Required from './Required.jsx'
+// import Optional from './Optional.jsx'
+// import Required from './Required.jsx'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
 import { selectClass } from '../Utils.js'
@@ -15,8 +15,8 @@ const Label = ({ field=useField() }) => {
   return hasLabel &&
     <label htmlFor={id} className={className}>
       {label||<span>&nbsp;</span>}
-      {showRequired && <Required field={field} />}
-      {showOptional && <Optional field={field} />}
+      {/* {showRequired && <Required field={field} />} */}
+      {/* {showOptional && <Optional field={field} />} */}
     </label>
 }
 

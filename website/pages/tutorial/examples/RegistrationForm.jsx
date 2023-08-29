@@ -39,35 +39,40 @@ const validatePassword = value => yup
 const fields = {
   name: {
     label:    'Your name',
-    required: true
+    required: true,
+    inputsClass: 'wide'
   },
   email: {
     label:    'Email address',
     required: true,
-    validate: validateEmail
+    validate: validateEmail,
+    inputsClass: 'wide'
   },
   password: {
     label:    'Password',
     type:     'password',
     required: true,
-    validate: validatePassword
+    validate: validatePassword,
+    inputsClass: 'wide'
   },
   passcheck: {
     label:    'Confirm password',
     type:     'password',
     required: true,
-    validate: validatePassword
+    validate: validatePassword,
+    inputsClass: 'wide'
   },
   experience: {
     label:    'What is your level of experience?',
     type:     'radio',
     options:  ['Beginner', 'Intermediate', 'Expert'],
-    className: 'inline wide',
-    inputsClass: 'radio inputs lg-grid-3',
+    className: 'wide',
+    // inputsClass: 'radio inputs lg-grid-3',
   },
   dob: {
     type:  'date',
     label: 'Date of Birth',
+    inputsClass: 'wide'
   },
   price: {
     type:  'number',
@@ -75,13 +80,15 @@ const fields = {
     prefix: '£',
     suffix: '.00',
     min: 11,
-    max: 100
+    max: 100,
+    inputsClass: 'wide'
   },
   animal: {
     label:    'What is your favourite animal?',
     type:     'select',
     default:  'Badger',
-    options:  ['Badger', 'Ferret', 'Stoat']
+    options:  ['Badger', 'Ferret', 'Stoat'],
+    inputsClass: 'wide',
   },
   color: {
     label:    'What is your favourite color?',
@@ -94,7 +101,8 @@ const fields = {
       { value: 'yellow', text: 'Yellow' },
       { value: 'violet', text: 'Violet' },
       { value: 'white',  text: 'White'  },
-    ]
+    ],
+    inputsClass: 'wide',
   },
   terms: {
     label:    'Terms and conditions',

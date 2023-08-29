@@ -31,7 +31,7 @@ const SimpleForm = () =>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button. Also see what happens if you don&apos;t
         enter a value for either field.  Note that the &quot;Forgot your
-        password?&quot; link doesn&apos;t do anything useful - it&apos;t just
+        password?&quot; link doesn&apos;t do anything useful - it&apos;s just
         there to demonstrate how you can include your own markup in a form.
       </p>
     </Example>

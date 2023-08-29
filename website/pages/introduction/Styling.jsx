@@ -10,6 +10,14 @@ const Styling = () =>
   <div>
     <h1>Adding Styling</h1>
 
+    <div className="warning alert border">
+      <h3>NOTE</h3>
+      The CSS/SCSS styling is now provided by{' '}
+      <a href="https://abw.github.io/badger-css/forms/">Badger-CSS</a>.
+      The instructions on this page need to be updated to reflect that.
+
+    </div>
+
     <h2 className="hint">Either CSS...</h2>
     <p>
       To get up and running you should import the provided CSS stylesheet

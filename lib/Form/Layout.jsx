@@ -15,7 +15,8 @@ export const Layout = ({children}) => {
     Footer=DefaultFooter,
   } = form
   const className = statusClasses(
-    form.status,
+    { },
+    // form.status,
     form.classes,
     selectClass(form.classes, 'formula'),
     form.className

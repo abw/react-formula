@@ -93,6 +93,12 @@ be `validate`
 
 * better name than mar-r-option for inline margins
 
+* badger-css
+
+* use alert for form errors
+
+* no longer wide by default
+
 ## Theming
 
 * Consistent prefix, e.g. Formula.Form, Formula.Field
