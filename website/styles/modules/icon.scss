@@ -3,7 +3,7 @@ svg.icon {
   box-sizing: content-box;
   display: inline-block;
   height: 1em;
-  overflow: visible;
+  line-height: 1;
   vertical-align: -.125em;
   transform-origin: center;
   &.right {
@@ -20,5 +20,11 @@ svg.icon {
   }
   &.flop {
     transform: scaleY(-1);
+  }
+  &.icon-left {
+    margin-right: 0.75em;
+  }
+  &.icon-right {
+    margin-left: 0.75em;
   }
 }

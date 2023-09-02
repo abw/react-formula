@@ -1,7 +1,8 @@
 import React      from 'react'
 import CodeBlock  from '../../site/CodeBlock.jsx'
 import Link       from '../../site/Link.jsx'
-import useCSS     from '../../snippets/useCSS?raw'
+import online     from '../../snippets/install/online-css?raw'
+import css        from '../../snippets/install/import-css?raw'
 import useSCSS    from '../../snippets/useSCSS?raw'
 import brandHue   from '../../snippets/brandHue.css?raw'
 import Pager      from '../../site/Pager/Introduction.jsx'
@@ -10,22 +11,36 @@ const Styling = () =>
   <div>
     <h1>Adding Styling</h1>
 
-    <div className="warning alert border">
-      <h3>NOTE</h3>
-      The CSS/SCSS styling is now provided by{' '}
-      <a href="https://abw.github.io/badger-css/forms/">Badger-CSS</a>.
-      The instructions on this page need to be updated to reflect that.
-
-    </div>
+    <p>
+      This library uses the default form styles provided
+      by <a href="https://abw.github.io/badger-css/forms/">Badger-CSS</a>.
+      This adopts a <i>mostly classless</i> approach to styling.  What this
+      means in practice is that the CSS rules apply styles to the default
+      form elements and you generally don&apos;t need to add any extra
+      CSS classes to get good looking forms out of the box.  If you don&apos;t
+      like the styles then it&apos;s easy to adapt the styles or use your own
+      stylesheet as a drop-in replacement.
+    </p>
+    <p>
+      The{' '}
+      <a href="https://abw.github.io/badger-css/getting-started/installation">Badger CSS Installation</a>{' '}
+      documentations has full details.
+    </p>
 
     <h2 className="hint">Either CSS...</h2>
     <p>
-      To get up and running you should import the provided CSS stylesheet
+      You can import the Badger-CSS styles by adding the following to the
+      <code>&lt;head&gt;</code> section of your web page.
+    </p>
+    <CodeBlock code={online} expand/>
+    <p>
+      To get up and running quickly you can import the
+       import the provided CSS stylesheet
       into your React app.  You don&apos;t have to use this stylesheet, and
       at some point you may want to adapt it.  But it&apos;s a good place to
       start.
     </p>
-    <CodeBlock code={useCSS} expand/>
+    <CodeBlock code={css} expand/>
     <p>
       Typically you would add this to the main entry
       point for your application which will depend on which framework you&apos;re

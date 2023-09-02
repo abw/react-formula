@@ -1,8 +1,26 @@
-@import 'config/all.scss';
-@import '@abw/badger-css/styles/badger.scss';
-@import 'utils/all.scss';
-@import 'modules/all.scss';
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@import '@abw/react-night-and-day/styles/night-and-day.css';
 
+$dark-theme: '#site.dark, .dark';
+$brand-hue:    206;
+$brand-color:  'blue';
+$brand-colors: (
+  brand:   $brand-color,
+  hover:   'teal',
+);
+
+@import '@abw/badger-css/styles/badger.scss';
+// @import "../../styles/badger.scss";
+@import "config/all.scss";
+@import "modules/all.scss";
+
+
+// @import 'config/all.scss';
+// @import '@abw/badger-css/styles/badger.scss';
+// @import 'utils/all.scss';
+// @import 'modules/all.scss';
+/*
 .note {
   color: var(--note-text);
   background-color: var(--note-back);
@@ -133,7 +151,8 @@ form.debug.valid {
 form.debug.invalid {
   border: 1px solid red;
 }
-
+*/
+/*
 form.formula {
   button.btn-red {
     background-color: hsl($red-hue, 60%, 50%);
@@ -205,7 +224,8 @@ form.formula {
     width: 48ch;
   }
 }
-
+*/
+/*
 .boxed {
   border: 1px solid hsl($dev-hue, 30%, 80%);
   background-color: hsl($dev-hue, 10%, 90%);
@@ -254,3 +274,4 @@ ul.credits {
     margin: 0;
   }
 }
+*/

@@ -6,13 +6,14 @@ import { useTheme } from '@abw/react-night-and-day'
 import Header from './Header.jsx'
 
 const Layout = () => {
-  const { theme } = useTheme()
+  const { theme, variant } = useTheme()
+  const classes = [theme, variant].join(' ')
   return (
-    <div id="page" className={theme}>
+    <div id="site" className={classes}>
       <Header/>
-      <div id="layout">
+      <div id="app">
         <ScrollToTop/>
-        <aside id="sidebar">
+        <aside>
           <Sidebar/>
         </aside>
         <main id="content">

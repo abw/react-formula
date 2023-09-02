@@ -1,3 +1,11 @@
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+.prose > p {
+  max-width: calc(50% - 1rem);
+}
+
+/*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -134,3 +142,4 @@ body {
   }
 }
 
+*/

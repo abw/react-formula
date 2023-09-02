@@ -108,15 +108,15 @@ li {
 
 div.see-also,
 div.toc {
-  background-color: var(--toc-bg);
-  border: 1px solid var(--toc-bd);
+  background-color: var(--toc-back);
+  border: 1px solid var(--toc-border);
   padding: 1rem 2rem;
-  border-radius: $radius;
-  box-shadow: $shadows;
+  border-radius: $unit-radius;
+  box-shadow: var(--shadow-2);
   h2 {
     margin: 0.5rem 0 1rem 0;
     font-size: 1.2rem;
-    color: var(--toc-hd);
+    color: var(--toc-head);
   }
   ul {
     padding: 0 0 0 1rem;
@@ -133,7 +133,7 @@ div.toc ul.menu {
       list-style: none;
       margin-left: -0.8rem;
       margin-bottom: 0.5rem;
-      color: var(--toc-hd2);
+      color: var(--toc-head2);
       h4 {
         font-weight: normal;
         margin-bottom: 0;
@@ -141,21 +141,21 @@ div.toc ul.menu {
       }
     }
     a {
-      background-color: var(--code-link-bg);
-      color: var(--code-link-fg);
-      border: 1px solid var(--code-link-bd);
-      border-bottom: 1px solid var(--code-link-ul);
+      background-color: var(--code-link-back);
+      color: var(--code-link-text);
+      border: 1px solid var(--code-link-border);
+      border-bottom: 1px solid var(--code-link-underline);
       padding: 0.1rem 0.25rem;
-      border-radius: $code-radius;
+      border-radius: $unit-radius;
       &:hover {
         // background-color: hsl($hover-hue, 40%, 90%);
         // border-color: hsl($hover-hue, 50%, 80%);
         // border-bottom-color: hsl($hover-hue, 40%, 70%);
         // color: hsl($hover-hue, 90%, 15%);
-        color: var(--code-hv-fg);
-        background-color: var(--code-hv-bg);
-        border-color: var(--code-hv-bd);
-        border-bottom-color: var(--code-hv-ul);
+        color: var(--code-hover-text);
+        background-color: var(--code-hover-back);
+        border-color: var(--code-hover-border);
+        border-bottom-color: var(--code-hover-underline);
       }
     }
   }

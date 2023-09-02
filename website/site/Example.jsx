@@ -2,31 +2,46 @@ import React from 'react'
 import CodeBlock from './CodeBlock.jsx'
 
 export const Example = ({
-  Element, code, children='', className='', caption, fixed, expand
+  Element,
+  code,
+  html,
+  children='',
+  className='',
+  caption,
+  fixed,
+  expand,
+  language
 }) => {
-  return <div className={`example ${className}`}>
-    <div className="mar-t-2">
-      <CodeBlock caption={caption} code={prepareCode(code)} expand={expand} fixed={fixed}/>
+  return <div className={`example grid-2 gap-8 stack-desktop ${className}`}>
+    <div className="source">
+      <CodeBlock
+        caption={caption}
+        code={code||html}
+        expand={expand}
+        fixed={fixed}
+        language={html ? 'html' : language}
+      />
     </div>
-    {children}
+    { Boolean(children) &&
+      <div className="interim">
+        {children}
+      </div>
+    }
     { Element
-      ? <div className="mar-t-2 output">
+      ? <div className="output">
           <h4 className="caption">Output</h4>
           <Element/>
         </div>
       : null
     }
+    { html
+      ? <div className="output">
+          <h4 className="caption">Output</h4>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      : null
+    }
   </div>
 }
-
-export const prepareCode = code =>
-  code
-    .replace(/^[^]*?{?\/\*\s*START\s*\*\/}?\n/, '')  // remove everything up to {/* START */}
-    .replace(/[\n\s]*{?\/\*\s*END\s*\*\/}?[^]*/, '') // and everything from {/* END */} onwards
-    .replaceAll(/\/\/\s*PRETEND:\s/g, '')            // and the // PRETEND: prefix
-    .replaceAll(/\/\*\s*REAL\s*\*\/.*?\/\*\s*UNREAL\s*\*\//g, '')
-    .replaceAll(/{\/\*\s*(UN?)PRETEND\s*\*\/}/g, '')
-    // .replaceAll(/*REAL:\s*\n.*?\n/g, '')       // and any line after // REAL:
-
 
 export default Example

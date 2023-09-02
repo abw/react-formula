@@ -40,9 +40,9 @@ const Home = () =>
       Furthermore, you have full access to the source code which you want
       adapt if you need to.  You don&apos;t owe me anything.
     </p>
-    <div className="warning">
-      <h3>WARNING - THIS IS A WORK IN PROGRESS</h3>
-      <p>
+    <div className="error alert border shadow-2">
+      <div className="headline">WARNING - Work in Progress</div>
+      <p className="fgc-80">
         <b>Do not use this library unless you like living dangerously.</b>
       </p>
       <p>
@@ -52,7 +52,7 @@ const Home = () =>
         No one... no one... no!  Don&apos;t touch it. Don&apos;t point, even.
         No.  It can&apos;t be played... never... I mean...
       </p>
-      <p className="bold mar-b-0">
+      <p className="bold mar-b-0 fgc-80">
         Don&apos;t even
         look at it.  You&apos;ve seen enough of that one.
       </p>
