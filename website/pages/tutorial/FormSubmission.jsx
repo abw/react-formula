@@ -26,16 +26,15 @@ const FormSubmission = () =>
       array of <code>errors</code>.  These are handled the same as for
       client-side form validation.
     </p>
+    <p>
+      Try entering some values in the form below and click on the
+      &quot;Login&quot; button.  You should see the submitted values
+      appear in a debugging window beneath the form.
+    </p>
     <Example
       Element={DummySubmit} code={DummySubmitSrc}
       caption="Dummy Submission"
-    >
-      <p>
-        Try entering some values in the form below and click on the
-        &quot;Login&quot; button.  You should see the submitted values
-        appear in a debugging window beneath the form.
-      </p>
-    </Example>
+    />
     <h2>Where Next?</h2>
     <p>
       When the form is submitted there are two possible outcomes.  Either

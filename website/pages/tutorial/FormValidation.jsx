@@ -40,18 +40,17 @@ const FormValidation = () =>
       <FieldsLink/> component which allows you to add multiple fields to
       a <FormLink/> in one fell swoop.
     </p>
+    <p>
+      Try entering some values in the form below and click on the
+      &quot;Register&quot; button. You should see the field level validation
+      errors if you don&apos;t provide a valid value for any field. Or if
+      you provide different values for the Password and Confirm Password
+      fields then you should see the form validation errors.
+    </p>
     <Example
       Element={PasswordCheck} code={PasswordCheckSrc}
       caption="Form Validation"
-    >
-      <p>
-        Try entering some values in the form below and click on the
-        &quot;Register&quot; button. You should see the field level validation
-        errors if you don&apos;t provide a valid value for any field. Or if
-        you provide different values for the Password and Confirm Password
-        fields then you should see the form validation errors.
-      </p>
-    </Example>
+    />
     <h2>Where Next?</h2>
     <p>
       Now that we&apos;ve handled the validation of the form we can talk

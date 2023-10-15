@@ -54,17 +54,17 @@ const FieldValidation = () =>
       <FieldLink/> element around, or just edit the <NameLink/> property than
       it is to cut and paste large blocks of code.
     </p>
+    <p>
+      Try entering some values in the form below and click on the
+      &quot;Login&quot; button. If you don&apos;t provide a value, or
+      if you provide an invalid value then you should see the validation
+      errors.
+    </p>
     <Example
       Element={LoginForm} code={LoginFormSrc}
       caption="Field Validation"
-    >
-      <p>
-        Try entering some values in the form below and click on the
-        &quot;Login&quot; button. If you don&apos;t provide a value, or
-        if you provide an invalid value then you should see the validation
-        errors.
-      </p>
-    </Example>
+    />
+
     <h2><code>validateOnBlur</code></h2>
     <p>
       By default, field validation happens when the form is submitted.

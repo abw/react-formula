@@ -1,6 +1,6 @@
 import React                    from 'react'
-import CodeBlock                from '../../../../site/CodeBlock.jsx'
-import Example, { prepareCode } from '../../../../site/Example.jsx'
+import CodeBlock, { prepareCode } from '../../../../site/CodeBlock.jsx'
+import Example                  from '../../../../site/Example.jsx'
 import FormFocusSrc             from './FormFocus.jsx?raw'
 import FormFocus                from './FormFocus.jsx'
 import UseFormFocusSrc          from './UseFormFocus.jsx?raw'

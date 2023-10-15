@@ -8,7 +8,7 @@ import Example         from '../../../site/Example.jsx'
 import CodeBlock       from '../../../site/CodeBlock.jsx'
 import Pager           from '../../../site/Pager/Customising.jsx'
 import { InputLink }   from '../../../site/Links.jsx'
-import { prepareCode } from '../../../site/Example.jsx'
+import { prepareCode } from '../../../site/CodeBlock.jsx'
 
 const CustomInput = () =>
   <div>

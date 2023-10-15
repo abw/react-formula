@@ -23,19 +23,17 @@ const SimpleForm = () =>
       So without further ado, let&apos;s look at the one form that most
       websites will require: a user login form.
     </p>
+    <p>
+      Try entering some values in the form below and click on the
+      &quot;Login&quot; button. Also see what happens if you don&apos;t
+      enter a value for either field.  Note that the &quot;Forgot your
+      password?&quot; link doesn&apos;t do anything useful - it&apos;s just
+      there to demonstrate how you can include your own markup in a form.
+    </p>
     <Example
       Element={BasicLoginForm} code={BasicLoginFormSrc}
       caption="Basic Login Form"
-    >
-      <p>
-        Try entering some values in the form below and click on the
-        &quot;Login&quot; button. Also see what happens if you don&apos;t
-        enter a value for either field.  Note that the &quot;Forgot your
-        password?&quot; link doesn&apos;t do anything useful - it&apos;s just
-        there to demonstrate how you can include your own markup in a form.
-      </p>
-    </Example>
-
+    />
     <h2><code>Form</code></h2>
     <p>
       A form is defined using the <FormLink/> component.  You can include

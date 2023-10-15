@@ -15,8 +15,7 @@ const FirstFormPage = () => {
         build forms.
       </p>
       <p>
-        If everything has gone according to plan then you should see a form
-        like this.
+        Here&apos;s an example of a very simple login form.
         Don&apos;t forget to see what it looks like in{' '}
         <span className="link" onClick={toggleTheme}>
           { isDark ? 'light mode' : 'dark mode' }

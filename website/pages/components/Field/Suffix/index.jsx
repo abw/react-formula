@@ -12,7 +12,7 @@ const PrefixSuffix = () =>
 
     <h2><code>suffix</code></h2>
     <p>
-      You can add add a <code>suffix</code> to a field
+      You can add a <code>suffix</code> to a field
     </p>
     <Example
       Element={Suffix} code={SuffixSrc}

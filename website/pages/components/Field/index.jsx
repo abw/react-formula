@@ -5,6 +5,7 @@ import Name              from './Name/index.jsx'
 import Label             from './Label/index.jsx'
 import Type              from './Type/index.jsx'
 import Placeholder       from './Placeholder/index.jsx'
+import Children          from './Children/index.jsx'
 import Help              from './Help/index.jsx'
 import Prefix            from './Prefix/index.jsx'
 import Suffix            from './Suffix/index.jsx'
@@ -38,6 +39,7 @@ const Field = () =>
     <Route path="label"             element={<Label/>}/>
     <Route path="type"              element={<Type/>}/>
     <Route path="placeholder"       element={<Placeholder/>}/>
+    <Route path="children"          element={<Children/>}/>
     <Route path="help"              element={<Help/>}/>
     <Route path="prefix"            element={<Prefix/>}/>
     <Route path="suffix"            element={<Suffix/>}/>

@@ -25,12 +25,9 @@ const fields = {
   },
 }
 
-const FieldsExample = () =>
+const FieldsWide = () =>
   <Form fields={fields}>
-    {/* array of field name strings */}
-    <Fields names={['name', 'message']}/>
-    {/* shortcut - a single string of field names */}
-    <Fields names='badgers animal'/>
+    <Fields names='name message badgers animal' wide/>
   </Form>
 
-export default FieldsExample
+export default FieldsWide

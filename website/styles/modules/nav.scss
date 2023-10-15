@@ -1,18 +1,20 @@
-.prev-next-link {
+a.prev-next-link {
+  --text:   var(--brand-50);
+  --head:   var(--brand-10);
+  --back:   var(--brand-90);
+  --border: var(--brand-70);
   min-width: 20ch;
-  // background-color: hsl($dev-hue, 40%, 95%);
-  // border: 1px solid hsl($dev-hue, 50%, 80%);
-  background-color: var(--prev-next-bg);
-  border: 1px solid var(--prev-next-bd);
+  color: var(--text);
+  background-color: var(--back);
+  border: 1px solid var(--border);
   margin-top: 1rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  box-shadow: $shadows;
+  box-shadow: var(--shadow-1);
   transition: all 0.5s;
   h4 {
     transition: all 0.5s;
-    // color: hsl($dev-hue, 80%, 40%);
-    color: var(--prev-next-fg);
+    color: var(--head);
     margin: 0;
   }
   p {
@@ -20,13 +22,27 @@
     padding: 0;
   }
   &:hover {
-    // background-color: hsl($hover-hue, 40%, 95%);
-    // border: 1px solid hsl($hover-hue, 50%, 80%);
-    background-color: var(--prev-next-hv-bg);
-    border-color: var(--prev-next-hv-bd);
+    --text:   var(--brand-30);
+    --head:   var(--brand-0);
+    --back:   var(--brand-85);
+    --border: var(--brand-70);
+    color: var(--text);
     h4 {
-      // color: hsl($hover-hue, 70%, 40%);
-      color: var(--prev-next-hv-fg);
+      color: var(--head);
     }
   }
 }
+
+#{$dark-theme} a.prev-next-link {
+  --text:         var(--brand-70);
+  --head:         var(--brand-90);
+  --back:         var(--brand-20);
+  --border:       var(--brand-10);
+  &:hover {
+    --text:   var(--brand-80);
+    --head:   var(--brand-100);
+    --back:   var(--brand-30);
+    --border: var(--brand-10);
+  }
+}
+

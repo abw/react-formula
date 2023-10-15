@@ -49,6 +49,7 @@ export const ComponentsMenu = {
     'component:Layout',
     'component:Label',
     'component:Message',
+    'component:UseField',
   ]
 }
 
@@ -87,6 +88,7 @@ export const FieldMenu = {
     'field:help',
     'field:prefix',
     'field:suffix',
+    'field:children',
     { heading: 'Validation' },
     'field:required',
     'field:showRequired',

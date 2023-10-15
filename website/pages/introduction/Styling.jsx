@@ -1,14 +1,14 @@
 import React      from 'react'
 import CodeBlock  from '../../site/CodeBlock.jsx'
-import Link       from '../../site/Link.jsx'
+// import Link       from '../../site/Link.jsx'
 import online     from '../../snippets/install/online-css?raw'
 import css        from '../../snippets/install/import-css?raw'
-import useSCSS    from '../../snippets/useSCSS?raw'
-import brandHue   from '../../snippets/brandHue.css?raw'
+import scss       from '../../snippets/install/import-scss?raw'
+// import brandHue   from '../../snippets/brandHue.css?raw'
 import Pager      from '../../site/Pager/Introduction.jsx'
 
 const Styling = () =>
-  <div>
+  <div className="prose">
     <h1>Adding Styling</h1>
 
     <p>
@@ -17,30 +17,36 @@ const Styling = () =>
       This adopts a <i>mostly classless</i> approach to styling.  What this
       means in practice is that the CSS rules apply styles to the default
       form elements and you generally don&apos;t need to add any extra
-      CSS classes to get good looking forms out of the box.  If you don&apos;t
-      like the styles then it&apos;s easy to adapt the styles or use your own
-      stylesheet as a drop-in replacement.
+      CSS classes to get good looking forms out of the box.
     </p>
-    <p>
-      The{' '}
-      <a href="https://abw.github.io/badger-css/getting-started/installation">Badger CSS Installation</a>{' '}
-      documentations has full details.
-    </p>
-
-    <h2 className="hint">Either CSS...</h2>
-    <p>
-      You can import the Badger-CSS styles by adding the following to the
-      <code>&lt;head&gt;</code> section of your web page.
-    </p>
-    <CodeBlock code={online} expand/>
     <p>
       To get up and running quickly you can import the
-       import the provided CSS stylesheet
+      import the provided CSS stylesheet
       into your React app.  You don&apos;t have to use this stylesheet, and
       at some point you may want to adapt it.  But it&apos;s a good place to
       start.
     </p>
-    <CodeBlock code={css} expand/>
+
+
+    <p>
+      The <b>TL;DR</b> version is shown below.
+      The{' '}
+      <a href="https://abw.github.io/badger-css/getting-started/installation">Badger CSS Installation</a>{' '}
+      documentation has further details if necessary.
+    </p>
+
+    <h2>Online CSS</h2>
+    <p>
+      You can import the Badger-CSS styles by adding the following to the{' '}
+      <code>&lt;head&gt;</code> section of your web page.
+    </p>
+    <CodeBlock code={online} expand/>
+
+    <h2>Local CSS</h2>
+    <p>
+      Or you can import the CSS into your application from the copy which
+      will be installed in your <code>node_modules</code> directory.
+    </p>
     <p>
       Typically you would add this to the main entry
       point for your application which will depend on which framework you&apos;re
@@ -49,48 +55,19 @@ const Styling = () =>
       bootstrapped your application using <a href="https://vitejs.dev/">Vite</a>{' '}
       then it would be <code>src/main.jsx</code>.
     </p>
+    <CodeBlock code={css} expand/>
 
-    <h2 className="hint">...or SASS / SCSS</h2>
+    <h2>Local SASS / SCSS</h2>
     <p>
       If you&apos;re using SASS then you can import the SASS (specifically
       SCSS) components into your main stylesheet instead.
     </p>
-    <CodeBlock code={useSCSS} language="scss" expand/>
-
-
-    <h2 className="hint">Optional step - setting the brand hue</h2>
+    <CodeBlock code={scss} language="scss" expand/>
     <p>
-      The CSS styles make heavy use of{' '}
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS Custom
-      Properties</a> (also known as &quot;CSS Variables&quot;), allowing you to
-      easily change the styles to fit your needs.
-    </p>
-    <p>
-      A good place to start is
-      by changing the <code>--brand-hue</code> variable to match the hue of
-      your web site brand color.  The CSS rules are scoped inside the
-      <code>.formula</code> namespace (which you can change if you need to).
-      You can define the variable inside that scope
-      or add it to a more general scope if you prefer (e.g. <code>:root</code>).
-    </p>
-    <CodeBlock code={brandHue} language="css" expand/>
-    <p>
-      See the <Link to="/styling" text="styling section"/> for further
-      information about customising the styles.
-    </p>
-
-    <h2 className="hint">Dark mode included</h2>
-    <p>
-      The CSS styles include both light and dark modes.  The default CSS scope
-      for dark mode is <code>.dark .formula</code> (again, you can change this
-      if you need to).  All you have to do is add the <code>dark</code> CSS
-      class to any container element and any forms inside it will be rendered
-      in the dark style.
-    </p>
-    <p>
-      See the next page for an example form and click on the sun/moon icon
-      on the right hand side of the header to toggle between light and dark
-      modes.
+      The advantage of using SCSS is that it makes it easy to change your
+      brand colors or make other adjustments to the default styles.
+      See the relevant <a href="https://abw.github.io/badger-css/colors/brand">Badger CSS </a> page
+      for further details.
     </p>
     <Pager uri="styling"/>
   </div>

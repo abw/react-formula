@@ -4,28 +4,29 @@ import { ReactComponent as ReactFormula } from '../svg/react-formula.svg'
 import Link from '../site/Link.jsx'
 
 const Home = () =>
-  <div className="home">
-    <h1>@abw/react-formula</h1>
+  <div className="home tablet center">
     <div className="pic-side">
       <div className="logo">
         <ReactFormula/>
       </div>
       <div className="blurb">
-        <p className="intro">
+        <p className="largest">
           <code className="code">react-formula</code> is yet another React
           form component library.
         </p>
-        <p className="intro">
-          I know what you&apos;re thinking.
-          What does the World need with another React form library?
-          What makes this different, better, and/or worse than all the
-          other form libraries?  Will this guy do my homework for me?
-          Why do we exist?  What is the meaning of life? Where did I leave
-          my car keys? And what is it with all the badgers?
-        </p>
       </div>
     </div>
-    <p className="subintro">
+    <h2> I know what you&apos;re thinking... </h2>
+    <ul>
+      <li>What does the World need with another React form library?</li>
+      <li>What makes this different, better, and/or worse than all the other form libraries?  </li>
+      <li>Will this guy do my homework for me?</li>
+      <li>Why do we exist?  </li>
+      <li>What is the meaning of life? </li>
+      <li>Where did I leave my car keys? </li>
+      <li>And what is it with all the badgers?</li>
+    </ul>
+    <p>
       None of these questions will be answered, at least not directly.
       You can read the copious documentation provided here if you want to
       find out more.  Or don&apos;t.  It makes no difference to me.  Seriously,
@@ -33,17 +34,11 @@ const Home = () =>
       than any other form library.  I&apos;m not interested in attracting new
       users or changing the world.  Been there, done that, burned out.
     </p>
-    <p className="subintro">
-      I wrote this library to help me do my job and make the process of
-      working with forms less painful than I found it using other modules.
-      It&apos;s Open Source and you can use it if you want to for <b>free</b>.
-      Furthermore, you have full access to the source code which you want
-      adapt if you need to.  You don&apos;t owe me anything.
-    </p>
+
     <div className="error alert border shadow-2">
       <div className="headline">WARNING - Work in Progress</div>
-      <p className="fgc-80">
-        <b>Do not use this library unless you like living dangerously.</b>
+      <p className="bold fgc-30 fgd-80">
+        Do not use this library unless you like living dangerously.
       </p>
       <p>
         It&apos;s in the process of being re-written and it&apos;s special.
@@ -52,15 +47,32 @@ const Home = () =>
         No one... no one... no!  Don&apos;t touch it. Don&apos;t point, even.
         No.  It can&apos;t be played... never... I mean...
       </p>
-      <p className="bold mar-b-0 fgc-80">
+      <p className="mar-b-0 bold fgc-30 fgd-80">
         Don&apos;t even
         look at it.  You&apos;ve seen enough of that one.
       </p>
     </div>
-    <p className="subintro">
-      Still with me?  OK then, but proceed at your own risk.
+
+    <h2>This is Opinionated and Selfish Software</h2>
+    <p>
+      I wrote this library to help me do my job and make the process of
+      working with forms less painful than I found it using other modules.
+      It is <i>opinionated</i> because it does things the way I like them
+      to be done, and it&apos;s <i>selfish</i> because I have no intention
+      of adding things that I don&apos;t need or want.
     </p>
+    <p>
+      It&apos;s Open Source and you can use it if you want to for <b>free</b>.
+      You have full access to the source code which you can adapt if you need
+      to.  If it proves useful in helping you get your job done then
+      that&apos;s great.  But please don&apos;t expect me to commit <i>my</i>{' '}
+      time to helping <i>you</i> get your job done.
+    </p>
+    <h2>Still With Me?</h2>
     <p className="subintro">
+      OK then, but proceed at your own risk.
+    </p>
+    <p>
       Read on for more information about what this library sets out to
       achieve.  If you just want to see it in action then feel free to skip
       the rest of this page and go straight to{' '}
@@ -68,9 +80,8 @@ const Home = () =>
     </p>
     <h2>Key Features</h2>
     <p className="subintro">
-      As I&apos;ve already said, I&apos;m not claiming this is better (or
-      worse) than any other form library, just different.  These are some of
-      the things that I think are important and influenced the design.
+      These are some of the things that I think are important in a form
+      library and have influenced the design.
     </p>
     <ul>
       <li>
@@ -186,7 +197,9 @@ const Home = () =>
 
     <h2>Why Not Just Use <code>&lt;ANOTHER FORM LIBRARY&gt;</code>?</h2>
     <p className="subintro">
-      Do we really have to do this?  Well, OK then.  I&apos;ll bite.
+      Go for it.  This is software that I wrote for me.  I&apos;m not
+      suggesting that it&apos;s the right solution for you.  But if you want
+      to know why I wrote it, then read on...
     </p>
     <p>
       This library started out a few years back when the state of the art in

@@ -90,6 +90,11 @@ export const URLS = {
     code:   'Message',
     about:  'Render a message for a form field',
   },
+  'component:UseField': {
+    url:    '/components/UseField',
+    code:   'UseField',
+    about:  'Provides field context for a deeply nested element',
+  },
 
   //--------------------------------------------------------------------------
   // Form links
@@ -148,6 +153,11 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Field links
   //--------------------------------------------------------------------------
+  'field:children': {
+    url:    '/components/Field/children',
+    code:   'children',
+    about:  'Child functions in a field',
+  },
   'field:help': {
     url:    '/components/Field/help',
     code:   'help',

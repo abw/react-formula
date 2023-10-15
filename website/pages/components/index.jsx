@@ -16,6 +16,7 @@ import Debug             from './Debug/index.jsx'
 import Layout            from './Layout/index.jsx'
 import Label             from './Label/index.jsx'
 import Message           from './Message/index.jsx'
+import UseField          from './UseField/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Components = () =>
@@ -37,6 +38,7 @@ const Components = () =>
     <Route path="Layout"             element={<Layout/>}/>
     <Route path="Label"              element={<Label/>}/>
     <Route path="Message"            element={<Message/>}/>
+    <Route path="UseField"           element={<UseField/>}/>
     {/*
     <Route path="controls"    element={<Controls/>}/>
     <Route path="validation"  element={<Validation/>}/>

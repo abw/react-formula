@@ -5,34 +5,34 @@ $theme-transition: 0.5s;
 
 :where(html) {
   --body-text:            var(--grey-20);
-  --bold-text:            var(--brand-20);
+  // --bold-text:            var(--color-20);
   --head-text:            var(--grey-20);
   --link-text:            var(--brand-50);
   --link-hover:           var(--brand-30);
   // header
-  --header-back:          var(--brand-80);
+  --header-back:          var(--grey40-80);
   --header-text:          var(--grey40-40);
-  --header-link:          var(--grey40-40);
+  --header-link:          var(--brand-30);
   --header-hover:         var(--brand-10);
-  --header-border:        var(--brand-70);
+  --header-border:        var(--grey20-60);
   // footer
   --footer-back:          var(--grey40-75);
   --footer-text:          var(--grey40-40);
   --footer-border:        var(--grey40-65);
   // app
-  --side-back:
-  --app-back:             var(--grey-70);
+  --app-back:             var(--grey-80);
   --main-back:            var(--grey-90);
-  --side-back:            var(--grey-80);
+  --side-back:            var(--grey-85);
   --side-border:          var(--grey-60);
   // --side-border:          var(--grey-70);
   --side-shadow:        rgba(0, 0, 0, 0.04);
   --top-shadow:         rgba(0, 0, 0, 0.08);
   // menu
+  --menu-back:            var(--side-back);
   --menu-text:            var(--grey20-40);
   --menu-head:            var(--brand-20);
-  --menu-hover-text:      var(--brand-10);
   --menu-hover-back:      var(--grey20-85);
+  --menu-hover-text:      var(--brand-10);
   --menu-active-text:     var(--brand-0);
   --menu-active-back:     var(--grey20-90);
   // table of contents
@@ -47,8 +47,8 @@ $theme-transition: 0.5s;
 }
 #{$dark-theme} {
   // body
-  --body-text:          var(--grey-60);
-  --bold-text:          var(--grey-70);
+  --body-text:          var(--color-60);
+  // --bold-text:          var(--grey-70);
   --head-text:          var(--grey-80);
   --link-text:          var(--brand-60);
   --link-hover:         var(--brand-80);
@@ -65,13 +65,14 @@ $theme-transition: 0.5s;
   --footer-border:      black;
   // app
   --app-back:           var(--grey-0);
-  --main-back:          var(--grey-20);
+  --main-back:          var(--grey-15);
   --side-back:          var(--grey-10);
   --side-border:        var(--grey-30);
   // --side-border:        var(--grey-20);
   --side-shadow:      rgba(0, 0, 0, 0.2);
   --top-shadow:       rgba(0, 0, 0, 0.15);
   // menu
+  --menu-back:          var(--side-back);
   --menu-text:          var(--grey20-80);
   --menu-head:          var(--brand-100);
   --menu-hover-text:    var(--brand-90);
@@ -84,4 +85,6 @@ $theme-transition: 0.5s;
   --toc-head:             var(--brand-80);
   --toc-head2:            var(--brand-70);
   --toc-about:            var(--brand-70);
+  --logo-color:           var(--grey20-70);
+
 }

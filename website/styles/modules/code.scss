@@ -8,17 +8,17 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 0.9);
 
 :where(html) {
   // code
-  --code-back:            var(--grey40-95);
-  --code-text:            var(--grey40-40);
-  --code-border:          var(--grey40-85);
+  --code-back:            var(--grey20-90);
+  --code-text:            var(--grey20-40);
+  --code-border:          var(--grey20-80);
   --code-link-back:       var(--brand-90);
   --code-link-text:       var(--brand-15);
-  --code-link-border:     var(--brand-70);
+  --code-link-border:     var(--brand-75);
   --code-link-underline:  var(--brand-50);
   --code-hover-back:      var(--hover-90);
   --code-hover-text:      var(--hover-15);
-  --code-hover-border:    var(--hover-80);
-  --code-hover-underline: var(--hover-50);
+  --code-hover-border:    var(--hover-60);
+  --code-hover-underline: var(--hover-30);
 
     // codeblock
   --codeblock-back:       var(--grey-95);
@@ -40,12 +40,12 @@ $codeblock-back-dark-to:     rgba($codeblock-back-dark, 0.9);
 #{$dark-theme} {
   // code
   --code-back:            var(--grey20-25);
-  --code-text:            var(--grey40-90);
+  --code-text:            var(--grey20-90);
   --code-border:          var(--grey20-20);
-  --code-link-back:       var(--brand-20);
-  --code-link-text:       var(--brand-75);
+  --code-link-back:       var(--brand-15);
+  --code-link-text:       var(--brand-80);
   --code-link-border:     var(--brand-25);
-  --code-link-underline:  var(--brand-40);
+  --code-link-underline:  var(--brand-45);
   --code-hover-back:      var(--hover-35);
   --code-hover-text:      var(--hover-90);
   --code-hover-border:    var(--hover-50);
@@ -76,6 +76,7 @@ code:not(.codeblock code):not(.toc code) {
   border: 1px solid var(--code-border);
   padding: 0 4px;
   border-radius: 4px;
+  transition: all 0.25s;
 }
 a code:not(.codeblock code):not(.toc code) {
   color: var(--code-link-text);
@@ -88,6 +89,7 @@ a:hover code:not(.codeblock code):not(.toc code) {
   background-color: var(--code-hover-back);
   border: 1px solid var(--code-hover-border);
   border-bottom-color: var(--code-hover-underline);
+  transition: all 0.15s;
 }
 
 div.example {
@@ -111,6 +113,7 @@ div.codeblock,
 div.output {
   position: relative;
   border-radius: 4px;
+  max-width: calc(100%);
   // box-shadow: var(--shadow-3);
   h4.caption {
     position: absolute;
@@ -210,6 +213,9 @@ div.codeblock {
       max-height: 250rem;
       transition: all 0.5s;
     }
+  }
+  & + p {
+    margin-top: 1rem;
   }
 }
 div.output {

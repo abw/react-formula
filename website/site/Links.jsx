@@ -44,6 +44,9 @@ export const LayoutLink = () =>
 export const MessageLink = () =>
   <CodeLink to="component:Message"/>
 
+export const UseFieldLink = () =>
+  <CodeLink to="component:UseField"/>
+
 export const ResetLink = () =>
   <CodeLink to="component:Reset"/>
 
@@ -100,6 +103,9 @@ export const FormValidateLink = () =>
 
 
 // field links
+export const FieldChildrenLink = () =>
+  <CodeLink to="field:children"/>
+
 export const FieldLabelLink = () =>
   <CodeLink to="field:label"/>
 

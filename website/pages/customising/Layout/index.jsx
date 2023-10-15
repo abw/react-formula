@@ -10,7 +10,7 @@ import PizzaCSS        from './examples/pizza.scss?raw'
 import Example         from '../../../site/Example.jsx'
 import CodeBlock       from '../../../site/CodeBlock.jsx'
 import Pager           from '../../../site/Pager/Customising.jsx'
-import { prepareCode } from '../../../site/Example.jsx'
+import { prepareCode } from '../../../site/CodeBlock.jsx'
 import { FieldLayoutLink, LabelLink }   from '../../../site/Links.jsx'
 
 const CustomLayout = () =>

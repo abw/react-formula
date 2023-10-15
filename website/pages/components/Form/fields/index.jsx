@@ -1,11 +1,11 @@
 import React      from 'react'
-import Example, { prepareCode }    from '../../../../site/Example.jsx'
+import Example    from '../../../../site/Example.jsx'
 import Fields     from './Fields.jsx'
 import FieldsSrc  from './Fields.jsx?raw'
 import InlineSrc  from './Inline.jsx?raw'
 import SeeAlso    from '../../../../site/SeeAlso.jsx'
 import { FieldLink, NameLink } from '../../../../site/Links.jsx'
-import CodeBlock from '../../../../site/CodeBlock.jsx'
+import CodeBlock, { prepareCode } from '../../../../site/CodeBlock.jsx'
 
 const FieldsExamples = () =>
   <div>

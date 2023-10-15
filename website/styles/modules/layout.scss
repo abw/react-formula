@@ -5,6 +5,43 @@
   max-width: calc(50% - 1rem);
 }
 
+@media only screen and (max-width: $desktop) {
+  .prose > p {
+    max-width: 100%;
+  }
+}
+
+.pic-side {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  align-items: start;
+  div.logo {
+      color: var(--logo-color);
+    svg {
+      margin-top: 0rem;
+      width: 100%;
+    }
+  }
+  & > div.blurb {
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.badger {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  img {
+    width: 100px;
+    margin: auto;
+  }
+  .caption {
+    padding: 0.5rem 0;
+  }
+}
+
 /*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
