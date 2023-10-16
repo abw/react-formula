@@ -1,6 +1,6 @@
 {
   "name": "@abw/react-formula",
-  "version": "0.0.2-alpha.2",
+  "version": "0.0.3-alpha.1",
   "description": "Yet another React form library",
   "type": "module",
   "files": [
