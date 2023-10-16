@@ -8,10 +8,11 @@ const showable = ['values', 'status', 'fields']
 export const Debug = ({show={ values: true }, showAll=false, ...props}) => {
   const form = useForm()
   return (
-    <div className="debug">
+    <div className="debug info alert border shadow-2 mar-t-4">
+      <div className="headline">Debug</div>
       { showable.map(
         item => (props[item] ?? (showAll || show[item])) &&
-          <div className="panel" key={item}>
+          <div className="panel bgc-95 bgd-5 pad-v-2 pad-h-4 bdr-1 mar-v-2" key={item}>
             <h4>{capitalise(item)}</h4>
             <pre>
               {JSON.stringify(form[item], null, 2)}

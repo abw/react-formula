@@ -6,7 +6,7 @@ import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
 import { selectClass } from '../Utils.js'
 import { hasValue } from '@abw/badger-utils'
-import { TEXT } from '../Constants.jsx'
+import { RADIO, TEXT } from '../Constants.jsx'
 
 const Input = ({ field=useField() }) => {
   const {
@@ -33,6 +33,10 @@ const Input = ({ field=useField() }) => {
     classNames.push(inputsClass)
   }
   const className = classNames.join(' ')
+
+  if (type == RADIO) {
+    return <Type field={field}/>
+  }
 
   return (
     <div className={className}>

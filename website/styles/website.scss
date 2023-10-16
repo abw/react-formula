@@ -10,8 +10,8 @@ $brand-colors: (
   hover:   'teal',
 );
 
-@import '@abw/badger-css/styles/badger.scss';
-// @import "../../styles/badger.scss";
+// @import '@abw/badger-css/styles/badger.scss';
+@import "../../styles/formula.scss";
 @import "config/all.scss";
 @import "modules/all.scss";
 

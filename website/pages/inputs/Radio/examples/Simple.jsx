@@ -4,12 +4,14 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const Radio = () =>
+const RadioSimple = () =>
   <Form>
     <Field
-      name="animal" label="What is your favourite animal?" type="radio"
-      options={[ 'Badger', 'Ferret', 'Stoat' ]}
+      type="radio"
+      name="animal"
+      label="Simple Options"
+      options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
     />
   </Form>
 
-export default Radio
+export default RadioSimple

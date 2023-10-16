@@ -1,57 +1,84 @@
 import React        from 'react'
 import Example      from '../../../site/Example.jsx'
-import Radio        from './examples/Radio.jsx'
-import RadioSrc     from './examples/Radio.jsx?raw'
-import Fluid        from './examples/Fluid.jsx'
-import FluidSrc     from './examples/Fluid.jsx?raw'
-import Inline       from './examples/Inline.jsx'
-import InlineSrc    from './examples/Inline.jsx?raw'
-import Bare         from './examples/Bare.jsx'
-import BareSrc      from './examples/Bare.jsx?raw'
+import Options      from './examples/Options.jsx'
+import OptionsSrc   from './examples/Options.jsx?raw'
+import Simple       from './examples/Simple.jsx'
+import SimpleSrc    from './examples/Simple.jsx?raw'
+import Wide         from './examples/Wide.jsx'
+import WideSrc      from './examples/Wide.jsx?raw'
+import Border       from './examples/Border.jsx'
+import BorderSrc    from './examples/Border.jsx?raw'
+import OptionsClass     from './examples/OptionsClass.jsx'
+import OptionsClassSrc  from './examples/OptionsClass.jsx?raw'
+import OptionClass     from './examples/OptionClass.jsx'
+import OptionClassSrc  from './examples/OptionClass.jsx?raw'
+import InputClass     from './examples/InputClass.jsx'
+import InputClassSrc  from './examples/InputClass.jsx?raw'
 import { FieldLink, TypeLink } from '../../../site/Links.jsx'
 
 const RadioExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Radio Button Input</h1>
     <p>
       Set the <FieldLink/> <TypeLink/> to <code>radio</code> to create a radio
       button set. The <code>options</code> property should be used to define
-      the options. In simple cases where the value and text are the same then
-      you only need to provide an array of values.  Otherwise, provide an
-      array of objects containing <code>value</code> and <code>text</code>{' '}
-      properties.
+      the options. This should be an array of objects containing{' '}
+      <code>value</code> and <code>text</code>{' '} properties.
     </p>
     <p>
       You can also add <code>className</code> if you want to add a particular
       class to an option.  Or for more complex markup, define the{' '}
       <code>text</code> as a JSX snippet.
     </p>
-    <Example Element={Radio} code={RadioSrc} expand/>
+    <Example Element={Options} code={OptionsSrc} expand/>
 
-    <h2>Fluid Radio Button Input</h2>
     <p>
-      The default behaviour is for radio button options to expand to the
-      full width of the container.  Add the <code>fluid</code> CSS class
-      using the <code>className</code> property to give them fluid width.
+      In simple cases where the value and text are the same then you can
+      define <code>options</code> as an array of values.
     </p>
-    <Example Element={Fluid} code={FluidSrc} expand/>
+    <Example Element={Simple} code={SimpleSrc} expand/>
 
-    <h2>Inline Radio Button Input</h2>
+    <h2><code>wide</code></h2>
     <p>
-      Add the <code>inline</code> CSS class to have the options inline.
-      Note that a margin is added between each option, but there isn&apos;t
-      any margin applied to the right side of the field.
+      The default behaviour is for radio button options to be displayed
+      inline.  Add the <code>wide</code> property to make them expand to
+      the full width of the container.
     </p>
-    <Example Element={Inline} code={InlineSrc} expand/>
+    <Example Element={Wide} code={WideSrc} expand/>
 
-    <h2>Bare Radio Button Input</h2>
+    <h2><code>border</code></h2>
     <p>
-      If you don&apos;t like the &quot;boxy&quot; look then add the{' '}
-      <code>bare</code> class to remove the border and
-      background.  The focus ring will still appear when the input is
-      focussed.
+      Add the <code>border</code> CSS class to have the options inline.
+      Note that margins aren&apos;t automatically added between option,
+      but you can use the <code>optionClass</code> and/or{' '}
+      <code>optionsClass</code> properties, described below, to add them.
     </p>
-    <Example Element={Bare} code={BareSrc} expand/>
+    <Example Element={Border} code={BorderSrc} expand/>
+
+    <h2><code>optionsClass</code></h2>
+    <p>
+      The <code>optionsClass</code> property (note plural) can be used to
+      add a CSS class to the options container.  This is useful for adding
+      gaps between options, or if you want to display the options in a grid,
+      for example.
+    </p>
+    <Example Element={OptionsClass} code={OptionsClassSrc} expand/>
+
+    <h2><code>optionClass</code></h2>
+    <p>
+      The <code>optionClass</code> property (note singular) can be used to
+      add a CSS class to each of the options.  This is useful if you want to
+      add margins to options, for example.
+    </p>
+    <Example Element={OptionClass} code={OptionClassSrc} expand/>
+
+    <h2><code>inputClass</code></h2>
+    <p>
+      The <code>inputClass</code> property can be used to add a CSS class to
+      the radio input.
+    </p>
+    <Example Element={InputClass} code={InputClassSrc} expand/>
+
 
   </div>
 
