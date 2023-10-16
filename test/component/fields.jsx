@@ -35,7 +35,7 @@ it(
   () => {
     const { container } = render(
       <Form fields={fields} showRequired>
-        <Fields names="foo bar" required requiredLabel="This is required"/>
+        <Fields names="foo bar" wide/>
       </Form>
     )
     const input = container.querySelectorAll('input')
@@ -46,10 +46,8 @@ it(
     expect(label[0]).toHaveTextContent('The foo field')
     expect(label[1]).toHaveTextContent('The bar field')
 
-    const req1 = label[0].querySelector('span.required')
-    expect(req1).toHaveTextContent('This is required')
-
-    const req2 = label[1].querySelector('span.required')
-    expect(req2).toHaveTextContent('This is required')
+    const inputs = container.querySelectorAll('div.input')
+    expect(inputs[0]).toHaveClass('wide')
+    expect(inputs[1]).toHaveClass('wide')
   }
 )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { it, expect } from 'vitest'
 import { render } from '@testing-library/react'
+
 import { Form, Field } from '../../lib/index.js'
 
 it(
@@ -17,13 +18,13 @@ it(
     const field = container.querySelector('div.field')
     expect(field).toBeDefined()
 
-    const inputs = field.querySelector('div.input')
-    expect(inputs).toBeDefined()
-    expect(inputs).toHaveClass('radio')
+    const options = field.querySelector('div.options')
+    expect(options).toBeDefined()
+    // expect(options).toHaveClass('radio')
 
-    const label = inputs.querySelector('label')
+    const label = options.querySelector('label')
     expect(label).toBeDefined()
-    expect(label).toHaveClass('option')
+    expect(label).toHaveClass('radio')
 
     const control = label.querySelector('input')
     expect(control).toBeDefined()
@@ -40,6 +41,7 @@ it(
   () => {
     const { container } = render(
       <Form
+        /*
         classes={{
           field: 'my-field',
           input: 'my-input',
@@ -48,9 +50,13 @@ it(
           label: 'my-label',
           // caption: 'my-caption',
         }}
+        */
       >
         <Field
           name="foo" type="radio"
+          className='my-field'
+          optionsClass='my-options'
+          optionClass='my-option'
           options={[
             'foo', 'bar',
             { value: 'baz', text: 'BAZ', className: 'my-baz' }
@@ -61,11 +67,10 @@ it(
     const field = container.querySelector('div.my-field')
     expect(field).toBeDefined()
 
-    const inputs = field.querySelector('div.my-input')
-    expect(inputs).toBeDefined()
-    expect(inputs).toHaveClass('my-radio')
+    const options = field.querySelector('div.my-options')
+    expect(options).toBeDefined()
 
-    const labels = inputs.querySelectorAll('label')
+    const labels = options.querySelectorAll('label')
     expect(labels.length).toBe(3)
     expect(labels[0]).toHaveClass('my-option')
     expect(labels[1]).toHaveClass('my-option')

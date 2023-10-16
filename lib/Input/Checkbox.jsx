@@ -10,16 +10,16 @@ const Checkbox = ({ field=useField() }) => {
     text,
     wide,
     border,
-    className,
+    labelClass,
     inputClass,
     type='checkbox',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
-  const labelClass = classes('checkbox', className, { wide, border })
+  const labelClassName = classes('checkbox', labelClass, { wide, border })
 
   return (
-    <label htmlFor={id} className={labelClass}>
+    <label htmlFor={id} className={labelClassName}>
       <input
         type={type}
         ref={field.inputRef}

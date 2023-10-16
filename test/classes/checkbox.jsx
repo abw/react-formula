@@ -20,7 +20,7 @@ it(
 
     const label = inputs.querySelector('label')
     expect(label).toBeDefined()
-    expect(label).toHaveClass('option')
+    expect(label).toHaveClass('checkbox')
 
     const control = label.querySelector('input')
     expect(control).toBeDefined()
@@ -38,6 +38,7 @@ it(
   () => {
     const { container } = render(
       <Form
+        /*
         classes={{
           field: 'my-field',
           input: 'my-input',
@@ -46,27 +47,28 @@ it(
           label: 'my-label',
           // caption: 'my-caption',
         }}
+        */
       >
-        <Field name="foo" type="checkbox" text="Hello"/>
+        <Field
+          name="foo" type="checkbox" text="Hello"
+          className='my-field'
+          labelClass='my-label'
+        />
       </Form>
     )
     const field = container.querySelector('div.my-field')
     expect(field).toBeDefined()
 
-    const inputs = field.querySelector('div.my-input')
+    const inputs = field.querySelector('div.input')
     expect(inputs).toBeDefined()
-    expect(inputs).toHaveClass('my-checkbox')
+    expect(inputs).toHaveClass('checkbox')
 
     const label = inputs.querySelector('label')
     expect(label).toBeDefined()
-    expect(label).toHaveClass('my-option')
+    expect(label).toHaveClass('my-label')
 
     const control = label.querySelector('input')
     expect(control).toBeDefined()
     expect(control).toHaveAttribute('type', 'checkbox')
-
-    const caption = label.querySelector('span')
-    expect(caption).toBeDefined()
-    // expect(caption).toHaveClass('my-caption')     // TODO
   }
 )

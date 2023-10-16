@@ -7,7 +7,7 @@ export const Debug = ({
   values=true,
   status=false,
   all=false,
-  className='orange alert border shadow-2 pad-l-4 mar-t-4 pad-b-2',
+  className='debug orange alert border shadow-2 pad-l-4 mar-t-4 pad-b-2',
   ...props
 }) => {
   const form = useForm()

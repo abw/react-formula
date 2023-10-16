@@ -30,8 +30,15 @@ it(
     expect(bar).toHaveValue('World!')
 
     // check debug panel is displaying values
-    const debug = container.querySelector('div.debug pre')
-    expect(debug).toHaveTextContent('"foo": "Hello"')
-    expect(debug).toHaveTextContent('"bar": "World!"')
+    const debug = container.querySelector('div.debug')
+    const rows = debug.querySelectorAll('table tbody tr')
+    console.log(`rows: `, rows.length)
+
+    const tds0 = rows[0].querySelectorAll('td')
+    const tds1 = rows[1].querySelectorAll('td')
+    expect(tds0[0]).toHaveTextContent('foo')
+    expect(tds0[1]).toHaveTextContent('Hello')
+    expect(tds1[0]).toHaveTextContent('bar')
+    expect(tds1[1]).toHaveTextContent('World!')
   }
 )

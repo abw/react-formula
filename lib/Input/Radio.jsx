@@ -11,7 +11,7 @@ const Radio = ({ field=useField() }) => {
     options=[],
     inputClass,
     optionClass,
-    optionsClass,
+    optionsClass='options',
     type='radio',
     handler=Handlers[type]||Handlers.default
   } = field
