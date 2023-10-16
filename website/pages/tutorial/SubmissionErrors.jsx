@@ -3,6 +3,8 @@ import Example            from '../../site/Example.jsx'
 import TutorialPager      from '../../site/Pager/Tutorial.jsx'
 import SubmitThrow        from './examples/SubmitThrow.jsx'
 import SubmitThrowSrc     from './examples/SubmitThrow.jsx?raw'
+import SubmitError        from './examples/SubmitThrowError.jsx'
+import SubmitErrorSrc     from './examples/SubmitThrowError.jsx?raw'
 import SubmitReject       from './examples/SubmitReject.jsx'
 import SubmitRejectSrc    from './examples/SubmitReject.jsx?raw'
 import OnError            from './examples/OnError.jsx'
@@ -15,7 +17,7 @@ import Split from '../../site/Split.jsx'
 const SubmissionErrors = () =>
   <div className="prose">
     <h1>Submission Errors</h1>
-    <p className="intro">
+    <p className="intro wide">
       For a good user experience we should use client-side validation to
       try and catch all data entry errors <i>before</i> they get submitted.
       However, it&apos;s not always possible to do that.  It may be the
@@ -31,8 +33,9 @@ const SubmissionErrors = () =>
       <p>
         If a submission throws an error or returns an error via a rejected
         Promise then the form submission handler will set the internal{' '}
-        <code>error</code> state variable. By default this error will be
-        displayed in the form header.  See the <ErrorsLink/> component for
+        <code>error</code> state variable.
+        <strike>By default this error will be
+        displayed in the form header</strike>.  See the <ErrorsLink/> component for
         more information about changing how and if errors are displayed.
       </p>
       <div className="info alert border">
@@ -43,6 +46,10 @@ const SubmissionErrors = () =>
     </Split>
     <Example
       Element={SubmitThrow} code={SubmitThrowSrc}
+      caption="Error Thrown"
+    />
+    <Example
+      Element={SubmitError} code={SubmitErrorSrc}
       caption="Error Thrown"
     />
 

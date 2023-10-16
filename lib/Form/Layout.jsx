@@ -1,35 +1,23 @@
 import React from 'react'
 import { useForm } from './Context.js'
-import { formAttrs, selectClass } from '../Utils.js'
-import DefaultHeader from './Header.jsx'
-import DefaultFooter from './Footer.jsx'
-import { statusClasses } from '../Utils.js'
+import { formAttrs } from '../Utils.js'
+import Children from './Children.jsx'
 
-export const Layout = ({children}) => {
+export const Layout = ({
+  children
+}) => {
   const form = useForm()
-  // console.log('form layout useForm: ', form)
   const {
     submit,
-    bodyClass,
-    Header=DefaultHeader,
-    Footer=DefaultFooter,
+    className
   } = form
-  const className = statusClasses(
-    { },
-    // form.status,
-    form.classes,
-    selectClass(form.classes, 'formula'),
-    form.className
-  )
   const attrs = formAttrs(form)
 
   return (
-    <form className={className} {...attrs} onSubmit={submit}>
-      <Header/>
-      <div className={bodyClass}>
+    <form className={className} {...attrs} onSubmit={submit} noValidate>
+      <Children>
         {children}
-      </div>
-      <Footer/>
+      </Children>
     </form>
   )
 }

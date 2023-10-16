@@ -1,8 +1,8 @@
-import { Form, Field, Submit } from '../../../../lib/index.js'
+import { Form, Field, Submit, Errors } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Field, Submit } from '@abw/react-formula'
+// PRETEND: import { Form, Field, Errors, Submit } from '@abw/react-formula'
 
 const SubmitReject = () => {
   const onSubmit = () => Promise.reject({
@@ -21,6 +21,7 @@ const SubmitReject = () => {
   return (
     <>
       <Form onSubmit={onSubmit}>
+        <Errors/>
         <Field name="email" label="Email Address" required debug/>
         <Field name="password" type="password" label="Password" required/>
         <Submit text="Login"/>

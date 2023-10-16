@@ -11,7 +11,7 @@ import Split from '../../site/Split.jsx'
 const SubmissionResponse = () =>
   <div className="prose">
     <h1>Submission Response</h1>
-    <p className="intro">
+    <p className="intro wide">
       We now need to think about what happens in the real world where a form
       submission results in a call to a back-end API.  There are, broadly
       speaking, two possible outcomes: the call is successful, or it fails

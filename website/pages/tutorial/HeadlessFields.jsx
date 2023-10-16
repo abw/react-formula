@@ -16,7 +16,7 @@ import {
 const HeadlessFieldsExample = () =>
   <div className="prose">
     <h1>Headless Fields</h1>
-    <p className="intro">
+    <p className="intro wide">
       One of the problems with any UI library is that it forces you into
       using the styles provided, or requires you to customise the CSS to
       match your in-house brand.  This is the problem that &quot;Headless&quot;

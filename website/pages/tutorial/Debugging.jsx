@@ -11,7 +11,7 @@ import Split from '../../site/Split.jsx'
 const DebuggingExample = () =>
   <div className="prose">
     <h1>Debugging</h1>
-    <p className="intro">
+    <p className="intro wide">
       Let&apos;t face it, things don&apos;t always work right first time,
       so being able to debug your forms is an important requirement.
     </p>

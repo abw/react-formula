@@ -9,7 +9,7 @@ import Split from '../../site/Split.jsx'
 const FormSubmission = () =>
   <div className="prose">
     <h1>Form Submission</h1>
-    <p className="intro">
+    <p className="intro wide">
       To handle submission of a form we need to add an <code>onSubmit</code>{' '}
       handler to the <FormLink/> component.
       In most cases this will be

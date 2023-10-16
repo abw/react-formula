@@ -16,7 +16,7 @@ import Split from '../../site/Split.jsx'
 const CompleteRegistration = () =>
   <div className="prose">
     <h1>Complete Registration Form</h1>
-    <p className="intro">
+    <p className="intro wide">
       Here&apos;s a more complete (albeit rather contrived) example of a
       user registration form.
     </p>

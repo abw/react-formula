@@ -6,12 +6,12 @@ import React from 'react'
 
 const SubmitThrow = () => {
   const onSubmit = () => {
-    throw('Oh noes! An error occurred')
+    throw new Error('Oh noes! An error occurred')
   }
 
   return (
     <>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} debug>
         <Errors/>
         <Field name="email" label="Email Address" required/>
         <Field name="password" type="password" label="Password" required/>

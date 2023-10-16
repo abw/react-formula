@@ -11,7 +11,7 @@ import Split from '../../site/Split.jsx'
 const FormValidation = () =>
   <div className="prose">
     <h1>Form Validation</h1>
-    <p className="intro">
+    <p className="intro wide">
       Sometimes you need access to all the submitted field values to validate
       the form.  The classic example is a registration form where you ask the
       user to enter their password twice to make sure that they&apos;re sure

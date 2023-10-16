@@ -12,21 +12,13 @@ import Split from '../../site/Split.jsx'
 const FieldValidation = () =>
   <div className="prose">
     <h1>Field Validation</h1>
-    <Split>
-      <p className="intro">
-        It&apos;s good practice to validate fields as thoroughly as possible.  On
-        the client-side this is important to help draw the user&apos;s attention
-        to any invalid fields <i>before</i> the form is submitted.  Of course
-        you&apos;ll also need some kind of server-side validation, but we&apos;ll
-        look at that later.
-      </p>
-      <blockquote className="intro">
-        Be conservative in what you send, be liberal in what you accept.
-        <div className="attrib">
-          John Postel
-        </div>
-      </blockquote>
-    </Split>
+    <p className="intro wide">
+      It&apos;s good practice to validate fields as thoroughly as possible.  On
+      the client-side this is important to help draw the user&apos;s attention
+      to any invalid fields <i>before</i> the form is submitted.  Of course
+      you&apos;ll also need some kind of server-side validation, but we&apos;ll
+      look at that later.
+    </p>
 
     <h2>Login Form With Field Validation</h2>
     <Split>

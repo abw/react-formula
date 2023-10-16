@@ -30,7 +30,9 @@ const Errors = () => {
         { hasError && <h4><Error error={error}/></h4> }
         { errors.length !== 0 &&
           <>
-            { Boolean(errorsPrompt) && <p>{errorsPrompt(errors.length)}</p>}
+            { Boolean(errorsPrompt) &&
+              <p className="wide">{errorsPrompt(errors.length)}</p>
+            }
             <ul>
               { errors.map(
                 (error, n) =>

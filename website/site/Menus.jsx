@@ -20,7 +20,7 @@ export const TutorialMenu = {
     ['form-submission',       'Form Submission'],
     ['submission-response',   'Submission Response'],
     ['submission-errors',     'Submission Errors'],
-    ['complete-registration', 'Complete Registration Form'],
+    ['complete-registration', 'Registration Form'],
     ['edit-form',             'Edit Form'],
     ['debugging',             'Debugging'],
     ['headless-fields',       'Headless Fields'],

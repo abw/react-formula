@@ -11,7 +11,7 @@ import Split from '../../site/Split.jsx'
 const EditFormExample = () =>
   <div className="prose">
     <h1>Edit Form</h1>
-    <p className="intro">
+    <p className="intro wide">
       Another common use case for forms is in editing existing data records.
     </p>
 
