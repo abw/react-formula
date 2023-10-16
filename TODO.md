@@ -10,6 +10,8 @@
 
 * also add `styles`?
 
+* Form children / function examples
+
 ## Components
 
 * Debug needs to be updated to reflect changes in form state
@@ -79,6 +81,8 @@ be `validate`
 * Field functions: setValid() and setInvalid()
 
 * Utilities - prefixClasses(), selectClass(), etc.
+
+* Update text, textarea, select and hidden (checkbox and radio done)
 
 ## Input Types
 
