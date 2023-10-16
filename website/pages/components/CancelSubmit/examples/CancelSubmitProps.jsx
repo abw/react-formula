@@ -6,18 +6,18 @@ import React from 'react'
 
 const CancelSubmitExample = () =>
   <Form onSubmit={() => alert('You submitted the form')}>
-    <Field name="field1" label="Field One"/>
+    <Field name="field1" label="Field One" wide/>
     <CancelSubmit
-      className="flex evenly"
       submit={{
-        text: 'Submit the Form',
-        className: 'wide btn-green',
+        text: 'Continue',
+        className: 'green',
       }}
       cancel={{
         text: 'Go Back',
-        className: 'wide btn-lilac',
+        className: 'outline',
         onClick: () => alert('You went back')
       }}
+      space
     />
   </Form>
 

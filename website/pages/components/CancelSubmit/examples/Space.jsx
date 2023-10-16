@@ -4,10 +4,10 @@ import { Form, Field, CancelSubmit } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, CancelSubmit } from '@abw/react-formula'
 
-const CancelSubmitExample = () =>
+const CancelSubmitSpace = () =>
   <Form>
-    <Field name="field1" label="Field One"/>
-    <CancelSubmit/>
+    <Field name="field1" label="Field One" wide/>
+    <CancelSubmit space/>
   </Form>
 
-export default CancelSubmitExample
+export default CancelSubmitSpace

@@ -4,10 +4,10 @@ import { Form, Field, ResetSubmit } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, ResetSubmit } from '@abw/react-formula'
 
-const ResetSubmitExample = () =>
+const ResetSubmitGap = () =>
   <Form>
     <Field name="field1" label="Field One"/>
-    <ResetSubmit/>
+    <ResetSubmit gap={8}/>
   </Form>
 
-export default ResetSubmitExample
+export default ResetSubmitGap

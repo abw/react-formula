@@ -4,10 +4,10 @@ import { Form, Field, CancelSubmit } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, CancelSubmit } from '@abw/react-formula'
 
-const CancelSubmitExample = () =>
+const CancelSubmitGap = () =>
   <Form>
     <Field name="field1" label="Field One"/>
-    <CancelSubmit/>
+    <CancelSubmit gap={8}/>
   </Form>
 
-export default CancelSubmitExample
+export default CancelSubmitGap

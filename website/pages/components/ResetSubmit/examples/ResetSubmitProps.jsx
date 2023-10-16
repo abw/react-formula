@@ -5,17 +5,18 @@ import React from 'react'
 // PRETEND: import { Form, Field, ResetSubmit } from '@abw/react-formula'
 
 const ResetSubmitExample = () =>
-  <Form onSubmit={() => alert('You submitted the form')}>
-    <Field name="field1" label="Field One"/>
+  <Form>
+    <Field name="field1" label="Field One" wide/>
     <ResetSubmit
       reset={{
         text: 'Reset the Form',
-        className: 'btn-brown'
+        className: 'outline'
       }}
       submit={{
         text: 'Submit the Form',
-        className: 'btn-blue'
+        className: 'blue'
       }}
+      space
     />
   </Form>
 
