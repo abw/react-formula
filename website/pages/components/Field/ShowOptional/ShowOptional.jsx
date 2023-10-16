@@ -7,11 +7,14 @@ import React from 'react'
 const ShowOptional = () =>
   <Form showOptional>
     <Field
-      name="field1" label="Required Field"
-      required={true}
+      name="field1"
+      label="Required Field"
+      required wide
     />
     <Field
-      name="field2" label="Optional Field"
+      name="field2"
+      label="Optional Field"
+      wide
     />
   </Form>
 

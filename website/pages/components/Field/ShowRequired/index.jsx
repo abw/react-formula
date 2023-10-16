@@ -8,7 +8,7 @@ import { FieldLink, FormLink, RequiredLink } from '../../../../site/Links.jsx'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const ShowRequiredExample = () =>
-  <div>
+  <div className="prose">
     <h1>Field Validation</h1>
 
     <h2><code>showRequired</code></h2>

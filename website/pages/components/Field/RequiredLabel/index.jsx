@@ -6,7 +6,7 @@ import { FieldLink, FormLink, RequiredLink, ShowRequiredLink } from '../../../..
 import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const RequiredLabelExample = () =>
-  <div>
+  <div className="prose">
     <h1>Field Validation</h1>
     <h2><code>requiredLabel</code></h2>
     <p>

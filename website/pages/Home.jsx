@@ -4,7 +4,7 @@ import { ReactComponent as ReactFormula } from '../svg/react-formula.svg'
 import Link from '../site/Link.jsx'
 
 const Home = () =>
-  <div className="home tablet center">
+  <div className="home tablet block-center">
     <div className="pic-side">
       <div className="logo">
         <ReactFormula/>

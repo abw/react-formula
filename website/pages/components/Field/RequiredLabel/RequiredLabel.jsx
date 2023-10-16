@@ -7,13 +7,15 @@ import React from 'react'
 const RequiredLabel = () =>
   <Form showRequired requiredLabel="Important!">
     <Field
-      name="field1" label="Required Field"
-      required
+      name="field1"
+      label="Required Field"
+      required wide
     />
     <Field
-      name="field2" label="Another Required Field"
-      required
+      name="field2"
+      label="Another Required Field"
       requiredLabel="Very Important!"
+      required wide
     />
   </Form>
 

@@ -6,7 +6,7 @@ import SeeAlso          from '../../../../site/SeeAlso.jsx'
 import { FieldLink, FormLink, OptionalLabelLink, RequiredLink } from '../../../../site/Links.jsx'
 
 const ShowOptionalExample = () =>
-  <div>
+  <div className="prose">
     <h1>Field Validation</h1>
     <h2><code>showOptional</code></h2>
     <p>

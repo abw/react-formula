@@ -1,22 +1,25 @@
 import React from 'react'
-// import Optional from './Optional.jsx'
-// import Required from './Required.jsx'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
-import { selectClass } from '../Utils.js'
+import { REQUIRED, OPTIONAL } from '../Constants.jsx'
 
 const Label = ({ field=useField() }) => {
-  const { classes, label, id, required } = field
+  const { label, id, required } = field
   const showRequired = field.showRequired  && required
   const showOptional = field.showOptional  && ! required
   const hasLabel     = label || showRequired || showOptional
-  const className    = selectClass(classes, 'label')
+  const className    = field.labelClass
+  const style        = { }
+  if (showRequired && field.requiredLabel !== REQUIRED) {
+    style['--required-text'] = `"${field.requiredLabel}"`
+  }
+  if (showOptional && field.optionalLabel !== OPTIONAL) {
+    style['--optional-text'] = `"${field.optionalLabel}"`
+  }
 
   return hasLabel &&
-    <label htmlFor={id} className={className}>
+    <label htmlFor={id} className={className} style={style}>
       {label||<span>&nbsp;</span>}
-      {/* {showRequired && <Required field={field} />} */}
-      {/* {showOptional && <Optional field={field} />} */}
     </label>
 }
 
