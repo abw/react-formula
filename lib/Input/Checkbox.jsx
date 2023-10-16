@@ -12,17 +12,10 @@ const Checkbox = ({ field=useField() }) => {
     border,
     className,
     inputClass,
-    // classes,
     type='checkbox',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
-  /*
-  const labelClass = joinClasses([
-    selectClass(classes, 'option'),
-    field.value ? selectClass(classes, 'checked') : null
-  ])
-  */
   const labelClass = classes('checkbox', className, { wide, border })
 
   return (
