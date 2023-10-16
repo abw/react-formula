@@ -6,9 +6,10 @@ import PasswordCheckSrc from './examples/PasswordCheck.jsx?raw'
 import {
   FieldsLink, FormLink, FormValidateLink
 } from '../../site/Links.jsx'
+import Split from '../../site/Split.jsx'
 
 const FormValidation = () =>
-  <div>
+  <div className="prose">
     <h1>Form Validation</h1>
     <p className="intro">
       Sometimes you need access to all the submitted field values to validate
@@ -19,34 +20,40 @@ const FormValidation = () =>
     </p>
 
     <h2>Registration Form With Validation</h2>
-    <p>
-      You can add a <FormValidateLink/> property to a form to provide a
-      function to validate the inputs from all fields.  The function will be
-      called after the field-level validation, and only if all fields have
-      validated successfully.
-    </p>
-    <p>
-      The function will be passed a <code>values</code> object containing
-      the validated field values.  It should return a Promise that resolves
-      with the (possibly modified) values if the input is valid, or rejects
-      with an an <code>error</code> and/or array of <code>errors</code> if not.
-      The <code>error</code> can be used to define an error for the form that
-      isn&apos;t specify to any particular field.  Each item in the errors
-      array should relate to a field identified by <code>name</code>, with
-      an additional <code>message</code> indicating why it is invalid.
-    </p>
-    <p>
-      We&apos;re also using this opportunity to introduce you to the{' '}
-      <FieldsLink/> component which allows you to add multiple fields to
-      a <FormLink/> in one fell swoop.
-    </p>
-    <p>
-      Try entering some values in the form below and click on the
-      &quot;Register&quot; button. You should see the field level validation
-      errors if you don&apos;t provide a valid value for any field. Or if
-      you provide different values for the Password and Confirm Password
-      fields then you should see the form validation errors.
-    </p>
+    <Split>
+      <div>
+        <p>
+          You can add a <FormValidateLink/> property to a form to provide a
+          function to validate the inputs from all fields.  The function will be
+          called after the field-level validation, and only if all fields have
+          validated successfully.
+        </p>
+        <p>
+          The function will be passed a <code>values</code> object containing
+          the validated field values.  It should return a Promise that resolves
+          with the (possibly modified) values if the input is valid, or rejects
+          with an an <code>error</code> and/or array of <code>errors</code> if not.
+          The <code>error</code> can be used to define an error for the form that
+          isn&apos;t specify to any particular field.  Each item in the errors
+          array should relate to a field identified by <code>name</code>, with
+          an additional <code>message</code> indicating why it is invalid.
+        </p>
+      </div>
+      <div>
+        <p>
+          We&apos;re also using this opportunity to introduce you to the{' '}
+          <FieldsLink/> component which allows you to add multiple fields to
+          a <FormLink/> in one fell swoop.
+        </p>
+        <div className="info alert border">
+          Try entering some values in the form below and click on the{' '}
+          <b>Register</b> button. You should see the field level validation
+          errors if you don&apos;t provide a valid value for any field. Or if
+          you provide different values for the Password and Confirm Password
+          fields then you should see the form validation errors.
+        </div>
+      </div>
+    </Split>
     <Example
       Element={PasswordCheck} code={PasswordCheckSrc}
       caption="Form Validation"

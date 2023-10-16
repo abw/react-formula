@@ -76,7 +76,7 @@ const fields = {
   },
   price: {
     type:  'number',
-    label: 'How much would you pay for this?',
+    label: 'Your donation?',
     prefix: '£',
     suffix: '.00',
     min: 11,
@@ -84,14 +84,14 @@ const fields = {
     inputsClass: 'wide'
   },
   animal: {
-    label:    'What is your favourite animal?',
+    label:    'Your favourite animal?',
     type:     'select',
     default:  'Badger',
     options:  ['Badger', 'Ferret', 'Stoat'],
     inputsClass: 'wide',
   },
   color: {
-    label:    'What is your favourite color?',
+    label:    'Your favourite color?',
     type:     'select',
     default:  'Red',
     options:  [
@@ -119,21 +119,22 @@ const RegistrationForm = () => {
 
   return (
     <Form
-      fields={fields} validate={validateForm}
-      showRequired showOptional
+      fields={fields}
+      validate={validateForm}
+      showRequired
+      // showOptional
     >
       <Fieldset legend="Your Details">
-        <div className="lg-grid-2">
-          <Fields names="name email"/>
-        </div>
-        <div className="lg-grid-2">
-          <Fields names="password passcheck"/>
-        </div>
+        <Fields
+          names="name email password passcheck"
+          className="lg-grid-2"
+        />
       </Fieldset>
       <Fieldset legend="Other Information">
-        <div className="lg-grid-2">
-          <Fields names="dob price"/>
-        </div>
+        <Fields
+          names="dob price"
+          className="lg-grid-2"
+        />
         <Field name="experience"/>
         <div className="lg-grid-2">
           <Field name="animal"/>

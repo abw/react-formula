@@ -126,6 +126,32 @@ blockquote {
     top:0;
   }
 }
+.prose {
+  --prose-width: calc(50% - 1rem);
+  p, blockquote {
+    max-width: var(--prose-width);
+  }
+  .wide {
+    --prose-width: 100%;
+  }
+}
+dl {
+  padding-top: 0.5rem;
+  dt {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  dd {
+    padding: 0.5rem 1rem;
+    // border-left: 3px solid var(--brand-50);
+    // background-color: var(--grey20-95);
+    p:last-child {
+      margin-bottom: 0;
+    }
+    margin-bottom: 1rem;
+  }
+}
+
 #{$dark-theme} {
   blockquote {
     --color: var(--grey-70);
@@ -136,6 +162,13 @@ blockquote {
     --attrib-color: var(--brand-70);
   }
 }
+
+@media only screen and (max-width: $desktop) {
+  .prose {
+    --prose-width: 100%;
+  }
+}
+
 /*
   --color: var(--grey-50);
   --em-color: var(--grey40-50);

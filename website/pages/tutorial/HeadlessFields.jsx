@@ -14,7 +14,7 @@ import {
 } from '../../site/Links.jsx'
 
 const HeadlessFieldsExample = () =>
-  <div>
+  <div className="prose">
     <h1>Headless Fields</h1>
     <p className="intro">
       One of the problems with any UI library is that it forces you into

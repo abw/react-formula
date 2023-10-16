@@ -4,9 +4,10 @@ import TutorialPager  from '../../site/Pager/Tutorial.jsx'
 import DummySubmit    from './examples/DummySubmit.jsx'
 import DummySubmitSrc from './examples/DummySubmit.jsx?raw'
 import { FormLink, FormOnSubmitLink } from '../../site/Links.jsx'
+import Split from '../../site/Split.jsx'
 
 const FormSubmission = () =>
-  <div>
+  <div className="prose">
     <h1>Form Submission</h1>
     <p className="intro">
       To handle submission of a form we need to add an <code>onSubmit</code>{' '}
@@ -16,21 +17,23 @@ const FormSubmission = () =>
       let&apos;s start with something simpler.
     </p>
     <h2><code>onSubmit</code> Handler</h2>
-    <p>
-      We&apos;ll create a function which stores the submitted{' '}
-      <code>values</code> in a state variable and displays them on the
-      screen.  The <FormOnSubmitLink/> handler is passed an object
-      containing the validated form values.  It should return a Promise which
-      resolves on success.  If an error occurs then the Promise should reject,
-      returning an object containing either an <code>error</code> and/or an
-      array of <code>errors</code>.  These are handled the same as for
-      client-side form validation.
-    </p>
-    <p>
-      Try entering some values in the form below and click on the
-      &quot;Login&quot; button.  You should see the submitted values
-      appear in a debugging window beneath the form.
-    </p>
+    <Split align="end">
+      <p>
+        We&apos;ll create a function which stores the submitted{' '}
+        <code>values</code> in a state variable and displays them on the
+        screen.  The <FormOnSubmitLink/> handler is passed an object
+        containing the validated form values.  It should return a Promise which
+        resolves on success.  If an error occurs then the Promise should reject,
+        returning an object containing either an <code>error</code> and/or an
+        array of <code>errors</code>.  These are handled the same as for
+        client-side form validation.
+      </p>
+      <div className="info alert border">
+        Try entering some values in the form below and click on the
+        &quot;Login&quot; button.  You should see the submitted values
+        appear in a debugging window beneath the form.
+      </div>
+    </Split>
     <Example
       Element={DummySubmit} code={DummySubmitSrc}
       caption="Dummy Submission"

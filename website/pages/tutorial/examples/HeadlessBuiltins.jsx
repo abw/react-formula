@@ -20,7 +20,9 @@ const HeadlessBuiltins = () =>
     <Field name="email">
       { field =>
         <Layout>
-          <h2>Custom Layout for {field.name}</h2>
+          <h2 className="mar-t-none">
+            Custom Layout for {field.name}
+          </h2>
           <Label/>
           <Text/>
           <Message/>

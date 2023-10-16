@@ -50,11 +50,13 @@ const hidden = {
 
 const EditForm = () =>
   <Form fields={fields} values={values} hidden={hidden}>
-    <Fields names="name description"/>
-    <div className="lg-grid-2">
-      <Fields names="manufacturer price"/>
-    </div>
-    <ResetSubmit submit={{ text: 'Save Changes' }}/>
+    <Fields names="name description" wide/>
+    <Fields names="manufacturer price" grid={2} wide/>
+    <ResetSubmit
+      submit={{ text: 'Save Changes', className: 'blue' }}
+      reset={{ className: 'outline' }}
+      className="flex space"
+    />
     <Debug state/>
   </Form>
 

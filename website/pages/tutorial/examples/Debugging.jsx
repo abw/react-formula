@@ -34,12 +34,10 @@ const fields = {
 
 const DebuggingForm = () =>
   <Form fields={fields} debug>
-    <Field name="name" debug/>
-    <Field name="description" debug/>
-    <div className="lg-grid-2">
-      <Fields names="manufacturer price" debug/>
-    </div>
-    <ResetSubmit/>
+    <Field name="name" debug wide/>
+    <Field name="description" debug wide/>
+    <Fields names="manufacturer price" grid={2} debug wide/>
+    <ResetSubmit className="flex space"/>
     <Debug status/>
   </Form>
 

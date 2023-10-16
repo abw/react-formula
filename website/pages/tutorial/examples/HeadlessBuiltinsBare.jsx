@@ -19,7 +19,9 @@ const HeadlessBuiltins = () =>
   <Form fields={fields}>
     <Field name="email">
       <Layout>
-        <h2>Custom Layout for Email field</h2>
+        <h2 className="mar-t-none">
+          Custom Layout for Email field
+        </h2>
         <Label/>
         <Text/>
         <Message/>
