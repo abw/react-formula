@@ -4,7 +4,7 @@ import { Form, Field, ResetSubmit, Debug } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, ResetSubmit, Debug } from '@abw/react-formula'
 
-const DebugForm = () =>
+const DebugAll = () =>
   <Form>
     <Field
       name="message"
@@ -28,7 +28,7 @@ const DebugForm = () =>
       wide required
     />
     <ResetSubmit/>
-    <Debug/>
+    <Debug all/>
   </Form>
 
-export default DebugForm
+export default DebugAll

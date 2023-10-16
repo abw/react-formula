@@ -6,8 +6,7 @@ export const BLURRED      = 'blurred'    // ??
 // export const CANCEL       = 'cancel'
 export const CHANGED      = 'changed'
 export const CHECKBOX     = 'checkbox'
-
-// export const CONTROLS     = 'controls'
+export const CONTROLS     = 'controls'
 // export const DEBUG        = 'debug'
 export const DEFAULT      = 'default'
 export const DISABLED     = 'disabled'

@@ -2,50 +2,50 @@ import React         from 'react'
 import Example       from '../../../site/Example.jsx'
 import DebugSrc      from './examples/Debug.jsx?raw'
 import Debug         from './examples/Debug.jsx'
-import ShowSrc       from './examples/Show.jsx?raw'
-import Show          from './examples/Show.jsx'
-import ShowAllSrc    from './examples/ShowAll.jsx?raw'
-import ShowAll       from './examples/ShowAll.jsx'
+import Status    from './examples/Status.jsx'
+import StatusSrc from './examples/Status.jsx?raw'
+import AllSrc    from './examples/All.jsx?raw'
+import All       from './examples/All.jsx'
+import Split from '../../../site/Split.jsx'
 
 const DebugExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Debug</h1>
-    <p>
-      The <code>Debug</code> component can be used in development to debug
-      your form.  By default it displays only the form values.
-    </p>
-
+    <Split align="end">
+      <p>
+        The <code>Debug</code> component can be used in development to debug
+        your form.  By default it displays only the form values.
+      </p>
+      <div className="info alert border">
+        Try updating the form values and see how the debugging data changes.
+      </div>
+    </Split>
     <Example
       Element={Debug} code={DebugSrc}
       caption="Debug"
-    >
-      <p>
-        Try updating the form values and see how the debugging data changes.
-      </p>
-    </Example>
-
-    <h2>show</h2>
-    <p>
-      The <code>show</code> option can used to configure what data the
-      debug panel displays.  It should be an object containing any of{' '}
-      <code>values</code>, <code>config</code>, <code>status</code> or{' '}
-      <code>fields</code> which should be set to <code>true</code> to enable
-      display.
-    </p>
-    <Example
-      Element={Show} code={ShowSrc}
-      caption="show"
     />
 
-    <h2>showAll</h2>
+    <h2><code>values</code> and <code>status</code></h2>
     <p>
-      The <code>showAll</code> option is a shortcut to showing all form
+      The <code>status</code> option can be set to view the form status.
+      The <code>values</code> option defaults to <code>true</code> but
+      you can set it to <code>false</code> if you don&apos;t want to
+      view the current form values.
+    </p>
+    <Example
+      Element={Status} code={StatusSrc}
+      caption="Status and Fields"
+    />
+
+    <h2><code>all</code></h2>
+    <p>
+      The <code>all</code> option is a shortcut to show all form
       data.
     </p>
 
     <Example
-      Element={ShowAll} code={ShowAllSrc}
-      caption="showAll" expand
+      Element={All} code={AllSrc}
+      caption="All Data" expand
     />
   </div>
 

@@ -1,7 +1,7 @@
 #app aside {
   details.menu {
     margin: 0 0 0.5rem 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     summary {
       font-weight: bold;
       margin-bottom: 0;
@@ -20,13 +20,6 @@
           padding-left: 0.5rem;
           font-weight: bold;
         }
-        h4.XXX {
-          font-size: 0.8rem;
-          padding: 0.25em 0.5em 0.25em 0.25em;
-          margin-bottom: 0.25em;
-          color: var(--menu-secn-fg);
-          font-weight: normal;
-        }
         a {
           display: block;
           // background-color: var(--menu-back);
@@ -35,6 +28,13 @@
           padding: 0 0.5em;
           margin-bottom: 0.2rem;
           // border-left: 5px solid var(--menu-bd);
+          code {
+            --code-link-back: transparent;
+            --code-link-border: transparent;
+            --code-link-underline: transparent;
+            // background-color: transparent;
+          }
+
           &:hover {
             color: var(--menu-hover-text);
             // background-color: var(--menu-hover-back);
@@ -52,12 +52,15 @@
         ul.menu {
           margin-left: 1rem;
           margin-bottom: 0.5rem;
+          font-size: 0.85em;
 
           &.closed {
             display: none;
           }
           li.heading h5 {
-            font-weight: normal;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            padding-left: 0;
           }
         }
       }
@@ -179,6 +182,9 @@ div.toc {
   padding: 1rem 2rem;
   border-radius: $unit-radius;
   box-shadow: var(--shadow-2);
+  h2 {
+    margin-top: 1rem;
+  }
   h5 {
     margin: 0.5rem 0 1rem 0;
     font-size: 1.2rem;
