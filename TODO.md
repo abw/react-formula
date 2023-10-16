@@ -47,6 +47,9 @@ registering with the form?
 * minLength, maxLength, pattern, etc.  Maybe also "format" to define some
 basic format, e.g. email
 
+* pass field validation functions: (value, { field, resolve, reject })
+  instead of: (value, field, resolve, reject)
+
 ## Docs
 
 * Changed component

@@ -29,7 +29,7 @@ const fields = {
 
 const ValidateExample = () =>
   <Form fields={fields}>
-    <Fields names="username password"/>
+    <Fields names="username password" wide/>
     <Submit/>
   </Form>
 

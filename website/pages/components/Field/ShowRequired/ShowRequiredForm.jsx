@@ -13,8 +13,8 @@ const ShowRequiredForm = () =>
     />
     <Field
       name="field2"
-      label="Another Required Field"
-      required wide
+      label="Optional Field"
+      wide
     />
   </Form>
 
