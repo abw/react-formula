@@ -38,14 +38,6 @@ const RadioExamples = () =>
     </p>
     <Example Element={Simple} code={SimpleSrc} expand/>
 
-    <h2><code>wide</code></h2>
-    <p>
-      The default behaviour is for radio button options to be displayed
-      inline.  Add the <code>wide</code> property to make them expand to
-      the full width of the container.
-    </p>
-    <Example Element={Wide} code={WideSrc} expand/>
-
     <h2><code>border</code></h2>
     <p>
       Add the <code>border</code> CSS class to have the options inline.
@@ -54,6 +46,14 @@ const RadioExamples = () =>
       <code>optionsClass</code> properties, described below, to add them.
     </p>
     <Example Element={Border} code={BorderSrc} expand/>
+
+    <h2><code>wide</code></h2>
+    <p>
+      The default behaviour is for radio button options to be displayed
+      inline.  Add the <code>wide</code> property to make them expand to
+      the full width of the container.
+    </p>
+    <Example Element={Wide} code={WideSrc} expand/>
 
     <h2><code>optionsClass</code></h2>
     <p>

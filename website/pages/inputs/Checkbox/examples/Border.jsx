@@ -4,13 +4,15 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const BareCheckbox = () =>
+const CheckboxBorder = () =>
   <Form>
     <Field
-      name="badger" label="A bare checkbox"
-      type="checkbox" text="I really, really like badgers!"
-      className="bare"
+      type="checkbox"
+      name="badger"
+      label="Checkbox Border"
+      text="I really, really like badgers!"
+      border
     />
   </Form>
 
-export default BareCheckbox
+export default CheckboxBorder

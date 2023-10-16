@@ -9,8 +9,13 @@ const Checkbox = () =>
     <Field
       name="one"
       type="checkbox"
-      label="A checkbox example"
+      label="Default Checkbox"
       text="I like badgers!"
+    />
+    <Field
+      name="two"
+      type="checkbox"
+      text="I accept the terms and conditions"
     />
   </Form>
 

@@ -4,20 +4,14 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const InlineCheckbox = () =>
+const CheckboxInputClass = () =>
   <Form>
     <Field
       name="badger"
       type="checkbox"
       text="Badgers are brilliant!"
-      className="inline mar-r-option"
-    />
-    <Field
-      name="ferret"
-      type="checkbox"
-      text="Ferrets are funky!"
-      className="inline"
+      inputClass="larger"
     />
   </Form>
 
-export default InlineCheckbox
+export default CheckboxInputClass
