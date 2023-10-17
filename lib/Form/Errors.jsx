@@ -25,7 +25,9 @@ const Errors = () => {
 
   return (
     <div className={className}>
-      { Boolean(errorsTitle) && <div className="headline">{errorsTitle(n)}</div> }
+      { Boolean(errorsTitle) &&
+        <div className="headline">{errorsTitle(n)}</div>
+      }
       <div>
         { hasError && <h4><Error error={error}/></h4> }
         { errors.length !== 0 &&

@@ -19,7 +19,7 @@ const DummySubmit = () => {
         <Submit text="Login"/>
       </Form>
       { values
-        ? <div className="debug">
+        ? <div className="info alert border mar-t-4">
             <h4>Submitted Values</h4>
             <pre>{JSON.stringify(values)}</pre>
           </div>

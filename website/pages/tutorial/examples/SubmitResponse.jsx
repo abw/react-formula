@@ -33,7 +33,7 @@ const SubmitResponse = () => {
         <Submit text="Login"/>
       </Form>
       { response
-        ? <div className="debug">
+        ? <div className="info alert mar-t-4">
             <h4>Emulated Response</h4>
             <pre>{JSON.stringify(response, null, 2)}</pre>
           </div>

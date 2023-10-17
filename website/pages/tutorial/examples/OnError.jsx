@@ -28,7 +28,7 @@ const SubmitThrow = () => {
         <Submit text="Login"/>
       </Form>
       { error
-        ? <div className="debug">
+        ? <div className="info alert mar-t-4 mar-b-none">
             <h4>Submission Error</h4>
             <pre>{JSON.stringify(error, null, 2)}</pre>
           </div>
