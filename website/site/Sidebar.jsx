@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from './Link.jsx'
 import Menu from './Menu.jsx'
-import { ComponentsMenu, CustomisingMenu, InputsMenu, IntroductionMenu, StylingMenu, TutorialMenu } from './Menus.jsx'
-import { date, version } from './Utils.js'
-import { ReactComponent as Abw } from '../svg/abw.svg'
+import {
+  ComponentsMenu, CustomisingMenu, InputsMenu, IntroductionMenu,
+  StylingMenu, TutorialMenu
+} from './Menus.jsx'
 
 const Sidebar = () =>
   <>
@@ -21,19 +22,6 @@ const Sidebar = () =>
       <li><Link to="/test-styles" text="Style Test"/></li>
       <li><Link to="/test-validate" text="Validation Test"/></li>
     </ul>
-    <footer>
-      <div className="notes">
-        <div>
-          v{version}
-        </div>
-        <a href="https://github.com/abw">
-          <Abw/>
-        </a>
-        <div>
-          {date}
-        </div>
-      </div>
-    </footer>
   </>
 
 export default Sidebar

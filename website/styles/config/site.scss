@@ -7,13 +7,13 @@ $theme-transition: 0.5s;
   --body-text:            var(--grey-20);
   // --bold-text:            var(--color-20);
   --head-text:            var(--grey-20);
-  --link-text:            var(--brand-50);
-  --link-hover:           var(--brand-30);
+  --link-text:            var(--brand-40);
+  --link-hover:           var(--hover-50);
   // header
-  --header-back:          var(--grey40-80);
-  --header-text:          var(--grey40-40);
-  --header-link:          var(--brand-30);
-  --header-hover:         var(--brand-10);
+  --header-back:          var(--grey40-35);
+  --header-text:          var(--grey40-90);
+  --header-link:          var(--brand-75);
+  --header-hover:         var(--brand-100);
   --header-border:        var(--grey20-60);
   // footer
   --footer-back:          var(--grey40-75);
@@ -50,8 +50,8 @@ $theme-transition: 0.5s;
   --body-text:          var(--color-60);
   // --bold-text:          var(--grey-70);
   --head-text:          var(--grey-80);
-  --link-text:          var(--brand-60);
-  --link-hover:         var(--brand-80);
+  --link-text:          var(--brand-50);
+  --link-hover:         var(--hover-60);
   // header
   --header-back:        var(--brand-25);
   --header-text:        var(--brand-80);

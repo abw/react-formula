@@ -4,6 +4,7 @@ import Sidebar from './Sidebar.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import { useTheme } from '@abw/react-night-and-day'
 import Header from './Header.jsx'
+import Footer from './Footer.jsx'
 
 const Layout = () => {
   const { theme, variant } = useTheme()
@@ -20,6 +21,7 @@ const Layout = () => {
           <Outlet/>
         </main>
       </div>
+      <Footer/>
     </div>
   )
 }

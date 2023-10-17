@@ -11,7 +11,10 @@
     transition: background-color $theme-transition ease-in-out;
   }
   & > aside {
+    // display: flex;
+    // flex-direction: column;
     flex-basis: var(--sidebar-width);
+    height: auto;
     margin-left: var(--sidebar-margin-left);
     padding: var(--sidebar-padding);
     border-right: 1px solid var(--side-border);

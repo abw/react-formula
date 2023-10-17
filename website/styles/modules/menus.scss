@@ -228,11 +228,13 @@ div.toc ul.menu {
       border-bottom: 1px solid var(--code-link-underline);
       padding: 0.1rem 0.25rem;
       border-radius: $unit-radius;
+      transition: 0.3s;
       &:hover {
         // background-color: hsl($hover-hue, 40%, 90%);
         // border-color: hsl($hover-hue, 50%, 80%);
         // border-bottom-color: hsl($hover-hue, 40%, 70%);
         // color: hsl($hover-hue, 90%, 15%);
+        transition: 0.2s;
         color: var(--code-hover-text);
         background-color: var(--code-hover-back);
         border-color: var(--code-hover-border);

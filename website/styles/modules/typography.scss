@@ -78,8 +78,10 @@ a, .link {
   color: var(--link-text);
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s;
   &:hover:not(.button) {
     color: var(--link-hover);
+    transition: color 0.1s;
   }
 }
 b {
