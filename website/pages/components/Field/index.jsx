@@ -17,6 +17,7 @@ import Reset             from './Reset/index.jsx'
 import OnChange          from './OnChange/index.jsx'
 import OnValid           from './OnValid/index.jsx'
 import OnInvalid         from './OnInvalid/index.jsx'
+import OnLoad            from './OnLoad/index.jsx'
 import PrepareValue      from './PrepareValue/index.jsx'
 import Required          from './Required/index.jsx'
 import ShowRequired      from './ShowRequired/index.jsx'
@@ -28,6 +29,7 @@ import OptionalLabel     from './OptionalLabel/index.jsx'
 import Validate          from './Validate/index.jsx'
 import ValidateOnChange  from './ValidateOnChange/index.jsx'
 import ValidateOnBlur    from './ValidateOnBlur/index.jsx'
+import Wide              from './Wide/index.jsx'
 import Input             from './Input/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
@@ -43,6 +45,7 @@ const Field = () =>
     <Route path="help"              element={<Help/>}/>
     <Route path="prefix"            element={<Prefix/>}/>
     <Route path="suffix"            element={<Suffix/>}/>
+    <Route path="wide"              element={<Wide/>}/>
     <Route path="required"          element={<Required/>}/>
     <Route path="showRequired"      element={<ShowRequired/>}/>
     <Route path="requiredLabel"     element={<RequiredLabel/>}/>
@@ -59,6 +62,7 @@ const Field = () =>
     <Route path="onChange"          element={<OnChange/>}/>
     <Route path="onValid"           element={<OnValid/>}/>
     <Route path="onInvalid"         element={<OnInvalid/>}/>
+    <Route path="onLoad"            element={<OnLoad/>}/>
     <Route path="setFocus"          element={<SetFocus/>}/>
     <Route path="setValue"          element={<SetValue/>}/>
     <Route path="Reset"             element={<Reset/>}/>

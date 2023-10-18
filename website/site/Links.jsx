@@ -139,6 +139,9 @@ export const OnInvalidLink = () =>
 export const OnValidLink = () =>
   <CodeLink to="field:onValid"/>
 
+export const OnLoadLink = () =>
+  <CodeLink to="field:onLoad"/>
+
 export const OptionalLabelLink = () =>
   <CodeLink to="field:optionalLabel"/>
 

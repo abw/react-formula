@@ -4,23 +4,22 @@ import Validate       from './Validate.jsx'
 import ValidateSrc    from './Validate.jsx?raw'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
 import { ValidateOnChangeLink } from '../../../../site/Links.jsx'
+import Split from '../../../../site/Split.jsx'
+import Suggest from '../../../../site/Suggest.jsx'
 
 const MinValidateLengthExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Field Validation</h1>
     <h2><code>minValidateLength</code></h2>
-    <p>
-      You can set the <ValidateOnChangeLink/> property flag to enable
-      validation any time the field value changes.  The{' '}
-      <code>minValidateLength</code> property can
-      be set to only trigger validation when the input length exceeds a
-      threshold.
-    </p>
-    <Example
-      Element={Validate} code={ValidateSrc}
-      caption="minValidateLength"
-    >
+    <Split>
       <p>
+        You can set the <ValidateOnChangeLink/> property flag to enable
+        validation any time the field value changes.  The{' '}
+        <code>minValidateLength</code> property can
+        be set to only trigger validation when the input length exceeds a
+        threshold.
+      </p>
+      <Suggest>
         Enter a username in the form below.  The usernames <code>alice</code>,
         <code>bob</code> and <code>charlie</code> will return a validation
         error saying that they&apos;re not available.  There&apos;s a minimum
@@ -29,8 +28,13 @@ const MinValidateLengthExamples = () =>
         that the validation will also be triggered when the form is submitted,
         regardless of how many characters have been entered.  For that reason
         the validation function also rejects any username that is too short.
-      </p>
-    </Example>
+      </Suggest>
+    </Split>
+    <Example
+      Element={Validate} code={ValidateSrc}
+      caption="minValidateLength"
+    />
+
     <SeeAlso
       links={[
         'field:required',

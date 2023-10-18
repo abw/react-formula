@@ -213,6 +213,11 @@ export const URLS = {
     code:   'onValid',
     about:  'Define a handler to be called when a field passes validation',
   },
+  'field:onLoad': {
+    url:    '/components/Field/onLoad',
+    code:   'onLoad',
+    about:  'Called when the field is loaded',
+  },
   'field:optionalLabel': {
     url:    '/components/Field/optionalLabel',
     code:   'optionalLabel',
@@ -308,6 +313,11 @@ export const URLS = {
     code:   'validateOnChange',
     about:  'Run field validation when the value changes',
   },
+  'field:wide': {
+    url:    '/components/Field/wide',
+    code:   'wide',
+    about:  'Max field extend to the full width of the container',
+  },
 
   //--------------------------------------------------------------------------
   // Input links
@@ -319,32 +329,32 @@ export const URLS = {
   },
   'input:Text': {
     url:    '/inputs/Text',
-    text:   'Text',
+    text:   'text',
     about:  'Text input',
   },
   'input:TextArea': {
     url:    '/inputs/TextArea',
-    text:   'TextArea',
+    text:   'textarea',
     about:  'Text area input',
   },
   'input:Checkbox': {
     url:    '/inputs/Checkbox',
-    text:   'Checkbox',
+    text:   'checkbox',
     about:  'Checkbox input',
   },
   'input:Radio': {
     url:    '/inputs/Radio',
-    text:   'Radio',
+    text:   'radio',
     about:  'Radio buttons input',
   },
   'input:Select': {
     url:    '/inputs/Select',
-    text:   'Select',
+    text:   'select',
     about:  'Select list input',
   },
   'input:Hidden': {
     url:    '/inputs/Hidden',
-    text:   'Hidden',
+    text:   'hidden',
     about:  'Hidden input',
   },
 

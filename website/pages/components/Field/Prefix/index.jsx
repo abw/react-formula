@@ -5,7 +5,7 @@ import Prefix    from './Prefix.jsx'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
 
 const PrefixExample = () =>
-  <div>
+  <div className="prose">
     <h1>Field Properties</h1>
 
     <h2><code>prefix</code></h2>

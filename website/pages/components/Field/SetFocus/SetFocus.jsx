@@ -13,14 +13,18 @@ const SetFocusExample = () => {
       <Form>
         <Field
           onLoad={setField1}
-          name="field1" label="Field One"
+          name="field1"
+          label="Field One"
+          wide
         />
         <Field
           onLoad={setField2}
-          name="field2" label="Field Two"
+          name="field2"
+          label="Field Two"
+          wide
         />
       </Form>
-      <div>
+      <div className="flex gap-4">
         <button onClick={() => field1?.setFocus()}>
           Focus Field One
         </button>

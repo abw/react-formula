@@ -12,31 +12,33 @@ const SetValueExample = () => {
       <Form>
         <Field
           onLoad={setField}
-          name="animal" label="Animal"
+          name="animal"
+          label="Animal"
+          wide
         />
-        <div>
+        <div className="flex gap-4">
           <button
-            className="btn-green"
+            className="green"
             onClick={e => { e.preventDefault(); field.setValue('Antelope') }}
           >
             Antelope
           </button>
           <button
-            className="btn-green"
+            className="green"
             onClick={e => field.setValue('Badger', e)}
           >
             Badger
           </button>
           <button
             type="button"
-            className="btn-green"
+            className="green"
             onClick={() => field.setValue('Camel')}
           >
             Camel
           </button>
           <button
             onClick={() => field.setValue('Danger!')}
-            className="btn-red"
+            className="red"
           >
             Danger!
           </button>

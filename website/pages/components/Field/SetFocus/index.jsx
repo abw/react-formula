@@ -2,31 +2,37 @@ import React         from 'react'
 import Example       from '../../../../site/Example.jsx'
 import SetFocusSrc   from './SetFocus.jsx?raw'
 import SetFocus      from './SetFocus.jsx'
-import { FieldLink, FormLink, FormSetFocusLink } from '../../../../site/Links.jsx'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
+import Split from '../../../../site/Split.jsx'
+import Suggest from '../../../../site/Suggest.jsx'
+import { FormLink, FormSetFocusLink, OnLoadLink } from '../../../../site/Links.jsx'
 
 const SetFocusExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Field Functions</h1>
 
     <h2><code>setFocus()</code></h2>
-    <p>
-      If you want to programmatically set the focus on a <FieldLink/> then you
-      first need to capture a reference to it.  You can do that
-      using an <code>onLoad</code> property to set a state variable.
-    </p>
-    <p>
-      Then call the <code>setFocus()</code> method on the field object to
-      focus it.
-    </p>
+    <Split>
+      <div>
+        <p>
+          The <code>setFocus()</code> function can be called to focus a field.
+          You can use the <OnLoadLink/> property to save a reference to a field
+          context object.
+        </p>
+        <p>
+          Then call the <code>setFocus()</code> method on the field object to
+          focus it.
+        </p>
+      </div>
+      <Suggest>
+        Click on one of the buttons to focus the corresponding field.
+      </Suggest>
+    </Split>
     <Example
       Element={SetFocus} code={SetFocusSrc}
       caption="setFocus()"
-    >
-      <p>
-        Click on one of the buttons to focus on a field.
-      </p>
-    </Example>
+    />
+
     <p>
       You can also focus on fields by name using the <FormLink/>{' '}
       <FormSetFocusLink/> method.

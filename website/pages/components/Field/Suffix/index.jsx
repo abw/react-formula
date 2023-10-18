@@ -6,8 +6,8 @@ import BothSrc    from './Both.jsx?raw'
 import Both       from './Both.jsx'
 import SeeAlso from '../../../../site/SeeAlso.jsx'
 
-const PrefixSuffix = () =>
-  <div>
+const SuffixExample = () =>
+  <div className="prose">
     <h1>Field Properties</h1>
 
     <h2><code>suffix</code></h2>
@@ -35,4 +35,4 @@ const PrefixSuffix = () =>
   </div>
 
 
-export default PrefixSuffix
+export default SuffixExample

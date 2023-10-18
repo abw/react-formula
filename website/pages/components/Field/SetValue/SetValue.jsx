@@ -12,10 +12,12 @@ const SetValueExample = () => {
       <Form>
         <Field
           onLoad={setField}
-          name="animal" label="Animal"
+          name="animal"
+          label="Animal"
+          wide
         />
       </Form>
-      <div>
+      <div className="flex gap-4">
         <button onClick={() => field.setValue('Antelope')}>
           Antelope
         </button>
