@@ -7,6 +7,7 @@ import {
   DebugLink, FieldLink, FieldsLink, FormLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const DebuggingExample = () =>
   <div className="prose">
@@ -35,11 +36,11 @@ const DebuggingExample = () =>
           there too.
         </p>
       </div>
-      <div className="info alert border">
+      <Suggest>
         Try changing some of the values in the form.  Watch the form values
         and status change in the debugging panel.  Also check out the
         Javascript console for further debugging messages.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={Debugging} code={DebuggingSrc}

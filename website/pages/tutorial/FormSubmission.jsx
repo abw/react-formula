@@ -5,6 +5,7 @@ import DummySubmit    from './examples/DummySubmit.jsx'
 import DummySubmitSrc from './examples/DummySubmit.jsx?raw'
 import { FormLink, FormOnSubmitLink } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const FormSubmission = () =>
   <div className="prose">
@@ -28,11 +29,11 @@ const FormSubmission = () =>
         array of <code>errors</code>.  These are handled the same as for
         client-side form validation.
       </p>
-      <div className="info alert border">
+      <Suggest>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button.  You should see the submitted values
         appear in a debugging window beneath the form.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={DummySubmit} code={DummySubmitSrc}

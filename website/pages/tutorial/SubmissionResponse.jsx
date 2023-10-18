@@ -7,6 +7,7 @@ import {
   FormOnSubmitLink, FormOnSuccessLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const SubmissionResponse = () =>
   <div className="prose">
@@ -37,12 +38,12 @@ const SubmissionResponse = () =>
           time we&apos;re emulating the full request and response cycle.
         </p>
       </div>
-      <div className="info alert border">
+      <Suggest>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button.  You should see the values returned by
         an emulated server response appear in a debugging window beneath the
         form.  Also note that the form is reset on a successful submission.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={SubmitResponse} code={SubmitResponseSrc}

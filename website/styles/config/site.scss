@@ -10,15 +10,15 @@ $theme-transition: 0.5s;
   --link-text:            var(--brand-40);
   --link-hover:           var(--hover-50);
   // header
-  --header-back:          var(--grey40-35);
-  --header-text:          var(--grey40-90);
-  --header-link:          var(--brand-75);
+  --header-back:          var(--grey40-30);
+  --header-text:          var(--grey40-75);
+  --header-link:          var(--brand-80);
   --header-hover:         var(--brand-100);
   --header-border:        var(--grey20-60);
   // footer
-  --footer-back:          var(--grey40-75);
-  --footer-text:          var(--grey40-40);
-  --footer-border:        var(--grey40-65);
+  --footer-back:          var(--grey40-15);
+  --footer-text:          var(--grey40-70);
+  --footer-border:        var(--grey40-10);
   // app
   --app-back:             var(--grey-80);
   --main-back:            var(--grey-90);
@@ -29,15 +29,15 @@ $theme-transition: 0.5s;
   --top-shadow:         rgba(0, 0, 0, 0.08);
   // menu
   --menu-back:            var(--side-back);
-  --menu-text:            var(--grey20-40);
+  --menu-text:            var(--grey20-20);
   --menu-head:            var(--brand-20);
-  --menu-hover-back:      var(--grey20-85);
-  --menu-hover-text:      var(--brand-10);
+  --menu-hover-back:      var(--grey20-90);
+  --menu-hover-text:      var(--brand-0);
   --menu-active-text:     var(--brand-0);
-  --menu-active-back:     var(--grey20-90);
+  --menu-active-back:     var(--grey20-95);
   // table of contents
-  --toc-back:             var(--brand-90);
-  --toc-border:           var(--brand-80);
+  --toc-back:             var(--grey20-90);
+  --toc-border:           var(--grey20-70);
   --toc-head:             var(--brand-10);
   --toc-head2:            var(--brand-30);
   --toc-about:            var(--brand-40);
@@ -76,11 +76,11 @@ $theme-transition: 0.5s;
   --menu-text:          var(--grey20-80);
   --menu-head:          var(--brand-100);
   --menu-hover-text:    var(--brand-90);
-  --menu-hover-back:    var(--grey20-20);
+  --menu-hover-back:    var(--grey20-15);
   --menu-active-text:   var(--brand-100);
-  --menu-active-back:   var(--grey20-30);
+  --menu-active-back:   var(--grey20-20);
   // table of contents
-  --toc-back:             var(--brand-10);
+  --toc-back:             var(--grey20-10);
   --toc-border:           var(--brand-0);
   --toc-head:             var(--brand-80);
   --toc-head2:            var(--brand-70);

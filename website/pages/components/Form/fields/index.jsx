@@ -8,7 +8,7 @@ import { FieldLink, NameLink } from '../../../../site/Links.jsx'
 import CodeBlock, { prepareCode } from '../../../../site/CodeBlock.jsx'
 
 const FieldsExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Form Properties</h1>
     <h2><code>fields</code></h2>
     <p>
@@ -50,10 +50,12 @@ const FieldsExamples = () =>
       field will be the same for each, so it makes sense to define it in one
       place.
     </p>
+    {/*
     <SeeAlso
       links={[
       ]}
     />
+    */}
   </div>
 
 

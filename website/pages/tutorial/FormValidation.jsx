@@ -7,6 +7,7 @@ import {
   FieldsLink, FormLink, FormValidateLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const FormValidation = () =>
   <div className="prose">
@@ -45,13 +46,13 @@ const FormValidation = () =>
           <FieldsLink/> component which allows you to add multiple fields to
           a <FormLink/> in one fell swoop.
         </p>
-        <div className="info alert border">
+        <Suggest>
           Try entering some values in the form below and click on the{' '}
           <b>Register</b> button. You should see the field level validation
           errors if you don&apos;t provide a valid value for any field. Or if
           you provide different values for the Password and Confirm Password
           fields then you should see the form validation errors.
-        </div>
+        </Suggest>
       </div>
     </Split>
     <Example

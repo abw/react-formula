@@ -139,9 +139,9 @@ export const URLS = {
     code:   'setValues',
     about:  'Set form values',
   },
-  'form:validate': {
-    url:    '/components/Form/validate',
-    code:   'validate',
+  'form:validation': {
+    url:    '/components/Form/validation',
+    code:   'validation',
     about:  'Validation function for a form',
   },
   'form:values': {

@@ -34,19 +34,21 @@
             --code-link-underline: transparent;
             // background-color: transparent;
           }
+          transition: all 0.3s;
 
           &:hover {
             color: var(--menu-hover-text);
-            // background-color: var(--menu-hover-back);
+            background-color: var(--menu-hover-back);
+            transition: all 0.2s;
             // border-color: var(--menu-hover-border);
           }
           &.active {
-            // background-color: var(--menu-active-back);
+            background-color: var(--menu-active-back);
             // border-color: var(--menu-active-border);
             color: var(--menu-active-text);
           }
           &.active:hover {
-            // background-color: var(--menu-active-back);
+            background-color: var(--menu-active-back);
           }
         }
         ul.menu {

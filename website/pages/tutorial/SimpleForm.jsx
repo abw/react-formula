@@ -8,6 +8,7 @@ import {
   SubmitLink, TypeLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const SimpleForm = () =>
   <div className="prose">
@@ -33,11 +34,11 @@ const SimpleForm = () =>
         So without further ado, let&apos;s look at the one form that most
         websites will require: a user login form.
       </p>
-      <p>
+      <Suggest>
         Try entering some values in the form below and click on the
         &quot;Login&quot; button. Also see what happens if you don&apos;t
         enter a value for either field.
-      </p>
+      </Suggest>
     </Split>
     <Example
       Element={BasicLoginForm} code={BasicLoginFormSrc}

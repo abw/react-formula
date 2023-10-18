@@ -5,7 +5,7 @@ import HiddenSrc  from './Hidden.jsx?raw'
 import SeeAlso    from '../../../../site/SeeAlso.jsx'
 
 const HiddenExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Form Properties</h1>
     <h2><code>hidden</code></h2>
     <p>

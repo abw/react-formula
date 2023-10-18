@@ -13,6 +13,7 @@ import {
   ErrorsLink, FormOnErrorLink
 }    from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const SubmissionErrors = () =>
   <div className="prose">
@@ -38,11 +39,11 @@ const SubmissionErrors = () =>
         displayed in the form header</strike>.  See the <ErrorsLink/> component for
         more information about changing how and if errors are displayed.
       </p>
-      <div className="info alert border">
+      <Suggest>
         Try submitting this form to see what happens when an error is thrown.
         You should see the error displayed in the form header and also in a
         debugging window beneath the form.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={SubmitThrow} code={SubmitThrowSrc}
@@ -78,9 +79,9 @@ const SubmissionErrors = () =>
           This would be the typical way to handle a request that failed due to
           server-side validation errors.
         </p>
-        <div className="info alert border">
+        <Suggest>
         Try submitting the form to see the errors generated.
-        </div>
+        </Suggest>
       </div>
     </Split>
     <Example
@@ -96,11 +97,11 @@ const SubmissionErrors = () =>
         a <code>setError()</code> function to store the error in a React state
         variable and then display it beneath the form.
       </p>
-      <div className="info alert border">
+      <Suggest>
         Try submitting the form to see the errors generated.  The {' '}
         <FormOnErrorLink/> handler will store them in the state variable
         and display them beneath the form.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={OnError} code={OnErrorSrc}

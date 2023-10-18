@@ -7,6 +7,7 @@ import {
   DebugLink, FormHiddenLink, FormLink, FormValuesLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const EditFormExample = () =>
   <div className="prose">
@@ -23,14 +24,14 @@ const EditFormExample = () =>
         hidden values that you want to include when you submit the form then
         you can provide them using the <FormHiddenLink/> property.
       </p>
-      <div className="info alert border">
+      <Suggest>
         Try changing some of the values in the form and then
-        click on the &quot;Reset&quot; button.  The fields will
+        click on the <b>Reset</b> button.  The fields will
         reset to their original values.  The <DebugLink/> component is
         included in this example so you can see what&apos;s going on
         behind the scenes.  We&apos;ll talk more about that on the next
         page.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={EditForm} code={EditFormSrc}

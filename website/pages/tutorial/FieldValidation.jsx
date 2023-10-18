@@ -8,6 +8,7 @@ import {
   ValidateLink, ValidateOnBlurLink, ValidateOnChangeLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
+import Suggest from '../../site/Suggest.jsx'
 
 const FieldValidation = () =>
   <div className="prose">
@@ -59,12 +60,12 @@ const FieldValidation = () =>
           <FieldLink/> element around, or just edit the <NameLink/> property than
           it is to cut and paste large blocks of code.
         </p>
-        <div className="info alert border">
+        <Suggest>
           Try entering some values in the form below and click on the{' '}
           <b>Login</b> button. If you don&apos;t provide a value, or
           if you provide an invalid value then you should see the validation
           errors.
-        </div>
+        </Suggest>
       </div>
     </Split>
     <Example

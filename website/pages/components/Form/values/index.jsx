@@ -5,7 +5,7 @@ import ValuesSrc  from './Values.jsx?raw'
 import SeeAlso    from '../../../../site/SeeAlso.jsx'
 
 const ValuesExamples = () =>
-  <div>
+  <div className="prose">
     <h1>Form Properties</h1>
     <h2><code>values</code></h2>
     <p>
