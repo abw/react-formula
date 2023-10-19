@@ -156,172 +156,181 @@ export const URLS = {
   },
 
   //--------------------------------------------------------------------------
-  // Field links
+  // Field
   //--------------------------------------------------------------------------
+  // properties
   'field:children': {
-    url:    '/components/Field/children',
+    url:    '/components/Field/properties/children',
     code:   'children',
     about:  'Child functions in a field',
   },
   'field:help': {
-    url:    '/components/Field/help',
+    url:    '/components/Field/properties/help',
     code:   'help',
     about:  'Additional help for a field',
   },
-  'field:Input': {
-    url:    '/components/Field/Input',
-    code:   'Input',
-    about:  'Custom input component for a field',
-  },
   'field:label': {
-    url:    '/components/Field/label',
+    url:    '/components/Field/properties/label',
     code:   'label',
     about:  'A label for the field',
   },
-  'field:Layout': {
-    url:    '/components/Field/Layout',
-    code:   'Layout',
-    about:  'Custom layout component for a field',
-  },
-  'field:minValidateLength': {
-    url:    '/components/Field/minValidateLength',
-    code:   'minValidateLength',
-    about:  'The minimum input length to trigger validation',
-  },
   'field:name': {
-    url:    '/components/Field/name',
+    url:    '/components/Field/properties/name',
     code:   'name',
     about:  'The field name',
   },
-  'field:onBlur': {
-    url:    '/components/Field/onBlur',
-    code:   'onBlur',
-    about:  'Define a handler to be called when a field loses focus',
-  },
-  'field:onChange': {
-    url:    '/components/Field/onChange',
-    code:   'onChange',
-    about:  'Define a handler to be called when a field value changes',
-  },
-  'field:onFocus': {
-    url:    '/components/Field/onFocus',
-    code:   'onFocus',
-    about:  'Define a handler to be called when a field gains focus',
-  },
-  'field:onInvalid': {
-    url:    '/components/Field/onInvalid',
-    code:   'onInvalid',
-    about:  'Define a handler to be called when a field fails validation',
-  },
-  'field:onValid': {
-    url:    '/components/Field/onValid',
-    code:   'onValid',
-    about:  'Define a handler to be called when a field passes validation',
-  },
-  'field:onLoad': {
-    url:    '/components/Field/onLoad',
-    code:   'onLoad',
-    about:  'Called when the field is loaded',
-  },
-  'field:optionalLabel': {
-    url:    '/components/Field/optionalLabel',
-    code:   'optionalLabel',
-    about:  'Customise the label displayed for optional fields',
-  },
   'field:placeholder': {
-    url:    '/components/Field/placeholder',
+    url:    '/components/Field/properties/placeholder',
     code:   'placeholder',
     about:  'Add a placeholder to a field',
   },
   'field:prefix': {
-    url:    '/components/Field/prefix',
+    url:    '/components/Field/properties/prefix',
     code:   'prefix',
     about:  'Add a prefix to a field',
   },
-  'field:prepareValue': {
-    url:    '/components/Field/prepareValue',
-    code:   'prepareValue',
-    about:  'Define a handler to prepare the value entered for a field',
-  },
-  'field:required': {
-    url:    '/components/Field/required',
-    code:   'required',
-    about:  'Mark a field as being required',
-  },
-  'field:requiredLabel': {
-    url:    '/components/Field/requiredLabel',
-    code:   'requiredLabel',
-    about:  'Customise the label displayed for required fields',
-  },
-  'field:requiredMessage': {
-    url:    '/components/Field/requiredMessage',
-    code:   'requiredMessage',
-    about:  'Customise the error message generated for required fields',
-  },
-  'field:reset': {
-    url:    '/components/Field/reset',
-    code:   'reset()',
-    about:  'Reset a field to its original state',
-  },
-  'field:setFocus': {
-    url:    '/components/Field/setFocus',
-    code:   'setFocus()',
-    about:  'Focus a field',
-  },
-  'field:setValue': {
-    url:    '/components/Field/setValue',
-    code:   'setValue()',
-    about:  'Set a field value',
-  },
-  'field:setValid': {
-    url:    '/components/Field/setValid',
-    code:   'setValid()',
-    about:  'Set a field to be valid',
-  },
-  'field:setInvalid': {
-    url:    '/components/Field/setInvalid',
-    code:   'setInvalid()',
-    about:  'Set a field to be invalid',
-  },
-  'field:showOptional': {
-    url:    '/components/Field/showOptional',
-    code:   'showOptional',
-    about:  'Enable the label shown for optional fields',
-  },
-  'field:showRequired': {
-    url:    '/components/Field/showRequired',
-    code:   'showRequired',
-    about:  'Enable the label shown for required fields',
-  },
   'field:suffix': {
-    url:    '/components/Field/suffix',
+    url:    '/components/Field/properties/suffix',
     code:   'suffix',
     about:  'Add a suffix to a field',
   },
   'field:type': {
-    url:    '/components/Field/type',
+    url:    '/components/Field/properties/type',
     code:   'type',
     about:  'The input type for a field',
   },
+  'field:wide': {
+    url:    '/components/Field/properties/wide',
+    code:   'wide',
+    about:  'Make field extend to the full width of the container',
+  },
+
+  // validation
+  'field:minValidateLength': {
+    url:    '/components/Field/validation/minValidateLength',
+    code:   'minValidateLength',
+    about:  'The minimum input length to trigger validation',
+  },
+  'field:optionalLabel': {
+    url:    '/components/Field/validation/optionalLabel',
+    code:   'optionalLabel',
+    about:  'Customise the label displayed for optional fields',
+  },
+  'field:prepareValue': {
+    url:    '/components/Field/validation/prepareValue',
+    code:   'prepareValue',
+    about:  'Define a handler to prepare the value entered for a field',
+  },
+  'field:required': {
+    url:    '/components/Field/validation/required',
+    code:   'required',
+    about:  'Mark a field as being required',
+  },
+  'field:requiredLabel': {
+    url:    '/components/Field/validation/requiredLabel',
+    code:   'requiredLabel',
+    about:  'Customise the label displayed for required fields',
+  },
+  'field:requiredMessage': {
+    url:    '/components/Field/validation/requiredMessage',
+    code:   'requiredMessage',
+    about:  'Customise the error message generated for required fields',
+  },
+  'field:showOptional': {
+    url:    '/components/Field/validation/showOptional',
+    code:   'showOptional',
+    about:  'Enable the label shown for optional fields',
+  },
+  'field:showRequired': {
+    url:    '/components/Field/validation/showRequired',
+    code:   'showRequired',
+    about:  'Enable the label shown for required fields',
+  },
   'field:validate': {
-    url:    '/components/Field/validate',
+    url:    '/components/Field/validation/validate',
     code:   'validate',
     about:  'Handler to validate field input',
   },
   'field:validateOnBlur': {
-    url:    '/components/Field/validateOnBlur',
+    url:    '/components/Field/validation/validateOnBlur',
     code:   'validateOnBlur',
     about:  'Run field validation when it loses focus',
   },
   'field:validateOnChange': {
-    url:    '/components/Field/validateOnChange',
+    url:    '/components/Field/validation/validateOnChange',
     code:   'validateOnChange',
     about:  'Run field validation when the value changes',
   },
-  'field:wide': {
-    url:    '/components/Field/wide',
-    code:   'wide',
-    about:  'Make field extend to the full width of the container',
+
+  // events
+  'field:onBlur': {
+    url:    '/components/Field/events/onBlur',
+    code:   'onBlur',
+    about:  'Define a handler to be called when a field loses focus',
+  },
+  'field:onChange': {
+    url:    '/components/Field/events/onChange',
+    code:   'onChange',
+    about:  'Define a handler to be called when a field value changes',
+  },
+  'field:onFocus': {
+    url:    '/components/Field/events/onFocus',
+    code:   'onFocus',
+    about:  'Define a handler to be called when a field gains focus',
+  },
+  'field:onInvalid': {
+    url:    '/components/Field/events/onInvalid',
+    code:   'onInvalid',
+    about:  'Define a handler to be called when a field fails validation',
+  },
+  'field:onLoad': {
+    url:    '/components/Field/events/onLoad',
+    code:   'onLoad',
+    about:  'Called when the field is loaded',
+  },
+  'field:onValid': {
+    url:    '/components/Field/events/onValid',
+    code:   'onValid',
+    about:  'Define a handler to be called when a field passes validation',
+  },
+
+  // functions
+  'field:reset': {
+    url:    '/components/Field/functions/reset',
+    code:   'reset()',
+    about:  'Reset a field to its original state',
+  },
+  'field:setFocus': {
+    url:    '/components/Field/functions/setFocus',
+    code:   'setFocus()',
+    about:  'Focus a field',
+  },
+  'field:setInvalid': {
+    url:    '/components/Field/functions/setInvalid',
+    code:   'setInvalid()',
+    about:  'Set a field to be invalid',
+  },
+  'field:setValue': {
+    url:    '/components/Field/functions/setValue',
+    code:   'setValue()',
+    about:  'Set a field value',
+  },
+  'field:setValid': {
+    url:    '/components/Field/functions/setValid',
+    code:   'setValid()',
+    about:  'Set a field to be valid',
+  },
+
+  // components
+  'field:Input': {
+    url:    '/components/Field/components/Input',
+    code:   'Input',
+    about:  'Custom input component for a field',
+  },
+  'field:Layout': {
+    url:    '/components/Field/components/Layout',
+    code:   'Layout',
+    about:  'Custom layout component for a field',
   },
 
   //--------------------------------------------------------------------------

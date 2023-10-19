@@ -1,21 +1,26 @@
-import React               from 'react'
-import Example             from '../../../site/Example.jsx'
-import Layout              from './Layout.jsx'
-import LayoutSrc           from './Layout.jsx?raw'
-import LayoutContent       from './LayoutContent.jsx'
-import LayoutContentSrc    from './LayoutContent.jsx?raw'
-import { FieldLink, LabelLink, MessageLink, TypeLink } from '../../../site/Links.jsx'
-import Link from '../../../site/Link.jsx'
+import React              from 'react'
+import Layout             from './Layout.jsx'
+import LayoutSrc          from './Layout.jsx?raw'
+import LayoutContent      from './LayoutContent.jsx'
+import LayoutContentSrc   from './LayoutContent.jsx?raw'
+import Example            from '@/site/Example.jsx'
+import Link               from '@/site/Link.jsx'
+import { FieldLayoutLink, FieldLink, LabelLink, MessageLink, TypeLink } from '@/site/Links.jsx'
 
 const LayoutExamples = () =>
-  <div>
-    <h1>Layout</h1>
+  <div className="prose">
+    <h1>Field Components</h1>
+
+    <div className="alert error border">
+      NOTE: this page is probably redundant as it&apos;s been replaced by
+      the Field <FieldLayoutLink/> page.
+    </div>
+
     <p>
       The <code>Layout</code> component provides the default content for a{' '}
-      <FieldLink/>.  It renders a <code>div</code> with the <code>field</code>{' '}
-      CSS class and any other classes relevant to the state of the field
-      (e.g. <code>focus</code>, <code>valid</code> and/or <code>invalid</code>).
+      <FieldLink/>.
     </p>
+
     <p>
       If you&apos;re defining your own field content and want to include all
       the usual elements then you can manually include it in a <FieldLink/>.

@@ -14,6 +14,10 @@ import { FieldInputLink } from '@/website/site/Links.jsx'
 const InputExamples = () =>
   <div className="prose">
     <h1>Field Components</h1>
+    <div className="alert error border">
+      NOTE: this page is probably redundant as it&apos;s been replaced by
+      the Field <FieldInputLink/> page.
+    </div>
     <h2><code>Input</code></h2>
     <p className="intro wide">
       TODO: change this to describe the default input and say how you can
