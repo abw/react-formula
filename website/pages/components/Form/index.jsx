@@ -6,7 +6,7 @@ import Hidden       from './hidden/index.jsx'
 import Classes      from './classes/index.jsx'
 import Properties   from './Properties/index.jsx'
 import SetFocus     from './SetFocus/index.jsx'
-import Validation   from './Validation/index.jsx'
+import Validate     from './Validate/index.jsx'
 import OnSubmit     from './OnSubmit/index.jsx'
 import OnSuccess    from './OnSuccess/index.jsx'
 import OnError      from './OnError/index.jsx'
@@ -28,7 +28,7 @@ const Form = () =>
     <Route path="classes"     element={<Classes/>}/>
     <Route path="properties"  element={<Properties/>}/>
     <Route path="setfocus"    element={<SetFocus/>}/>
-    <Route path="validation"  element={<Validation/>}/>
+    <Route path="validate"    element={<Validate/>}/>
     <Route path="onSubmit"    element={<OnSubmit/>}/>
     <Route path="onSuccess"   element={<OnSuccess/>}/>
     <Route path="onError"     element={<OnError/>}/>

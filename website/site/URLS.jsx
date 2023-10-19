@@ -75,6 +75,11 @@ export const URLS = {
     code:   'Debug',
     about:  'Render debugging information for a form',
   },
+  'component:Input': {
+    url:    '/components/Input',
+    code:   'Input',
+    about:  'Renders the input for a form field',
+  },
   'component:Layout': {
     url:    '/components/Layout',
     code:   'Layout',
@@ -139,9 +144,9 @@ export const URLS = {
     code:   'setValues',
     about:  'Set form values',
   },
-  'form:validation': {
-    url:    '/components/Form/validation',
-    code:   'validation',
+  'form:validate': {
+    url:    '/components/Form/validate',
+    code:   'validate',
     about:  'Validation function for a form',
   },
   'form:values': {
@@ -255,27 +260,27 @@ export const URLS = {
   },
   'field:reset': {
     url:    '/components/Field/reset',
-    code:   'reset',
+    code:   'reset()',
     about:  'Reset a field to its original state',
   },
   'field:setFocus': {
     url:    '/components/Field/setFocus',
-    code:   'setFocus',
+    code:   'setFocus()',
     about:  'Focus a field',
   },
   'field:setValue': {
     url:    '/components/Field/setValue',
-    code:   'setValue',
+    code:   'setValue()',
     about:  'Set a field value',
   },
   'field:setValid': {
     url:    '/components/Field/setValid',
-    code:   'setValid - TODO',
+    code:   'setValid()',
     about:  'Set a field to be valid',
   },
   'field:setInvalid': {
     url:    '/components/Field/setInvalid',
-    code:   'setInvalid - TODO',
+    code:   'setInvalid()',
     about:  'Set a field to be invalid',
   },
   'field:showOptional': {
@@ -316,7 +321,7 @@ export const URLS = {
   'field:wide': {
     url:    '/components/Field/wide',
     code:   'wide',
-    about:  'Max field extend to the full width of the container',
+    about:  'Make field extend to the full width of the container',
   },
 
   //--------------------------------------------------------------------------

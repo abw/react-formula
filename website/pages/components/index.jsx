@@ -14,6 +14,7 @@ import Changed           from './Changed/index.jsx'
 import Errors            from './Errors/index.jsx'
 import Debug             from './Debug/index.jsx'
 import Layout            from './Layout/index.jsx'
+import Input            from './Input/index.jsx'
 import Label             from './Label/index.jsx'
 import Message           from './Message/index.jsx'
 import UseField          from './UseField/index.jsx'
@@ -36,6 +37,7 @@ const Components = () =>
     <Route path="Errors"             element={<Errors/>}/>
     <Route path="Debug"              element={<Debug/>}/>
     <Route path="Layout"             element={<Layout/>}/>
+    <Route path="Input"              element={<Input/>}/>
     <Route path="Label"              element={<Label/>}/>
     <Route path="Message"            element={<Message/>}/>
     <Route path="UseField"           element={<UseField/>}/>

@@ -9,12 +9,18 @@ import CodeBlock       from '@/site/CodeBlock.jsx'
 import Split           from '@/site/Split.jsx'
 import Suggest         from '@/site/Suggest.jsx'
 import { prepareCode } from '@/site/CodeBlock.jsx'
+import { FieldInputLink } from '@/website/site/Links.jsx'
 
 const InputExamples = () =>
   <div className="prose">
     <h1>Field Components</h1>
     <h2><code>Input</code></h2>
     <p className="intro wide">
+      TODO: change this to describe the default input and say how you can
+      define your own input as the <FieldInputLink/>
+    </p>
+    <p>
+
       You can define a custom <code className="code">Input</code> component
       to render the input for a field.
     </p>

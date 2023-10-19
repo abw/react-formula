@@ -4,7 +4,7 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React, { useState } from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const ResetExample = () => {
+const SetInvalidExample = () => {
   const [field1, setField1] = useState(false)
   const [field2, setField2] = useState(false)
 
@@ -19,7 +19,6 @@ const ResetExample = () => {
         />
         <Field
           onLoad={setField2}
-          value="Initial value"
           name="field2"
           label="Field Two"
           wide
@@ -27,20 +26,20 @@ const ResetExample = () => {
       </Form>
       <div className="flex gap-4">
         <button
-          className="blue"
-          onClick={field1.reset}
+          className="red"
+          onClick={() => field1.setInvalid()}
         >
-          Reset Field One
+          Invalid Field One
         </button>
         <button
-          className="blue"
-          onClick={field2.reset}
+          className="red"
+          onClick={() => field2.setInvalid('Naughty!')}
         >
-          Reset Field Two
+          Invalid Field Two
         </button>
       </div>
     </>
   )
 }
 
-export default ResetExample
+export default SetInvalidExample

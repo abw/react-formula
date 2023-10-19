@@ -1,8 +1,8 @@
 a.prev-next-link {
   --text:   var(--brand-50);
   --head:   var(--brand-10);
-  --back:   var(--brand-90);
-  --border: var(--brand-70);
+  --back:   var(--brand-95);
+  --border: var(--brand-80);
   min-width: 20ch;
   color: var(--text);
   background-color: var(--back);
@@ -10,7 +10,7 @@ a.prev-next-link {
   margin-top: 1rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-3);
   transition: all 0.5s;
   h4 {
     transition: all 0.5s;
@@ -24,8 +24,8 @@ a.prev-next-link {
   &:hover {
     --text:   var(--brand-30);
     --head:   var(--brand-0);
-    --back:   var(--brand-85);
-    --border: var(--brand-70);
+    --back:   var(--brand-100);
+    --border: var(--brand-80);
     color: var(--text);
     h4 {
       color: var(--head);
@@ -36,12 +36,12 @@ a.prev-next-link {
 #{$dark-theme} a.prev-next-link {
   --text:         var(--brand-70);
   --head:         var(--brand-90);
-  --back:         var(--brand-20);
+  --back:         var(--grey40-15);
   --border:       var(--brand-10);
   &:hover {
     --text:   var(--brand-80);
     --head:   var(--brand-100);
-    --back:   var(--brand-30);
+    --back:   var(--grey40-20);
     --border: var(--brand-10);
   }
 }

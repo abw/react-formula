@@ -13,6 +13,8 @@ import OnFocus           from './OnFocus/index.jsx'
 import OnBlur            from './OnBlur/index.jsx'
 import SetFocus          from './SetFocus/index.jsx'
 import SetValue          from './SetValue/index.jsx'
+import SetValid          from './SetValid/index.jsx'
+import SetInvalid        from './SetInvalid/index.jsx'
 import Reset             from './Reset/index.jsx'
 import OnChange          from './OnChange/index.jsx'
 import OnValid           from './OnValid/index.jsx'
@@ -31,6 +33,7 @@ import ValidateOnChange  from './ValidateOnChange/index.jsx'
 import ValidateOnBlur    from './ValidateOnBlur/index.jsx'
 import Wide              from './Wide/index.jsx'
 import Input             from './Input/index.jsx'
+import Layout            from './Layout/index.jsx'
 import { Routes, Route } from 'react-router-dom'
 
 const Field = () =>
@@ -65,8 +68,11 @@ const Field = () =>
     <Route path="onLoad"            element={<OnLoad/>}/>
     <Route path="setFocus"          element={<SetFocus/>}/>
     <Route path="setValue"          element={<SetValue/>}/>
+    <Route path="setValid"          element={<SetValid/>}/>
+    <Route path="setInvalid"        element={<SetInvalid/>}/>
     <Route path="Reset"             element={<Reset/>}/>
     <Route path="Input"             element={<Input/>}/>
+    <Route path="Layout"            element={<Layout/>}/>
   </Routes>
 
 export default Field

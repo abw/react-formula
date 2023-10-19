@@ -3,13 +3,14 @@ import Example        from '../../../../site/Example.jsx'
 import Link           from '../../../../site/Link.jsx'
 import Required       from './examples/Required.jsx'
 import RequiredSrc    from './examples/Required.jsx?raw'
-import { FormLink } from '../../../../site/Links.jsx'
-import Split from '../../../../site/Split.jsx'
-import Suggest from '../../../../site/Suggest.jsx'
+import Split          from '../../../../site/Split.jsx'
+import Suggest        from '../../../../site/Suggest.jsx'
+import { FormLink }   from '../../../../site/Links.jsx'
 
 const Validation = () =>
   <div className="prose">
-    <h1>Validation</h1>
+    <h1>Form Properties</h1>
+    <h2><code>validate</code></h2>
     <p className="intro wide">
       Validation can be applied on two levels: on individual fields
       and/or on the form.

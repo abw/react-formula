@@ -35,6 +35,9 @@ export const FieldsLink = () =>
 export const FieldsetLink = () =>
   <CodeLink to="component:Fieldset"/>
 
+export const InputLink = () =>
+  <CodeLink to="component:Input"/>
+
 export const LabelLink = () =>
   <CodeLink to="component:Label"/>
 
@@ -112,7 +115,7 @@ export const FieldLabelLink = () =>
 export const HelpLink = () =>
   <CodeLink to="field:help"/>
 
-export const InputLink = () =>
+export const FieldInputLink = () =>
   <CodeLink to="field:Input"/>
 
 export const FieldLayoutLink = () =>
@@ -156,6 +159,12 @@ export const RequiredLabelLink = () =>
 
 export const RequiredMessageLink = () =>
   <CodeLink to="field:requiredMessage"/>
+
+export const SetInvalidLink = () =>
+  <CodeLink to="field:setInvalid"/>
+
+export const SetValidLink = () =>
+  <CodeLink to="field:setValid"/>
 
 export const ShowRequiredLink = () =>
   <CodeLink to="field:showRequired"/>

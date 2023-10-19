@@ -11,7 +11,7 @@ const NavLink = ({caption, text, link}) =>
   link
     ? <Link to={link} className="prev-next-link">
         <h4>{caption}</h4>
-        <p>{text}</p>
+        <p className="wide">{text}</p>
       </Link>
     : <div></div>
 

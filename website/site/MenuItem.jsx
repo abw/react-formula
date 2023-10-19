@@ -5,6 +5,24 @@ import { CodeLink } from './Links.jsx'
 import MenuItems from './MenuItems.jsx'
 import URLS from './URLS.jsx'
 
+/*
+export const resolveMenuItem = item => {
+  if (isArray(item)) {
+    const [path, text, submenu] = item
+    return { link: `/${path}`, text, submenu }
+  }
+  if (isString(item)) {
+    const entry = URLS[item] || fail(`Invalid MenuItem specified: ${item}`)
+    const { url, code, text } = entry
+    return { link: url, text: text ? text : <code>{code}</code> }
+  }
+  if (isObject(item)) {
+    return item
+  }
+  fail(`Invalid menu item: ${item}`)
+}
+*/
+
 export const MenuItem = ({ item, open, showAbout=false, url='' }) => {
   if (isArray(item)) {
     const [path, text, submenu] = item
