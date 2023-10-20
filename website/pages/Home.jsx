@@ -1,6 +1,7 @@
 import React from 'react'
 import { imgUrl } from '../site/Utils.js'
 import { ReactComponent as ReactFormula } from '../svg/react-formula.svg'
+import { ReactComponent as OSS } from '../svg/oss.svg'
 import Link from '../site/Link.jsx'
 
 const Home = () =>
@@ -53,6 +54,9 @@ const Home = () =>
       </p>
     </div>
 
+    <div className="text-center">
+      <OSS style={{ width: '12em', marginTop: '2rem' }}/>
+    </div>
     <h2>This is Opinionated and Selfish Software</h2>
     <p>
       I wrote this library to help me do my job and make the process of
