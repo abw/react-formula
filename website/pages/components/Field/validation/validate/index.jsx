@@ -12,15 +12,9 @@ import { RequiredLink } from '@/site/Links.jsx'
 const ValidateExamples = () =>
   <div className="prose">
     <h1>Field Validation</h1>
-    <p>
-      There are a number of different ways to validate field input.
-      For simple cases where a value must be provided you can use the{' '}
-      <RequiredLink/> property.  If you need to perform additional
-      validation then you can do that using a <code>validate</code> function.
-    </p>
 
     <h2><code>validate</code></h2>
-    <Split>
+    <Split align="end">
       <div>
         <p>
           You can use the <RequiredLink/> property to mark a field as being

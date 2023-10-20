@@ -7,6 +7,7 @@ import StatusSrc from './examples/Status.jsx?raw'
 import AllSrc    from './examples/All.jsx?raw'
 import All       from './examples/All.jsx'
 import Split from '../../../site/Split.jsx'
+import Suggest from '@/website/site/Suggest.jsx'
 
 const DebugExamples = () =>
   <div className="prose">
@@ -16,9 +17,9 @@ const DebugExamples = () =>
         The <code>Debug</code> component can be used in development to debug
         your form.  By default it displays only the form values.
       </p>
-      <div className="info alert border">
+      <Suggest>
         Try updating the form values and see how the debugging data changes.
-      </div>
+      </Suggest>
     </Split>
     <Example
       Element={Debug} code={DebugSrc}

@@ -88,6 +88,9 @@ export const FormHiddenLink = () =>
 export const FormClassesLink = () =>
   <CodeLink to="form:classes"/>
 
+export const FormOnResetLink = () =>
+  <CodeLink to="form:onReset"/>
+
 export const FormOnSubmitLink = () =>
   <CodeLink to="form:onSubmit"/>
 

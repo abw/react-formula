@@ -13,6 +13,15 @@ import { FormLink } from '../../../site/Links.jsx'
 const ErrorsExamples = () =>
   <div>
     <h1>Errors</h1>
+    <div className="error alert border">
+      <h3>This page needs updating</h3>
+      <p>
+        I&apos;ve change it so that errors don&apos;t get displayed by
+        default (except in field validition messages).  You have to manually
+        insert the <code>Errors</code> component if you want the more detailed
+        errors to be displayed
+      </p>
+    </div>
     <p>
       By default, validation errors will be displayed in the form header.
     </p>

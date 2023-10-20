@@ -94,6 +94,11 @@ export const URLS = {
     code:   'hidden',
     about:  'Hidden values for a form',
   },
+  'form:onReset': {
+    url:    '/components/Form/onReset',
+    code:   'onReset',
+    about:  'Function to be called when the form is reset',
+  },
   'form:onSubmit': {
     url:    '/components/Form/onSubmit',
     code:   'onSubmit',

@@ -13,7 +13,7 @@ import CancelResetSubmitPropsSrc  from './examples/CancelResetSubmitProps.jsx?ra
 import { CancelLink, ResetLink, SubmitLink } from '../../../site/Links.jsx'
 
 const CancelResetSubmitExamples = () =>
-  <div>
+  <div className="prose">
     <h1>CancelResetSubmit</h1>
     <p>
       The <code>CancelResetSubmit</code> component can be used to add all
