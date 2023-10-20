@@ -57,7 +57,7 @@ const Home = () =>
     <div className="text-center">
       <OSS style={{ width: '12em', marginTop: '2rem' }}/>
     </div>
-    <h2>This is Opinionated and Selfish Software</h2>
+    <h2>This is Opinionated and Selfish Software...</h2>
     <p>
       I wrote this library to help me do my job and make the process of
       working with forms less painful than I found it using other modules.
@@ -65,12 +65,13 @@ const Home = () =>
       to be done, and it&apos;s <i>selfish</i> because I have no intention
       of adding things that I don&apos;t need or want.
     </p>
+    <h2>...because it&apos;s Open Source Software</h2>
     <p>
-      It&apos;s Open Source and you can use it if you want to for <b>free</b>.
-      You have full access to the source code which you can adapt if you need
-      to.  If it proves useful in helping you get your job done then
-      that&apos;s great.  But please don&apos;t expect me to commit <i>my</i>{' '}
-      time to helping <i>you</i> get your job done.
+      It&apos;s Open Source Software and you can use it if you want to
+      for <b>free</b>. You have full access to the source code which you can
+      adapt if you need to.  If it proves useful in helping you get your job
+      done then that&apos;s great.  But please don&apos;t expect me to
+      commit <i>my</i> time to helping <i>you</i> get your job done.
     </p>
     <h2>Still With Me?</h2>
     <p className="subintro">
