@@ -30,12 +30,12 @@
   },
   "scripts": {
     "dev": "vite --config vite.docs.js",
-    "build": "pnpm build:vite && pnpm build:css && pnpm build:scss",
+    "build": "$npm_execpath build:vite && $npm_execpath build:css && $npm_execpath build:scss",
     "build:vite": "vite build",
     "build:css": "bin/build-css.sh",
     "build:scss": "bin/build-scss.sh",
     "build:docs": "vite build --config vite.docs.js",
-    "build:all": "pnpm build && pnpm build:docs",
+    "build:all": "$npm_execpath build && $npm_execpath build:docs",
     "lint": "eslint 'lib/**/*.{js,jsx}'",
     "preview": "vite preview --config vite.docs.js",
     "test": "vitest --ui --coverage"
