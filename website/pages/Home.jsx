@@ -18,7 +18,7 @@ const Home = () =>
       </div>
     </div>
     <h2> I know what you&apos;re thinking... </h2>
-    <ul>
+    <ul className="li-space large">
       <li>What does the World need with another React form library?</li>
       <li>What makes this different, better, and/or worse than all the other form libraries?  </li>
       <li>Will this guy do my homework for me?</li>
@@ -28,7 +28,7 @@ const Home = () =>
       <li>And what is it with all the badgers?</li>
     </ul>
     <p>
-      None of these questions will be answered, at least not directly.
+      <b>None</b> of these questions will be answered, at least not directly.
       You can read the copious documentation provided here if you want to
       find out more.  Or don&apos;t.  It makes no difference to me.  Seriously,
       I&apos;m not looking to convince you that this is any better or worse
@@ -36,10 +36,10 @@ const Home = () =>
       users or changing the world.  Been there, done that, burned out.
     </p>
 
-    <div className="error alert border shadow-2">
+    <div className="error alert border bdw-2 shadow-2 mar-v-16">
       <div className="headline">WARNING - Work in Progress</div>
-      <p className="bold fgc-30 fgd-80">
-        Do not use this library unless you like living dangerously.
+      <p className="bold large">
+        Do not use this library unless you like living dangerously!
       </p>
       <p>
         It&apos;s in the process of being re-written and it&apos;s special.
@@ -88,7 +88,7 @@ const Home = () =>
       These are some of the things that I think are important in a form
       library and have influenced the design.
     </p>
-    <ul>
+    <ul className="li-space">
       <li>
         Above all else, <b>simplicity</b>.  Building a form with{' '}
         <code>react-formula</code> should be <i>at least</i> as easy as
@@ -244,7 +244,7 @@ const Home = () =>
 
     <h2>Read the Fine Manual</h2>
     <div>
-      <ul className="large menu">
+      <ul className="large menu li-space">
         <li>
           <Link to="/introduction">Getting Started - installing the library and importing the styles</Link>
         </li>
@@ -257,12 +257,14 @@ const Home = () =>
         <li>
           <Link to="/inputs">Input Types - further information about the different types of input</Link>
         </li>
+        {/*
         <li>
           <Link to="/customising">Customising - adapting existing modules and adding your own</Link>
         </li>
         <li>
           <Link to="/styling">Styling - changing the default styles</Link>
         </li>
+        */}
       </ul>
     </div>
     <div className="badger">
