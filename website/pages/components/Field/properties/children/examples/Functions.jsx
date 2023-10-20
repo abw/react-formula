@@ -17,25 +17,25 @@ const ChildFunctions = () =>
       }
       <Layout/>
       { field =>
-        <>
-          <div>
-            Current value is: {field.value}
-          </div>
-          <div className="flex gap-2 blue mar-t-4">
-            <button
-              type="button"
-              onClick={() => field.setValue('Foo')}
-            >
-              Foo
-            </button>
-            <button
-              type="button"
-              onClick={() => field.setValue('Bar')}
-            >
-              Bar
-            </button>
-          </div>
-        </>
+        <div>
+          Current value is: {field.value}
+        </div>
+      }
+      { field =>
+        <div className="flex gap-2 blue mar-t-4">
+          <button
+            type="button"
+            onClick={() => field.setValue('Foo')}
+          >
+            Foo
+          </button>
+          <button
+            type="button"
+            onClick={() => field.setValue('Bar')}
+          >
+            Bar
+          </button>
+        </div>
       }
     </Field>
   </Form>
