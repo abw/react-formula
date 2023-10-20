@@ -75,31 +75,6 @@ export const URLS = {
     code:   'Debug',
     about:  'Render debugging information for a form',
   },
-  'component:Input': {
-    url:    '/components/Input',
-    code:   'Input',
-    about:  'Renders the input for a form field',
-  },
-  'component:Layout': {
-    url:    '/components/Layout',
-    code:   'Layout',
-    about:  'Renders the default content for a form field',
-  },
-  'component:Label': {
-    url:    '/components/Label',
-    code:   'Label',
-    about:  'Render a label for a form field',
-  },
-  'component:Message': {
-    url:    '/components/Message',
-    code:   'Message',
-    about:  'Render a message for a form field',
-  },
-  'component:UseField': {
-    url:    '/components/UseField',
-    code:   'UseField',
-    about:  'Provides field context for a deeply nested element',
-  },
 
   //--------------------------------------------------------------------------
   // Form links
@@ -325,12 +300,27 @@ export const URLS = {
   'field:Input': {
     url:    '/components/Field/components/Input',
     code:   'Input',
-    about:  'Custom input component for a field',
+    about:  'Input component for a field',
+  },
+  'field:Label': {
+    url:    '/components/Field/components/Label',
+    code:   'Label',
+    about:  'Label component for a field',
   },
   'field:Layout': {
     url:    '/components/Field/components/Layout',
     code:   'Layout',
-    about:  'Custom layout component for a field',
+    about:  'Layout component for a field',
+  },
+  'field:Message': {
+    url:    '/components/Field/components/Message',
+    code:   'Message',
+    about:  'Message component for a field',
+  },
+  'field:UseField': {
+    url:    '/components/Field/components/UseField',
+    code:   'UseField',
+    about:  'Provides field context for a deeply nested element',
   },
 
   //--------------------------------------------------------------------------

@@ -7,10 +7,11 @@ const Fieldset = ({
   legend,
   children,
   fields,
+  ...props
 }) =>
   <fieldset className={className}>
     { Boolean(legend) && <legend>{legend}</legend> }
-    { Boolean(fields) && <Fields names={fields}/> }
+    { Boolean(fields) && <Fields names={fields} {...props}/> }
     { children }
   </fieldset>
 

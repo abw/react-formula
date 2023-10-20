@@ -1,8 +1,11 @@
-import { Form, Field, Layout, Label, Text, Message, Submit } from '../../../../lib/index.js'
+import { Form, Field, Layout, Label, Input, Message, Submit } from '@/lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Field, Layout, Label, Text, Message, Submit } from '@abw/react-formula'
+// PRETEND: import {
+// PRETEND:   Form, Field, Layout, Label,
+// PRETEND:   Input, Message, Submit
+// PRETEND: } from '@abw/react-formula'
 
 const MessageExample = () =>
   <Form>
@@ -15,7 +18,7 @@ const MessageExample = () =>
     >
       <Layout>
         <Label/>
-        <Text/>
+        <Input/>
         <Message/>
       </Layout>
     </Field>

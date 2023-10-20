@@ -1,18 +1,26 @@
 import React               from 'react'
-import Example             from '../../../site/Example.jsx'
-import UFExample           from './UFExample.jsx'
-import UFExampleSrc        from './UFExample.jsx?raw'
-import { FieldChildrenLink, FieldLink, LayoutLink } from '../../../site/Links.jsx'
-// import { FieldLink, LabelLink, MessageLink, TypeLink } from '../../../site/Links.jsx'
-// import Link from '../../../site/Link.jsx'
+import Children            from './examples/Children.jsx'
+import ChildrenSrc         from './examples/Children.jsx?raw'
+import UFExample           from './examples/UFExample.jsx'
+import UFExampleSrc        from './examples/UFExample.jsx?raw'
+import Example             from '@/site/Example.jsx'
+import { FieldChildrenLink, FieldLink, FieldLayoutLink } from '@/site/Links.jsx'
 
 const UseFieldExamples = () =>
-  <div>
-    <h1>UseField</h1>
+  <div className="prose">
+    <h1>Field Components</h1>
+    <h2><code>UseField</code></h2>
     <p>
       The immediate <FieldChildrenLink/> of a <FieldLink/> component can
       be functions that will receive the field context as the first argument.
     </p>
+    <Example
+      Element={Children}
+      code={ChildrenSrc}
+      caption="Field Children"
+      expand
+    />
+
     <p>
       However, this only works for the immediate children of the <FieldLink/>.
       If you want to include a function that is nested inside another element
@@ -21,7 +29,7 @@ const UseFieldExamples = () =>
     </p>
     <p>
       Don&apos;t forget that defining any children of a <FieldLink/> component
-      will override the default <LayoutLink/> component, so you&apos;ll need
+      will override the default <FieldLayoutLink/> component, so you&apos;ll need
       to add it manually or define your own layout for the field.
     </p>
     <Example

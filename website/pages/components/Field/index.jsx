@@ -40,8 +40,11 @@ import SetValid          from './functions/setValid/index.jsx'
 import SetValue          from './functions/setValue/index.jsx'
 
 // components
-import Input             from './components/Input/index.jsx'
+import LabelComponent    from './components/Label/index.jsx'
 import Layout            from './components/Layout/index.jsx'
+import Input             from './components/Input/index.jsx'
+import Message           from './components/Message/index.jsx'
+import UseField          from './components/UseField/index.jsx'
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -90,6 +93,9 @@ const Field = () =>
     <Route path="components">
       <Route path="Input"             element={<Input/>}/>
       <Route path="Layout"            element={<Layout/>}/>
+      <Route path="Label"             element={<LabelComponent/>}/>
+      <Route path="Message"           element={<Message/>}/>
+      <Route path="UseField"          element={<UseField/>}/>
     </Route>
 
   </Routes>

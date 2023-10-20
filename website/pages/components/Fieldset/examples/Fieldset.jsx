@@ -7,8 +7,8 @@ import React from 'react'
 const FieldsetExample = () =>
   <Form>
     <Fieldset legend="Fieldset One">
-      <Field name="one" label="Field One"/>
-      <Field name="one" label="Field Two"/>
+      <Field name="one" label="Field One" wide/>
+      <Field name="one" label="Field Two" wide/>
     </Fieldset>
   </Form>
 

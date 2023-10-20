@@ -35,6 +35,7 @@ export const FieldsLink = () =>
 export const FieldsetLink = () =>
   <CodeLink to="component:Fieldset"/>
 
+/*
 export const InputLink = () =>
   <CodeLink to="component:Input"/>
 
@@ -46,6 +47,7 @@ export const LayoutLink = () =>
 
 export const MessageLink = () =>
   <CodeLink to="component:Message"/>
+*/
 
 export const UseFieldLink = () =>
   <CodeLink to="component:UseField"/>
@@ -120,6 +122,12 @@ export const FieldInputLink = () =>
 
 export const FieldLayoutLink = () =>
   <CodeLink to="field:Layout"/>
+
+export const FieldLabelComponentLink = () =>
+  <CodeLink to="field:Label"/>
+
+export const FieldMessageLink = () =>
+  <CodeLink to="field:Message"/>
 
 export const MinValidateLengthLink = () =>
   <CodeLink to="field:minValidateLength"/>

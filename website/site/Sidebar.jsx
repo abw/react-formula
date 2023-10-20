@@ -2,7 +2,7 @@ import React from 'react'
 // import Link from './Link.jsx'
 import Menu from './Menu.jsx'
 import {
-  ComponentsMenu, CustomisingMenu, InputsMenu, IntroductionMenu,
+  ComponentsMenu, InputsMenu, IntroductionMenu,
   TutorialMenu
 } from './Menus.jsx'
 
@@ -12,7 +12,7 @@ const Sidebar = () =>
     <Menu {...TutorialMenu}/>
     <Menu {...ComponentsMenu}/>
     <Menu {...InputsMenu}/>
-    <Menu {...CustomisingMenu}/>
+    {/* <Menu {...CustomisingMenu}/> */}
     {/* <Menu {...StylingMenu}/> */}
 
     {/*

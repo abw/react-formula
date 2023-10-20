@@ -45,12 +45,6 @@ export const ComponentsMenu = {
     'component:Changed',
     'component:Errors',
     'component:Debug',
-    { heading: 'Field Components' },
-    'component:Layout',
-    'component:Input',
-    'component:Label',
-    'component:Message',
-    'component:UseField',
   ]
 }
 
@@ -119,7 +113,10 @@ export const FieldMenu = {
     'field:reset',
     { heading: 'Components' },
     'field:Layout',
+    'field:Label',
     'field:Input',
+    'field:Message',
+    'field:UseField',
   ]
 }
 
@@ -141,8 +138,8 @@ export const CustomisingMenu = {
   title: 'Customising',
   url:   '/customising',
   items: [
-    ['input',    'Custom Input'],
-    ['layout',   'Custom Layout'],
+    // ['input',    'Custom Input'],
+    // ['layout',   'Custom Layout'],
   ]
 }
 

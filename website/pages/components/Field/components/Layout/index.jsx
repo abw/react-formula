@@ -13,11 +13,10 @@ import SummarySrc      from './examples/Summary.jsx?raw'
 import PizzaCSS        from './examples/pizza.scss?raw'
 import Example         from '@/site/Example.jsx'
 import CodeBlock       from '@/site/CodeBlock.jsx'
-import Pager           from '@/site/Pager/Customising.jsx'
 import Split           from '@/site/Split.jsx'
 import Suggest         from '@/site/Suggest.jsx'
 import { prepareCode } from '@/site/CodeBlock.jsx'
-import { FieldLink, InputLink, LabelLink, LayoutLink, MessageLink }   from '@/site/Links.jsx'
+import { FieldLink, FieldInputLink, FieldLabelLink, FieldMessageLink }   from '@/site/Links.jsx'
 
 const CustomLayout = () =>
   <div className="prose">
@@ -25,12 +24,12 @@ const CustomLayout = () =>
     <h2><code>Layout</code></h2>
 
     <p>
-      The <LayoutLink/> component is inserted as the default content for
+      The <code>Layout</code> component is inserted as the default content for
       a <FieldLink/> that doesn&apos;t have it&apos;s own content.
     </p>
     <p>
       The two fields in the example below both generate the same output.
-      The first implicitly uses the <LayoutLink/> for its content, the
+      The first implicitly uses the <code>Layout</code> for its content, the
       second includes it explicitly.
     </p>
     <Example
@@ -41,8 +40,8 @@ const CustomLayout = () =>
     />
     <Split>
       <p>
-        The <LayoutLink/> component creates a <code>div</code> containing
-        the <LabelLink/>, <InputLink/> and <MessageLink/> components.
+        The <code>Layout</code> component creates a <code>div</code> containing
+        the <FieldLabelLink/>, <FieldInputLink/> and <FieldMessageLink/> components.
         The <code>div</code> will have the <code>field</code> CSS class and
         possibly other classes based on the state of the field (e.g.{' '}
         <code>valid</code>, <code>invalid</code>, etc.)  The
@@ -52,7 +51,7 @@ const CustomLayout = () =>
       <div>
         <p>
           The example below shows how you can roll your own layout that does
-          the same thing as the default <LayoutLink/> component.
+          the same thing as the default <code>Layout</code> component.
         </p>
         <Suggest>
           Try submitting the form without entering any value in the required
@@ -137,7 +136,7 @@ const CustomLayout = () =>
         <p>
           We have some explanatory text from lines 14 to 20.  Note how this
           includes the <code>free</code> and <code>price</code> values defined
-          in our field schema. On line 21 we render the default <LabelLink/>{' '}
+          in our field schema. On line 21 we render the default <FieldLabelLink/>{' '}
           component to generate the field label. On line 23 we render a custom{' '}
           <code>Options</code> component and on line 27 a custom{' '}
           <code>Summary</code> component.
@@ -202,7 +201,6 @@ const CustomLayout = () =>
       expand
     />
 
-    <Pager uri="layout"/>
   </div>
 
 export default CustomLayout

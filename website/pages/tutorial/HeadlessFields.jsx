@@ -10,7 +10,7 @@ import HeadlessBuiltinsSrc      from './examples/HeadlessBuiltins.jsx?raw'
 import HeadlessBuiltinsBare     from './examples/HeadlessBuiltinsBare.jsx'
 import HeadlessBuiltinsBareSrc  from './examples/HeadlessBuiltinsBare.jsx?raw'
 import {
-  FieldLink, LayoutLink, LabelLink, MessageLink, TextInputLink
+  FieldLink, FieldLayoutLink, FieldLabelLink, MessageLink, TextInputLink
 } from '../../site/Links.jsx'
 
 const HeadlessFieldsExample = () =>
@@ -47,7 +47,7 @@ const HeadlessFieldsExample = () =>
     <h2>Builtin Components</h2>
     <p>
       You can mix and match your own layout with the builtin components.
-      This example shows how you can use the <LayoutLink/>, <LabelLink/>,{' '}
+      This example shows how you can use the <FieldLayoutLink/>, <FieldLabelLink/>,{' '}
       <TextInputLink/> and <MessageLink/> components to build up the field content.
     </p>
     <Example

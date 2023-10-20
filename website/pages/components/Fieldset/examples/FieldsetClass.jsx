@@ -3,6 +3,7 @@ import { Form, Fieldset } from '../../../../../lib/index.js'
 {/* START */}
 import React from 'react'
 // PRETEND: import { Form, Fieldset } from '@abw/react-formula'
+import './fieldset.css'
 
 const fields = {
   name: {
@@ -19,7 +20,9 @@ const FieldsetFieldsExample = () =>
   <Form fields={fields}>
     <Fieldset
       legend="Fieldset Two"
-      fields="name message" wide
+      fields="name message"
+      className="prominent"
+      wide
     />
   </Form>
 
