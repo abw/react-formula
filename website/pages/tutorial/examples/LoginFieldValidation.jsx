@@ -11,7 +11,7 @@ const fields = {
     validate: value => yup
       .string()
       .trim()
-      .email()
+      .email("That doesn't look like an email address")
       .required('You must enter your email address!')
       .validate(value)
   },

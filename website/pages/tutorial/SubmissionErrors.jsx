@@ -35,8 +35,7 @@ const SubmissionErrors = () =>
         If a submission throws an error or returns an error via a rejected
         Promise then the form submission handler will set the internal{' '}
         <code>error</code> state variable.
-        <strike>By default this error will be
-        displayed in the form header</strike>.  See the <ErrorsLink/> component for
+        See the <ErrorsLink/> component for
         more information about changing how and if errors are displayed.
       </p>
       <Suggest>
@@ -49,17 +48,21 @@ const SubmissionErrors = () =>
       Element={SubmitThrow} code={SubmitThrowSrc}
       caption="Error Thrown"
     />
+    <p>
+      As well as calling the <code>throw()</code> function with a string,
+      you can <code>throw</code> an <code>Error</code> object.
+    </p>
     <Example
       Element={SubmitError} code={SubmitErrorSrc}
       caption="Error Thrown"
     />
 
     <h2>Rejected Promise</h2>
-    <Split align="end">
+    <Split align="start">
       <div>
         <p>
           In most cases a failed submission should return a rejected Promise.
-          The data returned should be an objecting containing either a single
+          The data returned should be an objecting containing either a single{' '}
           <code>error</code> string (or object containing a <code>message</code>),
           or an array of <code>errors</code>.  Each element in the array can be
           an error string, but the more usual (and useful) case is for each
@@ -79,7 +82,7 @@ const SubmissionErrors = () =>
           This would be the typical way to handle a request that failed due to
           server-side validation errors.
         </p>
-        <Suggest>
+        <Suggest title="Try it out">
         Try submitting the form to see the errors generated.
         </Suggest>
       </div>

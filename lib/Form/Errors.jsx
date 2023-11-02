@@ -6,7 +6,8 @@ import { maybeFunction, selectClass } from '../Utils.js'
 
 const Errors = ({
   title,
-  prompt
+  prompt,
+  fieldErrors=true
 }) => {
   const form = useForm()
   const {
@@ -18,7 +19,7 @@ const Errors = ({
     Error=DefaultError
   } = form
   const hasError = Boolean(error)
-  const n = errors.length + (hasError ? 1 : 0)
+  const n = (fieldErrors ? errors.length : 0) + (hasError ? 1 : 0)
   const className = selectClass(classes, 'error alert border')
 
   title  ||= errorsTitle
@@ -28,10 +29,6 @@ const Errors = ({
     return null
   }
 
-  console.log(`prompt: `, prompt)
-  console.log(`hasError: `, hasError)
-  console.log(`errors.length: `, errors.length)
-
   return (
     <div className={className}>
       { Boolean(title) &&
@@ -39,7 +36,7 @@ const Errors = ({
       }
       <div>
         { hasError && <h4><Error error={error}/></h4> }
-        { errors.length !== 0 &&
+        { fieldErrors && errors.length !== 0 &&
           <>
             { Boolean(prompt) &&
               <p className="wide">{maybeFunction(prompt, errors.length)}</p>

@@ -4,6 +4,7 @@ import TutorialPager    from '../../site/Pager/Tutorial.jsx'
 import PasswordCheck    from './examples/PasswordCheck.jsx'
 import PasswordCheckSrc from './examples/PasswordCheck.jsx?raw'
 import {
+  ErrorsLink,
   FieldsLink, FormLink, FormValidateLink
 } from '../../site/Links.jsx'
 import Split from '../../site/Split.jsx'
@@ -34,13 +35,31 @@ const FormValidation = () =>
           the validated field values.  It should return a Promise that resolves
           with the (possibly modified) values if the input is valid, or rejects
           with an an <code>error</code> and/or array of <code>errors</code> if not.
+        </p>
+        <p>
           The <code>error</code> can be used to define an error for the form that
-          isn&apos;t specify to any particular field.  Each item in the errors
-          array should relate to a field identified by <code>name</code>, with
-          an additional <code>message</code> indicating why it is invalid.
+          isn&apos;t specific to any particular field.  In this case it&apos;s
+          being used to raise an error indicating that the two passwords entered
+          don&apos;t match.
+        </p>
+        <p>
+          Each item in the <code>errors</code> array should relate to a field identified
+          by <code>name</code>, with an additional <code>message</code>{' '}
+          indicating why it is invalid.  In this case we&apos;re also raising
+          errors for both password fields.
         </p>
       </div>
       <div>
+        <p>
+          The <ErrorsLink/> component can used to insert a prominent alert
+          anywhere in the form, warning the user about what&apos;s
+          gone wrong.  By default it will display any generic <code>error</code>{' '}
+          and also a list of any field-specific <code>errors</code>.  But here
+          we&apos;re relying on the fact that the field errors will be displayed
+          underneath each field input, so we&apos;re setting the {' '}
+          <code>fieldErrors</code> flag to <code>false</code> to suppress the{' '}
+          <code>errors</code> list.
+        </p>
         <p>
           We&apos;re also using this opportunity to introduce you to the{' '}
           <FieldsLink/> component which allows you to add multiple fields to

@@ -71,15 +71,17 @@ const CompleteRegistration = () =>
     </dl>
 
     <h2>Custom CSS</h2>
-    <p>
-      The example above uses a couple of custom CSS classes, {' '}
-      <code>lg-grid-2</code> and <code>lg-grid-3</code> to display
-      fields in 2 and 3 columns, respectively, on larger screen sizes.
-      You may already be using a CSS framework which includes something
-      similar which you can use instead.  Here&apos;s the CSS for those
-      classes for completeness.
-    </p>
-    <CodeBlock code={CustomCSS} language="css" className="mar-b-2" fixed/>
+    <Split>
+      <p>
+        The example above uses a couple of custom CSS classes, {' '}
+        <code>lg-grid-2</code> and <code>lg-grid-3</code> to display
+        fields in 2 and 3 columns, respectively, on larger screen sizes.
+        You may already be using a CSS framework which includes something
+        similar which you can use instead.  Here&apos;s the CSS for those
+        classes for completeness.
+      </p>
+      <CodeBlock code={CustomCSS} language="css" className="mar-b-2" fixed/>
+    </Split>
 
     <h2>Where Next?</h2>
     <p>

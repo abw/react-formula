@@ -1,8 +1,8 @@
-import { Form, Fields, ResetSubmit, Debug } from '../../../../lib/index.js'
+import { Form, Fields, ResetSubmit } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Fields, ResetSubmit, Debug } from '@abw/react-formula'
+// PRETEND: import { Form, Fields, ResetSubmit } from '@abw/react-formula'
 
 // field definitions - these could be defined elsewhere and imported in
 // allowing them to be re-used in other forms, e.g. an "Add Product" form
@@ -57,7 +57,6 @@ const EditForm = () =>
       reset={{ className: 'outline' }}
       className="flex space"
     />
-    <Debug state/>
   </Form>
 
 export default EditForm

@@ -4,7 +4,7 @@ import { Form, Field, Errors, Submit } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field, Errors, Submit } from '@abw/react-formula'
 
-const FormErrorOptions = () =>
+const FormOptions = () =>
   <Form
     errorsTitle="Custom Errors Title"
     errorsPrompt="Custom errors prompt"
@@ -16,4 +16,4 @@ const FormErrorOptions = () =>
     <Submit/>
   </Form>
 
-export default FormErrorOptions
+export default FormOptions

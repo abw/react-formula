@@ -1,8 +1,8 @@
-import { Form, Fields, Submit } from '../../../../lib/index.js'
+import { Form, Fields, Errors, Submit } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, Fields, Submit } from '@abw/react-formula'
+// PRETEND: import { Form, Fields, Errors, Submit } from '@abw/react-formula'
 import * as yup  from 'yup'
 
 const validateForm = values => new Promise(
@@ -56,6 +56,7 @@ const fields = {
 const LoginWithValidation = () =>
   <Form fields={fields} validate={validateForm}>
     <Fields names="email password passcheck"/>
+    <Errors title="Registration Error" fieldErrors={false}/>
     <Submit text="Register"/>
   </Form>
 

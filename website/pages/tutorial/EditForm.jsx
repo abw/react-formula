@@ -27,10 +27,13 @@ const EditFormExample = () =>
       <Suggest>
         Try changing some of the values in the form and then
         click on the <b>Reset</b> button.  The fields will
-        reset to their original values.  The <DebugLink/> component is
+        reset to their original values.
+        {/*
+        The <DebugLink/> component is
         included in this example so you can see what&apos;s going on
         behind the scenes.  We&apos;ll talk more about that on the next
         page.
+        */}
       </Suggest>
     </Split>
     <Example
