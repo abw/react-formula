@@ -7,6 +7,7 @@ export const Fields = ({
   names,
   grid=false,
   gap=4,
+  stack,
   className,
   ...props
 }) => {
@@ -15,7 +16,7 @@ export const Fields = ({
     grid = namesList.length
   }
   return (
-    <div className={gridGapClasses({grid, gap, className, props})}>
+    <div className={gridGapClasses({grid, gap, stack, className, props})}>
       { namesList.map(
         (name) => <Field key={name} name={name} {...props}/>
       )}

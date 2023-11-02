@@ -9,7 +9,11 @@ const ChangedExample = () =>
     <Field name="field1" label="Field One"/>
     <Field name="field2" label="Field Two" value="Hello World!"/>
     <Changed>
-      <ResetSubmit/>
+      <ResetSubmit
+        space
+        reset={{ className: 'outline' }}
+        submit={{ className: 'blue' }}
+      />
     </Changed>
   </Form>
 

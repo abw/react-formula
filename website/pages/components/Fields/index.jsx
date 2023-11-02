@@ -2,17 +2,19 @@ import React      from 'react'
 import Example    from '../../../site/Example.jsx'
 import Fields     from './examples/Fields.jsx'
 import FieldsSrc  from './examples/Fields.jsx?raw'
-import FieldsGrid    from './examples/FieldsGrid.jsx'
-import FieldsGridSrc from './examples/FieldsGrid.jsx?raw'
-import FieldsAuto    from './examples/FieldsGridAuto.jsx'
-import FieldsAutoSrc from './examples/FieldsGridAuto.jsx?raw'
-import FieldsGap     from './examples/FieldsGap.jsx'
-import FieldsGapSrc  from './examples/FieldsGap.jsx?raw'
-import FieldsClass     from './examples/FieldsClass.jsx'
-import FieldsClassSrc  from './examples/FieldsClass.jsx?raw'
-import FieldsWide    from './examples/FieldsWide.jsx'
-import FieldsWideSrc from './examples/FieldsWide.jsx?raw'
-import { FieldLink } from '../../../site/Links.jsx'
+import Grid       from './examples/FieldsGrid.jsx'
+import GridSrc    from './examples/FieldsGrid.jsx?raw'
+import Auto       from './examples/FieldsGridAuto.jsx'
+import AutoSrc    from './examples/FieldsGridAuto.jsx?raw'
+import Gap        from './examples/FieldsGap.jsx'
+import GapSrc     from './examples/FieldsGap.jsx?raw'
+import Stack      from './examples/FieldsStack.jsx'
+import StackSrc   from './examples/FieldsStack.jsx?raw'
+import Class      from './examples/FieldsClass.jsx'
+import ClassSrc   from './examples/FieldsClass.jsx?raw'
+// import Wide       from './examples/FieldsWide.jsx'
+// import WideSrc    from './examples/FieldsWide.jsx?raw'
+// import { FieldLink } from '../../../site/Links.jsx'
 
 const FieldsExamples = () =>
   <div className="prose">
@@ -46,8 +48,8 @@ const FieldsExamples = () =>
       the fields container.
     </p>
     <Example
-      Element={FieldsClass}
-      code={FieldsClassSrc}
+      Element={Class}
+      code={ClassSrc}
       caption="Fields Class"
     />
 
@@ -60,8 +62,8 @@ const FieldsExamples = () =>
       <a href="https://abw.github.io/badger-css/utilities/grid">Badger-CSS</a>).
     </p>
     <Example
-      Element={FieldsGrid}
-      code={FieldsGridSrc}
+      Element={Grid}
+      code={GridSrc}
       caption="Fields in a Grid"
     />
     <p>
@@ -72,8 +74,8 @@ const FieldsExamples = () =>
       rendering.
     </p>
     <Example
-      Element={FieldsAuto}
-      code={FieldsAutoSrc}
+      Element={Auto}
+      code={AutoSrc}
       caption="Automatic Grid Columns"
     />
 
@@ -84,11 +86,26 @@ const FieldsExamples = () =>
       units of 0.25rem.
     </p>
     <Example
-      Element={FieldsGap}
-      code={FieldsGapSrc}
+      Element={Gap}
+      code={GapSrc}
       caption="Fields With a Gap"
     />
 
+    <h2><code>stack</code></h2>
+    <p>
+      The <code>stack</code> property can be used to define a stacking
+      breakpoint.  This will add the corresponding <code>stack-XXX</code> CSS
+      class.  Try resizing your browser window to see the effect.  With a
+      width of less than 800px, the fields will be stacked, otherwise they
+      will be displayed in three columns.
+    </p>
+    <Example
+      Element={Stack}
+      code={StackSrc}
+      caption="Stacking Fields"
+    />
+
+    {/*
     <h2>Additional Properties</h2>
     <p>
       Any additional properties that you pass to the <code>Fields</code> component
@@ -100,10 +117,11 @@ const FieldsExamples = () =>
       will forward it to each of the <FieldLink/> components.
     </p>
     <Example
-      Element={FieldsWide}
-      code={FieldsWideSrc}
+      Element={Wide}
+      code={WideSrc}
       caption="Wide Fields"
     />
+    */}
   </div>
 
 export default FieldsExamples

@@ -1,14 +1,16 @@
-import React              from 'react'
-import Fieldset           from './examples/Fieldset.jsx'
-import FieldsetSrc        from './examples/Fieldset.jsx?raw'
-import FieldsetFields     from './examples/FieldsetFields.jsx'
-import FieldsetFieldsSrc  from './examples/FieldsetFields.jsx?raw'
-import FieldsetClass      from './examples/FieldsetClass.jsx'
-import FieldsetClassSrc   from './examples/FieldsetClass.jsx?raw'
-import FieldsetCSS        from './examples/fieldset.css?raw'
-import Example            from '@/site/Example.jsx'
-import CodeBlock          from '@/site/CodeBlock.jsx'
-import { FieldsLink }     from '@/site/Links.jsx'
+import React          from 'react'
+import Fieldset       from './examples/Fieldset.jsx'
+import FieldsetSrc    from './examples/Fieldset.jsx?raw'
+import Fields         from './examples/Fields.jsx'
+import FieldsSrc      from './examples/Fields.jsx?raw'
+import Class          from './examples/Class.jsx'
+import ClassSrc       from './examples/Class.jsx?raw'
+import Grid           from './examples/Grid.jsx'
+import GridSrc        from './examples/Grid.jsx?raw'
+import Example        from '@/site/Example.jsx'
+import FieldsetCSS    from './examples/fieldset.css?raw'
+import CodeBlock      from '@/site/CodeBlock.jsx'
+import { FieldsLink } from '@/site/Links.jsx'
 
 const FieldsetExamples = () =>
   <div className="prose">
@@ -30,8 +32,21 @@ const FieldsetExamples = () =>
       <FieldsLink/> component.
     </p>
     <Example
-      Element={FieldsetFields} code={FieldsetFieldsSrc}
+      Element={Fields} code={FieldsSrc}
       caption="Fieldset fields" expand
+    />
+
+    <h2><code>grid</code>, <code>gap</code> and <code>stack</code></h2>
+    <p>
+      Any other properties are forwarded onto the <FieldsLink/> component.
+      For example, you can set the <code>grid</code>, <code>gap</code> and{' '}
+      <code>stack</code> properties to set the layout to implement a grid
+      layout.
+    </p>
+    <Example
+      Element={Grid}
+      code={GridSrc}
+      caption="Fieldset Grid" expand
     />
 
     <h2><code>className</code></h2>
@@ -40,8 +55,8 @@ const FieldsetExamples = () =>
       the fieldset container.
     </p>
     <Example
-      Element={FieldsetClass}
-      code={FieldsetClassSrc}
+      Element={Class}
+      code={ClassSrc}
       caption="Fieldset className" expand
     />
 

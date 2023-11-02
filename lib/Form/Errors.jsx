@@ -2,9 +2,12 @@ import React from 'react'
 import DefaultError from './Error.jsx'
 import { useForm } from './Context.js'
 import { Themed } from '../Theme.jsx'
-import { selectClass } from '../Utils.js'
+import { maybeFunction, selectClass } from '../Utils.js'
 
-const Errors = () => {
+const Errors = ({
+  title,
+  prompt
+}) => {
   const form = useForm()
   const {
     error,
@@ -18,21 +21,28 @@ const Errors = () => {
   const n = errors.length + (hasError ? 1 : 0)
   const className = selectClass(classes, 'error alert border')
 
+  title  ||= errorsTitle
+  prompt ||= errorsPrompt
+
   if (n === 0 ) {
     return null
   }
 
+  console.log(`prompt: `, prompt)
+  console.log(`hasError: `, hasError)
+  console.log(`errors.length: `, errors.length)
+
   return (
     <div className={className}>
-      { Boolean(errorsTitle) &&
-        <div className="headline">{errorsTitle(n)}</div>
+      { Boolean(title) &&
+        <div className="headline">{maybeFunction(title, n)}</div>
       }
       <div>
         { hasError && <h4><Error error={error}/></h4> }
         { errors.length !== 0 &&
           <>
-            { Boolean(errorsPrompt) &&
-              <p className="wide">{errorsPrompt(errors.length)}</p>
+            { Boolean(prompt) &&
+              <p className="wide">{maybeFunction(prompt, errors.length)}</p>
             }
             <ul>
               { errors.map(

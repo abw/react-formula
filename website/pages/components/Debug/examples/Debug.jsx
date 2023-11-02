@@ -27,7 +27,11 @@ const DebugForm = () =>
       text="I agree to the Terms and Conditions"
       required
     />
-    <ResetSubmit/>
+    <ResetSubmit
+      space
+      reset={{ className: 'outline' }}
+      submit={{ className: 'blue' }}
+    />
     <Debug/>
   </Form>
 

@@ -1,20 +1,24 @@
-import { Form, useForm } from '../../../../../lib/index.js'
+import { Form, Field, Errors, Reset, useForm } from '../../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
-// PRETEND: import { Form, useForm } from '@abw/react-formula'
+// PRETEND: import { Form, Field, Errors, Reset, useForm } from '@abw/react-formula'
 
-const Errors = () =>
+const ErrorsExample = () =>
   <Form>
+    <Field name="one" label="Field One"/>
+    <Field name="two" label="Field Two"/>
+    <Errors/>
     <ErrorButtons/>
+    <Reset/>
   </Form>
 
 const ErrorButtons = () => {
-  const { setInvalidState } = useForm()
+  const { handleError } = useForm()
 
   const setErrors = (event, errors) => {
     event.preventDefault()
-    setInvalidState({ errors })
+    handleError({ errors })
   }
 
   const errorString = event =>
@@ -30,18 +34,26 @@ const ErrorButtons = () => {
 
   const errorObjects = event =>
     setErrors(event, [
-      { message: 'An error object' },
-      { message: 'Another error object'}
+      { message: 'An error message in an object' },
+      { message: 'Another error message in an object'}
     ])
 
   const errorLabels  = event =>
     setErrors(event, [
-      { label: 'Example1', message: 'An error object' },
-      { label: 'Example2', message: 'Another error object' }
+      { label: 'The First Field',  message: 'This is a labelled error' },
+      { label: 'The Second Field', message: 'Another labelled error' }
+    ])
+
+  const errorFields  = event =>
+    setErrors(event, [
+      // both 'name' and 'field' (and also 'param') can be
+      // used to denote the invalid field
+      { name:  'one', message: 'An error for the "one" field' },
+      { field: 'two', message: 'An error for the "two" field' }
     ])
 
   return (
-    <>
+    <div className="grid-2 gap-4 mar-b-4">
       <button onClick={errorString}>
         Error String
       </button>
@@ -54,8 +66,11 @@ const ErrorButtons = () => {
       <button onClick={errorLabels}>
         Labelled Errors
       </button>
-    </>
+      <button onClick={errorFields}>
+        Field Errors
+      </button>
+    </div>
   )
 }
 
-export default Errors
+export default ErrorsExample
