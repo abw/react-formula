@@ -1,4 +1,4 @@
-import{j as t,a as e,T as M,b as Y,P as J,F as o,c as i,S as l,E as a,d as h,e as n,f as k,N as y,g as B,R,h as F,V as N,i as L,k as U,l as z,M as _,m as f,n as G,o as D,r as w,p as g,q as I,s as K,t as E,u as Q,v as P,w as q,x as X,y as Z,C as ee,z as te,A as re,B as ie,O as ae,D as oe,G as j,H as W,I as se,J as ne,K as S,L as O,Q as H,U as V,W as $,X as le,Y as de,Z as ce,_ as me,$ as c}from"./index-c469f383.js";import{S as d,a as m,c as b}from"./index.esm-a27f51bb.js";const ue=()=>t("div",{children:[e("h1",{children:"Tutorial"}),e("p",{className:"intro",children:"This section of the documentation provides a guided walk-through of the features without going into too much detail.  The idea is to give you an overview of the functionality to get a feel for how it works."}),e(M,{menu:Y,url:"/tutorial"})]}),u=({uri:r})=>e(J,{uri:r,menu:Y}),he=()=>t(o,{children:[e(i,{name:"email",label:"Email Address",required:!0}),e(i,{name:"password",type:"password",label:"Password",required:!0}),e(l,{text:"Login"})]}),pe=`import { Form, Field, Submit } from '../../../../lib/index.js'
+import{j as t,a as e,T as M,b as Y,P as J,F as o,c as i,S as l,E as a,d as h,e as n,f as k,N as y,g as B,R,h as F,V as N,i as L,k as U,l as z,M as _,m as f,n as G,o as D,r as w,p as g,q as I,s as K,t as E,u as Q,v as P,w as q,x as X,y as Z,C as ee,z as te,A as re,B as ie,O as ae,D as oe,G as j,H as W,I as se,J as ne,K as S,L as O,Q as H,U as V,W as $,X as le,Y as de,Z as ce,_ as me,$ as c}from"./index-2ded27f3.js";import{S as d,a as m,c as b}from"./index.esm-b6197137.js";const ue=()=>t("div",{children:[e("h1",{children:"Tutorial"}),e("p",{className:"intro",children:"This section of the documentation provides a guided walk-through of the features without going into too much detail.  The idea is to give you an overview of the functionality to get a feel for how it works."}),e(M,{menu:Y,url:"/tutorial"})]}),u=({uri:r})=>e(J,{uri:r,menu:Y}),he=()=>t(o,{children:[e(i,{name:"email",label:"Email Address",required:!0}),e(i,{name:"password",type:"password",label:"Password",required:!0}),e(l,{text:"Login"})]}),pe=`import { Form, Field, Submit } from '../../../../lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -10,6 +10,7 @@ const BasicLoginForm = () =>
       name="email"
       label="Email Address"
       required
+      // inputClass="flat"
     />
     <Field
       name="password"
