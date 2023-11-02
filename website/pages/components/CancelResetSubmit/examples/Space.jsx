@@ -6,7 +6,7 @@ import React from 'react'
 
 const CancelResetSubmitSpace = () =>
   <Form>
-    <Field name="field1" label="Field One" wide/>
+    <Field name="field1" label="Field One"/>
     <CancelResetSubmit space/>
   </Form>
 

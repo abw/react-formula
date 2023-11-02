@@ -10,6 +10,7 @@ const BasicLoginForm = () =>
       name="email"
       label="Email Address"
       required
+      // inputClass="flat"
     />
     <Field
       name="password"

@@ -13,13 +13,11 @@ const Wide = () =>
     <Field
       name="wide"
       label="Wide Field"
-      wide
     />
     <Field
       name="wide-textarea"
       type="textarea"
       label="Wide Text Area Field"
-      wide
     />
   </Form>
 

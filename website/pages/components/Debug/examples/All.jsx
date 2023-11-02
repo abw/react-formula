@@ -10,7 +10,7 @@ const DebugAll = () =>
       name="message"
       label="Message"
       placeholder="Enter a message"
-      wide required
+      required
     />
     <Field
       name="animal"
@@ -18,14 +18,14 @@ const DebugAll = () =>
       type="select"
       options={['Anteater', 'Badger', 'Camel']}
       placeholder="Select an animal"
-      wide required
+      required
     />
     <Field
       name="terms"
       label="Terms and Conditions"
       type="checkbox"
       text="I agree to the Terms and Conditions"
-      wide required
+      required
     />
     <ResetSubmit/>
     <Debug all/>

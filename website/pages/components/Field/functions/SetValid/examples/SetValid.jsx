@@ -15,13 +15,11 @@ const SetValidExample = () => {
           onLoad={setField1}
           name="field1"
           label="Field One"
-          wide
         />
         <Field
           onLoad={setField2}
           name="field2"
           label="Field Two"
-          wide
         />
       </Form>
       <div className="flex gap-4">

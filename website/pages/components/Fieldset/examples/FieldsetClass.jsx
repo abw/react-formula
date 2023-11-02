@@ -22,7 +22,6 @@ const FieldsetFieldsExample = () =>
       legend="Fieldset Two"
       fields="name message"
       className="prominent"
-      wide
     />
   </Form>
 

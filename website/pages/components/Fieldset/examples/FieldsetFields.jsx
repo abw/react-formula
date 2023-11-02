@@ -19,7 +19,7 @@ const FieldsetFieldsExample = () =>
   <Form fields={fields}>
     <Fieldset
       legend="Fieldset Two"
-      fields="name message" wide
+      fields="name message"
     />
   </Form>
 

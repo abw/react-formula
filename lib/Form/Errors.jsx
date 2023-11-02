@@ -16,8 +16,7 @@ const Errors = () => {
   } = form
   const hasError = Boolean(error)
   const n = errors.length + (hasError ? 1 : 0)
-  // const className = selectClass(classes, 'error alert border')
-  const className = selectClass(classes, 'error alert')
+  const className = selectClass(classes, 'error alert border')
 
   if (n === 0 ) {
     return null

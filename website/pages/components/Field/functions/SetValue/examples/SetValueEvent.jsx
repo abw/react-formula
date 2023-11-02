@@ -14,7 +14,6 @@ const SetValueExample = () => {
           onLoad={setField}
           name="animal"
           label="Animal"
-          wide
         />
         <div className="flex gap-4">
           <button

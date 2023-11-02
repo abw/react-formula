@@ -20,7 +20,6 @@ const FieldsClassExample = () =>
     <Fields
       names="name email"
       className="border pad-4 bgc-95 bgd-5 bdr-2"
-      wide
     />
   </Form>
 

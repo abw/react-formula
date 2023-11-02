@@ -6,7 +6,7 @@ import React from 'react'
 
 const ResetSubmitExample = () =>
   <Form>
-    <Field name="field1" label="Field One" wide/>
+    <Field name="field1" label="Field One"/>
     <ResetSubmit
       reset={{
         text: 'Reset the Form',

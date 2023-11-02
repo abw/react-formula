@@ -25,7 +25,6 @@ const MessageExample = () =>
       requiredMessage="You must enter a value"
       Message={MyMessage}
       required
-      wide
     />
     <Submit/>
   </Form>

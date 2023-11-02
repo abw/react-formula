@@ -18,7 +18,7 @@ const fields = {
 
 const FieldsGridAutoExample = () =>
   <Form fields={fields}>
-    <Fields names="one two three" grid wide/>
+    <Fields names="one two three" grid/>
   </Form>
 
 export default FieldsGridAutoExample

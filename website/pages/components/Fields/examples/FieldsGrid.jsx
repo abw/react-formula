@@ -19,7 +19,7 @@ const FieldsGridExample = () =>
   <Form fields={fields}>
     <Fields
       names="name email"
-      grid={2} wide
+      grid={2}
     />
   </Form>
 

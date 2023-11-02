@@ -39,11 +39,11 @@ const fields = {
 
 const FormFieldsExample = () =>
   <Form fields={fields}>
-    <Field name="field1" wide/>
-    <Field name="field2" wide/>
-    <Field name="field3" wide/>
-    <Field name="field4" wide/>
-    <Field name="field5" wide/>
+    <Field name="field1"/>
+    <Field name="field2"/>
+    <Field name="field3"/>
+    <Field name="field4"/>
+    <Field name="field5"/>
     <Field name="field6"/>
     <Field name="field7"/>
   </Form>

@@ -5,11 +5,10 @@ import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
 const Wide = () =>
-  <Form wide>
+  <Form>
     <Field
       name="zero"
       label="Narrow Text Field"
-      wide={false}
     />
     <Field
       name="one"

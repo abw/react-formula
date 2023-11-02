@@ -17,7 +17,7 @@ const Input = ({ field=useField() }) => {
   } = field
   const Type = InputTypes[type] || InputTypes.default
   let classNames = [
-    selectClass(classes, 'input'),
+    selectClass(classes, 'inputs'),
     selectClass(classes, type)
   ]
   if (hasValue(prefix)) {

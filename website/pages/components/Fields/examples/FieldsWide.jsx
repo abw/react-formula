@@ -27,7 +27,7 @@ const fields = {
 
 const FieldsWide = () =>
   <Form fields={fields}>
-    <Fields names='name message badgers animal' wide/>
+    <Fields names='name message badgers animal'/>
   </Form>
 
 export default FieldsWide

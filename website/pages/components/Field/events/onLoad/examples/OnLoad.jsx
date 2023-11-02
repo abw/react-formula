@@ -13,7 +13,6 @@ const OnLoadExample = () => {
         name="foo"
         label="Foo Field"
         onLoad={setField}
-        wide
       />
       <div className="grid-4 gap-2">
         <button

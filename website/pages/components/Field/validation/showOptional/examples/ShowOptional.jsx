@@ -9,12 +9,11 @@ const ShowOptional = () =>
     <Field
       name="field1"
       label="Required Field"
-      required wide
+      required
     />
     <Field
       name="field2"
       label="Optional Field"
-      wide
     />
   </Form>
 

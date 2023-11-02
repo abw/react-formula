@@ -15,14 +15,12 @@ const ResetExample = () => {
           onLoad={setField1}
           name="field1"
           label="Field One"
-          wide
         />
         <Field
           onLoad={setField2}
           value="Initial value"
           name="field2"
           label="Field Two"
-          wide
         />
       </Form>
       <div className="flex gap-4">

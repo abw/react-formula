@@ -9,13 +9,11 @@ const OptionalLabel = () =>
     <Field
       name="field1"
       label="Optional Field"
-      wide
     />
     <Field
       name="field2"
       label="Another Optional Field"
       optionalLabel="Nice to have"
-      wide
     />
   </Form>
 

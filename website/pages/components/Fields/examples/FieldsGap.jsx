@@ -27,7 +27,7 @@ const FieldsGapExample = () =>
   <Form fields={fields}>
     <Fields
       names="forename surname company job_title"
-      grid={2} gap={12} wide
+      grid={2} gap={12}
     />
   </Form>
 

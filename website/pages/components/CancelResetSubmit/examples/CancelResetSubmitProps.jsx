@@ -6,7 +6,7 @@ import React from 'react'
 
 const CancelResetSubmitExample = () =>
   <Form onSubmit={() => alert('You submitted the form')}>
-    <Field name="field1" label="Field One" wide/>
+    <Field name="field1" label="Field One"/>
     <CancelResetSubmit
       submit={{
         text: 'Continue',

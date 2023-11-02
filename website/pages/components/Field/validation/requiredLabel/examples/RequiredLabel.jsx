@@ -9,13 +9,13 @@ const RequiredLabel = () =>
     <Field
       name="field1"
       label="Required Field"
-      required wide
+      required
     />
     <Field
       name="field2"
       label="Another Required Field"
       requiredLabel="Very Important!"
-      required wide
+      required
     />
   </Form>
 

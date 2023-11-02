@@ -83,7 +83,7 @@ export const FieldMenu = {
     'field:help',
     'field:prefix',
     'field:suffix',
-    'field:wide',
+    // 'field:wide',
     'field:children',
     // 'field:Input',
     { heading: 'Validation' },
