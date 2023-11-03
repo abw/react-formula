@@ -23,6 +23,7 @@ import ShowRequired      from './validation/showRequired/index.jsx'
 import Validate          from './validation/validate/index.jsx'
 import ValidateOnBlur    from './validation/validateOnBlur/index.jsx'
 import ValidateOnChange  from './validation/validateOnChange/index.jsx'
+import ValidateOnInvalid from './validation/validateOnInvalid/index.jsx'
 
 // events
 import OnBlur            from './events/onBlur/index.jsx'
@@ -74,6 +75,7 @@ const Field = () =>
       <Route path="validate"          element={<Validate/>}/>
       <Route path="validateOnBlur"    element={<ValidateOnBlur/>}/>
       <Route path="validateOnChange"  element={<ValidateOnChange/>}/>
+      <Route path="validateOnInvalid" element={<ValidateOnInvalid/>}/>
     </Route>
     <Route path="events">
       <Route path="onBlur"            element={<OnBlur/>}/>

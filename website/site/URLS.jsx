@@ -95,12 +95,60 @@ export const URLS = {
     code:   'hidden',
     about:  'Hidden values for a form',
   },
+  //'validMessage',
+  //'classes', 'wide'
+
 
   // validation
   'form:validate': {
     url:    '/components/Form/validation/validate',
     code:   'validate',
     about:  'Validation function for a form',
+  },
+  'form:showRequired': {
+    url:    '/components/Form/validation/showRequired',
+    code:   'showRequired',
+    about:  'Show the "Required" tag for all required fields',
+  },
+  'form:requiredLabel': {
+    url:    '/components/Form/validation/requiredLabel',
+    code:   'requiredLabel',
+    about:  'Set the default "Required" label for all required fields',
+  },
+  'form:requiredMessage': {
+    url:    '/components/Form/validation/requiredMessage',
+    code:   'requiredMessage',
+    about:  'Set the default error message for required fields',
+  },
+  'form:showOptional': {
+    url:    '/components/Form/validation/showOptional',
+    code:   'showOptional',
+    about:  'Show the "Optional" tag for all optional fields',
+  },
+  'form:optionalLabel': {
+    url:    '/components/Form/validation/optionalLabel',
+    code:   'optionalLabel',
+    about:  'Set the default "Optional" label for all optional fields',
+  },
+  'form:validateOnBlur': {
+    url:    '/components/Form/validation/validateOnBlur',
+    code:   'validateOnBlur',
+    about:  'Set fields to validate on blur by default',
+  },
+  'form:validateOnChange': {
+    url:    '/components/Form/validation/validateOnChange',
+    code:   'validateOnChange',
+    about:  'Set fields to validate on change by default',
+  },
+  'form:validateOnInvalid': {
+    url:    '/components/Form/validation/validateOnInvalid',
+    code:   'validateOnInvalid',
+    about:  'Set fields to validate on change when invalid',
+  },
+  'form:minValidateLength': {
+    url:    '/components/Form/validation/minValidateLength',
+    code:   'minValidateLength',
+    about:  'Set default length of input to trigger validation',
   },
   'form:focusInvalidField': {
     url:    '/components/Form/validation/focusInvalidField',
@@ -269,6 +317,11 @@ export const URLS = {
     url:    '/components/Field/validation/validateOnChange',
     code:   'validateOnChange',
     about:  'Run field validation when the value changes',
+  },
+  'field:validateOnInvalid': {
+    url:    '/components/Field/validation/validateOnInvalid',
+    code:   'validateOnInvalid',
+    about:  'Run field validation when the value changes after failing validation',
   },
 
   // events

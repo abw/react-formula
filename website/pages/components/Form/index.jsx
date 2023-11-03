@@ -6,9 +6,18 @@ import Values       from './properties/values/index.jsx'
 import Hidden       from './properties/hidden/index.jsx'
 
 // validation
-import Validate       from './validation/validate/index.jsx'
-import ResetOnSuccess from './validation/resetOnSuccess/index.jsx'
-import FocusInvalid   from './validation/focusInvalidField/index.jsx'
+import Validate           from './validation/validate/index.jsx'
+import ValidateOnBlur     from './validation/validateOnBlur/index.jsx'
+import ValidateOnChange   from './validation/validateOnChange/index.jsx'
+import ValidateOnInvalid  from './validation/validateOnInvalid/index.jsx'
+import MinValidateLength  from './validation/minValidateLength/index.jsx'
+import ShowRequired       from './validation/showRequired/index.jsx'
+import RequiredLabel      from './validation/requiredLabel/index.jsx'
+import RequiredMessage    from './validation/requiredMessage/index.jsx'
+import ShowOptional       from './validation/showOptional/index.jsx'
+import OptionalLabel      from './validation/optionalLabel/index.jsx'
+import ResetOnSuccess     from './validation/resetOnSuccess/index.jsx'
+import FocusInvalid       from './validation/focusInvalidField/index.jsx'
 
 // events
 import OnLoad       from './events/onLoad/index.jsx'
@@ -41,7 +50,16 @@ const Form = () =>
       {/* <Route path="children"          element={<Children/>}/> */}
     </Route>
     <Route path="validation">
+      <Route path="showRequired"      element={<ShowRequired/>}/>
+      <Route path="requiredLabel"     element={<RequiredLabel/>}/>
+      <Route path="requiredMessage"   element={<RequiredMessage/>}/>
+      <Route path="showOptional"      element={<ShowOptional/>}/>
+      <Route path="optionalLabel"     element={<OptionalLabel/>}/>
       <Route path="validate"          element={<Validate/>}/>
+      <Route path="validateOnBlur"    element={<ValidateOnBlur/>}/>
+      <Route path="validateOnChange"  element={<ValidateOnChange/>}/>
+      <Route path="validateOnInvalid" element={<ValidateOnInvalid/>}/>
+      <Route path="minValidateLength" element={<MinValidateLength/>}/>
       <Route path="focusInvalidField" element={<FocusInvalid/>}/>
       <Route path="resetOnSuccess"    element={<ResetOnSuccess/>}/>
     </Route>

@@ -1,14 +1,14 @@
-import React                      from 'react'
-import FormFocusSrc               from './examples/FormFocus.jsx?raw'
-import FormFocus                  from './examples/FormFocus.jsx'
-import UseFormFocusSrc            from './examples/UseFormFocus.jsx?raw'
-import UseFormFocus               from './examples/UseFormFocus.jsx'
-import FocusButtonSrc             from './examples/FocusButton.jsx?raw'
-import Example                    from '@/site/Example.jsx'
-import Split                      from '@/site/Split.jsx'
-import { FieldLink, FormLink, OnLoadLink }    from '@/site/Links.jsx'
+import React            from 'react'
+import FormFocusSrc     from './examples/FormFocus.jsx?raw'
+import FormFocus        from './examples/FormFocus.jsx'
+import UseFormFocusSrc  from './examples/UseFormFocus.jsx?raw'
+import UseFormFocus     from './examples/UseFormFocus.jsx'
+import FocusButtonSrc   from './examples/FocusButton.jsx?raw'
+import Example          from '@/site/Example.jsx'
+import Split            from '@/site/Split.jsx'
+import TryItOut         from '@/site/TryItOut.jsx'
+import { FieldLink, FormLink, OnLoadLink } from '@/site/Links.jsx'
 import CodeBlock, { prepareCode } from '@/site/CodeBlock.jsx'
-import TryItOut from '@/website/site/TryItOut.jsx'
 
 const SetFocusExamples = () =>
   <div className="prose flow">
@@ -46,8 +46,7 @@ const SetFocusExamples = () =>
     <Example
       Element={UseFormFocus} code={UseFormFocusSrc}
       caption="useForm() and setFocus()"
-    >
-    </Example>
+    />
 
     <h2>Preventing Default Event</h2>
     <Split>

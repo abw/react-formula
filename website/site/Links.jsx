@@ -203,6 +203,9 @@ export const ValidateOnBlurLink = () =>
 export const ValidateOnChangeLink = () =>
   <CodeLink to="field:validateOnChange"/>
 
+export const ValidateOnInvalidLink = () =>
+  <CodeLink to="field:validateOnInvalid"/>
+
 // input types
 export const TextInputLink = () =>
   <CodeLink to="input:Text"/>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const IntroductionMenu = {
   title: 'Getting Started',
   url:  '/introduction',
@@ -58,7 +56,16 @@ export const FormMenu = {
     'form:hidden',
     // 'form:classes',
     { heading: 'Validation' },
+    'form:showRequired',
+    'form:requiredLabel',
+    'form:requiredMessage',
+    'form:showOptional',
+    'form:optionalLabel',
     'form:validate',
+    'form:validateOnBlur',
+    'form:validateOnChange',
+    'form:validateOnInvalid',
+    'form:minValidateLength',
     'form:resetOnSuccess',
     'form:focusInvalidField',
     // ['properties',    'Properties - TODO'],
@@ -70,6 +77,7 @@ export const FormMenu = {
     'form:onSuccess',
     'form:onError',
     { heading: 'Functions' },
+    'form:reset',
     'form:setFocus',
     'form:setValues',
   ]
@@ -100,6 +108,7 @@ export const FieldMenu = {
     'field:validate',
     'field:validateOnBlur',
     'field:validateOnChange',
+    'field:validateOnInvalid',
     'field:minValidateLength',
     { heading: 'Events' },
     'field:onFocus',
