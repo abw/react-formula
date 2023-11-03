@@ -1,8 +1,8 @@
 import React      from 'react'
-import Example    from '../../../../site/Example.jsx'
-import Values     from './Values.jsx'
-import ValuesSrc  from './Values.jsx?raw'
-import SeeAlso    from '../../../../site/SeeAlso.jsx'
+import Values     from './examples/Values.jsx'
+import ValuesSrc  from './examples/Values.jsx?raw'
+import Example    from '@/site/Example.jsx'
+import SeeAlso    from '@/site/SeeAlso.jsx'
 
 const ValuesExamples = () =>
   <div className="prose">

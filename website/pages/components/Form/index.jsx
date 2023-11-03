@@ -1,12 +1,16 @@
 import React        from 'react'
 import Home         from './Home.jsx'
-import Fields       from './fields/index.jsx'
-import Values       from './values/index.jsx'
-import Hidden       from './hidden/index.jsx'
+// properties
+import Fields       from './properties/fields/index.jsx'
+import Values       from './properties/values/index.jsx'
+import Hidden       from './properties/hidden/index.jsx'
+import Validate     from './properties/validate/index.jsx'
+
+// functions
+import Reset        from './functions/reset/index.jsx'
+
 import Classes      from './classes/index.jsx'
-import Properties   from './Properties/index.jsx'
 import SetFocus     from './SetFocus/index.jsx'
-import Validate     from './Validate/index.jsx'
 import OnSubmit     from './OnSubmit/index.jsx'
 import OnSuccess    from './OnSuccess/index.jsx'
 import OnError      from './OnError/index.jsx'
@@ -22,13 +26,19 @@ import { Routes, Route } from 'react-router-dom'
 const Form = () =>
   <Routes>
     <Route path="" end        element={<Home/>}/>
-    <Route path="fields"      element={<Fields/>}/>
-    <Route path="values"      element={<Values/>}/>
-    <Route path="hidden"      element={<Hidden/>}/>
+    <Route path="properties">
+      <Route path="fields"      element={<Fields/>}/>
+      <Route path="values"      element={<Values/>}/>
+      <Route path="hidden"      element={<Hidden/>}/>
+      <Route path="validate"    element={<Validate/>}/>
+      {/* <Route path="children"          element={<Children/>}/> */}
+    </Route>
+    <Route path="functions">
+      <Route path="reset"       element={<Reset/>}/>
+    </Route>
+
     <Route path="classes"     element={<Classes/>}/>
-    <Route path="properties"  element={<Properties/>}/>
     <Route path="setfocus"    element={<SetFocus/>}/>
-    <Route path="validate"    element={<Validate/>}/>
     <Route path="onSubmit"    element={<OnSubmit/>}/>
     <Route path="onSuccess"   element={<OnSuccess/>}/>
     <Route path="onError"     element={<OnError/>}/>

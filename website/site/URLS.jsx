@@ -79,20 +79,41 @@ export const URLS = {
   //--------------------------------------------------------------------------
   // Form links
   //--------------------------------------------------------------------------
+  // properties
+  'form:fields': {
+    url:    '/components/Form/properties/fields',
+    code:   'fields',
+    about:  'Properties for form fields',
+  },
+  'form:values': {
+    url:    '/components/Form/properties/values',
+    code:   'values',
+    about:  'Values for form fields',
+  },
+  'form:hidden': {
+    url:    '/components/Form/properties/hidden',
+    code:   'hidden',
+    about:  'Hidden values for a form',
+  },
+  'form:validate': {
+    url:    '/components/Form/properties/validate',
+    code:   'validate',
+    about:  'Validation function for a form',
+  },
+
+
+  // functions
+  'form:reset': {
+    url:    '/components/Form/functions/reset',
+    code:   'reset',
+    about:  'Reset the form state',
+  },
+
+
   'form:classes': {
     url:    '/components/Form/classes',
     code:   'classes',
     about:  'Custom CSS classes for form components',
-  },
-  'form:fields': {
-    url:    '/components/Form/fields',
-    code:   'fields',
-    about:  'Properties for form fields',
-  },
-  'form:hidden': {
-    url:    '/components/Form/hidden',
-    code:   'hidden',
-    about:  'Hidden values for a form',
   },
   'form:onReset': {
     url:    '/components/Form/onReset',
@@ -123,16 +144,6 @@ export const URLS = {
     url:    '/components/Form/setValues',
     code:   'setValues',
     about:  'Set form values',
-  },
-  'form:validate': {
-    url:    '/components/Form/validate',
-    code:   'validate',
-    about:  'Validation function for a form',
-  },
-  'form:values': {
-    url:    '/components/Form/values',
-    code:   'values',
-    about:  'Values for form fields',
   },
 
   //--------------------------------------------------------------------------

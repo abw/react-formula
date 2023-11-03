@@ -85,6 +85,11 @@ export const FormValuesLink = () =>
 export const FormHiddenLink = () =>
   <CodeLink to="form:hidden"/>
 
+export const FormResetLink = () =>
+  <CodeLink to="form:reset"/>
+
+
+
 export const FormClassesLink = () =>
   <CodeLink to="form:classes"/>
 

@@ -1,14 +1,13 @@
 import React      from 'react'
-import Example    from '../../../../site/Example.jsx'
-import Fields     from './Fields.jsx'
-import FieldsSrc  from './Fields.jsx?raw'
-import InlineSrc  from './Inline.jsx?raw'
-import SeeAlso    from '../../../../site/SeeAlso.jsx'
-import { FieldLink, NameLink } from '../../../../site/Links.jsx'
-import CodeBlock, { prepareCode } from '../../../../site/CodeBlock.jsx'
+import Fields     from './examples/Fields.jsx'
+import FieldsSrc  from './examples/Fields.jsx?raw'
+import Inline     from './examples/Inline.jsx'
+import InlineSrc  from './examples/Inline.jsx?raw'
+import Example    from '@/site/Example.jsx'
+import { FieldLink, NameLink } from '@/site/Links.jsx'
 
 const FieldsExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Form Properties</h1>
     <h2><code>fields</code></h2>
     <p>
@@ -18,15 +17,14 @@ const FieldsExamples = () =>
     </p>
     <Example
       Element={Fields} code={FieldsSrc}
-      caption="fields" expand
+      caption="fields"
     />
     <p>
       This is the same as defining the properties on the <FieldLink/> components.
     </p>
-    <CodeBlock
-      code={prepareCode(InlineSrc)}
-      caption="Inline Field"
-      expand
+    <Example
+      Element={Inline} code={InlineSrc}
+      caption="fields"
     />
     <p>
       The <code>fields</code> definition can contain any number of fields,
@@ -50,12 +48,6 @@ const FieldsExamples = () =>
       field will be the same for each, so it makes sense to define it in one
       place.
     </p>
-    {/*
-    <SeeAlso
-      links={[
-      ]}
-    />
-    */}
   </div>
 
 
