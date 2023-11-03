@@ -10,13 +10,14 @@ const Submit = ({
   Button=DefaultButton,
   ...props
 }) => {
-  const { submit } = useForm()
+  const { submit, status } = useForm()
   return (
     <Button
       type={type}
       text={text}
       className={className}
       onClick={submit}
+      disabled={status.submitting}
       {...props}
     />
   )
