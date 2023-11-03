@@ -1,4 +1,4 @@
-import { Form, Field, Submit } from '../../../../../lib/index.js'
+import { Form, Field, Submit } from '@/lib/index.js'
 
 {/* START */}
 import React, { useState } from 'react'
@@ -6,12 +6,18 @@ import React, { useState } from 'react'
 
 const OnSubmitExample = () => {
   const [msg, setMsg] = useState()
+  const onSubmit = values =>
+    setMsg(`Form submitted, foo is ${values.foo}`)
 
   return (
-    <Form onSubmit={values => setMsg(`foo was submitted as ${values.foo}`)}>
+    <Form onSubmit={onSubmit}>
       <Field name="foo" label="Foo Field"/>
       <Submit/>
-      {msg}
+      { msg &&
+        <div className="info alert mar-t-2">
+          {msg}
+        </div>
+      }
     </Form>
   )
 }

@@ -79,19 +79,14 @@ export const SelectLink = () =>
 export const FormFieldsLink = () =>
   <CodeLink to="form:fields"/>
 
-export const FormValuesLink = () =>
-  <CodeLink to="form:values"/>
-
 export const FormHiddenLink = () =>
   <CodeLink to="form:hidden"/>
 
-export const FormResetLink = () =>
-  <CodeLink to="form:reset"/>
+export const FormOnErrorLink = () =>
+  <CodeLink to="form:onError"/>
 
-
-
-export const FormClassesLink = () =>
-  <CodeLink to="form:classes"/>
+export const FormOnLoadLink = () =>
+  <CodeLink to="form:onLoad"/>
 
 export const FormOnResetLink = () =>
   <CodeLink to="form:onReset"/>
@@ -102,8 +97,8 @@ export const FormOnSubmitLink = () =>
 export const FormOnSuccessLink = () =>
   <CodeLink to="form:onSuccess"/>
 
-export const FormOnErrorLink = () =>
-  <CodeLink to="form:onError"/>
+export const FormResetLink = () =>
+  <CodeLink to="form:reset"/>
 
 export const FormSetFocusLink = () =>
   <CodeLink to="form:setFocus"/>
@@ -113,6 +108,14 @@ export const FormSetValuesLink = () =>
 
 export const FormValidateLink = () =>
   <CodeLink to="form:validate"/>
+
+export const FormValuesLink = () =>
+  <CodeLink to="form:values"/>
+
+
+export const FormClassesLink = () =>
+  <CodeLink to="form:classes"/>
+
 
 
 // field links

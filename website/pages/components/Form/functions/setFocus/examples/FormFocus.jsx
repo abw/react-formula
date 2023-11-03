@@ -1,4 +1,4 @@
-import { Form, Field } from '../../../../../lib/index.js'
+import { Form, Field } from '@/lib/index.js'
 
 {/* START */}
 import React, { useState } from 'react'
@@ -17,22 +17,24 @@ const SetFocusExample = () => {
           name="field2" label="Field Two"
           type="textarea"
         />
-        <Field
-          name="field3" label="Field Three"
-          type="checkbox" text="One Louder"
-        />
-        <Field
-          name="field4" label="Field Four"
-          type="select" options={['Nigel', 'David', 'Derek']}
-        />
+        <div className="grid-2 gap-4">
+          <Field
+            name="field3" label="Field Three"
+            type="checkbox" text="One Louder"
+          />
+          <Field
+            name="field4" label="Field Four"
+            type="select" options={['Nigel', 'David', 'Derek']}
+          />
+        </div>
         <Field
           name="field5" label="Field Five"
           type="radio" default='Keyboards'
-          className="inline"
+          optionClass="inline"
           options={['Vocals', 'Guitar', 'Bass', 'Keyboards', 'Drums']}
         />
       </Form>
-      <div className="formula">
+      <div className="mar-t-4 grid-fit gap-2">
         <button onClick={() => form?.setFocus('field1')}>
           Focus One
         </button>

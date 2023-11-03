@@ -40,6 +40,10 @@ $brand-colors: (
   }
 }
 
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
 ul.li-space li {
   margin-bottom: 1rem;
 }

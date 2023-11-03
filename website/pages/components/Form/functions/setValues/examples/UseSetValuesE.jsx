@@ -1,4 +1,4 @@
-import { Form, Field, useForm } from '../../../../../../lib/index.js'
+import { Form, Field, useForm } from '@/lib/index.js'
 
 {/* START */}
 import React from 'react'
@@ -9,8 +9,10 @@ const UseSetValues = () =>
     <Form>
       <Field name="color"  label="Color"/>
       <Field name="animal" label="Animal"/>
-      <Setter color="Grey" animal="Elephant"/>
-      <Setter color="Red"  animal="Fox"/>
+      <div className="grid-2 gap-4">
+        <Setter color="Grey" animal="Elephant"/>
+        <Setter color="Red"  animal="Fox"/>
+      </div>
     </Form>
   </>
 

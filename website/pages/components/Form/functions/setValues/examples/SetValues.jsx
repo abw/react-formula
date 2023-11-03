@@ -1,4 +1,4 @@
-import { Form, Field } from '../../../../../../lib/index.js'
+import { Form, Field } from '@/lib/index.js'
 
 {/* START */}
 import React, { useState } from 'react'
@@ -15,14 +15,14 @@ const SetValues = () => {
         <Field name="color"  label="Color"/>
         <Field name="animal" label="Animal"/>
       </Form>
-
-      <button onClick={() => setValues('Grey', 'Elephant')}>
-        Grey Elephant
-      </button>
-
-      <button onClick={() => setValues('Red', 'Fox')}>
-        Red Fox
-      </button>
+      <div className="grid-2 gap-4">
+        <button onClick={() => setValues('Grey', 'Elephant')}>
+          Grey Elephant
+        </button>
+        <button onClick={() => setValues('Red', 'Fox')}>
+          Red Fox
+        </button>
+      </div>
     </>
   )
 }

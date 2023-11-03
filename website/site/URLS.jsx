@@ -95,12 +95,50 @@ export const URLS = {
     code:   'hidden',
     about:  'Hidden values for a form',
   },
+
+  // validation
   'form:validate': {
-    url:    '/components/Form/properties/validate',
+    url:    '/components/Form/validation/validate',
     code:   'validate',
     about:  'Validation function for a form',
   },
+  'form:focusInvalidField': {
+    url:    '/components/Form/validation/focusInvalidField',
+    code:   'focusInvalidField',
+    about:  'Automatically focus the first field failing validation',
+  },
+  'form:resetOnSuccess': {
+    url:    '/components/Form/validation/resetOnSuccess',
+    code:   'resetOnSuccess',
+    about:  'Reset the form after a successful submission',
+  },
 
+  // events
+  'form:onLoad': {
+    url:    '/components/Form/events/onLoad',
+    code:   'onLoad',
+    about:  'Function to be called when the form is loaded',
+  },
+  'form:onReset': {
+    url:    '/components/Form/events/onReset',
+    code:   'onReset',
+    about:  'Function to be called when the form is reset',
+  },
+  'form:onSubmit': {
+    url:    '/components/Form/events/onSubmit',
+    code:   'onSubmit',
+    about:  'Function to handle form submission',
+  },
+  'form:onSuccess': {
+    url:    '/components/Form/events/onSuccess',
+    code:   'onSuccess',
+    about:  'Function to handle successful form submission',
+  },
+  'form:onError': {
+    url:    '/components/Form/events/onError',
+    code:   'onError',
+    about:  'Function to handle failed form submission',
+  },
 
   // functions
   'form:reset': {
@@ -108,42 +146,22 @@ export const URLS = {
     code:   'reset',
     about:  'Reset the form state',
   },
+  'form:setFocus': {
+    url:    '/components/Form/functions/setFocus',
+    code:   'setFocus',
+    about:  'Focus a form field',
+  },
+  'form:setValues': {
+    url:    '/components/Form/functions/setValues',
+    code:   'setValues',
+    about:  'Set form values',
+  },
 
 
   'form:classes': {
     url:    '/components/Form/classes',
     code:   'classes',
     about:  'Custom CSS classes for form components',
-  },
-  'form:onReset': {
-    url:    '/components/Form/onReset',
-    code:   'onReset',
-    about:  'Function to be called when the form is reset',
-  },
-  'form:onSubmit': {
-    url:    '/components/Form/onSubmit',
-    code:   'onSubmit',
-    about:  'Function to handle form submission',
-  },
-  'form:onSuccess': {
-    url:    '/components/Form/onSuccess',
-    code:   'onSuccess',
-    about:  'Function to handle successful form submission',
-  },
-  'form:onError': {
-    url:    '/components/Form/onError',
-    code:   'onError',
-    about:  'Function to handle failed form submission',
-  },
-  'form:setFocus': {
-    url:    '/components/Form/setFocus',
-    code:   'setFocus',
-    about:  'Focus a form field',
-  },
-  'form:setValues': {
-    url:    '/components/Form/setValues',
-    code:   'setValues',
-    about:  'Set form values',
   },
 
   //--------------------------------------------------------------------------
