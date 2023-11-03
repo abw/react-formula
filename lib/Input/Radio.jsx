@@ -20,10 +20,14 @@ const Radio = ({ field=useField() }) => {
   return (
     <div className={classes(optionsClass)}>
       { options.map(
-        option => {
+        (option, i) => {
           option = valueOption(option)
           const id = `${field.id}-${option.value}`
           const checked = field.value == option.value
+          // when we focus the field we want to focus the currently selected
+          // option (if there is one) or the first option otherwise
+          const focus = field.value ? checked : i == 0
+          const ref = focus ? field.inputRef : null
           const labelClass = classes(
             'radio',
             optionClass,
@@ -40,7 +44,8 @@ const Radio = ({ field=useField() }) => {
               <input
                 type={type}
                 className={inputClass}
-                ref={field.inputRef}
+                // ref={field.inputRef}
+                ref={ref}
                 aria-disabled={field.disabled}
                 tabIndex={field.disabled ? -1 : field.tabIndex}
                 onChange={handler(field)}
