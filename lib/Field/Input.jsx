@@ -10,7 +10,7 @@ import { RADIO, TEXT } from '../Constants.jsx'
 
 const Input = ({ field=useField() }) => {
   const {
-    classes, prefix, suffix, inputsClass, wide,
+    classes, prefix, suffix, inputsClass, inline,
     type=TEXT,
     Prefix=DefaultPrefix,
     Suffix=DefaultSuffix,
@@ -18,7 +18,7 @@ const Input = ({ field=useField() }) => {
   const Type = InputTypes[type] || InputTypes.default
   let classNames = [
     selectClass(classes, 'inputs'),
-    selectClass(classes, type)
+    // selectClass(classes, type)
   ]
   if (hasValue(prefix)) {
     classNames.push(selectClass(classes, 'prefixed'))
@@ -26,8 +26,8 @@ const Input = ({ field=useField() }) => {
   if (hasValue(suffix)) {
     classNames.push(selectClass(classes, 'suffixed'))
   }
-  if (wide) {
-    classNames.push(selectClass(classes, 'wide'))
+  if (inline) {
+    classNames.push(selectClass(classes, 'inline'))
   }
   if (hasValue(inputsClass)) {
     classNames.push(inputsClass)

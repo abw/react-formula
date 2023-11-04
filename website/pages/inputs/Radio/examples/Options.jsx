@@ -13,7 +13,7 @@ const RadioOptions = () =>
       options={[
         { value:     'badger',
           text:      'Bobby Badger',
-          className: 'bold'
+          className: 'underline'
         },
         { value: 'ferret', text: 'Franky Ferret' },
         { value: 'stoat',  text: 'Simon Stoat'   },

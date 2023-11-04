@@ -6,7 +6,7 @@ import { Themed } from '../Theme.jsx'
 
 const Radio = ({ field=useField() }) => {
   const {
-    wide,
+    inline,
     border,
     options=[],
     inputClass,
@@ -32,7 +32,7 @@ const Radio = ({ field=useField() }) => {
             'radio',
             optionClass,
             option.className,
-            { wide, border }
+            { inline, border }
           )
           return (
             <label

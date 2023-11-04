@@ -11,7 +11,8 @@ const InlineSelect = () =>
       type="select"
       label="What is your favourite animal?"
       options={[ 'Badger', 'Ferret', 'Stoat' ]}
-      className="inline mar-r-option"
+      className="mar-r-option"
+      inline
     />
     <Field
       name="food"
@@ -19,7 +20,7 @@ const InlineSelect = () =>
       label="What is your favourite number?"
       placeholder="Pick a number"
       options={[ 10, 11, 42, 69 ]}
-      className="inline"
+      inline
     />
   </Form>
 

@@ -11,7 +11,7 @@ const RadioBorder = () =>
       name="animal1"
       label="Border Options"
       options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
-      optionClass="mar-r-2"
+      optionClass="inline mar-r-2"
       border
     />
     <Field

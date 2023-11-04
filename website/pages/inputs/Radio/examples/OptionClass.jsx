@@ -11,7 +11,7 @@ const RadioOptionsClass = () =>
       name="animal1"
       label="Options With Margins on Right and Extra Padding"
       options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
-      optionClass="mar-r-4 pad-h-4"
+      optionClass="inline mar-r-4 mar-b-4 pad-h-4"
       border
     />
     <Field
@@ -20,7 +20,7 @@ const RadioOptionsClass = () =>
       label="Large Options With Margins and Padding"
       options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
       optionClass="large mar-b-4 pad-v-2 pad-h-4"
-      border wide
+      border
     />
   </Form>
 

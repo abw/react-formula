@@ -420,32 +420,32 @@ export const URLS = {
   },
   'input:Text': {
     url:    '/inputs/Text',
-    text:   'text',
+    code:   'text',
     about:  'Text input',
   },
   'input:TextArea': {
     url:    '/inputs/TextArea',
-    text:   'textarea',
+    code:   'textarea',
     about:  'Text area input',
   },
   'input:Checkbox': {
     url:    '/inputs/Checkbox',
-    text:   'checkbox',
+    code:   'checkbox',
     about:  'Checkbox input',
   },
   'input:Radio': {
     url:    '/inputs/Radio',
-    text:   'radio',
+    code:   'radio',
     about:  'Radio buttons input',
   },
   'input:Select': {
     url:    '/inputs/Select',
-    text:   'select',
+    code:   'select',
     about:  'Select list input',
   },
   'input:Hidden': {
     url:    '/inputs/Hidden',
-    text:   'hidden',
+    code:   'hidden',
     about:  'Hidden input',
   },
 

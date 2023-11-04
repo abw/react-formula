@@ -11,7 +11,7 @@ const RadioOptionsClass = () =>
       name="animal1"
       label="Flex Options With Gaps"
       options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
-      optionsClass="flex gap-2"
+      optionsClass="flex gap-4"
       border
     />
     <Field

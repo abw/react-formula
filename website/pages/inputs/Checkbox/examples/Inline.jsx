@@ -10,13 +10,13 @@ const CheckboxWide = () =>
       name="badger"
       type="checkbox"
       text="Badgers are brilliant!"
-      border wide
+      border inline
     />
     <Field
       name="stoat"
       type="checkbox"
       text="Stoats are sexy!"
-      border wide
+      border inline
     />
   </Form>
 

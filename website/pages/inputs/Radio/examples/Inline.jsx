@@ -4,14 +4,15 @@ import { Form, Field } from '../../../../../lib/index.js'
 import React from 'react'
 // PRETEND: import { Form, Field } from '@abw/react-formula'
 
-const Fluid = () =>
+const RadioInline = () =>
   <Form>
     <Field
-      name="one"
-      type="textarea"
-      label="Fluid Text Area"
-      className="fluid"
+      type="radio"
+      name="animal"
+      label="Inline Options"
+      options={['Badger', 'Ferret', 'Stoat', 'Weasel']}
+      inline
     />
   </Form>
 
-export default Fluid
+export default RadioInline

@@ -4,14 +4,14 @@ import Checkbox       from './examples/Checkbox.jsx'
 import CheckboxSrc    from './examples/Checkbox.jsx?raw'
 import Border         from './examples/Border.jsx'
 import BorderSrc      from './examples/Border.jsx?raw'
-import Wide           from './examples/Wide.jsx'
-import WideSrc        from './examples/Wide.jsx?raw'
+import Inline         from './examples/Inline.jsx'
+import InlineSrc      from './examples/Inline.jsx?raw'
 import InputClass     from './examples/InputClass.jsx'
 import InputClassSrc  from './examples/InputClass.jsx?raw'
 import { FieldLink, TypeLink } from '../../../site/Links.jsx'
 
 const CheckboxExamples = () =>
-  <div className="prose">
+  <div className="prose flow">
     <h1>Checkbox Input</h1>
     <p>
       Set the <FieldLink/> <TypeLink/> to <code>checkbox</code> for a checkbox.
@@ -29,13 +29,13 @@ const CheckboxExamples = () =>
     </p>
     <Example Element={Border} code={BorderSrc} expand/>
 
-    <h2><code>wide</code></h2>
+    <h2><code>inline</code></h2>
     <p>
-      The default behaviour is for checkboxes to be displayed
-      inline.  Add the <code>wide</code> property to make them expand to
-      the full width of the container.
+      The default behaviour is for checkboxes to expand to the full width
+      of the container. Add the <code>inline</code> property to make them
+      only expand as wide as necessary.
     </p>
-    <Example Element={Wide} code={WideSrc} expand/>
+    <Example Element={Inline} code={InlineSrc} expand/>
 
     <h2><code>inputClass</code></h2>
     <p>

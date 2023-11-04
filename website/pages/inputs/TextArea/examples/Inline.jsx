@@ -10,13 +10,13 @@ const Inline = () =>
       name="one"
       type="textarea"
       label="Text Area One"
-      className="inline mar-r-option"
+      inline
     />
     <Field
       name="one"
       type="textarea"
       label="Text Area Two"
-      className="inline"
+      inline
     />
   </Form>
 
