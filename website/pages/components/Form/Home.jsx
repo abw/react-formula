@@ -1,22 +1,27 @@
-import React from 'react'
-import Link from '../../../site/Link.jsx'
-
+import React          from 'react'
+import TOC            from '@/site/TOC.jsx'
+import Example        from '@/site/Example.jsx'
+import ExampleSrc     from './Example.jsx?raw'
+import ExampleElement from './Example.jsx'
+import { FormMenu }   from '@/site/Menus.jsx'
+import { FieldLink, SubmitLink } from '@/site/Links.jsx'
 const Home = () =>
   <div>
     <h1>Form</h1>
     <p>
       The <code>Form</code> component is used to render a form.
       Inside the form you will typically have one or more{' '}
-      <Link to="/field"><code>Field</code></Link> components to render
-      the fields and a <Link to="/form/submit"><code>Submit</code></Link>{' '}
-      component to add a submit button.
+      <FieldLink/> components to render
+      the fields and a <SubmitLink/> component to add a submit button.
     </p>
-    <ul className="menu">
-      <li><Link to="./properties" text="Form properties"/></li>
-      <li><Link to="./reset"><code>Reset</code></Link> component to reset the form</li>
-      <li><Link to="./submit"><code>Submit</code></Link> component to submit the form</li>
-      <li><Link to="./controls">Controls combining <code>Submit</code></Link> component to submit the form</li>
-    </ul>
+    <Example
+      Element={ExampleElement}
+      code={ExampleSrc}
+      caption="Form"
+      expand
+    />
+
+    <TOC menu={FormMenu}/>
   </div>
 
 export default Home
