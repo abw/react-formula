@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@abw/badger-css': ^0.2.1
+  '@abw/badger-css': ^0.2.3
   '@abw/badger-utils': ^1.0.19
   '@abw/react-context': ^2.0.3
   '@abw/react-night-and-day': ^0.0.4
@@ -30,7 +30,7 @@ specifiers:
   yup: ^1.0.2
 
 dependencies:
-  '@abw/badger-css': 0.2.1
+  '@abw/badger-css': 0.2.3
   '@abw/badger-utils': 1.0.19
   '@abw/react-context': 2.0.3
   '@abw/react-one-louder': 0.0.5
@@ -69,8 +69,8 @@ packages:
       js-yaml: 4.1.0
     dev: false
 
-  /@abw/badger-css/0.2.1:
-    resolution: {integrity: sha512-09Ah95wmmi6gupqfv5oy0DvO91NTo/GJNkX8DeTYZSy1fqm1Sgqj4w94cqgy3vNyxvvGnvo8EPhoGuXBS6djDQ==}
+  /@abw/badger-css/0.2.3:
+    resolution: {integrity: sha512-vDmgc6FCmmvldfW0RcHrysH3z4UF1/Hh+qGWhDXDAR56Gy8VtHGTac8bAPefU4ug3SaFvqGJqku+gOYksGh8yQ==}
     hasBin: true
     dependencies:
       '@abw/badger': 1.1.18
