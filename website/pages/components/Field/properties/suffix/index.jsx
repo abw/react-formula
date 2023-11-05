@@ -12,15 +12,20 @@ const SuffixExample = () =>
 
     <h2><code>suffix</code></h2>
     <p>
-      You can add a <code>suffix</code> to a field
+      The <code>suffix</code> property can be used to a a suffix to a field.
+      This can be text, an SVG icon or other JSX fragment.
     </p>
+
     <Example
       Element={Suffix} code={SuffixSrc}
       caption="suffix" expand
     />
 
     <p>
-      You can add both a <code>prefix</code> and a <code>suffix</code>.
+      The <code>suffixClass</code> property can be used to set a CSS class
+      for the suffix.  Badger CSS provides two built in styles: {' '}
+      <code>lined</code> to add a dividing line, and <code>shaded</code> to
+      add some background shading.
     </p>
     <Example
       Element={Both} code={BothSrc}

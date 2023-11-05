@@ -7,7 +7,8 @@ import React from 'react'
 const SuffixExample = () =>
   <Form>
     <Field
-      name="suffix" type="password"
+      name="suffix"
+      type="password"
       label="Enter your password"
       suffix="🔒"
     />

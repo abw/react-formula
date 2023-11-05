@@ -1,10 +1,10 @@
 import React from 'react'
 import { useField } from './Context.js'
 import { Themed } from '../Theme.jsx'
-import { selectClass } from '../Utils.js'
+import { classes } from '../Utils.js'
 
 const Prefix = ({ field=useField() }) =>
-  <div className={selectClass(field.classes, 'prefix')}>
+  <div className={classes('prefix', field.prefixClass)}>
     {field.prefix}
   </div>
 
