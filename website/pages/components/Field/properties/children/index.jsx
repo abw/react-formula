@@ -12,7 +12,7 @@ const Children = () =>
     <h2><code>children</code></h2>
     <p>
       You can define children of a field, either as components or functions.
-      Component can access the field context
+      Component can access the field context via <code>useField</code>.
       Functions receive the field context as the first argument.
     </p>
     <p>
@@ -27,7 +27,7 @@ const Children = () =>
     </p>
     <Example
       Element={Functions} code={FunctionsSrc}
-      caption="suffix" expand
+      caption="children" expand
     />
   </div>
 

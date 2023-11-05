@@ -4,6 +4,7 @@ import Home         from './Home.jsx'
 import Fields       from './properties/fields/index.jsx'
 import Values       from './properties/values/index.jsx'
 import Hidden       from './properties/hidden/index.jsx'
+import Children     from './properties/children/index.jsx'
 
 // validation
 import Validate           from './validation/validate/index.jsx'
@@ -44,10 +45,10 @@ const Form = () =>
   <Routes>
     <Route path="" end        element={<Home/>}/>
     <Route path="properties">
-      <Route path="fields"          element={<Fields/>}/>
-      <Route path="values"          element={<Values/>}/>
-      <Route path="hidden"          element={<Hidden/>}/>
-      {/* <Route path="children"          element={<Children/>}/> */}
+      <Route path="fields"            element={<Fields/>}/>
+      <Route path="values"            element={<Values/>}/>
+      <Route path="hidden"            element={<Hidden/>}/>
+      <Route path="children"          element={<Children/>}/>
     </Route>
     <Route path="validation">
       <Route path="showRequired"      element={<ShowRequired/>}/>

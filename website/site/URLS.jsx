@@ -95,6 +95,11 @@ export const URLS = {
     code:   'hidden',
     about:  'Hidden values for a form',
   },
+  'form:children': {
+    url:    '/components/Form/properties/children',
+    code:   'children',
+    about:  'Child components in a form',
+  },
   //'validMessage',
   //'classes', 'wide'
 

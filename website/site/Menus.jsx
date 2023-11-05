@@ -54,6 +54,7 @@ export const FormMenu = {
     'form:fields',
     'form:values',
     'form:hidden',
+    'form:children',
     // 'form:classes',
     { heading: 'Validation' },
     'form:showRequired',
