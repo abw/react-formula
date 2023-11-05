@@ -16,6 +16,8 @@ const Inline = () =>
       name="two"
       label="A text field with prefix and suffix"
       prefix="$" suffix=".00"
+      prefixClass="lined shaded"
+      suffixClass="lined shaded"
       size="6"
       inline
     />

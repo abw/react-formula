@@ -1,6 +1,7 @@
 import React from 'react'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
+import { inputClasses } from '../Utils.js'
 
 const TextArea = ({ field=useField() }) => {
   const { rows=5 } = field
@@ -8,7 +9,7 @@ const TextArea = ({ field=useField() }) => {
     <textarea
       id={field.id}
       ref={field.inputRef}
-      // className={className}
+      className={inputClasses(field)}
       name={field.name}
       value={field.value}
       disabled={field.disabled}

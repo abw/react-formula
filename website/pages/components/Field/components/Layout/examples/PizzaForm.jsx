@@ -30,7 +30,13 @@ const fields = {
 const PizzaForm = () =>
   <Form fields={fields}>
     <Field name="toppings"/>
-    <ResetSubmit/>
+    <ResetSubmit
+      space
+      submit={{
+        text: 'Order Pizza',
+        className: 'blue'
+      }}
+    />
   </Form>
 
 export default PizzaForm

@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { classes, inputAttrs } from '../Utils.js'
+import { classes, inputAttrs, inputClasses } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
 
@@ -8,15 +8,14 @@ const Checkbox = ({ field=useField() }) => {
   const {
     id,
     text,
-    wide,
+    inline,
     border,
     labelClass,
-    inputClass,
     type='checkbox',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
-  const labelClassName = classes('checkbox', labelClass, { wide, border })
+  const labelClassName = classes('checkbox', labelClass, { inline, border })
 
   return (
     <label htmlFor={id} className={labelClassName}>
@@ -26,7 +25,7 @@ const Checkbox = ({ field=useField() }) => {
         aria-disabled={field.disabled}
         tabIndex={field.disabled ? -1 : field.tabIndex}
         onChange={handler(field)}
-        className={inputClass}
+        className={inputClasses(field)}
         {...attrs}
         checked={field.value}
       />

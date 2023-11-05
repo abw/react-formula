@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs, valueOption } from '../Utils.js'
+import { inputAttrs, inputClasses, valueOption } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
 
@@ -19,6 +19,7 @@ const Select = ({ field=useField() }) => {
       ref={field.inputRef}
       aria-disabled={field.disabled}
       tabIndex={field.disabled ? -1 : field.tabIndex}
+      className={inputClasses(field)}
       onChange={handler(field)}
       {...attrs}
       value={field.value}

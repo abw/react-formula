@@ -1,6 +1,6 @@
 import React from 'react'
 import Handlers from './Handlers.js'
-import { inputAttrs } from '../Utils.js'
+import { inputClasses, inputAttrs } from '../Utils.js'
 import { useField } from '../Field/Context.js'
 import { Themed } from '../Theme.jsx'
 import { TEXT } from '../Constants.jsx'
@@ -8,7 +8,6 @@ import { TEXT } from '../Constants.jsx'
 export const Text = ({ field=useField() }) => {
   const {
     type=TEXT,
-    inputClass='',
     handler=Handlers[type]||Handlers.default
   } = field
   const attrs = inputAttrs(field)
@@ -17,7 +16,7 @@ export const Text = ({ field=useField() }) => {
     <input
       type={type}
       ref={field.inputRef}
-      className={inputClass}
+      className={inputClasses(field)}
       aria-disabled={field.disabled}
       // aria-invalid, aria-required
       tabIndex={field.disabled ? -1 : field.tabIndex}

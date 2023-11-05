@@ -8,7 +8,7 @@ const FormInput = () =>
   <Form>
     <Field name="one">
       <div className="field flex baseline gap-2">
-        <label>Label on the left</label>
+        <label className="nowrap">Field Label</label>
         <Input/>
       </div>
     </Field>

@@ -1,8 +1,10 @@
-import { Form, Field, Fields, Fieldset, Submit } from '../../../../lib/index.js'
+import { Form, Field, Fields, Fieldset, Errors, Submit } from '../../../../lib/index.js'
 
 {/* START */}
 import React, { useState } from 'react'
-// PRETEND: import { Form, Field, Fields, Fieldset, Submit } from '@abw/react-formula'
+// PRETEND: import {
+// PRETEND:   Form, Field, Fields, Fieldset, Errors, Submit
+// PRETEND: } from '@abw/react-formula'
 import * as yup  from 'yup'
 
 const validateForm = values => new Promise(
@@ -130,6 +132,7 @@ const RegistrationForm = () => {
           className="lg-grid-2"
         />
       </Fieldset>
+      <Errors fieldErrors={false}/>
       <Fieldset legend="Other Information">
         <Fields
           names="dob price"
